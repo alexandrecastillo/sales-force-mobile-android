@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/content_inset_small"
+    android:layout_marginTop="@dimen/content_inset_small"
+    android:layout_marginEnd="@dimen/content_inset_small"
+    android:layout_marginBottom="@dimen/content_inset_small"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/otra_marca_logo_height"
+        android:clickable="false"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/marca_logo_unique" />
+
+    <biz.belcorp.mobile.components.design.switchx.Switch
+        android:id="@+id/switch_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/content_inset_half"
+        android:paddingTop="@dimen/zero"
+        android:paddingEnd="@dimen/content_inset_tiny"
+        android:paddingBottom="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:showText="true"
+        app:switchThumb="@drawable/switch_thumb"
+        app:switchTrack="@drawable/switch_track"
+        app:switchTrackTintList="@color/switch_track_color_selector"
+        app:titleFontFamily="@font/lato_regular"
+        app:titleTextColor="@color/switch_text_color_selector"
+        app:titleTextSize="@dimen/text_size_label"
+        tools:titleTextOn="Sí vende" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

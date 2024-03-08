@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleItemTextView">
+        <attr name="simpleItemPadding" format="dimension" />
+        <attr name="simpleItemWidth" format="dimension" />
+    </declare-styleable>
+</resources>

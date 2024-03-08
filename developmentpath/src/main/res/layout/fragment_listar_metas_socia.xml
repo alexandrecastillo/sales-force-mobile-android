@@ -1,0 +1,51 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.etiqueta.GrupoEtiquetaLayout
+        android:id="@+id/layoutMetas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtContadorMetas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="3/3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMetas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutMetas"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_meta" />
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.FlatIconButtonCustomView
+        android:id="@+id/btnAgregarMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="?attr/selectableItemBackground"
+        android:visibility="gone"
+        app:fibIcon="@drawable/ic_action_add"
+        app:fibText="@string/listar_meta_consultora_boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvMetas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

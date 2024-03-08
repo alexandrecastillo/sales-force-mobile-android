@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-7.5dp"
+    android:background="@drawable/shadow_rdd"
+    android:padding="25dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textTituloItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12.5dp"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.04"
+        android:textColor="@color/meta_avance_campania"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/layoutCampania"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop"
+        tools:text="Región 1 - Ada Higueras" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textVisitasRegistradasItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTituloItem"
+        tools:text="4" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textVisitasPlanificadasItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.08"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textVisitasRegistradasItem"
+        app:layout_constraintStart_toEndOf="@id/textVisitasRegistradasItem"
+        tools:targetApi="lollipop"
+        tools:text="/15" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barreraVisitasProductividadDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textVisitasPlanificadasItem,layoutProductividad" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textGerentesDeZonaVisitadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/mulish_regular"
+        android:letterSpacing="0.05"
+        android:text="@string/gerentes_zona_visitadas"
+        android:textColor="@color/meta_avance_campania"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textVisitasPlanificadasItem"
+        tools:targetApi="lollipop" />
+
+    <ProgressBar
+        android:id="@+id/progressVisitas"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="6dp"
+        android:max="100"
+        android:progressDrawable="@drawable/custom_progress_mis_visitas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textGerentesDeZonaVisitadas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGerentesDeZonaVisitadas"
+        tools:progress="14" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutProductividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_meta_avance_pais"
+        android:padding="6dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textGerentesDeZonaVisitadas"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textEstadoProductividadItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:letterSpacing="0.05"
+            android:textColor="@color/meta_avance_campania"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="lollipop"
+            tools:text="Productiva" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toStartOf="@+id/textEstadoProductividadItem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_estado_gr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_campania_dashboard_rdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textCampania"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.3dp"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/morado_unete"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="C-01" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

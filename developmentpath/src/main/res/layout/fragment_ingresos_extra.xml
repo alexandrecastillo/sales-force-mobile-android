@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/content_inset_normal"
+    android:layout_marginBottom="@dimen/content_inset_normal"
+    android:clipChildren="false">
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.HeaderIconTextCustomView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:layout_marginLeft="@dimen/content_inset_normal"
+        android:layout_marginRight="@dimen/content_inset_normal"
+        app:hitDescription="@string/summary_ingresos_extra"
+        app:hitIcon="@drawable/ic_ingresos_extra"
+        app:hitTitle="@string/title_ingresos_extra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/wrap_dont_sell_other_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <biz.belcorp.mobile.components.design.switchx.Switch
+            android:id="@+id/switch_check"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:checked="false"
+            android:paddingStart="@dimen/icon_size_medium"
+            android:paddingTop="@dimen/zero"
+            android:paddingEnd="@dimen/content_inset_tiny"
+            android:paddingBottom="@dimen/content_inset_small"
+            app:showText="true"
+            app:switchThumb="@drawable/switch_thumb"
+            app:switchTrack="@drawable/switch_track"
+            app:switchTrackTintList="@color/switch_track_color_selector"
+            app:titleFontFamily="@font/mulish_regular"
+            app:titleTextColor="@color/switch_text_color_selector"
+            app:titleTextOff="@string/no_sell_other_rproducts"
+            app:titleTextOn="@string/no_sell_other_rproducts"
+            app:titleTextSize="@dimen/text_size_body" />
+
+        <View
+            android:id="@+id/view_disable_switch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp90"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_last_update_campaign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/accordion_default_title_size"
+        app:layout_constraintTop_toBottomOf="@+id/wrap_dont_sell_other_products"
+        app:layout_constraintStart_toStartOf="@+id/recycler"
+        app:layout_constraintBottom_toTopOf="@+id/recycler"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Ultima Actualizacion:200340"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_last_update_campaign"
+        tools:itemCount="3"
+        tools:layoutManager="GridLayoutManager"
+        tools:listitem="@layout/item_ingresos_extras_marca"
+        tools:spanCount="3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_split"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23.5dp"
+        android:layout_marginRight="23.5dp"
+        android:background="@color/white"
+        android:fontFamily="@font/mulish_regular"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/recycler"
+        tools:ignore="MissingConstraints,UnusedAttribute"
+        tools:text="Dupree, Herbalife, Omnilife" />
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.FlatIconButtonCustomView
+        android:id="@+id/btn_add_others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="?attr/selectableItemBackground"
+        app:fibIcon="@drawable/ic_action_add"
+        app:fibText="@string/action_agregar_otras_marcas"
+        app:layout_constraintEnd_toEndOf="@+id/text_split"
+        app:layout_constraintTop_toBottomOf="@id/text_split" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_categories_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:text="@string/main_categorie_label"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_others" />
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.MainSpinner
+        android:id="@+id/sp_categories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_categories_label"
+        tools:layout_height="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

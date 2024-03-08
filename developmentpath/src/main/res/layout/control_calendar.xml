@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- days header -->
+    <LinearLayout
+        android:id="@+id/calendar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="DOM"
+            android:textColor="@color/black_50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="LUN"
+            android:textColor="@color/black_50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="MAR"
+            android:textColor="@color/black_50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="MIE"
+            android:textColor="@color/black_50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="JUE"
+            android:textColor="@color/black_50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="VIE"
+            android:textColor="@color/black_50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="SAB"
+            android:textColor="@color/black_50" />
+
+    </LinearLayout>
+
+    <!-- days view -->
+    <biz.belcorp.salesforce.modules.developmentpath.features.mi_ruta.view.calendario.CalendarioGridView
+        android:id="@+id/calendar_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="#00000000"
+        android:numColumns="7" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/black_20" />
+
+    <ImageButton
+        android:id="@+id/btn_expandir"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+</LinearLayout>

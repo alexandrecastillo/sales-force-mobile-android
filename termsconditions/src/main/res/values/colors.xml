@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="header_politics_terms_conditions">@color/black</color>
+    <color name="grey_disabled">#BFBFBF</color>
+    <color name="black">#000000</color>
+    <color name="pink_bg">#E5E0EB</color>
+    <color name="purple_text">#672779</color>
+</resources>

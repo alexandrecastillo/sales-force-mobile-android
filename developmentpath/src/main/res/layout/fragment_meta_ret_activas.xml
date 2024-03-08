@@ -1,0 +1,134 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgNex"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        android:layout_margin="@dimen/content_inset_small"
+        android:contentDescription="@string/app_name"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@id/barrierTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        android:layout_margin="@dimen/content_inset_small"
+        android:contentDescription="@string/app_name"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@id/barrierTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/consultant_profile_green_on"
+        app:layout_constraintBottom_toTopOf="@id/barrierTitle"
+        app:layout_constraintEnd_toStartOf="@+id/imgNex"
+        app:layout_constraintStart_toEndOf="@+id/imgback"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="% SECC >= META \nRET ACTIVAS" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imgNex, tvTitle" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:background="@color/rdd_dashboard_seleccion_persona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierTitle" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:fontFamily="@font/mulish_bold"
+        android:text="Meta"
+        android:textColor="@color/mi_ruta_success"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:background="@drawable/back_border_txt"
+        android:fontFamily="@font/mulish_bold"
+        android:padding="@dimen/content_inset_tiny"
+        android:text="PER III - 106%"
+        android:textColor="@color/mi_ruta_success"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_border_txt"
+        android:fontFamily="@font/mulish_bold"
+        android:padding="@dimen/content_inset_tiny"
+        android:text="PER II - 104%"
+        android:textColor="@color/mi_ruta_success"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView25"
+        app:layout_constraintEnd_toStartOf="@+id/textView24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:background="@drawable/back_border_txt"
+        android:fontFamily="@font/mulish_bold"
+        android:padding="@dimen/content_inset_tiny"
+        android:text="PER I - 102%"
+        android:textColor="@color/mi_ruta_success"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintEnd_toStartOf="@+id/textView26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <include
+        layout="@layout/grafico_base_gz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

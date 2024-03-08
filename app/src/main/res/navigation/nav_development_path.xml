@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navFeatureDevelopmentPath"
+    app:startDestination="@id/rddFragment">
+
+    <fragment
+        android:id="@+id/rddFragment"
+        android:name="biz.belcorp.salesforce.modules.developmentpath.features.rdd.flujo.RddFragment"
+        android:label="RddFragment"
+        tools:layout="@layout/fragment_rdd" />
+
+    <dialog
+        android:id="@+id/recognitionFragment"
+        android:name="biz.belcorp.salesforce.modules.developmentpath.features.reconocimientos.superior.view.ReconocimientoASuperiorDetalleFragment"
+        android:label="ReconocimientoFragment" />
+
+</navigation>

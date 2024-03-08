@@ -1,0 +1,404 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/content_inset_normal"
+    android:layout_marginEnd="@dimen/content_inset_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCatalogSale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textStyle="bold"
+        android:textColor="@color/primary_color"
+        android:text="@string/title_venta_catalogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContainerCatalogSale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCatalogSale"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNoCatalogSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_medium"
+            android:layout_marginBottom="@dimen/content_inset_medium"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            android:textStyle="normal"
+            android:text="@string/mensaje_no_tiene_ventas"
+            android:textColor="@color/gray_5"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/clContainerCatalogSale"
+            app:layout_constraintEnd_toEndOf="@id/clContainerCatalogSale"
+            app:layout_constraintStart_toStartOf="@id/clContainerCatalogSale"
+            app:layout_constraintTop_toTopOf="@id/clContainerCatalogSale"
+            tools:text="No tiene ventas"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCatalogSale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCatalogSaleAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:textAppearance="@style/TextAppearance.DS.H5"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_headline_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="109,976" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_tiniest"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                android:textColor="@color/gray_5"
+                app:layout_constraintEnd_toEndOf="@id/tvCatalogSaleAmount"
+                app:layout_constraintStart_toStartOf="@id/tvCatalogSaleAmount"
+                app:layout_constraintTop_toBottomOf="@id/tvCatalogSaleAmount"
+                tools:ignore="UnusedAttribute"
+                tools:text="💪C18 - Pedido de Alto Valor" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTituloVentaCatalogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_less"
+                android:layout_marginTop="@dimen/content_inset_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCampaign">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon"
+                    android:layout_width="@dimen/icon_size_normal"
+                    android:layout_height="@dimen/icon_size_normal"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_venta"
+                    tools:srcCompat="@drawable/ic_venta" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCatalogSaleSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_tiniest"
+                    android:textAppearance="@style/TextAppearance.DS.Body"
+                    android:textStyle="bold"
+                    android:text="@string/title_venta_catalogo_u6c"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Venta Catálogo U6C" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clIndicators"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clTituloVentaCatalogo">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivHighValue"
+                    android:layout_width="@dimen/content_inset_less"
+                    android:layout_height="@dimen/content_inset_less"
+                    android:contentDescription="@null"
+                    android:padding="3dp"
+                    android:tint="@color/estado_positivo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_oval" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvHighValue"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_tiniest"
+                    android:textAppearance="@style/TextAppearance.DS.Caption"
+                    android:text="@string/label_venta_pedido_alto_valor"
+                    android:textColor="@color/estado_positivo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivHighValue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Pedido de Alto Valor" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLowValue"
+                    android:layout_width="@dimen/content_inset_less"
+                    android:layout_height="@dimen/content_inset_less"
+                    android:padding="3dp"
+                    android:tint="@color/estado_negativo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvLowValue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_oval" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvLowValue"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_tiniest"
+                    android:textAppearance="@style/TextAppearance.DS.Caption"
+                    android:text="@string/label_venta_pedido_bajo_valor"
+                    android:textColor="@color/estado_negativo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Pedido de Bajo Valor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCatalogSale"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_less"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clIndicators"
+                tools:listitem="@layout/item_underline_category" />
+
+            <include
+                android:id="@+id/iclMontoFacturado"
+                layout="@layout/inflate_custom_etiqueta_information"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCatalogSale" />
+
+            <include
+                android:id="@+id/iclVentaPromedioU6C"
+                layout="@layout/inflate_custom_etiqueta_information"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:maxWidth="140dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCatalogSale" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/brInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="iclMontoFacturado,iclVentaPromedioU6C" />
+
+            <include
+                android:id="@+id/iclPrimeraFacturacion"
+                layout="@layout/inflate_custom_etiqueta_information"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginBottom="@dimen/content_inset_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/iclMontoFacturado"
+                app:layout_constraintTop_toBottomOf="@id/brInformation" />
+
+            <include
+                android:id="@+id/iclUltimaFacturacion"
+                layout="@layout/inflate_custom_etiqueta_information"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginBottom="@dimen/content_inset_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iclVentaPromedioU6C"
+                app:layout_constraintTop_toBottomOf="@id/brInformation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/knownBrightPath"
+        style="@style/Widget.Button.Black"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fitsSystemWindows="true"
+        app:icon="@drawable/ic_camino_brillante"
+        android:text="@string/known_bright_path"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clContainerCatalogSale"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvGainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:text="@string/title_ganancia"
+        android:textColor="@color/magenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/knownBrightPath" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGainContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:layout_marginBottom="@dimen/content_inset_large"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGainTitle"
+        tools:visibility="gone">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNoGains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_large"
+            android:layout_marginBottom="@dimen/content_inset_large"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            android:text="@string/mensaje_no_tiene_ganancias"
+            android:textColor="@color/gray_5"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/clGainContainer"
+            app:layout_constraintEnd_toEndOf="@id/clGainContainer"
+            app:layout_constraintStart_toStartOf="@id/clGainContainer"
+            app:layout_constraintTop_toTopOf="@id/clGainContainer"
+            tools:text="No tiene ganancias"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGains"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvGainAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_headline_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="109,976" />
+
+            <androidx.emoji.widget.EmojiTextView
+                android:id="@+id/tvGainSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_tiniest"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                android:textColor="@color/gray_5"
+                app:layout_constraintEnd_toEndOf="@id/tvGainAmount"
+                app:layout_constraintStart_toStartOf="@id/tvGainAmount"
+                app:layout_constraintTop_toBottomOf="@id/tvGainAmount"
+                tools:ignore="UnusedAttribute"
+                tools:text="💰Ganancia C18" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clGainSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_less"
+                android:layout_marginTop="@dimen/content_inset_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGainSubTitle">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icGain"
+                    android:layout_width="@dimen/icon_size_normal"
+                    android:layout_height="@dimen/icon_size_normal"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_venta"
+                    tools:srcCompat="@drawable/ic_venta" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvGainSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_tiniest"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.DS.Body"
+                    android:text="@string/title_ganancia_moneda_nacional_u6c"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icGain"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/title_ganancia_moneda_nacional_u6c" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGains"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginBottom="@dimen/content_inset_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clGainSubtitle"
+                tools:listitem="@layout/item_underline_category" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

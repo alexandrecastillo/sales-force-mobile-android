@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/rdd_bg_registrada">
+
+    <ImageView
+        android:id="@+id/image_alerta_sin_reconocimiento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/text_campania_reconocimiento"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/text_campania_reconocimiento"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_campania_reconocimiento"
+        app:srcCompat="@drawable/ic_alert_red" />
+
+    <ImageView
+        android:id="@+id/image_check_reconocida"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/image_alerta_sin_reconocimiento"
+        app:layout_constraintEnd_toEndOf="@id/image_alerta_sin_reconocimiento"
+        app:layout_constraintStart_toStartOf="@id/image_alerta_sin_reconocimiento"
+        app:layout_constraintTop_toTopOf="@id/image_alerta_sin_reconocimiento"
+        app:srcCompat="@drawable/ic_check_green_rdd" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_campania_reconocimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/dark_text"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_divisor_campania_rating"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/image_alerta_sin_reconocimiento"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C12" />
+
+    <View
+        android:id="@+id/view_separador_sin_reconocimiento"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginBottom="7.5dp"
+        android:background="@color/rdd_dashboard_foco_separador"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_divisor_campania_rating"
+        app:layout_constraintStart_toStartOf="@id/guideline_divisor_campania_rating"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rating_reconocimiento_item"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="1"
+        android:theme="@style/RatingBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_reconocer_detalle"
+        app:layout_constraintStart_toEndOf="@+id/guideline_divisor_campania_rating"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_reconocer_detalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/background_layout_as_button_rdd"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/mulish_bold"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="11dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="11dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:text="@string/perfil_no_reconocida_reconocer"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_ver_mas_reconocida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/ver_mas"
+        android:textColor="@color/mi_ruta_accent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_reconocer_detalle"
+        app:layout_constraintEnd_toEndOf="@id/button_reconocer_detalle"
+        app:layout_constraintStart_toStartOf="@id/button_reconocer_detalle"
+        app:layout_constraintTop_toTopOf="@id/button_reconocer_detalle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_divisor_campania_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_reconocida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="image_check_reconocida,text_ver_mas_reconocida" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_no_reconocida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="image_alerta_sin_reconocimiento,button_reconocer_detalle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

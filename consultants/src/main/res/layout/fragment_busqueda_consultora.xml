@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="@dimen/ds_margin_normal">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="top|start"
+                    android:padding="@dimen/ds_padding_normal"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_backspace"
+                    app:tint="@color/white" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCampaign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_label"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="@+id/ivBack"
+                    tools:text="VENTA C02" />
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:layout_marginBottom="@dimen/ds_margin_normal"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvTitle"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBack"
+                    app:srcCompat="@drawable/search" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/text_buscar_consultora"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title_2"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/ivIcon"
+                    app:layout_constraintTop_toTopOf="@id/ivIcon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginStart="@dimen/ds_margin_normal"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginEnd="@dimen/ds_margin_normal"
+                android:layout_marginBottom="@dimen/ds_margin_other_2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center"
+                android:text="@string/text_completa_al_menos_una_accion"
+                android:textColor="@color/warning_message_color"
+                android:textSize="@dimen/text_size_subtitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filtrosLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/search_form_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/icon_size_medium"
+                    android:layout_marginTop="@dimen/ds_margin_other_2"
+                    android:layout_marginRight="@dimen/icon_size_medium"
+                    android:layout_marginBottom="@dimen/ds_margin_small"
+                    app:cardCornerRadius="@dimen/search_radius_none"
+                    app:cardElevation="@dimen/ds_elevation_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_consultant_code"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        app:hintTextColor="@color/gray_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConsultantCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:cursorVisible="true"
+                            android:digits="0123456789"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="start"
+                            android:hint="@string/consultant_code_hint"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textColorHint="@color/gray_label"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/icon_size_medium"
+                    android:layout_marginTop="@dimen/ds_margin_other_2"
+                    android:layout_marginRight="@dimen/icon_size_medium"
+                    android:layout_marginBottom="@dimen/ds_margin_small"
+                    android:background="@color/white"
+                    app:cardCornerRadius="@dimen/search_radius_none"
+                    app:cardElevation="@dimen/ds_elevation_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvCode">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_consultant_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        app:hintTextColor="@color/gray_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConsultantName"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="start|center_vertical"
+                            android:hint="@string/consultant_name_hint"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="text|textNoSuggestions"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textColorHint="@color/gray_label"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/icon_size_medium"
+                    android:layout_marginTop="@dimen/ds_margin_other_2"
+                    android:layout_marginRight="@dimen/icon_size_medium"
+                    android:layout_marginBottom="@dimen/ds_margin_small"
+                    android:background="@color/white"
+                    app:cardCornerRadius="@dimen/search_radius_none"
+                    app:cardElevation="@dimen/ds_elevation_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvName">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_consultant_dni"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        app:hintTextColor="@color/gray_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConsultantDocument"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/mulish_regular"
+                            android:hint="@string/identity_document"
+                            android:imeOptions="actionDone|flagNoExtractUi"
+                            android:inputType="text|textNoSuggestions"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textColorHint="@color/gray_label"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/otherFiltersLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvDocument">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llSeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleSection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilConsultantSection"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilConsultantSection"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilConsultantSection"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleSection"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etConsultantSection"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_section_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvSection">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilConsultantStatus"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilConsultantStatus"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilConsultantStatus"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleStatus"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etConsultantStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_status_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toBottomOf="@id/tilConsultantStatus" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSegment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvStatus">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llSegment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleSegment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilConsultantSegment"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilConsultantSegment"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilConsultantSegment"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleSegment"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etConsultantSegment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_segment_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvSegment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toBottomOf="@id/tilConsultantSegment" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvSegment">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilConsultantType"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilConsultantType"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilConsultantType"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleType"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etConsultantType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_type_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toBottomOf="@id/tilConsultantType" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvRequested"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvType">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llRequested"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleRequested"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilConsultantRequested"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilConsultantRequested"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilConsultantRequested"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleRequested"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etConsultantRequested"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_requested_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvRequested"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toBottomOf="@id/tilConsultantRequested" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAuthorized"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvRequested">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llAuthorized"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleAuthorized"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilAuthorized"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilAuthorized"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilAuthorized"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleAuthorized"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAuthorized"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_authorized_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvAuthorized"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toBottomOf="@id/tilAuthorized" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvResidue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/icon_size_medium"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginRight="@dimen/icon_size_medium"
+                        android:layout_marginBottom="@dimen/ds_margin_small"
+                        android:background="@color/white"
+                        app:cardCornerRadius="@dimen/search_radius_none"
+                        app:cardElevation="@dimen/ds_elevation_2"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cvAuthorized">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llResidue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/ds_padding_medium">
+
+                            <ImageView
+                                android:id="@+id/ivTriangleResidue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/ds_margin_normal"
+                                android:clickable="false"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="@id/tilConsultantResidue"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilConsultantResidue"
+                                app:srcCompat="@drawable/selector_triangle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilConsultantResidue"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="@dimen/search_radius_none"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                app:hintTextColor="@color/gray_label"
+                                app:layout_constraintEnd_toStartOf="@id/ivTriangleResidue"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etConsultantResidue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:cursorVisible="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:gravity="start"
+                                    android:hint="@string/consultant_residue_hint"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray_label_dark"
+                                    android:textColorHint="@color/gray_label"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/text_size_subtitle" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvResidue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toBottomOf="@id/tilConsultantResidue" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:id="@+id/sectionSpace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/cvSection"
+                        app:layout_constraintEnd_toEndOf="@+id/cvSection"
+                        app:layout_constraintTop_toTopOf="@+id/cvSection" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvSectionAdapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/ds_margin_normal"
+                        android:visibility="gone"
+                        app:cardElevation="@dimen/ds_elevation_4"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="@+id/sectionSpace"
+                        app:layout_constraintTop_toBottomOf="@+id/sectionSpace">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvSections"
+                            android:layout_width="@dimen/search_table_width"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnMoreFilters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/icon_size_medium"
+                    android:layout_marginTop="@dimen/ds_margin_other_2"
+                    android:layout_marginRight="@dimen/icon_size_medium"
+                    android:layout_marginBottom="@dimen/ds_margin_small"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/see_more_filters"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/text_size_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/otherFiltersLayout" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConsultantSearch"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/search_form_height_2"
+                    android:layout_marginLeft="@dimen/icon_size_medium"
+                    android:layout_marginTop="@dimen/ds_margin_other_2"
+                    android:layout_marginRight="@dimen/icon_size_medium"
+                    android:layout_marginBottom="@dimen/ds_margin_small"
+                    android:fitsSystemWindows="true"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/search_2"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_subtitle"
+                    app:backgroundTint="@color/purple"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnMoreFilters" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvConsultantSearchError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/ds_margin_small"
+                    android:layout_marginBottom="@dimen/ds_margin_small"
+                    android:fontFamily="@font/mulish_bold"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/ds_margin_normal"
+                    android:textAllCaps="true"
+                    android:textColor="@color/error_consultant_search"
+                    android:textSize="@dimen/text_size_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnConsultantSearch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/resultsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomKeyboardGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConsultantSearchKeyboard"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_form_height_2"
+            android:layout_marginLeft="@dimen/icon_size_medium"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/icon_size_medium"
+            android:layout_marginBottom="@dimen/ds_margin_small"
+            android:fitsSystemWindows="true"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/search_2"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_subtitle"
+            app:backgroundTint="@color/purple" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvConsultantSearchErrorKeyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ds_margin_small"
+            android:layout_marginBottom="@dimen/ds_margin_small"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/error_consultant_search"
+            android:textSize="@dimen/text_size_label" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

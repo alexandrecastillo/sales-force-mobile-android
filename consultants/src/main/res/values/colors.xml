@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple">#722789</color>
+
+    <color name="warning_message_color">#758da3</color>
+    <color name="error_consultant_search">#e32927</color>
+    <color name="gray_label">#661d1d26</color>
+    <color name="gray_label_dark">#1d1d26</color>
+
+    <color name="indicator_level">#6879f8</color>
+    <color name="indicator_level_light">#6879f8</color>
+
+    <color name="gris">#768DA5</color>
+    <color name="red_balance">#ed1212</color>
+
+    <color name="red">#F00</color>
+
+    <color name="separator_color">#e8e8e9</color>
+
+    <color name="background_color_consultant_level_pdv">#f9fafd</color>
+
+    <color name="color_beauty_consultant_bright">#b19260</color>
+    <color name="color_beauty_consultant_topaz">#2d7ab0</color>
+    <color name="color_beauty_consultant_pearl">#db9e8a</color>
+    <color name="color_beauty_consultant_amber">#e8b74b</color>
+    <color name="color_beauty_consultant_coral">#CD5B5B</color>
+    <color name="color_beauty_consultant_consultant">#b66fa6</color>
+
+    <color name="text_color_consultant_level_pdv">#454549</color>
+    <color name="text_color_consultant_name_pdv">#0e428d</color>
+    <color name="text_color_consultant_code_pdv">#243039</color>
+
+    <color name="colorSnackBarPermission">#768ea3</color>
+    <color name="colorButtonEditPosition">#567baf</color>
+
+    <color name="textColorIndicatorRed">#EB4444</color>
+    <color name="textColorIndicatorGreen">#3BC392</color>
+    <color name="bgColorIndicatorRed">#FEE6EC</color>
+    <color name="bgColorIndicatorGreen">#CFEFD9</color>
+
+</resources>

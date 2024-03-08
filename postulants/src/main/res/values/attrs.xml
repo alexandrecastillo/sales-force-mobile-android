@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="hint" format="string" />
+    <attr name="textSize" format="dimension" />
+    <attr name="validateIconVisible" format="boolean" />
+
+    <declare-styleable name="SelectorFecha">
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="UEditText">
+        <attr name="hint" />
+        <attr name="valid_msg" format="string" />
+        <attr name="readOnly" format="boolean" />
+        <attr name="hasPrefix" format="boolean" />
+        <attr name="validateIconVisible" />
+        <attr name="multiline" format="boolean" />
+        <attr name="placeholder" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="USpinner">
+        <attr name="hasSelection" format="boolean" />
+        <attr name="hint" />
+        <attr name="textSize" />
+        <attr name="validateIconVisible" />
+    </declare-styleable>
+
+    <declare-styleable name="UAutoCompleteTextView">
+        <attr name="hint" />
+        <attr name="textSize" />
+        <attr name="disableCopyPaste" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FlatDialog">
+        <attr name="cancelButtonStyle" format="integer" />
+        <attr name="cancelTextStyle" format="color" />
+        <attr name="confirmButtonStyle" format="integer" />
+        <attr name="confirmTextStyle" format="color" />
+    </declare-styleable>
+
+    <attr name="dotRadius" format="dimension" />
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="android:gravity" />
+        <attr name="dotRadius" />
+        <attr name="viewPagerId" format="reference" />
+        <attr name="dotPadding" format="dimension" />
+        <attr name="selectedDotColor" format="color" />
+        <attr name="unselectedDotColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorDotView">
+        <attr name="dotRadius" />
+        <attr name="dotColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomSnackbarView">
+        <attr name="textoInformativo" format="string" />
+        <attr name="textoAccion" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgressView">
+        <attr name="fontFamily" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="HeaderIconTextCustomView">
+        <attr name="hitIcon" format="integer|reference" />
+        <attr name="hitTitleSize" format="dimension" />
+        <attr name="hitDescriptionSize" format="dimension" />
+        <attr name="hitTitle" format="string" />
+        <attr name="hitTitleColor" format="color" />
+        <attr name="hitTitleFontFamily" format="reference" />
+        <attr name="hitDescription" format="string" />
+        <attr name="hitDescriptionColor" format="color" />
+        <attr name="hitDescriptionFontFamily" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FlatIconButtonCustomView">
+        <attr name="fibText" format="string" />
+        <attr name="fibTextColor" format="color" />
+        <attr name="fibTextFontFamily" format="reference" />
+        <attr name="fibIcon" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorButtonCustomView">
+        <attr name="ibText" format="string" />
+        <attr name="ibTextColor" format="color" />
+        <attr name="ibTextFontFamily" format="reference" />
+        <attr name="ibIcon" format="integer|reference" />
+        <attr name="ibBackgroundColor" format="color" />
+        <attr name="ibRippleColor" format="color" />
+        <attr name="ibOutline" format="boolean" />
+        <attr name="ibBorderRadius" format="dimension" />
+        <attr name="ibBorderSize" format="dimension" />
+        <attr name="ibBorderColor" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">@color/magenta</color>
+    <color name="colorAccent">#A0A0A0</color>
+    <color name="gray_3">#d1d1d4</color>
+
+    <color name="colorBgNoInternet">#4f0036</color>
+    <color name="colorBgInternetOk">#38be62</color>
+
+    <color name="colorPrimaryText">#2c2654</color>
+
+    <color name="colorBackgroundSplash">#2C2753</color>
+
+    <color name="colorLoadingBrandStart">#E81C36</color>
+    <color name="colorLoadingBrandCenter">#B9007E</color>
+    <color name="colorLoadingBrandEnd">#4E008E</color>
+
+    <color name="endColorBannerBillingAdvance">#3e71d1</color>
+    <color name="startColorBannerBillingAdvance">#ef8dcf</color>
+
+    <color name="colorIcon">#2f3676</color>
+
+    <color name="colorNewCycle">#39bbb1</color>
+    <color name="colorCycleNewsAlpha">#1439BBB1</color>
+
+    <color name="green_progress">#00D373</color>
+
+    <color name="colorToolbarDataReport">#768EA3</color>
+    <color name="colorToolbarUCB">#722789</color>
+    <color name="colorToolbarDefault">#000000</color>
+
+    <!-- Multi Brand colors -->
+    <color name="colorMultiBrandShadow">#A9A9AC</color>
+    <color name="colorMultiBrandFirst">#EE2737</color>
+    <color name="colorMultiBrandSecond">#772583</color>
+    <color name="colorMultiBrandThird">#BC0075</color>
+
+    <color name="colorDevelopmentPath">#A31D3A8A</color>
+    <color name="purple">#722789</color>
+    <color name="purple_70">#8f66aa</color>
+    <color name="black_70">#666666</color>
+    <color name="grey_cookies">#F6F6F6</color>
+    <color name="border_cookies">#C4C4C4</color>
+</resources>

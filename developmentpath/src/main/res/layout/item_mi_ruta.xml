@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/rdd_margin_min_less"
+    android:layout_marginTop="@dimen/rdd_margin_start_tiny_high"
+    android:layout_marginEnd="@dimen/rdd_margin_min_less"
+    android:layout_marginBottom="@dimen/ds_margin_other_1"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="@dimen/ds_padding_medium"
+    android:paddingBottom="@dimen/ds_padding_medium"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/margin_tiniest"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/expandable_height"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/franja"
+                android:layout_width="@dimen/margin_tiniest"
+                android:layout_height="match_parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/size_card_consultora_ruta_avatar"
+                android:layout_height="@dimen/size_card_consultora_ruta_avatar"
+                android:layout_marginStart="@dimen/ds_margin_normal">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_rdd_registar"
+                    android:layout_width="@dimen/button_list_large"
+                    android:layout_height="@dimen/button_list_large"
+                    android:background="@drawable/background_mi_ruta_check_visitada"
+                    android:padding="@dimen/rdd_margin_start_tiny"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_check_rdd" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ds_padding_normal"
+                android:layout_marginTop="@dimen/ds_padding_medium"
+                android:layout_marginBottom="@dimen/ds_padding_medium"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_card_consultora_ruta_nombre" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_padding_small"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_hora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_6dp"
+                        android:background="@drawable/background_rdd_hora_visita"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="center"
+                        android:minWidth="@dimen/rdd_dashboard_avatar_size"
+                        android:padding="@dimen/ds_padding_small"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:text="12:00 p. m." />
+
+                    <LinearLayout
+                        android:id="@+id/ll_segmento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ds_margin_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/punto_segmento"
+                            android:layout_width="@dimen/ds_margin_small"
+                            android:layout_height="@dimen/ds_margin_small"
+                            android:layout_marginEnd="@dimen/ds_margin_small" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_segmento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/mulish_regular"
+                            android:maxLines="1"
+                            tools:text="C3" />
+
+                        <include
+                            android:id="@+id/includeCantidadProductosPPU"
+                            layout="@layout/layout_cantidad_productos_ppu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ds_margin_small"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_exito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ds_margin_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/punto_exito"
+                            android:layout_width="@dimen/ds_margin_small"
+                            android:layout_height="@dimen/ds_margin_small"
+                            android:layout_marginEnd="@dimen/ds_margin_small" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_exito"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_small"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_seccion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_image_result_visit"
+                            android:layout_height="@dimen/size_image_result_visit"
+                            app:srcCompat="@drawable/ic_rdd_nivel" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_seccion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ds_margin_small"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/mulish_regular"
+                            android:maxLines="1"
+                            android:textColor="@color/rdd_secondary_text" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_socia_nueva"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/rdd_margin_min_less"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_image_result_visit"
+                            android:layout_height="@dimen/size_image_result_visit"
+                            app:srcCompat="@drawable/ic_rdd_nueva" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_nueva"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ds_margin_small"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/mulish_regular"
+                            android:maxLines="1"
+                            android:textColor="@color/rdd_secondary_text" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_small"
+                    android:background="@drawable/background_rdd_tips_desarrollo_true"
+                    android:paddingLeft="@dimen/ds_margin_small"
+                    android:paddingTop="@dimen/rdd_margin_start_tiny"
+                    android:paddingRight="@dimen/ds_margin_small"
+                    android:paddingBottom="@dimen/rdd_margin_start_tiny">
+
+                    <TextView
+                        android:id="@+id/tvTipsDesarrollo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:textSize="@dimen/size_tv_rechazar"
+                        tools:text="Comparte Catálogo Digital" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_realizada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_small"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_image_result_visit"
+                        android:layout_height="@dimen/size_image_result_visit"
+                        app:srcCompat="@drawable/ic_rdd_registrar" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/ds_margin_medium"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:text="@string/mi_ruta_visita_registrada"
+                        android:textColor="@color/colorButtonVariant" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_planifica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_small"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_image_result_visit"
+                        android:layout_height="@dimen/size_image_result_visit"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_rdd_calendario_azul" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_planificar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ds_margin_medium"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/mulish_regular"
+                        android:paddingTop="@dimen/ds_margin_other_1"
+                        android:paddingBottom="@dimen/ds_margin_other_1"
+                        android:text="@string/mi_ruta_planificar_seccion_no_planificadas"
+                        android:textColor="@color/rdd_accent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:text="@string/mi_ruta_planificar_tail_seccion_no_planificadas"
+                        android:textColor="@color/rdd_accent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ds_margin_normal"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_ic_maps"
+                    android:layout_width="@dimen/rdd_margin_path_large"
+                    android:layout_height="@dimen/rdd_margin_path_large"
+                    android:layout_marginEnd="@dimen/ds_margin_small"
+                    android:background="?android:selectableItemBackground"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/icon_ruta_map" />
+
+                <View
+                    android:id="@+id/separador_mapa_menu"
+                    android:layout_width="@dimen/ds_margin_small"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_mostrar_menu"
+                    android:layout_width="@dimen/rdd_margin_path_large"
+                    android:layout_height="@dimen/rdd_margin_path_large"
+                    android:background="?android:selectableItemBackground"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_rdd_mostrar_menu" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Inicio" android:id="@+id/action_home" android:icon="@drawable/icon_home" android:visible="false"/>
+    <item android:title="Buscar" android:id="@+id/action_search" android:icon="@drawable/icon_search_consultant" android:visible="false"/>
+    <item android:title="Pedidos Web" android:id="@+id/orders_web" android:icon="@drawable/icon_orders" android:visible="false"/>
+    <item android:title="Más" android:id="@+id/plus" android:icon="@drawable/icon_menu" android:visible="false"/>
+
+</menu>

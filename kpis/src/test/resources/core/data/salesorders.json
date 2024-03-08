@@ -1,0 +1,148 @@
+{
+  "KpiSalesOrdersV2": [
+    {
+      "campaign": "202003",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "profile": "SE",
+      "sales": {
+        "net_sale_real": 4878124,
+        "net_sale_goal": 6756900,
+        "fulfillment_net_sales_percentage": 0.722,
+        "catalog_sale": 6359282,
+        "catalog_sale_goal": 6756900,
+        "fulfillment_catalog_sales_percentage": 0.722,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "Pedidos Bajo Valor",
+            "amount": 0
+          },
+          {
+            "pos": 1,
+            "range": "Pedidos Alto Valor",
+            "amount": 0
+          },
+          {
+            "pos": 2,
+            "range": "Pedidos Alto Valor Plus",
+            "amount": 0
+          }
+        ]
+      },
+      "orders": {
+        "real": 75,
+        "goal": 80,
+        "high_value_orders": 0,
+        "low_value_orders": 75,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "Pedidos Bajo Valor",
+            "quantity": 75
+          },
+          {
+            "pos": 1,
+            "range": "Pedidos Alto Valor",
+            "quantity": 0
+          },
+          {
+            "pos": 2,
+            "range": "Pedidos Alto Valor Plus",
+            "quantity": 0
+          }
+        ],
+        "average_amount": 65041.65,
+        "fulfillment_order_percentage": 0.937,
+        "fulfillment_order_average_percentage": 0.7700768103716201
+      },
+      "activity": {
+        "percentage": 0.806,
+        "goal": 0,
+        "fulfillment_percentage": 0,
+        "pegs": 18
+      },
+      "actives": {
+        "initials": 96,
+        "finals": 93,
+        "finals_lastyear": 95,
+        "retention_percentage": 0.979,
+        "retention_fulfillment_percentage": 0,
+        "retention_goal": 0
+      }
+    },
+    {
+      "campaign": "202004",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "profile": "SE",
+      "sales": {
+        "net_sale_real": 4572924,
+        "net_sale_goal": 7048669,
+        "fulfillment_net_sales_percentage": 0.649,
+        "catalog_sale": 5891425,
+        "catalog_sale_goal": 7048669,
+        "fulfillment_catalog_sales_percentage": 0.649,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "Pedidos Bajo Valor",
+            "amount": 0
+          },
+          {
+            "pos": 1,
+            "range": "Pedidos Alto Valor",
+            "amount": 0
+          },
+          {
+            "pos": 2,
+            "range": "Pedidos Alto Valor Plus",
+            "amount": 0
+          }
+        ]
+      },
+      "orders": {
+        "real": 78,
+        "goal": 83,
+        "high_value_orders": 0,
+        "low_value_orders": 78,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "Pedidos Bajo Valor",
+            "quantity": 78
+          },
+          {
+            "pos": 1,
+            "range": "Pedidos Alto Valor",
+            "quantity": 0
+          },
+          {
+            "pos": 2,
+            "range": "Pedidos Alto Valor Plus",
+            "quantity": 0
+          }
+        ],
+        "average_amount": 58627.23,
+        "fulfillment_order_percentage": 0.94,
+        "fulfillment_order_average_percentage": 0.6903516229499266
+      },
+      "activity": {
+        "percentage": 0.897,
+        "goal": 0,
+        "fulfillment_percentage": 0,
+        "pegs": 9
+      },
+      "actives": {
+        "initials": 93,
+        "finals": 87,
+        "finals_lastyear": 95,
+        "retention_percentage": 0.916,
+        "retention_fulfillment_percentage": 0,
+        "retention_goal": 0
+      }
+    }
+  ]
+}

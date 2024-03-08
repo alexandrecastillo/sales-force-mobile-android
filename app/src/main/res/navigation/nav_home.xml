@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeFragment">
+
+    <include app:graph="@navigation/nav_credit_inquiry" />
+    <include app:graph="@navigation/nav_billing" />
+    <include app:graph="@navigation/nav_kpi_detail" />
+    <include app:graph="@navigation/nav_development_path" />
+    <include app:graph="@navigation/nav_consultants" />
+    <include app:graph="@navigation/nav_development_material" />
+    <include app:graph="@navigation/nav_orders" />
+    <include app:graph="@navigation/nav_postulants" />
+    <include app:graph="@navigation/nav_virtual_methodology" />
+    <include app:graph="@navigation/nav_calculator" />
+    <include app:graph="@navigation/nav_bright_path_indicator" />
+    <include app:graph="@navigation/nav_map" />
+    <include app:graph="@navigation/nav_notification" />
+    <include app:graph="@navigation/nav_terms_conditions" />
+    <include app:graph="@navigation/nav_digital" />
+    <include app:graph="@navigation/nav_inspires_program" />
+    <include app:graph="@navigation/nav_postulant_evaluation" />
+    <include app:graph="@navigation/nav_bright_path_change_level" />
+    <include app:graph="@navigation/nav_my_partners" />
+
+    <action
+        android:id="@+id/globalToCreditInquiry"
+        app:destination="@id/navFeatureCreditInquiry"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/globalToSideMenuFragment"
+        app:destination="@+id/sideMenuFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/globalToDevelopmentMaterialFragment"
+        app:destination="@+id/navFeatureDevelopmentMaterial"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/globalToWebPageFragment"
+        app:destination="@+id/webPageFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/globalToLoginActivity"
+        app:destination="@+id/loginActivity"
+        app:launchSingleTop="true" />
+
+    <action
+        android:id="@+id/globalToChatBotActivity"
+        app:destination="@+id/chatBotActivity"
+        app:launchSingleTop="true" />
+
+    <action
+        android:id="@+id/globalToBilling"
+        app:destination="@id/navFeatureBilling" />
+
+
+    <action
+        android:id="@+id/globalToKpiDetail"
+        app:destination="@id/navFeatureKpiDetail" />
+
+    <action
+        android:id="@+id/globalToPostulants"
+        app:destination="@id/navFeaturePostulants" />
+
+    <action
+        android:id="@+id/globalToPostulantEvaluation"
+        app:destination="@id/navFeaturePostulantEvaluation"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/globalToDevelopmentPathFragment"
+        app:destination="@id/navFeatureDevelopmentPath"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/actionGoToBrightPathIndicator"
+        app:destination="@+id/navFeatureBrightPathIndicator" />
+
+    <action
+        android:id="@+id/actionGoToInspiresProgramFragment"
+        app:destination="@id/navFeatureInspiresProgram"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/actionGoToBrightPathChangeLevelFragment"
+        app:destination="@id/navBrightPathChangeLevel"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/actionGoToMyPartnersFragment"
+        app:destination="@id/navMyPartners"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment" />
+
+
+    <action
+        android:id="@+id/globalToMapFeature"
+        app:destination="@+id/navFeatureConsultantOnMap" />
+
+    <action
+        android:id="@+id/globalToNotificationFeature"
+        app:destination="@+id/nav_notification" />
+
+    <action
+        android:id="@+id/globalToNewsFragment"
+        app:destination="@+id/newsFragment" />
+
+    <action
+        android:id="@+id/globalToTermsConditionsDialogFragment"
+        app:destination="@id/linkUneteDialogFragment" />
+
+    <action
+        android:id="@+id/globalToBlockSEDialogFragment"
+        app:destination="@id/linkBlockedDialogFragment" />
+
+    <action
+        android:id="@+id/globalToRecognitionFragment"
+        app:destination="@+id/rddRecognitionFragment" />
+
+    <action
+        android:id="@+id/globalToTermsConditionsFragment"
+        app:destination="@+id/navFeatureTermsConditions"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/homeFragment" />
+
+    <action
+        android:id="@+id/globalToDigitalFragment"
+        app:destination="@id/navFeatureDigital" />
+
+    <action
+        android:id="@+id/navToCalculator"
+        app:destination="@id/navFeatureCalculator"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment"/>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="biz.belcorp.salesforce.base.features.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/sideMenuFragment"
+        android:name="biz.belcorp.salesforce.base.features.home.menu.sidemenu.SideMenuFragment"
+        android:label="SideMenuFragment"
+        tools:layout="@layout/fragment_side_menu">
+
+        <action
+            android:id="@+id/menuToVirtualMethodologyFragment"
+            app:destination="@+id/navFeatureVirtualMethodology"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/menuToDevelopmentMaterialFragment"
+            app:destination="@+id/navFeatureDevelopmentMaterial"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/sideMenuFragment" />
+
+        <action
+            android:id="@+id/menuToTermsConditionsFragment"
+            app:destination="@+id/navFeatureTermsConditions"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/sideMenuFragment" />
+
+        <action
+            android:id="@+id/menuToTermsConditionsDialogFragment"
+            app:destination="@id/linkUneteDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/sideMenuFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/webPageFragment"
+        android:name="biz.belcorp.salesforce.base.features.webpage.WebPageFragment"
+        android:label="WebPageFragment"
+        tools:layout="@layout/fragment_web_page">
+
+        <argument
+            android:name="topic"
+            android:defaultValue="NONE"
+            app:argType="biz.belcorp.salesforce.core.domain.usecases.browser.WebTopic"
+            app:nullable="false" />
+
+    </fragment>
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="biz.belcorp.salesforce.modules.auth.features.LoginActivity"
+        android:label="LoginActivity"
+        tools:layout="@layout/activity_login">
+
+        <argument
+            android:name="message"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+    </activity>
+
+    <activity
+        android:id="@+id/chatBotActivity"
+        android:name="biz.belcorp.salesforce.modules.consultants.features.chatbot.ChatBotActivity"
+        android:label="ChatBotActivity" />
+
+    <dialog
+        android:id="@+id/newsFragment"
+        android:name="biz.belcorp.salesforce.messaging.features.news.NewsFragment"
+        android:label="NewsFragment" />
+
+    <dialog
+        android:id="@+id/rddRecognitionFragment"
+        android:name="biz.belcorp.salesforce.modules.developmentpath.features.reconocimientos.superior.view.ReconocimientoASuperiorDetalleFragment"
+        android:label="ReconocimientoFragment" />
+
+    <dialog
+        android:id="@+id/linkUneteDialogFragment"
+        android:name="biz.belcorp.salesforce.modules.termsconditions.features.dialog.fragment.LinkUneteDialogFragment"
+        android:label="LinkUneteDialogFragment"
+        tools:layout="@layout/layout_link_se_dialog" />
+
+    <dialog
+        android:id="@+id/linkBlockedDialogFragment"
+        android:name="biz.belcorp.salesforce.modules.termsconditions.features.dialog.fragment.LinkBlockedDialogFragment"
+        android:label="linkBlockedDialogFragment"
+        tools:layout="@layout/layout_link_se_blocked_dialog" />
+
+</navigation>

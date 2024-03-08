@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/ds_padding_normal"
+        android:paddingEnd="@dimen/ds_padding_normal"
+        android:scrollbars="none"
+        tools:itemCount="6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_segment_progress" />
+
+    <include
+        android:id="@+id/billingFooter"
+        layout="@layout/include_section_go_billing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

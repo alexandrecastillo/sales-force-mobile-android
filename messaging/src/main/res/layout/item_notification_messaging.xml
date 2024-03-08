@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemNotification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:padding="@dimen/content_inset_normal">
+
+    <biz.belcorp.mobile.components.design.indicatorheader.IndicatorImage
+        android:id="@+id/imgNotification"
+        android:layout_width="@dimen/content_inset_large"
+        android:layout_height="@dimen/content_inset_large"
+        app:indicator_disableAlphaColor="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:indicator_backgroundColor="@color/magenta"
+        tools:indicator_icon="@drawable/ic_notification"
+        tools:indicator_iconColor="@color/white" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/messageNotification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgNotification"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/edt_password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timeNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        app:layout_constraintEnd_toEndOf="@id/messageNotification"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/messageNotification"
+        app:layout_constraintTop_toBottomOf="@id/messageNotification"
+        tools:text="@string/dialogs_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

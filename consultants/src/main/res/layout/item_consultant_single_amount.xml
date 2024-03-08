@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/content_inset_less">
+
+    <include
+        android:id="@+id/includedContentItemViewConsultantSingleAmount"
+        layout="@layout/content_item_view_consultant_single_amount" />
+
+</com.google.android.material.card.MaterialCardView>

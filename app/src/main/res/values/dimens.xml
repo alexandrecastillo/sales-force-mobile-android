@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="splash_text_margin_bottom">44dp</dimen>
+    <dimen name="splash_cloud_margin_end">36dp</dimen>
+    <dimen name="splash_cloud_margin_top">72dp</dimen>
+
+    <dimen name="loading_height">2dp</dimen>
+
+    <dimen name="ds_height_separator">2dp</dimen>
+    <dimen name="ds_icon_small_size_16dp">16dp</dimen>
+    <dimen name="ds_padding_empty">36dp</dimen>
+    <dimen name="ds_label_digital_size">56dp</dimen>
+    <dimen name="ds_stroke_width_1">1dp</dimen>
+    <dimen name="ds_divider_horizontal_height">1dp</dimen>
+    <dimen name="ds_default_elevation">@dimen/ds_elevation_4</dimen>
+
+    <dimen name="ds_default_inset_multi_brand">@dimen/content_inset_less</dimen>
+
+    <dimen name="banner_min_height">78dp</dimen>
+
+    <dimen name="uncaught_img_width">160dp</dimen>
+    <dimen name="uncaught_img_height">160dp</dimen>
+    <dimen name="min_item_height">56dp</dimen>
+    <dimen name="uncaught_title_margin_top">21.5dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+
+    <dimen name="dp90">90dp</dimen>
+</resources>

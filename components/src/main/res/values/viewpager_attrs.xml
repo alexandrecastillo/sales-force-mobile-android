@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IndicatorDotView">
+        <attr name="idv_dotRadius" format="dimension" />
+        <attr name="dotColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="android:gravity" />
+        <attr name="vpi_dotRadius" format="dimension" />
+        <attr name="viewPagerId" format="reference" />
+        <attr name="dotPadding" format="dimension" />
+        <attr name="selectedDotColor" format="color" />
+        <attr name="unselectedDotColor" format="color" />
+    </declare-styleable>
+
+</resources>

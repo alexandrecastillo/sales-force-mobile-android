@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtSeguroSocial"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        custom:hint="@string/unete_paso1_seguro_social"
+        custom:validateIconVisible="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContactPostulant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        android:background="@drawable/background_contact_postulant"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/margin_18dp"
+            android:layout_marginTop="18dp"
+            android:contentDescription="@string/app_name"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent"
+            custom:srcCompat="@drawable/ic_advertencia" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_18dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:fontFamily="@font/mulish_bold"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/message_contact_postulant"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_14sp"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toStartOf="@+id/ivWhatsApp"
+            custom:layout_constraintStart_toEndOf="@+id/imageView3"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPhoneNumber"
+            android:layout_width="@dimen/margin_32dp"
+            android:layout_height="@dimen/margin_32dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/app_name"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintTop_toTopOf="parent"
+            custom:srcCompat="@drawable/ic_phone" />
+
+        <ImageView
+            android:id="@+id/ivWhatsApp"
+            android:layout_width="@dimen/margin_32dp"
+            android:layout_height="@dimen/margin_32dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/app_name"
+            custom:layout_constraintEnd_toStartOf="@+id/ivPhoneNumber"
+            custom:layout_constraintTop_toTopOf="@+id/ivPhoneNumber"
+            custom:srcCompat="@drawable/ic_whatsapp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/lyBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtPrimerNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/primer_nombre" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtSegundoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/segundo_nombre" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtApellidoPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/apellito_paterno" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtApellidoMaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/apellito_materno" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UDatePicker
+            android:id="@+id/txtFechaNacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/fecha_nacimiento"
+            custom:readOnly="true" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.UAutoCompleteTextView
+            android:id="@+id/txtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            custom:hint="@string/correo" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.UAutoCompleteTextView
+            android:id="@+id/txtCorreoRepeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            custom:disableCopyPaste="true"
+            custom:hint="@string/correo_repeat" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+            android:id="@+id/spnGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/genero" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_obligatorio_label"
+            android:text="@string/campos_obligatorios" />
+
+    </LinearLayout>
+
+</LinearLayout>

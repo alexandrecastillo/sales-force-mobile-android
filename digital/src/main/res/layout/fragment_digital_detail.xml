@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <biz.belcorp.mobile.components.design.selector.bar.view.SelectorBar
+        android:id="@+id/selector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:theme="@style/DigitalFilterTheme"
+        android:visibility="gone"
+        app:bgColorSelectedStatus="?attr/bgSelectorBarSelectedColor"
+        app:selectorBorderRadius="?attr/dimenBorderRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/cfvDigital"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selector" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/detailGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="selector, cfvDigital"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

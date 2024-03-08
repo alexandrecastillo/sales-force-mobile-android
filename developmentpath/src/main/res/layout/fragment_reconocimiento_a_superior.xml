@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rdd_dashboard_foco_seccion_header">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/notificacion_calificar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_circle_close" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:text="@string/reconocimiento_detalle_titulo"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+        <ImageView
+            android:id="@+id/image_avatar_borde"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_dialog_circle_white"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question" />
+
+        <View
+            android:id="@+id/view_separador_superior"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_separador_inferior"
+            app:layout_constraintTop_toTopOf="@id/image_avatar_borde" />
+
+        <View
+            android:id="@+id/view_separador_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/image_avatar_borde"
+            app:layout_constraintTop_toBottomOf="@id/view_separador_superior" />
+
+        <View
+            android:id="@+id/layout_contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_reconocimiento"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_separador_superior" />
+
+        <ImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="3.5dp"
+            android:background="@drawable/background_gradient_avatar"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/image_avatar_borde"
+            app:layout_constraintEnd_toEndOf="@+id/image_avatar_borde"
+            app:layout_constraintStart_toStartOf="@+id/image_avatar_borde"
+            app:layout_constraintTop_toTopOf="@+id/image_avatar_borde" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_iniciales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/image_avatar_borde"
+            app:layout_constraintEnd_toEndOf="@id/image_avatar_borde"
+            app:layout_constraintStart_toStartOf="@id/image_avatar_borde"
+            app:layout_constraintTop_toTopOf="@id/image_avatar_borde"
+            tools:text="RM" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_recognized_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/rdd_evento"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_avatar_borde"
+            tools:text="María Meza" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_recognized_rol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:textColor="@color/rdd_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recognized_name"
+            tools:text="GZ - 3115" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_sub_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:text="@string/reconocimmiento_detalle_pregunta"
+            android:textColor="@color/gris_escala_5"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/layout_contenedor"
+            app:layout_constraintStart_toStartOf="@+id/layout_contenedor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recognized_rol" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingbar_recognized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:foregroundGravity="center"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_question" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/poco"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/ratingbar_recognized"
+            app:layout_constraintTop_toBottomOf="@+id/ratingbar_recognized" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/regular"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ratingbar_recognized"
+            app:layout_constraintStart_toStartOf="@+id/ratingbar_recognized"
+            app:layout_constraintTop_toBottomOf="@+id/ratingbar_recognized" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/alto"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ratingbar_recognized"
+            app:layout_constraintTop_toBottomOf="@+id/ratingbar_recognized" />
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_calificar_visita_message"
+            android:fontFamily="@font/mulish_regular"
+            android:hint="@string/reconocimientog_gz_hint"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gris_escala_3"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/layout_contenedor"
+            app:layout_constraintStart_toStartOf="@id/layout_contenedor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_medium"
+            tools:ignore="Autofill,TextFields" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:paddingBottom="30dp"
+            android:text="@string/reconocimiento_gz_anonimo"
+            android:textColor="@color/gris_escala_5"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_reconocer"
+            app:layout_constraintEnd_toEndOf="@id/layout_contenedor"
+            app:layout_constraintStart_toStartOf="@id/layout_contenedor"
+            app:layout_constraintTop_toBottomOf="@+id/et_message" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reconocer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            style="@style/Widget.Button.Black.Variant"
+            android:fontFamily="@font/mulish_regular"
+            android:letterSpacing="0.03"
+            android:text="@string/reconocer"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_message"
+            tools:ignore="UnusedAttribute"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="show_all">Todos</string>
+    <string name="codigo">Código</string>
+    <string name="monto_total">Monto Total</string>
+    <string name="estado_pedido">Estado pedido</string>
+    <string name="origen">Origen</string>
+    <string name="bloqueado">Bloqueado</string>
+    <string name="saldo_pendiente">Saldo Pendiente</string>
+
+    <string name="pedido_origen_web">Web</string>
+    <string name="pedido_origen_digitacion">Digitación Distribuida</string>
+    <string name="pedido_bloquear">BLOQUEAR</string>
+    <string name="pedido_desbloquear">DESBLOQUEAR</string>
+    <string name="pedido_ver_ficha">VER FICHA</string>
+    <string name="pedido_llamar">LLAMAR</string>
+    <string name="pedido_title">PEDIDOS WEB</string>
+    <string name="pedido_title_filtro">FILTRAR</string>
+    <string name="pedido_aplicar_filtros">Aplicar Filtros</string>
+    <string name="pedido_filtros">Ver Filtros</string>
+    <string name="pedido_mensaje_no_resultados">NO SE ENCONTRARON CONSULTORAS\nCON LOS FILTROS APLICADOS</string>
+    <string name="pedido_mensaje_resultados">RESULTADO DE LOS FILTROS APLICADOS</string>
+    <string name="pedido_fecha_hint">DD/MM/AAAA</string>
+    <string name="pedido_nombre_hint">Nombre de Consultora</string>
+
+    <string name="see_more_filters">Ver más filtros</string>
+    <string name="hide_filters">Ocultar filtros</string>
+
+    <string name="consultant_segment_hint">Segmento</string>
+    <string name="consultant_code_hint">Código de Consultora</string>
+    <string name="consultant_origen_hint">Origen</string>
+    <string name="consultant_section_hint">Sección</string>
+    <string name="consultant_status_hint">Estado</string>
+    <string name="consultant_tipo_hint">Tipo de Filtro</string>
+    <string name="consultant_campania_hint">Campaña</string>
+    <string name="consultant_residue_hint">Saldo</string>
+    <string name="order_web_hint_campania">Campaña</string>
+    <string name="order_web_hint_etTipoFiltro">Tipo de Filtro</string>
+    <string name="order_web_hint_section">Sección</string>
+    <string name="order_web_hint_status">Estado</string>
+    <string name="order_web_hint_date_from">Fecha desde</string>
+    <string name="order_web_hint_date_to">Fecha hasta</string>
+    <string name="order_web_hint_source">Origen</string>
+    <string name="order_web_hint_code">Código de Consultora</string>
+    <string name="order_web_hint_name">Nombre de Consultora</string>
+    <string name="order_web_hint_segment">Segmento</string>
+
+    <string name="resultados_total">Total de pedidos web: %d</string>
+    <string name="resultados_total_monto_minimo">Pedidos por debajo del monto mínimo: %d</string>
+
+    <string name="campania_tipo_v">VENTA %s</string>
+    <string name="campania_tipo_f">FACTURACIÓN %s</string>
+
+</resources>

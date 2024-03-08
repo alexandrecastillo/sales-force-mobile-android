@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/icon_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/title_dream"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/add_dream_title"
+        android:textAppearance="@style/TextAppearance.DS.H5"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_close"
+        app:layout_constraintEnd_toStartOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icon_close" />
+
+    <TextView
+        android:id="@+id/what_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/what_your_dream_title"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/title_dream"
+        app:layout_constraintTop_toBottomOf="@+id/icon_close" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_dream_reason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:maxHeight="150dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_text"
+        android:textSize="@dimen/text_size_body"
+        android:maxLength="280"
+        android:gravity="top"
+        android:hint="@string/dream_description"
+        android:background="@drawable/box_edit_text_black"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/what_title"
+        app:layout_constraintTop_toBottomOf="@+id/what_title" />
+
+    <TextView
+        android:id="@+id/time_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/time_to_accomplish"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/title_dream"
+        app:layout_constraintTop_toBottomOf="@+id/edt_dream_reason" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_amount_accomplish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box_edit_text_black"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_text"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/what_title"
+        app:layout_constraintTop_toBottomOf="@+id/time_title" />
+
+    <TextView
+        android:id="@+id/campaings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/campaings_achieve"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/title_dream"
+        app:layout_constraintTop_toBottomOf="@+id/edt_amount_accomplish" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box_edit_text_black"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/title_dream"
+        app:layout_constraintTop_toBottomOf="@+id/campaings">
+
+        <Spinner
+            android:id="@+id/spinner_campaigns"
+            style="@style/spinner_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/comments"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/title_dream"
+        app:layout_constraintTop_toBottomOf="@+id/container_spinner" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_comments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/box_edit_text_black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_text"
+        android:textSize="@dimen/text_size_body"
+        android:maxHeight="150dp"
+        android:minHeight="80dp"
+        android:maxLength="280"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:hint="@string/add_comment"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/what_title"
+        app:layout_constraintTop_toBottomOf="@+id/comments" />
+
+    <Button
+        android:id="@+id/btn_save_accept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/save_dream"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/icon_close"
+        app:layout_constraintStart_toStartOf="@+id/title_dream"
+        app:layout_constraintTop_toBottomOf="@+id/edt_comments" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

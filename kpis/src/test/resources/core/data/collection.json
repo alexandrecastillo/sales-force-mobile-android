@@ -1,0 +1,72 @@
+{
+  "KpiCollection": [
+    {
+      "campaign": "202003",
+      "profile": "SE",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "percentage": 13.45,
+      "orders": {
+        "total_gained": 18.2,
+        "minimal_collection_percentage": 18.2,
+        "total_collected": 18,
+        "total_orders": 18,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "MENOR A 370",
+            "collected": 54,
+            "total": 70
+          },
+          {
+            "pos": 1,
+            "range": "MAYOR A 370",
+            "collected": 54,
+            "total": 70
+          },
+          {
+            "pos": 2,
+            "range": "MAYOR A 600",
+            "collected": 54,
+            "total": 70
+          }
+        ]
+      }
+    },
+    {
+      "campaign": "202004",
+      "profile": "SE",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "percentage": 13.45,
+      "orders": {
+        "total_gained": 18.2,
+        "minimal_collection_percentage": 18.2,
+        "total_collected": 18,
+        "total_orders": 18,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "MENOR A 370",
+            "collected": 54,
+            "total": 70
+          },
+          {
+            "pos": 1,
+            "range": "MAYOR A 370",
+            "collected": 54,
+            "total": 70
+          },
+          {
+            "pos": 2,
+            "range": "MAYOR A 600",
+            "collected": 54,
+            "total": 70
+          }
+        ]
+      }
+    }
+  ]
+}

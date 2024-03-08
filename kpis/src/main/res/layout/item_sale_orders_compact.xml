@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:background="@drawable/bg_sale_orders_profit"
+        app:layout_constraintEnd_toStartOf="@id/glGuide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_profit" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:textAppearance="@style/TextAppearance.DS.Base"
+            android:textColor="@color/textColorPrimaryVariant"
+            app:layout_constraintEnd_toEndOf="@id/ivIcon"
+            app:layout_constraintStart_toStartOf="@id/ivIcon"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon"
+            tools:text="Venta Catálogo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDescriptionIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimaryVariant"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitleIndicator"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleIndicator"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleIndicator"
+            tools:text="$90,000" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/clMainInfoContainer"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/content_inset_small"
+        app:layout_constraintBottom_toBottomOf="@id/clMainInfoContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glGuide"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clGoalContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            app:layout_constraintBottom_toTopOf="@id/clFulfillment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <include layout="@layout/include_title_description_bottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clFulfillment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            android:layout_marginBottom="@dimen/content_inset_tiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clGoalContainer"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <include layout="@layout/include_sale_orders_progress" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleRanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clMainInfoContainer"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:text="Detalle de Pedidos"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRanges"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleRanges"
+        tools:listitem="2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/rangeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvTitleRanges,rvRanges" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorCabecera"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@color/rdd_accent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="@dimen/content_inset_less">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_development_path_header_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="@+id/btn_back"
+            tools:text="Rutas de Desarrollo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_campaign_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/mulish_regular"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/indicator_detail_campaign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Venta C-15" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/rdd_dashboard_avatar_size"
+                android:layout_height="@dimen/rdd_dashboard_avatar_size"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/rdd_background_color_avatar"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textInicialesCabecera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_bold"
+                    android:textColor="@color/colorIconRdd"
+                    android:textSize="@dimen/text_size_headline_5"
+                    android:layout_gravity="center"
+                    tools:text="CS" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_title_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/cl_image_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center_horizontal"
+                android:minHeight="@dimen/rdd_text_min_height"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="Carina Saavedra" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:gravity="center_horizontal"
+                android:minHeight="@dimen/rdd_text_min_height"
+                android:text="@string/rdd_dashboard_subtitle_new"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                tools:text="Bienvenida a tu Ruta de Desarrollo" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_button_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ll_title_container"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title_container">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_user_role_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:minHeight="@dimen/rdd_text_min_height"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                android:maxLines="2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_ver_mi_ruta"
+                app:layout_constraintEnd_toStartOf="@+id/btn_ver_mi_ruta"
+                tools:text="Gerente de zona" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_user_role_sub_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="start"
+                android:maxLines="2"
+                android:minHeight="@dimen/rdd_text_min_height"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_role_info"
+                app:layout_constraintEnd_toStartOf="@+id/btn_ver_mi_ruta"
+                tools:text="Zona:1014" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ver_mi_ruta"
+                style="@style/Widget.Button.Blue.Rounded.R8.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:enabled="false"
+                android:fontFamily="@font/mulish_regular"
+                android:letterSpacing="@dimen/rdd_dashboard_line_spacing"
+                android:text="@string/rdd_dashboard_btn_ver_mi_ruta"
+                android:textSize="@dimen/text_button_ruta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

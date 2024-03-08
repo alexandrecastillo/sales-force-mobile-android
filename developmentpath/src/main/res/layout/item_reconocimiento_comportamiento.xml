@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/content_inset_small"
+    android:layout_marginTop="@dimen/content_inset_tiniest"
+    android:layout_marginEnd="@dimen/content_inset_small"
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/ds_radius_2"
+    app:cardElevation="@dimen/ds_elevation_4"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/content_inset_small"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewIcono"
+            android:layout_width="@dimen/icon_size_big"
+            android:layout_height="@dimen/icon_size_big"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/content_inset_less"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/icon_hands" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_regular"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_body"
+            tools:text="@string/rdd_reconocimiento_visita_clientes" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

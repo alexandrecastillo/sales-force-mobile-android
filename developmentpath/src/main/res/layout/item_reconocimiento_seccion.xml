@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pgbPorcentaje"
+        android:layout_width="@dimen/porcentaje_chart_size"
+        android:layout_height="@dimen/porcentaje_chart_size"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_medium"
+        app:cpb_background_progressbar_color="@color/gray_3"
+        app:cpb_background_progressbar_width="@dimen/porcentaje_chart_progress_width"
+        app:cpb_progressbar_color="@color/estado_positivo"
+        app:cpb_progressbar_width="@dimen/porcentaje_chart_progress_width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:cpb_progress="50" />
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/ds_icon_small_size"
+        android:layout_height="@dimen/ds_icon_small_size"
+        android:layout_margin="@dimen/ds_margin_medium"
+        android:contentDescription="@string/accept"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/pgbPorcentaje"
+        app:layout_constraintEnd_toEndOf="@+id/pgbPorcentaje"
+        app:layout_constraintStart_toStartOf="@+id/pgbPorcentaje"
+        app:layout_constraintTop_toTopOf="@+id/pgbPorcentaje"
+        app:srcCompat="@drawable/ic_comportamiento_1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtPorcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_other_1"
+        android:fontFamily="@font/mulish_black"
+        android:textColor="@color/estado_positivo"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
+        app:layout_constraintStart_toEndOf="@+id/pgbPorcentaje"
+        app:layout_constraintTop_toTopOf="@+id/pgbPorcentaje"
+        tools:text="100%" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_other_1"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="@+id/pgbPorcentaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pgbPorcentaje"
+        app:layout_constraintTop_toBottomOf="@+id/txtPorcentage"
+        tools:text="@string/reconociminto_seccion_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

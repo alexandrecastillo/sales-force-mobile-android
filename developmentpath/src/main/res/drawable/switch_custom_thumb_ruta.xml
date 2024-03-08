@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/mi_ruta_switch_thumb_shadow" />
+            <corners android:radius="28dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="36dp" />
+            <size
+                android:width="@dimen/switch_thumb_width"
+                android:height="@dimen/switch_thumb_height" />
+        </shape>
+    </item>
+</layer-list>

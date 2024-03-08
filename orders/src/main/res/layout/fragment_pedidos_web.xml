@@ -1,0 +1,184 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sections_drilldown_detail_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <View
+                android:id="@+id/layoutCabecera"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pedidoweb_cabecera_height"
+                android:background="@color/color_pedidos_web"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCampania"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_regular"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="C12" />
+
+            <ImageView
+                android:id="@+id/ivIconTitle"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginEnd="@dimen/content_inset_tiny"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="@id/layoutCabecera"
+                app:layout_constraintEnd_toStartOf="@id/tvTitle"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layoutCabecera"
+                app:srcCompat="@drawable/ic_requests_white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/content_inset_tiny"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/pedido_title"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title_2"
+                app:layout_constraintBottom_toBottomOf="@id/layoutCabecera"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/ivIconTitle"
+                app:layout_constraintTop_toTopOf="@id/layoutCabecera" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFiltros"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pedidoweb_button_height"
+                android:layout_marginLeft="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginRight="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/pedido_filtros"
+                android:textAllCaps="false"
+                android:textColor="@color/color_pedidos_web"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutCabecera"
+                app:strokeColor="@color/order_web" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:layout_marginRight="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnFiltros"
+                tools:text="NO SE ENCONTRARON CONSULTORAS\nCON LOS FILTROS APLICADOS"
+                tools:textColor="@color/red_error" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_tiny"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray_4"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMensaje"
+                tools:text="Total de pedidos web: " />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTotalMontoMinimo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_tiniest"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray_4"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTotal"
+                tools:text="Pedidos por debajo del monto mínimo: " />
+
+            <RelativeLayout
+                android:id="@+id/rlHeaderLock"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/color_background_opciones"
+                android:clickable="true"
+                android:fadeScrollbars="false"
+                android:focusable="true"
+                android:overScrollMode="always"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <biz.belcorp.salesforce.modules.orders.components.OrderWebRecyclerView
+        android:id="@+id/rvPedidoWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:id="@+id/containerFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="false"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

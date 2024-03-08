@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Billing -->
+    <string name="billing_toolbar_title">Avance de facturación</string>
+    <string name="billing_close">Cerrar</string>
+    <string name="billing_orders_title">Avance de Pedidos</string>
+    <string name="billing_catalog_sale_title">Avance de Venta Catálogo</string>
+    <string name="billing_sale_title">Avance de Venta Neta</string>
+
+    <string name="billing_ua_info_title">Estás viendo el detalle de:</string>
+
+    <!-- No Camino Brillante -->
+    <string name="advance_sale_description">Vas logrando %s</string>
+    <string name="advance_sale_description_third">Va logrando %s</string>
+
+    <string name="advance_sale_success_description_multiprofile">Lograste tu meta al %s%%, vas %s</string>
+    <string name="advance_sale_success_description_multiprofile_third">Logró su meta al %s%%, va %s</string>
+
+    <plurals name="advance_orders_description">
+        <item quantity="one">Vas al %s%% de tu meta, te falta %s pedido</item>
+        <item quantity="other">Vas al %s%% de tu meta, te faltan %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_third">
+        <item quantity="one">Va al %s%% de su meta, le falta %s pedido</item>
+        <item quantity="other">Va al %s%% de su meta, le faltan %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_success">
+        <item quantity="one">Has superado tu meta al %s%%, vas %s pedido</item>
+        <item quantity="other">Has superado tu meta al %s%%, vas %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_success_third">
+        <item quantity="one">Ha superado su meta al %s%%, va %s pedido</item>
+        <item quantity="other">Ha superado su meta al %s%%, va %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_reached">
+        <item quantity="one">Has logrado tu meta al %s%%, vas %s pedido</item>
+        <item quantity="other">Has logrado tu meta al %s%%, vas %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_reached_third">
+       <item quantity="one">Ha logrado su meta al %s%%, va %s pedido</item>
+        <item quantity="other">Ha logrado su meta al %s%%, va %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_success_multiprofile">
+        <item quantity="one">Superaste tu meta al %s%%, vas %s pedido</item>
+        <item quantity="other">Superaste tu meta al %s%%, vas %s pedidos</item>
+    </plurals>
+    <plurals name="advance_orders_description_success_multiprofile_third">
+        <item quantity="one">Superó su meta al %s%%, va %s pedido</item>
+        <item quantity="other">Superó su meta al %s%%, va %s pedidos</item>
+    </plurals>
+    <!-- Fin No Camino Brillante-->
+
+    <!-- Camino Brillante -->
+    <string name="advance_bright_sale_description">Vas al %s%% de tu meta, te faltan %s</string>
+    <string name="advance_bright_sale_description_third">Va al %s%% de su meta, le faltan %s</string>
+    <string name="advance_bright_sale_success_description">Has superado tu meta al %s%%, vas %s</string>
+    <string name="advance_bright_sale_success_description_third">Ha superado su meta al %s%%, va %s</string>
+    <string name="advance_bright_sale_reached_description">Has logrado tu meta al %s%%, vas %s</string>
+    <string name="advance_bright_sale_reached_description_third">Ha logrado su meta al %s%%, va %s</string>
+
+    <plurals name="advance_bright_orders_description">
+        <item quantity="one">Vas logrando %s pedido facturado</item>
+        <item quantity="other">Vas logrando %s pedidos facturados</item>
+    </plurals>
+    <plurals name="advance_bright_orders_description_third">
+        <item quantity="one">Va logrando %s pedido facturado</item>
+        <item quantity="other">Va logrando %s pedidos facturados</item>
+    </plurals>
+    <!-- Fin Camino Brillante -->
+
+    <string name="title_advance_period">Pedidos %s</string>
+    <string name="title_sale_period">Venta Neta %s</string>
+
+    <string name="title_billing_detail">Detalle de pedidos</string>
+    <string name="search_consultant_text">Buscar por nombre o segmento</string>
+    <string name="title_pending_to_billing">Pendientes de Facturar</string>
+    <string name="title_in_billing">Facturados</string>
+
+    <string name="sort_by">Ordenar por</string>
+    <string name="filters">Filtros</string>
+
+    <string name="title_debt">Deuda:</string>
+    <string name="title_orders_sb">Pedido en SB:</string>
+    <string name="title_orders_amount">Monto de pedido:</string>
+
+    <string name="title_consultants_orders">Pedidos de las Consultoras</string>
+
+    <string name="title_pegs">PEGs</string>
+    <string name="title_new_cycle">Ciclo de Nuevas</string>
+    <string name="title_rejected_orders">Pedidos Rechazados</string>
+    <string name="title_rejected_orders_message">No tiene pedidos rechazados en esta campaña.</string>
+    <string name="description_advancement_new_cycle">Vas logrando:</string>
+    <string name="description_retention">Retención al:</string>
+
+    <string name="text_amount_with_currency">%s %s</string>
+
+    <string name="description_billing_new_cycle">%d de %d</string>
+    <string name="ixdx">%dD%d</string>
+    <string name="ixdx_high_value">%dD%d Alto valor</string>
+    <string name="all_number_with_percentage">%d%%</string>
+
+    <string name="title_billing_retained_peg">Vas reteniendo</string>
+    <string name="title_billing_retained_peg_third_person">Va reteniendo</string>
+    <string name="title_billing_newcycle">Vas logrando</string>
+    <string name="title_billing_newcycle_third_person">Va logrando</string>
+    <string name="description_billing_pending_pegs">Total: %d PEGs</string>
+    <string name="target_description_billing_pending_pegs">%d PEGs</string>
+    <string name="message_billing_pending_pegs">¡Sigue motivándolas!</string>
+
+    <string name="text_billing_ua_with_hyphen">"%s - "</string>
+
+</resources>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- RDD -->
+    <color name="rdd_dashboard_gray">#252628</color>
+    <color name="rdd_dashboard_white">#d6d6e4</color>
+    <color name="rdd_white">#FFFFFF</color>
+    <color name="rdd_white_gray">#f8f8f8</color>
+    <color name="rdd_loading_transparent">#aa000022</color>
+    <color name="rdd_black_text">#010000</color>
+    <color name="rdd_green_disabled">#4028b3a4</color>
+    <color name="rdd_accent">#1e3b8b</color>
+    <color name="rdd_accent_light">#194a90e2</color>
+    <color name="rdd_danger">#f01137</color>
+    <color name="rdd_danger_disabled">#40f01137</color>
+    <color name="rdd_danger_alt">#cf0f0f</color>
+    <color name="rdd_primary_text">#1b242b</color>
+    <color name="rdd_primary_text_disabled">#401b242b</color>
+    <color name="rdd_secondary_text">#cacaca</color>
+    <color name="textbox_color">#fbfbfb</color>
+    <color name="rdd_no_visitas_text">#cdcdcd</color>
+    <color name="rdd_img_bg">#c0c4d0</color>
+    <color name="rdd_bg_registrada">#f8f8f8</color>
+    <color name="rdd_dashboard_text">#8e8e93</color>
+    <color name="rdd_dashboard_bg">#f2f2f2</color>
+    <color name="rdd_dashboard_bg_light">#f9f9f9</color>
+    <color name="rdd_dashboard_disabled_btn">#f6f6f6</color>
+    <color name="rdd_evento">#0e428d</color>
+    <color name="rdd_dashboard_foco_seccion_header">#f6f7fb</color>
+    <color name="rdd_dashboard_tab_bg">#f4f6fc</color>
+    <color name="rdd_dashboard_foco_separador">#d6d6e4</color>
+    <color name="rdd_dashboard_habilidad_separador">#3d979797</color>
+    <color name="rdd_dashboard_seleccion_persona">#979797</color>
+    <color name="line_color_title">#ebebeb</color>
+    <color name="rdd_dashboard_titulo_seleccion_foco">#4a4a4a</color>
+    <color name="rdd_dashboard_detalle_seleccion_foco">#243039</color>
+    <color name="rdd_dashboard_asignar_foco_disabled">#f7f7f7</color>
+    <color name="rdd_dashboard_gr_nueva_gz">#bf32ea</color>
+    <color name="rdd_light_success">#192abeb3</color>
+    <color name="rdd_habilidades_boton_disabled">#979797</color>
+    <color name="rdd_habilidades_reconocidas_success">#2abeb3</color>
+    <color name="rdd_head_color_subtitle">#8a8a8e</color>
+    <color name="notificacion_calificar">#0e428d</color>
+    <color name="rdd_background_color_avatar">#BDC5DC</color>
+
+    <!-- Gerente regional -->
+    <color name="rdd_amarillo_estable">#f0b741</color>
+    <color name="meta_agregado">#5b5b5b</color>
+    <color name="meta_fecha_agregado">#b4b4b4</color>
+    <color name="mi_ruta_success">#2abeb3</color>
+    <color name="mi_ruta_danger">#eb5a5a</color>
+    <color name="mi_ruta_accent">#0e428d</color>
+    <color name="colorPrimaryDark">#768ea3</color>
+
+    <color name="mi_ruta_switch_track_transparent">#6B87AF</color>
+    <color name="mi_ruta_switch_thumb_shadow">#56565656</color>
+    <color name="mi_ruta_switch_text_track">#EE000066</color>
+    <color name="mi_ruta_datetime_picker_background">#F2F2F2</color>
+    <color name="mi_ruta_datetime_picker">#34BDB2</color>
+    <color name="mi_ruta_mini_perfil_disable">#dfdfdf</color>
+    <color name="mi_ruta_datetime_picker_text">#242029</color>
+
+    <color name="mi_ruta_eliminar_red">#f62e46</color>
+    <color name="mi_ruta_eliminar_title">#243039</color>
+    <color name="mi_ruta_eliminar_subtitle">#66243039</color>
+
+    <color name="mi_ruta_registrar_visita_detail">#d4d4d4</color>
+    <color name="mi_ruta_replanificar_subtitle">#A6FFFFFF</color>
+
+    <color name="mi_ruta_foco_separacion">#2FA99F</color>
+    <color name="mi_ruta_foco_texto">#34bdb2</color>
+    <color name="mi_ruta_foco_equis">#2fa99f</color>
+
+    <!-- Graficos -->
+    <color name="grafico_barrote_ganancia_consultora">#5893e0</color>
+    <color name="grafico_barrote_venta_catalogo">#f9ca68</color>
+    <color name="grafico_barrote_shadow">#f4f4f4</color>
+    <color name="grafico_venta_catalogo_puntaje_valor_bajo">#d0021b</color>
+    <color name="grafico_venta_catalogo_puntaje_valor_alto">#2abeb3</color>
+    <color name="grafico_producto_mas_vendido_primero">#2abeb3</color>
+    <color name="grafico_producto_mas_vendido">#8e8e93</color>
+    <color name="light_text">#8e8e93</color>
+    <color name="grafico_marca_esika">#F8787B</color>
+    <color name="grafico_marca_lbel">#9E72AE</color>
+    <color name="grafico_marca_cyzone">#E964B6</color>
+
+
+    <!-- Mapa RDD -->
+    <color name="rdd_linea_mapa">#6b8bb5</color>
+    <color name="rdd_mapa_check_visitada">#2abeb3</color>
+    <color name="rdd_mapa_marker_bg_gray">#c1c1c1</color>
+    <color name="rdd_mapa_card_divider">#dcd9d9</color>
+    <color name="rdd_mapa_card_text">#1d1d26</color>
+    <color name="rdd_mapa_bg_transparent">#0000</color>
+    <color name="rdd_mapa_bg_text_hora">#99bcbcb8</color>
+
+    <color name="purple_loading">#732789</color>
+
+    <integer-array name="color_array">
+        <item>@color/purple_loading</item>
+    </integer-array>
+
+    <color name="unete_aprobado">#179899</color>
+    <color name="unete_preaprobado">#009999</color>
+    <color name="unete_rechazado">#dc0e27</color>
+    <color name="unete_evaluacion">#009999</color>
+    <color name="unete_aceptar">#712192</color>
+    <color name="unete_cancelar">#637b92</color>
+    <color name="unete_text">#637b92</color>
+    <color name="unete_action">#712192</color>
+    <color name="unete_warning">#fdbd39</color>
+    <color name="unete_success">#009999</color>
+    <color name="unete_error">#e31c19</color>
+    <color name="unete_ok">#49cb19</color>
+    <color name="unete_neutral">#80637b92</color>
+
+    <color name="vent_neta">#567baf</color>
+
+
+    <color name="perfil_text_section">#004292</color>
+    <color name="blue_item">#6203fc</color>
+
+    <color name="rdd_reconocimiento_success_subtitulo">#c4ffffff</color>
+    <color name="rdd_cabecera_otra_persona_background">#575757</color>
+
+    <color name="perfil_background_gris">#80d4d4d4</color>
+
+    <color name="puntaje_perfil_text_nivel">#636363</color>
+
+    <!-- Mi sección RDD -->
+    <color name="denominador_avance">#232323</color>
+    <color name="placeholder_sin_focos">#706e6e</color>
+
+    <color name="inicial_gradiente_reconocimiento_avatar">#808491</color>
+    <color name="final_gradiente_reconocimiento_avatar">#c0c4d0</color>
+
+    <color name="inicial_gradiente_avatar_shadow">#00000000</color>
+    <color name="final_gradiente_avatar_shadow">#CC000000</color>
+
+    <!-- Reconocimiento -->
+    <color name="text_gris_reconocimiento">#909090</color>
+    <color name="text_escala_reconocimiento">#4a4a4a</color>
+    <color name="text_zona_reconocimiento">#8e8e93</color>
+
+    <!-- Avance Habilidades u6c -->
+    <color name="background_progress">#8fd8d8d8</color>
+    <color name="background_progress_new">#d6d6e4</color>
+    <color name="text_campanias">#8f8f93</color>
+    <color name="pale_grey">#f6f8fa</color>
+    <color name="dark_text">#243039</color>
+    <color name="gana_mas">#c39934</color>
+    <color name="cantidad_productos_ppu">#768ea3</color>
+    <color name="conexion_internet_subtitulo">#768ea3</color>
+    <color name="text_porcentaje_texto">#454549</color>
+    <color name="light_bluerdd">#99c9ff</color>
+
+    <color name="strawberry">#f62e46</color>
+
+    <!-- Eventos -->
+    <color name="background_eliminado">#19e81c36</color>
+    <color name="background_registrado">#1938be62</color>
+
+    <!-- Dashboard DV -->
+    <color name="titulo_avance_campania">#252628</color>
+    <color name="meta_avance_campania">#494b4e</color>
+    <color name="progress_velocimetro">#3f8eff</color>
+
+    <!-- Perfil GR -->
+    <color name="titulo_conversacion">#000000</color>
+    <color name="preguntas_desarrollo">#454549</color>
+    <color name="purple">#722789</color>
+
+    <!-- Escala de grises -->
+    <color name="gris_escala_1">#F5F5F7</color>
+    <color name="gris_escala_2">#EAEAEC</color>
+    <color name="gris_escala_3">#D1D1D4</color>
+    <color name="gris_escala_4">#909094</color>
+    <color name="gris_escala_5">#454549</color>
+    <color name="gris_escala_6">#BFBFBF</color>
+
+    <color name="barrier">#51ffffff</color>
+
+    <color name="rojo_notificacion">#e52833</color>
+    <color name="white_selected">#e5e5e5</color>
+
+    <!-- Información histórica de región -->
+    <color name="informacion_historica_leyenda">#f5a623</color>
+    <color name="informacion_historica_barras">#f9ca68</color>
+    <color name="grafico_historica_region_venta">#f5a623</color>
+    <color name="grafico_historica_region_promedio">#43ad81</color>
+    <color name="grafico_historica_region_retencion6d6">#3abbb2</color>
+    <color name="grafico_historica_region_pedidos">#722789</color>
+    <color name="grafico_historica_region_productivas">#722789</color>
+    <color name="grafico_historica_region_retencionactivas">#ea2459</color>
+    <color name="grafico_historica_region_cambionivel">#6879f8</color>
+
+    <!-- Notificacion -->
+    <color name="color_nombre_notification">#768da5</color>
+    <color name="color_descripcion_notification">#cc768da5</color>
+    <color name="color_separador_notification">#4c768da5</color>
+    <color name="color_titulo_notification">#ff6666</color>
+
+    <color name="color_beauty_consultant_bright">#b19260</color>
+    <color name="color_beauty_consultant_topaz">#2d7ab0</color>
+    <color name="color_beauty_consultant_pearl">#db9e8a</color>
+    <color name="color_beauty_consultant_amber">#e8b74b</color>
+    <color name="color_beauty_consultant_coral">#CD5B5B</color>
+    <color name="color_beauty_consultant_consultant">#b66fa6</color>
+
+    <!-- Paleta oficial -->
+    <color name="primary_color">#b9007e</color>
+    <color name="gray_1">#f5f5f7</color>
+    <color name="gray_2">#eaeaec</color>
+    <color name="gray_3">#d1d1d4</color>
+    <color name="gray_4">#909094</color>
+    <color name="gray_5">#454549</color>
+    <color name="background_color">#f8f9fd</color>
+    <color name="faded_background_color">#a3ffffff</color>
+    <color name="rdd_establecida">#fcab53</color>
+    <color name="rdd_nueva">#f33162</color>
+    <color name="rdd_postulante">#6f85ff</color>
+    <color name="estado_positivo">#38be62</color>
+    <color name="estado_intermedio">#f5a623</color>
+    <color name="estado_negativo">#e81c36</color>
+    <color name="transparente">#00000000</color>
+
+    <color name="color_ingresos">#722789</color>
+    <color name="color_reingresos">#f5a623</color>
+    <color name="color_egresos">#e81c36</color>
+
+    <color name="color_persona_1">#8e8e93</color>
+    <color name="color_persona_2">#243039</color>
+
+    <color name="indicador_grafico">#38be62</color>
+    <color name="grafico_ganancia">#5893e0</color>
+    <color name="colorGraphicNetSale">#f9ca68</color>
+    <color name="grafico_pedidos">#732789</color>
+
+    <color name="account_state_request">#ed1556</color>
+    <color name="gray_label">#661d1d26</color>
+    <color name="gray_label_dark">#1d1d26</color>
+    <color name="green_cav">#3bad7f</color>
+    <color name="titles">#243039</color>
+
+    <color name="white_transparent_20">#33FFFFFF</color>
+    <color name="white_transparent_30">#4DFFFFFF</color>
+    <color name="white_transparent_70">#B3FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="black_70">#a2aebe</color>
+    <color name="black_50">#7e7e7e</color>
+    <color name="black_20">#e4e8ed</color>
+    <color name="black_10">#f2f2f2</color>
+
+    <color name="shadow_start">#26000000</color>
+    <color name="shadow_end">#00000000</color>
+
+    <color name="morado_unete">#72208a</color>
+    <color name="consultant_save_success">#34bdb2</color>
+
+    <color name="linear_grey">#d9d7d7</color>
+    <color name="separator_color">#e8e8e9</color>
+    <color name="sections_drilldown_detail_background">#F8F8F9</color>
+    <color name="rdd_state">#45b030</color>
+
+    <color name="development_income">#2abeb3</color>
+    <color name="baground_space_venta_mn">#efefef</color>
+    <color name="consultant_profile_green_on">#004292</color>
+
+    <color name="porcentaje_normal">#99c9ff</color>
+    <color name="pointCheck">#0e428d</color>
+
+    <color name="color_text_rdd_tips_desarrollo_true">#3BC392</color>
+    <color name="color_background_rdd_tips_desarrollo_true">#293BC392</color>
+    <color name="color_text_rdd_tips_desarrollo_false">#EB4444</color>
+    <color name="color_background_rdd_tips_desarrollo_false">#29EB4444</color>
+    <color name="seekbar_dream_background_track">#D9D9D9</color>
+    <color name="purple_dream">#921291</color>
+    <color name="disable_gray">#C4C4C4</color>
+    <color name="background_gray_light">#f4f2f6</color>
+
+    <!--    consultant-->
+    <color name="bright_path_consultant">#878895</color>
+    <color name="bright_path_consultant_coral">#E79C45</color>
+    <color name="bright_path_consultant_ambar">#DA695B</color>
+    <color name="bright_path_consultant_perla">#9E4566</color>
+    <color name="bright_path_consultant_topacio">#2F6D9C</color>
+    <color name="bright_path_consultant_bright">#58595B</color>
+    <color name="background_request_level">#F0F0F0</color>
+    <color name="white_gray">#FAFAFD</color>
+    <color name="dark_gray">#48484A</color>
+    <color name="fragrance_color">#CF3944</color>
+    <color name="facial_treatment_color">#8B1A63</color>
+    <color name="makeup_color">#390587</color>
+    <color name="others_color">#5B5B5B</color>
+
+    <color name="marcas_categorias_color_one_chart">#CF3944</color>
+    <color name="marcas_categorias_color_two_chart">#8B1A63</color>
+    <color name="marcas_categorias_color_three_chart">#390587</color>
+    <color name="marcas_categorias_color_four_chart">#5B5B5B</color>
+
+
+
+
+</resources>

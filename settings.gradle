@@ -1,0 +1,5 @@
+include ':digital'
+include ':analytics'
+include ':app', ':brightpath', ':messaging'
+include ':core', ':components'
+include ':auth', ':kpis', ':developmentpath', ':virtualmethodology', ':developmentmaterial', ':postulants', ':consultants', ':orders', ':billing', ':creditinquiry', ':calculator', ':termsconditions', ':inspires'

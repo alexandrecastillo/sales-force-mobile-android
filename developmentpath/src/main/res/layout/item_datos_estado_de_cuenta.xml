@@ -1,0 +1,79 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ds_margin_normal"
+    android:paddingTop="@dimen/ds_margin_medium"
+    android:paddingEnd="@dimen/ds_margin_normal"
+    android:paddingBottom="@dimen/ds_margin_medium">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvFechaEstadoCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLines="1"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20/05/2019" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDescripcionEstadoCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/ds_margin_other_1"
+        android:ellipsize="end"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLines="2"
+        android:textColor="@color/gray_label_dark"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaEstadoCuenta"
+        tools:text="Banco de Credito del Perú" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTituloEstadoCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_label"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Abono" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMontoEstadoCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLines="1"
+        android:textColor="@color/gray_label_dark"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloEstadoCuenta"
+        tools:text="517.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clContenedorPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitulo"
+        style="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_progreso_de_la_consultora"
+        android:textColor="@color/magenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContenedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_normal"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo">
+
+        <biz.belcorp.mobile.components.design.step.Stepper
+            android:id="@+id/nivelesCaminoBrillante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginEnd="@dimen/content_inset_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContenedorProgreso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_medium"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nivelesCaminoBrillante">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTituloPeriodo"
+                style="@style/TextAppearance.DS.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_en_el_periodo"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <biz.belcorp.mobile.components.design.goalprogressbar.GoalProgressBar
+                android:id="@+id/barraProgreso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_margin_other_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtTituloPeriodo"
+                app:layout_constraintTop_toBottomOf="@+id/txtTituloPeriodo"
+                app:progressbar_isReadonly="true"
+                app:progressbar_progressDrawable="@drawable/custom_progressbar"
+                app:progressbar_show_hito="true"
+                app:progressbar_show_meta="true"
+                app:progressbar_show_thumb="false"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTipsCaminoBrilllante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clContenedorProgreso"
+            tools:itemCount="2"
+            tools:layoutManager="LinearLayoutManager"
+            tools:orientation="vertical" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="tab_rdd_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/mulish_bold</item>
+    </style>
+
+    <style name="switch_calculator">
+        <item name="android:thumb">@drawable/switch_thumb_calculator</item>
+        <item name="track">@drawable/switch_track_calculator</item>
+    </style>
+</resources>

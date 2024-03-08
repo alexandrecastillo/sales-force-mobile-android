@@ -1,0 +1,119 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_corners_4"
+    android:paddingStart="@dimen/content_inset_large"
+    android:paddingTop="@dimen/content_inset_medium"
+    android:paddingEnd="@dimen/content_inset_large"
+    android:paddingBottom="@dimen/ds_padding_other_6">
+
+    <biz.belcorp.mobile.components.charts.legend.ChartLegend
+        android:id="@+id/legendIngresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toStartOf="@id/legendReingresos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:legend_contentPadding="@dimen/ds_padding_small"
+        app:legend_descriptionColor="@color/color_ingresos"
+        app:legend_descriptionSize="@dimen/text_size_caption"
+        app:legend_descriptionText="@string/ingresos"
+        app:legend_indicatorColor="@color/color_ingresos"
+        app:legend_indicatorStyle="oval"
+        tools:layout_height="30dp" />
+
+    <biz.belcorp.mobile.components.charts.legend.ChartLegend
+        android:id="@+id/legendReingresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toStartOf="@id/legendEgresos"
+        app:layout_constraintStart_toEndOf="@id/legendIngresos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:legend_contentPadding="@dimen/content_inset_tiny"
+        app:legend_descriptionColor="@color/color_reingresos"
+        app:legend_descriptionSize="@dimen/text_size_caption"
+        app:legend_descriptionText="@string/reingresos"
+        app:legend_indicatorColor="@color/color_reingresos"
+        app:legend_indicatorStyle="oval"
+        tools:layout_height="30dp" />
+
+    <biz.belcorp.mobile.components.charts.legend.ChartLegend
+        android:id="@+id/legendEgresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/legendReingresos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:legend_contentPadding="@dimen/content_inset_tiny"
+        app:legend_descriptionColor="@color/color_egresos"
+        app:legend_descriptionSize="@dimen/text_size_caption"
+        app:legend_descriptionText="@string/egresos"
+        app:legend_indicatorColor="@color/color_egresos"
+        app:legend_indicatorStyle="oval"
+        tools:layout_height="30dp" />
+
+    <biz.belcorp.mobile.components.charts.bar.Bar
+        android:id="@+id/barChartCapitalizacion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chart_height"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:bar_axisColor="@color/gray_2"
+        app:bar_axisWidth="@dimen/chart_axisWidth"
+        app:bar_barWidth="@dimen/chart_barWidth"
+        app:bar_captionBottomPadding="@dimen/chart_captionBottomPaddingNormal"
+        app:bar_captionLineSpacing="@dimen/chart_captionLineSpacingSmall"
+        app:bar_cornerRadius="@dimen/chart_cornerRadius"
+        app:bar_itemSubtitleColor="@color/ambar"
+        app:bar_itemSubtitleTextSize="@dimen/text_size_caption"
+        app:bar_itemTitleTextSize="@dimen/text_size_caption"
+        app:bar_previewData="preview1"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/legendIngresos"
+        tools:bar_maxValue="100"
+        tools:bar_minValue="-60" />
+
+    <include
+        android:id="@+id/linearCapitalizacionTable"
+        layout="@layout/item_title_table_capitalizacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barChartCapitalizacion" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclvCapitalizacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearCapitalizacionTable"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/graficoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="legendIngresos,legendReingresos,legendEgresos,barChartCapitalizacion,linearCapitalizacionTable,rclvCapitalizacion"
+        tools:visibility="visible" />
+
+    <include
+        layout="@layout/include_empty_grafico"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

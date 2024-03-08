@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rdd_dashboard_bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mi_ruta_accent"
+        android:gravity="center_vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/rdd_margin_low"
+            android:paddingTop="@dimen/button_corner_radius"
+            android:paddingEnd="@dimen/rdd_margin_low"
+            android:paddingBottom="@dimen/rdd_margin_start_up">
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_backspace_white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/rdd_margin_min_less"
+                android:layout_marginTop="@dimen/rdd_margin_min_less_tiny"
+                android:fontFamily="@font/mulish_bold"
+                android:letterSpacing="0.07"
+                android:lineSpacingExtra="@dimen/rdd_margin_min_less"
+                android:paddingTop="@dimen/rdd_margin_start_tiny"
+                android:text="@string/titulo_avance_habilidades"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@id/image_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_back"
+                app:layout_constraintTop_toBottomOf="@id/image_back" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/rdd_margin_low"
+            android:layout_marginTop="@dimen/rdd_margin_low"
+            android:layout_marginEnd="@dimen/rdd_margin_low"
+            android:layout_marginBottom="@dimen/rdd_margin_low"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/rdd_margin_start_tiny_high"
+            app:cardElevation="@dimen/rdd_margin_min_tiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <include
+                android:id="@+id/layout_cabecera_campanias"
+                layout="@layout/layout_cabecera_campanias_habilidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rdd_margin_top"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_avance_habilidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rdd_margin_start_low"
+                android:layout_marginBottom="@dimen/rdd_margin_start_upper"
+                tools:listitem="@layout/item_avance_habilidad_u6c" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

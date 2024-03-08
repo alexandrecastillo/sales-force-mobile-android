@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/ds_padding_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveryAdvanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_other_3"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/tvRecoveryTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_zone_results" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toTopOf="@id/vDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRecoveryAdvanceTitle"
+        tools:text="@string/title_recovery" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:textAppearance="@style/TextAppearance.Header.Title.Percent"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintBottom_toBottomOf="@id/tvRecoveryTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="67.3%" />
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_elevation_1"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="@color/colorSeparator"
+        app:layout_constraintTop_toBottomOf="@id/tvRecoveryTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInvoicedTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        android:textColor="@color/colorGainHeaderLabel"
+        android:textSize="@dimen/text_size_label"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivider"
+        tools:text="@string/title_invoiced" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInvoicedTitleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_size_caption"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvInvoicedTitle"
+        app:layout_constraintStart_toStartOf="@id/tvInvoicedTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvInvoicedTitle"
+        tools:text="S/ 46,890,386.93" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveredTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        android:textColor="@color/colorGainHeaderLabel"
+        android:textSize="@dimen/text_size_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/vDivider"
+        tools:text="@string/title_recovered" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveredValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_size_caption"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvRecoveredTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvRecoveredTitle"
+        tools:text="S/ 46,890,386.93" />
+
+    <View
+        android:id="@+id/vDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_elevation_1"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="@color/colorSeparator"
+        app:layout_constraintTop_toBottomOf="@id/tvRecoveredValue" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvChargedOrderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:paddingBottom="@dimen/content_inset_tiniest"
+        android:text="@string/collection_charged_orders"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivider2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChargedOrders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChargedOrderTitle"
+        tools:itemCount="3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDateUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        android:textColor="@color/textColorTernary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvChargedOrders" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sw31daysCollection"
+        style="@style/Widget.MaterialComponents.CompoundButton.Switch.31Days"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:background="@drawable/bg_rectangle"
+        android:text="@string/collection_title_31_days"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_size_caption"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDateUpdate" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

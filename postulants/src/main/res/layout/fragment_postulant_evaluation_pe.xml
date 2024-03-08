@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/dp16">
+
+        <LinearLayout
+            android:id="@+id/llDocument"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dp16"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            custom:layout_constraintStart_toStartOf="parent">
+
+            <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+                android:id="@+id/spnTipoDocumento"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                custom:hint="@string/tipo_documento"
+                custom:validateIconVisible="false" />
+
+            <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+                android:id="@+id/txtDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:hint="@string/documento_identidad"
+                custom:validateIconVisible="true" />
+
+        </LinearLayout>
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_weight="0.3"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDocument"
+            custom:hint="@string/seccion" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:layout_marginTop="@dimen/ds_padding_normal"
+            android:gravity="center"
+            android:textColor="@color/colorBgNoInternet"
+            android:textSize="@dimen/size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConsultar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:layout_marginTop="@dimen/ds_padding_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+        <TextView
+            android:id="@+id/txtDisclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:layout_marginTop="@dimen/dimen_default_16p"
+            android:text="@string/postulant_evaluation_disclaimer_pe"
+            android:textSize="@dimen/size_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvwMessages" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConsultar"
+            style="@style/Widget.Button.Purple.Variant"
+            android:layout_marginTop="@dimen/dp16"
+            android:paddingHorizontal="@dimen/ds_padding_40dp"
+            android:text="@string/consultar"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/txtSeccion" />
+
+        <RelativeLayout
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

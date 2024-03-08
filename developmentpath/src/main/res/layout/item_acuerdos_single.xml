@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/content_inset_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/magenta"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Gana +" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:paddingTop="@dimen/content_inset_less"
+        android:paddingLeft="@dimen/content_inset_small"
+        android:paddingRight="@dimen/content_inset_normal"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintTop_toBottomOf="@id/text_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_icon"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ip_unico" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_icon"
+            app:layout_constraintTop_toTopOf="@id/image_icon"
+            tools:text="Suscrita desde C09 - 2018" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_subtitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_less"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toEndOf="@id/text_titulo"
+            app:layout_constraintStart_toStartOf="@id/text_titulo"
+            app:layout_constraintTop_toBottomOf="@id/text_titulo"
+            tools:text="¿Compra Ofertas Gana +?" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_less"
+            android:layout_marginBottom="@dimen/content_inset_normal"
+            app:layout_constraintTop_toBottomOf="@id/text_subtitulo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/text_titulo"
+            app:layout_constraintStart_toStartOf="@id/text_titulo"
+            tools:orientation="vertical"
+            tools:itemCount="3"
+            tools:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_digital_campania_child"
+            tools:spanCount="1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/flHabilidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/content_inset_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHabilidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_layout_white">
+
+            <ImageView
+                android:id="@+id/ivHabilidad"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginStart="@dimen/content_inset_tiny"
+                android:layout_marginTop="@dimen/content_inset_tiny"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_analiza_y_prioriza" />
+
+            <TextView
+                android:id="@+id/tvHabilidadTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/rdd_margin_start_tiny"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/rdd_evento"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivHabilidad"
+                app:layout_constraintTop_toTopOf="@id/ivHabilidad"
+                tools:text="Analiza y prioriza" />
+
+            <TextView
+                android:id="@+id/tvHabilidadComentario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:layout_marginBottom="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/text_porcentaje_texto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvHabilidadTitulo"
+                app:layout_constraintTop_toBottomOf="@id/tvHabilidadTitulo"
+                tools:text="Identifica los foco de campaña analizando de manera integral las variables de negocio y contexto." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_no_seleccionado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_layout_shadow_gray"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <Space
+        android:id="@+id/spaceCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCheckSeleccionado"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_gana_mas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

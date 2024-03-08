@@ -1,0 +1,35 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clContenedorProgramaNuevas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/content_inset_normal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="@dimen/content_inset_normal"
+        android:layout_marginRight="@dimen/content_inset_normal"
+        android:src="@drawable/banner_programa_nueva"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/framelayoutTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginLeft="@dimen/content_inset_normal"
+        android:layout_marginRight="@dimen/content_inset_normal"
+        app:layout_constraintTop_toBottomOf="@id/banner" />
+
+    <FrameLayout
+        android:id="@+id/framelayoutMateriales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        app:layout_constraintTop_toBottomOf="@id/framelayoutTips" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_inset_normal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_acuerdos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_campania"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:paddingStart="@dimen/ds_padding_normal"
+                android:paddingTop="@dimen/ds_padding_normal"
+                android:paddingEnd="@dimen/ds_padding_normal"
+                android:paddingBottom="@dimen/ds_padding_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ds_body_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Campaña 12" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_acuerdos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_campania"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_rdd_acuerdos" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_habilidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rdd_margin_start_tiny_high"
+        android:layout_marginBottom="@dimen/rdd_margin_start_tiny_high"
+        android:paddingBottom="@dimen/rdd_margin_start_tiny_high"
+        app:cardCornerRadius="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_acuerdos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_habilidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_habilidades_reconocidas_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/text_habilidades_reconocidas"
+                android:textColor="@color/dark_text"
+                android:textSize="@dimen/habilidades_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Titulo" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rdd_margin_min_less"
+                app:layout_constraintEnd_toStartOf="@+id/view_separador"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habilidades_reconocidas_titulo" />
+
+            <View
+                android:id="@+id/view_separador"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/pgb_habilidades"
+                app:layout_constraintStart_toEndOf="@+id/rv_habilidades"
+                app:layout_constraintTop_toTopOf="@+id/tv_habilidades_reconocidas_titulo" />
+
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/pgb_habilidades"
+                android:layout_width="@dimen/size_card_consultora_ruta_avatar"
+                android:layout_height="@dimen/size_card_consultora_ruta_avatar"
+                android:layout_marginEnd="@dimen/icon_size_small_less"
+                app:cpb_background_progressbar_color="#dfdfdf"
+                app:cpb_background_progressbar_width="@dimen/rdd_margin_start_tiny"
+                app:cpb_progress="0"
+                app:cpb_progressbar_color="@color/estado_positivo"
+                app:cpb_progressbar_width="@dimen/rdd_margin_start_tiny"
+                app:layout_constraintEnd_toStartOf="@+id/img_por_campana"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habilidades_reconocidas_titulo" />
+
+            <TextView
+                android:id="@+id/tv_cantidad_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintBottom_toBottomOf="@+id/pgb_habilidades"
+                app:layout_constraintEnd_toEndOf="@+id/pgb_habilidades"
+                app:layout_constraintStart_toStartOf="@+id/pgb_habilidades"
+                app:layout_constraintTop_toTopOf="@+id/pgb_habilidades"
+                tools:text="3/10" />
+
+            <ImageView
+                android:id="@+id/img_por_campana"
+                android:layout_width="@dimen/rdd_margin_start"
+                android:layout_height="@dimen/content_inset_medium"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_chevron" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupo_sin_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="iv_sin_habilidades,tv_sin_habilidades" />
+
+            <ImageView
+                android:id="@+id/iv_sin_habilidades"
+                android:layout_width="@dimen/rdd_margin_top"
+                android:layout_height="@dimen/rdd_margin_top"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="@id/pgb_habilidades"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/pgb_habilidades"
+                app:srcCompat="@drawable/ic_alert_red" />
+
+            <TextView
+                android:id="@+id/tv_sin_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:text="No se reconocieron habilidades"
+                android:textColor="@color/rdd_danger"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintBottom_toBottomOf="@id/pgb_habilidades"
+                app:layout_constraintStart_toEndOf="@id/iv_sin_habilidades"
+                app:layout_constraintTop_toTopOf="@id/pgb_habilidades" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_sin_habilidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rdd_margin_start_tiny_high"
+        android:layout_marginBottom="@dimen/rdd_margin_start_tiny_high"
+        android:visibility="gone"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/rdd_margin_start_tiny_high"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_acuerdos"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pale_grey"
+            android:padding="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_habilidad_descobertura_alert"
+                android:layout_width="@dimen/rdd_menu_icon_size"
+                android:layout_height="@dimen/rdd_menu_icon_size"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_foco_descobertura_alert" />
+
+            <TextView
+                android:id="@+id/tv_descoberturada_habilidades"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/perfil_no_reconocida"
+                android:textColor="@color/placeholder_sin_focos"
+                android:textSize="@dimen/habilidades_subtext_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ll_asignar_habilidades"
+                app:layout_constraintStart_toEndOf="@id/iv_habilidad_descobertura_alert"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_asignar_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rdd_boton_asignar_habilidades_enabled"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/rdd_margin_min_less_tiny"
+                android:paddingTop="@dimen/rdd_margin_min_less"
+                android:paddingEnd="@dimen/rdd_margin_min_less_tiny"
+                android:paddingBottom="@dimen/rdd_margin_min_less"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/rdd_perfil_reconocer_habilidades"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/habilidades_caption_size" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

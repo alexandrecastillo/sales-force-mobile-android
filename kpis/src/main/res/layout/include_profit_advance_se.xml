@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corners_top_4"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:padding="@dimen/ds_padding_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveryTitle"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:textColor="@color/colorPrimaryText"
+        android:paddingBottom="@dimen/ds_padding_other_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_recovery" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRecoveryValue"
+        style="@style/TextAppearance.Header.Title.Percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_size_title_2"
+        app:layout_constraintBottom_toBottomOf="@id/tvRecoveryTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false"
+        tools:text="67.3%" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvProfitAdvanceTitle"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:textColor="@color/colorPrimaryText"
+        android:paddingBottom="@dimen/ds_padding_other_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRecoveryTitle"
+        app:layout_constraintEnd_toStartOf="@id/tvProfitAdvanceValue"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        tools:text="@string/title_advance" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvProfitAdvanceValue"
+        android:textAppearance="@style/TextAppearance.Header.Title.Percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:textColor="@color/colorPrimaryText"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toEndOf="@id/tvProfitAdvanceTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvProfitAdvanceTitle"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="s/ 900" />
+
+    <View
+        android:id="@+id/viewDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_height_separator"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:background="@drawable/rectangle"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProfitAdvanceTitle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvInfo"
+        style="@style/Widget.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGreenBrighLight"
+            android:padding="@dimen/ds_padding_12dp">
+
+            <ImageView
+                android:id="@+id/ivDolar"
+                android:layout_width="@dimen/ds_margin_other_4"
+                android:layout_height="@dimen/ds_margin_other_20"
+                android:src="@drawable/icon_calculator"
+                android:tint="@color/default_magenta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.DS.Caption"
+                android:id="@+id/tvInfo1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:text="@string/you_projected_in_your_calc_aproach_gains"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivDolar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivFlag"
+                android:layout_width="@dimen/ds_margin_other_2"
+                android:layout_height="@dimen/ds_margin_other_2"
+                android:layout_marginStart="@dimen/ds_padding_small"
+                android:layout_marginTop="@dimen/ds_padding_normal"
+                android:src="@drawable/ic_chequered_flag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo1"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvInfo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ds_margin_small"
+                android:layout_marginTop="@dimen/ds_margin_12dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/you_need_x_to_achieve_it"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivFlag"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDateUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_padding_normal"
+            android:layout_marginEnd="@dimen/ds_margin_medium"
+            android:textAppearance="@style/TextAppearance.DS.Label"
+            android:textColor="@color/textColorTernary"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvInfo"
+            tools:text="@string/date_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

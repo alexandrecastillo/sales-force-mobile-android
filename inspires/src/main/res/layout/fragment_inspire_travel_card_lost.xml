@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/view_inspira_16dp"
+    android:layout_marginTop="@dimen/view_inspira_16dp"
+    android:layout_marginRight="@dimen/view_inspira_16dp"
+    android:layout_marginBottom="@dimen/view_inspira_16dp"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/view_inspira_3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvwInspireTravelCardLostLevelTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:layout_marginTop="@dimen/material_dimen_component_x2"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/indicator_inspira_title_current_level"
+            android:textAllCaps="true"
+            android:textColor="@color/dashboard_inspira_text"
+            android:textSize="@dimen/view_inspira_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivwInspireTravelCardLostLevelIcon"
+            android:layout_width="@dimen/view_inspira_8dp"
+            android:layout_height="@dimen/view_inspira_8dp"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:layout_marginEnd="@dimen/view_inspira_8dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/circle_rojo"
+            app:layout_constraintBottom_toBottomOf="@id/tvwInspireTravelCardLostLevelLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvwInspireTravelCardLostLevelLabel"
+            app:tint="@color/inspira_purple" />
+
+        <TextView
+            android:id="@+id/tvwInspireTravelCardLostLevelLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_4dp"
+            android:layout_marginTop="@dimen/material_dimen_component_x1"
+            android:fontFamily="@font/mulish_bold"
+            android:textAllCaps="true"
+            android:textColor="@color/gris_escala_5"
+            android:textSize="@dimen/view_inspira_14sp"
+            app:layout_constraintStart_toEndOf="@id/ivwInspireTravelCardLostLevelIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvwInspireTravelCardLostLevelTitle"
+            tools:text="DIAMANTE" />
+
+        <TextView
+            android:id="@+id/tvwInspireTravelCardLostStateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/material_dimen_component_x2"
+            android:fontFamily="@font/mulish_bold"
+            android:maxLines="1"
+            android:text="@string/indicator_inspira_title_state"
+            android:textAllCaps="true"
+            android:textColor="@color/dashboard_inspira_text"
+            android:textSize="@dimen/view_inspira_12sp"
+            app:layout_constraintStart_toStartOf="@id/tvwInspireTravelCardLostLevelTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvwInspireTravelCardLostLevelLabel" />
+
+        <TextView
+            android:id="@+id/tvwInspireTravelCardLostStateLabel"
+            android:layout_width="@dimen/view_inspira_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/material_dimen_component_x1"
+            android:layout_marginEnd="@dimen/view_inspira_12dp"
+            android:layout_marginBottom="@dimen/material_dimen_component_x2"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="start"
+            android:textAllCaps="true"
+            android:textColor="@color/gris_escala_5"
+            android:textSize="@dimen/view_inspira_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvwInspireTravelCardLostLevelTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvwInspireTravelCardLostStateTitle"
+            tools:text="@string/header_inspira_content_state_getting_ready" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,87 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/content_inset_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/data_for_section"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTituloIndicador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:layout_marginEnd="@dimen/content_inset_tiny"
+        android:background="@drawable/shadow_rdd"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textTituloIndicador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/icon_size_small"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/content_inset_normal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_subtitle"
+            app:layout_constraintEnd_toStartOf="@+id/imagePosterior"
+            app:layout_constraintStart_toEndOf="@+id/imageAnterior"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Venta Neta U6C" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageAnterior"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/textTituloIndicador"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textTituloIndicador"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagePosterior"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginEnd="@dimen/content_inset_small"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/textTituloIndicador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textTituloIndicador"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <biz.belcorp.salesforce.components.widgets.viewpager.HeightWrappingViewPager
+        android:id="@+id/viewPagerGraficos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTituloIndicador" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

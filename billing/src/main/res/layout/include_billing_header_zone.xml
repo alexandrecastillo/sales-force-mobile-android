@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/content_inset_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOrders"
+        style="@style/TextAppearance.DS.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/magenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_sale_billing" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOrdersDescription"
+        style="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvOrders"
+        app:layout_constraintTop_toBottomOf="@id/tvOrders"
+        tools:text="Vas al 77% de tu meta, te faltan 24 pedidos" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSales"
+        style="@style/TextAppearance.DS.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/magenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOrdersDescription"
+        tools:text="@string/title_net_sale_billing" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSalesDescription"
+        style="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvSales"
+        app:layout_constraintTop_toBottomOf="@id/tvSales"
+        tools:text="Vas logrando S/20,000" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

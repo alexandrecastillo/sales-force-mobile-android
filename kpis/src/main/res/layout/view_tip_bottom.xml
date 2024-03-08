@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rvProfitReceived"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTooltipMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_small"
+        android:layout_marginEnd="@dimen/ds_margin_other_2"
+        android:layout_marginBottom="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_regular"
+        tools:text="@string/info_total_gain_projected"
+        android:textColor="@color/textColorTernary"
+        android:textSize="@dimen/text_size_caption"
+        android:elevation="@dimen/ds_elevation_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

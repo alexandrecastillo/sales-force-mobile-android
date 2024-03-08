@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graficoLineal"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView34"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtValCx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/porcentaje_normal"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtValCx2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/graficoLineal"
+        app:layout_constraintTop_toBottomOf="@+id/graficoLineal"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="110%" />
+
+    <TextView
+        android:id="@+id/txtValCx2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/porcentaje_normal"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx1"
+        app:layout_constraintEnd_toStartOf="@+id/txtValCx3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtValCx1"
+        tools:text="110%" />
+
+    <TextView
+        android:id="@+id/txtValCx3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/porcentaje_normal"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx2"
+        app:layout_constraintEnd_toStartOf="@+id/txtValCx4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtValCx2"
+        tools:text="110%" />
+
+    <TextView
+        android:id="@+id/txtValCx4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/porcentaje_normal"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx3"
+        app:layout_constraintEnd_toStartOf="@+id/txtValCx5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtValCx3"
+        tools:text="110%" />
+
+    <TextView
+        android:id="@+id/txtValCx5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/porcentaje_normal"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx4"
+        app:layout_constraintEnd_toStartOf="@+id/txtValCx6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtValCx4"
+        tools:text="110%" />
+
+    <TextView
+        android:id="@+id/txtValCx6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/porcentaje_normal"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx5"
+        app:layout_constraintEnd_toEndOf="@+id/graficoLineal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtValCx5"
+        tools:text="110%" />
+
+    <TextView
+        android:id="@+id/txtMaxValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/porcentaje_maximo"
+        android:textColor="@color/mi_ruta_success"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/graficoLineal" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/porcentaje_promedio"
+        app:layout_constraintEnd_toEndOf="@+id/txtMaxValue"
+        app:layout_constraintStart_toStartOf="@+id/txtMaxValue"
+        app:layout_constraintTop_toBottomOf="@+id/txtMaxValue" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/porcentaje_cero"
+        app:layout_constraintEnd_toEndOf="@+id/textView34"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

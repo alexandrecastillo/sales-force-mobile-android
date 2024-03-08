@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/ds_margin_medium"
+    android:paddingBottom="@dimen/ds_margin_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/colorNewCycle"
+        app:layout_constraintEnd_toStartOf="@id/progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="6d6" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        app:layout_constraintEnd_toStartOf="@id/progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="0 de 4,223" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:barrierAllowsGoneWidgets="true"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="title,summary" />
+
+    <biz.belcorp.mobile.components.design.miniprogressbar.ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="parent"
+        app:miniprogressbar_currentProgress="90"
+        app:miniprogressbar_progressDrawableTint="@color/magenta"
+        app:miniprogressbar_progressDrawableWidth="@dimen/billing_progress_min_width"
+        app:miniprogressbar_progressMarginText="@dimen/ds_margin_small"
+        app:miniprogressbar_text="90%"
+        app:miniprogressbar_textAppearance="@style/TextAppearance.MiniProgressBar.Basic"
+        app:miniprogressbar_textGravity="left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

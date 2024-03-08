@@ -1,0 +1,280 @@
+{
+    "KpiRetention": [
+        {
+            "campaign": "202005",
+            "profile": "GZ",
+            "region": "09",
+            "zone": "0920",
+            "section": "",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "GZ",
+            "region": "09",
+            "zone": "0920",
+            "section": "",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "A",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "B",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "C",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "D",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "E",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "F",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "G",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "H",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "I",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        },
+        {
+            "campaign": "202004",
+            "profile": "SE",
+            "region": "09",
+            "zone": "0920",
+            "section": "J",
+            "high_value_orders": {
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            },
+            "low_value_orders": {
+                "_1d1": 0,
+                "_2d2": 0,
+                "_3d3": 0,
+                "_4d4": 0,
+                "_5d5": 0,
+                "_6d6": 0,
+                "retention_percentage": 0
+            }
+        }
+    ]
+}

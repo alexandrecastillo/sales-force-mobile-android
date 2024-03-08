@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvwInspireProgressItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardElevation="@dimen/view_inspira_0dp"
+    app:cardMaxElevation="@dimen/view_inspira_0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vwInspireProgressLineTop"
+            android:layout_width="@dimen/view_inspira_1dp"
+            android:layout_height="@dimen/view_inspira_0dp"
+            android:background="@color/inspira_gray_super_light"
+            app:layout_constraintBottom_toTopOf="@id/vwInspireProgressDot"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vwInspireProgressLineBottom"
+            android:layout_width="@dimen/view_inspira_1dp"
+            android:layout_height="@dimen/view_inspira_0dp"
+            android:background="@color/inspira_gray_super_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwInspireProgressDot" />
+
+        <View
+            android:id="@+id/vwInspireProgressDot"
+            android:layout_width="@dimen/view_inspira_8dp"
+            android:layout_height="@dimen/view_inspira_8dp"
+            android:background="@drawable/dot_inspira_off"
+            app:layout_constraintBottom_toBottomOf="@+id/tvwInspireProgressCampaignNumber"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf=" parent"
+            app:layout_constraintTop_toTopOf="@id/tvwInspireProgressCampaignNumber" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/view_inspira_24dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/view_inspira_16dp" />
+
+        <TextView
+            android:id="@+id/tvwInspireProgressCampaignNumber"
+            style="@style/AppTheme.Inspire.TextView.Small.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_inspira_8dp"
+            android:text="@string/inspira_progress_campaign_prefix"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvwInspireProgressCampaignSeparator"
+            style="@style/AppTheme.Inspire.TextView.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_2dp"
+            android:layout_marginTop="@dimen/view_inspira_8dp"
+            android:text="@string/inspira_condition_bullet_point"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvwInspireProgressCampaignNumber"
+            app:layout_constraintStart_toEndOf="@id/tvwInspireProgressCampaignNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvwInspireProgressCampaignDescription"
+            style="@style/AppTheme.Inspire.TextView.Small.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_2dp"
+            android:paddingBottom="@dimen/view_inspira_2dp"
+            android:text="@string/inspira_progress_campaign_points"
+            android:textColor="@color/verde"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvwInspireProgressCampaignSeparator"
+            app:layout_constraintStart_toEndOf="@id/tvwInspireProgressCampaignSeparator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwInspireProgressDetail"
+            android:layout_width="@dimen/view_inspira_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/view_inspira_16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tvwInspireProgressCampaignNumber"
+            tools:itemCount="@integer/five"
+            tools:listitem="@layout/item_inspire_travel_advance_campaign_detail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

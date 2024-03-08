@@ -1,0 +1,28 @@
+package biz.belcorp.salesforce.modules.kpis.core.data.repository.collection.cloud.dto
+
+internal const val FUNCTION_PROFIT_NAME_KEY = "Kpi_Profits"
+internal const val FILTER_PROFIT_KEY = "paramsProfit"
+internal const val FILTER_PROFIT_TYPE_KEY = "ParamsProfit"
+internal const val COLLECTION_PROFIT_KEY = "KpiProfits"
+internal const val INPUT_PROFIT_KEY = "input"
+
+internal const val KEY_PROF_TOTAL = "total"
+internal const val KEY_COMPETITION = "competition"
+internal const val KEY_CAPITALIZATION = "capitalization"
+internal const val KEY_6D6 = "_6d6"
+internal const val KEY_6D6_LOW_VALUE = "low_value"
+internal const val KEY_6D6_HIGH_VALUE = "high_value"
+internal const val KEY_6D6_TOTAL = "total"
+internal const val KEY_COMPETITION_TACTIC_BONUS = "tactic_bonus"
+internal const val KEY_COMPETITION_TACTIC_BONUS_LEVEL = "level"
+internal const val KEY_COMPETITION_TACTIC_BONUS_AMOUNT = "amount"
+
+internal const val KEY_CHANGE_LEVEL = "change_level"
+internal const val KEY_NEW_FIXED = "new_fixed"
+internal const val KEY_PRODUCTS_RELEASE = "products_release"
+internal const val KEY_PROF_ORDERS = "orders"
+internal const val KEY_PROF_POS = "pos"
+internal const val KEY_POTENTIAL = "potential"
+internal const val KEY_PROF_RANGES = "ranges"
+internal const val KEY_PROF_RANGE = "range"
+internal const val KEY_AMOUNT = "amount"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navFeatureCreditInquiry"
+    app:startDestination="@id/filterCreditInquiryFragment">
+
+    <fragment
+        android:id="@+id/creditConsultingDetailFragment"
+        android:name="biz.belcorp.salesforce.modules.creditinquiry.features.CreditConsultingDetailFragment"
+        android:label="CreditConsultingDetailFragment" />
+
+    <fragment
+        android:id="@+id/filterCreditInquiryFragment"
+        android:name="biz.belcorp.salesforce.modules.creditinquiry.features.FilterCreditInquiryFragment"
+        android:label="FilterCreditInquiryFragment">
+        <action
+            android:id="@+id/action_filterCreditInquiryFragment_to_creditConsultingDetailFragment"
+            app:destination="@id/creditConsultingDetailFragment" />
+    </fragment>
+</navigation>

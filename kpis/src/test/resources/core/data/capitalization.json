@@ -1,0 +1,64 @@
+{
+  "kpiCapitalizations": [
+    {
+      "campaign": "202003",
+      "profile": "SE",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "capitalization": {
+        "real": 45,
+        "goal": 62,
+        "projected": 15,
+        "entries": 4,
+        "entries_goal": 41,
+        "reentries": 32,
+        "expenses": 14
+      },
+      "pegs": {
+        "real": 4,
+        "retention": {
+          "goal": 5,
+          "real": 6,
+          "percentage": 0.8,
+          "remaining": 2
+        }
+      },
+      "potential": {
+        "total": 56,
+        "entries": 14,
+        "reentries": 11
+      }
+    },
+    {
+      "campaign": "202004",
+      "profile": "SE",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "capitalization": {
+        "real": 45,
+        "goal": 62,
+        "projected": 15,
+        "entries": 4,
+        "entries_goal": 41,
+        "reentries": 32,
+        "expenses": 14
+      },
+      "pegs": {
+        "real": 4,
+        "retention": {
+          "goal": 5,
+          "real": 6,
+          "percentage": 0.8,
+          "remaining": 2
+        }
+      },
+      "potential": {
+        "total": 56,
+        "entries": 14,
+        "reentries": 11
+      }
+    }
+  ]
+}

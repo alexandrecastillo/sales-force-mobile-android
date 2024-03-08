@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/bg_white_rounded_corners"
+    android:paddingTop="@dimen/content_inset_normal"
+    android:paddingBottom="@dimen/content_inset_normal">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecoveryAdvance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPotentialGainDisclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        android:textColor="@color/colorGrayLabel"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvRecoveryAdvance"
+        android:text="@string/text_profit_potential_disclaimer" />
+
+    <View
+        android:id="@+id/viewDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_divider_size"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:background="@color/colorDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPotentialGainDisclaimer" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvChargedOrderTitle"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:paddingBottom="@dimen/content_inset_tiniest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider1"
+        android:text="@string/collection_charged_orders"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChargedOrders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChargedOrderTitle"
+        tools:itemCount="3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDateUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        android:textColor="@color/colorGrayLabel"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvChargedOrders"
+        tools:text="@string/date_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

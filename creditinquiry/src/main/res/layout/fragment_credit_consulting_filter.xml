@@ -1,0 +1,179 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sections_drilldown_detail_background"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/credit_large_height"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="@dimen/size_0dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="@dimen/icon_size_normal"
+                        android:layout_height="@dimen/icon_size_normal"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/content_inset_normal"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_backspace_white" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_credit_consulting_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/credit_consulting_toolbat"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="@dimen/margin_12dp"
+                        android:layout_toStartOf="@+id/tv_credit_consulting_title"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_credit_consulting" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_24dp"
+                android:layout_marginTop="@dimen/margin_19dp"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center"
+                android:text="@string/credit_consulting_header"
+                android:textColor="@color/warning_message_color"
+                android:textSize="@dimen/size_15sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60dp"
+                android:layout_marginStart="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:layout_marginEnd="@dimen/margin_30dp"
+                android:layout_marginBottom="@dimen/margin_15dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/content_inset_tiny">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_identity_document"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="bottom"
+                    app:hintTextColor="@color/gray_label">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_identity_document"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:cursorVisible="true"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/identity_document"
+                        android:inputType="text"
+                        android:textColor="@color/gray_label_dark"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_subtitle"
+                        app:editImeOptions="actionDone"
+                        app:edittextColorHint="@color/gray_label"
+                        app:edittextFontFamily="@font/mulish_regular"
+                        app:maxLength="45" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_search"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_30dp"
+                android:layout_marginEnd="@dimen/margin_30dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/search_2"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/size_16sp"
+                app:backgroundTint="@color/purple" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_23dp"
+                android:layout_marginTop="@dimen/margin_12dp"
+                android:layout_marginEnd="@dimen/margin_23dp"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/red_error"
+                android:textSize="@dimen/size_12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Sections drill down sizes-->
+    <dimen name="size_drill_down_section_title">13sp</dimen>
+    <dimen name="size_drill_down_section_consultant">11sp</dimen>
+    <dimen name="tab_highlight_size">5dp</dimen>
+    <dimen name="activity_indicator_margin">10dp</dimen>
+    <dimen name="activity_regular_margin">5dp</dimen>
+
+</resources>

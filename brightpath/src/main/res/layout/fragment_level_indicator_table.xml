@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clBrightPathHeaderTable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/indicator_bright_path"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBrightPathHeaderLabels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLevelIndicatorTableVal11"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorTableVal12"
+            tools:text="ACUM. C03 - C08" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLevelIndicatorTableVal12"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_medium"
+            android:layout_marginBottom="@dimen/content_inset_tiny"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toTopOf="@+id/tvLevelIndicatorTableVal11"
+            app:layout_constraintEnd_toEndOf="@+id/tvLevelIndicatorTableVal11"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="C05" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBrightPathFirstColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clBrightPathHeaderLabels"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLevelIndicatorTableTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_tiny"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:text="@string/text_bright_path_level_coral"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN2prevCampaignVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_round_square_level_indicator"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/tvLevelIndicatorTableTitle2"
+            app:layout_constraintStart_toStartOf="@+id/tvLevelIndicatorTableTitle2"
+            app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorTableTitle2"
+            tools:text="5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN2PrevPeriodVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvLvlN2prevCampaignVal"
+            app:layout_constraintStart_toStartOf="@+id/tvLvlN2prevCampaignVal"
+            app:layout_constraintTop_toBottomOf="@+id/tvLvlN2prevCampaignVal"
+            tools:text="5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBrightPathSecondColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clBrightPathFirstColumn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLevelIndicatorTableTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_tiny"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:text="@string/text_bright_path_level_amber"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN3prevCampaignVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:background="@drawable/shape_round_square_level_indicator"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/tvLevelIndicatorTableTitle3"
+            app:layout_constraintStart_toStartOf="@+id/tvLevelIndicatorTableTitle3"
+            app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorTableTitle3"
+            tools:text="5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN3PrevPeriodVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/icon_size_normal"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvLvlN3prevCampaignVal"
+            app:layout_constraintStart_toStartOf="@+id/tvLvlN3prevCampaignVal"
+            app:layout_constraintTop_toBottomOf="@+id/tvLvlN3prevCampaignVal"
+            tools:text="8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBrightPathThirdColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clBrightPathSecondColumn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLevelIndicatorTableTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:text="@string/text_bright_path_level_pearl"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN4prevCampaignVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_round_square_level_indicator"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/tvLevelIndicatorTableTitle4"
+            app:layout_constraintStart_toStartOf="@+id/tvLevelIndicatorTableTitle4"
+            app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorTableTitle4"
+            tools:text="5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN4PrevPeriodVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvLvlN4prevCampaignVal"
+            app:layout_constraintStart_toStartOf="@+id/tvLvlN4prevCampaignVal"
+            app:layout_constraintTop_toBottomOf="@+id/tvLvlN4prevCampaignVal"
+            tools:text="8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBrightPathFourthColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clBrightPathThirdColumn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLevelIndicatorTableTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:text="@string/text_bright_path_level_topaz"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN5prevCampaignVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_round_square_level_indicator"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/tvLevelIndicatorTableTitle5"
+            app:layout_constraintStart_toStartOf="@+id/tvLevelIndicatorTableTitle5"
+            app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorTableTitle5"
+            tools:text="5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLvlN5PrevPeriodVal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="@dimen/content_inset_medium"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:paddingRight="@dimen/content_inset_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvLvlN5prevCampaignVal"
+            app:layout_constraintStart_toStartOf="@+id/tvLvlN5prevCampaignVal"
+            app:layout_constraintTop_toBottomOf="@+id/tvLvlN5prevCampaignVal"
+            tools:text="8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

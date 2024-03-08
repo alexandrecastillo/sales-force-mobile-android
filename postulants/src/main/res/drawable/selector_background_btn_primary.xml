@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/primary_color" />
+                </shape>
+            </item>
+            <item android:color="@color/white_transparent_70" />
+        </layer-list>
+    </item>
+    <item android:state_focused="true" android:state_hovered="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/primary_color" />
+                </shape>
+            </item>
+            <item android:color="@color/white_transparent_30" />
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/primary_color" />
+                </shape>
+            </item>
+            <item android:color="@color/white_transparent_30" />
+        </layer-list>
+    </item>
+    <item android:state_hovered="true" >
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/primary_color" />
+                </shape>
+            </item>
+            <item android:color="@color/white_transparent_20" />
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="@color/primary_color" />
+        </shape>
+    </item>
+
+</selector>

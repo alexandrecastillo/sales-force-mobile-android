@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_inset_less"
+    android:background="@drawable/surface_rounded_stroked"
+    android:paddingBottom="@dimen/content_inset_less">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margenInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margenFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="12dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewContenido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/gray_5"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="“Yessica mejorará la habilidad de manejar su tiempo para poder visitar a todas sus consultoras”" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewFecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="@color/gray_4"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toBottomOf="@id/textViewContenido"
+        tools:text="07 de febrero" />
+
+    <View
+        android:id="@+id/transparencia"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/faded_background_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/textViewFecha"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toTopOf="@id/textViewContenido" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonCumplir"
+        style="@style/Widget.Button.OutlinedButton.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/content_inset_double"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:text="@string/cumplir_acuerdo"
+        android:textColor="@color/textColorPrimary"
+        app:icon="@drawable/ic_thumb"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/content_inset_tiny"
+        app:iconTint="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toBottomOf="@id/textViewFecha" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonQuitarCumplimiento"
+        style="@style/Widget.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/content_inset_double"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:text="@string/quitar_cumplimiento_acuerdo"
+        android:textColor="@color/negativo"
+        app:icon="@drawable/ic_restablecer"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/content_inset_tiny"
+        app:iconTint="@color/negativo"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toBottomOf="@id/textViewFecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

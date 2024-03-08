@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvwInspireConditionItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/view_inspira_16dp"
+    android:background="@color/white"
+    app:cardElevation="@dimen/view_inspira_0dp"
+    app:cardMaxElevation="@dimen/view_inspira_0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/view_inspira_16dp">
+
+        <ImageView
+            android:id="@+id/ivwInspireConditionItemIcon"
+            android:layout_width="@dimen/view_inspira_24dp"
+            android:layout_height="@dimen/view_inspira_24dp"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:layout_marginTop="@dimen/view_inspira_12dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_success_level"
+            app:tint="@color/purple" />
+
+        <TextView
+            android:id="@+id/txvInspireConditionItemNumber"
+            style="@style/AppTheme.Inspire.TextView.Normal.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_4dp"
+            android:text="@string/inspira_condition_item_number"
+            android:textColor="@color/purple"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivwInspireConditionItemIcon"
+            app:layout_constraintStart_toEndOf="@id/ivwInspireConditionItemIcon"
+            app:layout_constraintTop_toTopOf="@id/ivwInspireConditionItemIcon" />
+
+
+        <TextView
+            android:id="@+id/txvInspireConditionItemTitle"
+            style="@style/AppTheme.Inspire.TextView.Normal.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_4dp"
+            android:text="@string/inspira_condition_item_title"
+            android:textAllCaps="true"
+            android:textColor="@color/purple"
+            app:layout_constraintBottom_toBottomOf="@id/ivwInspireConditionItemIcon"
+            app:layout_constraintStart_toEndOf="@id/ivwInspireConditionItemIcon"
+            app:layout_constraintTop_toTopOf="@id/ivwInspireConditionItemIcon" />
+
+        <TextView
+            android:id="@+id/txvInspireConditionItemDescription"
+            style="@style/AppTheme.Inspire.TextView.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_40dp"
+            android:layout_marginTop="@dimen/view_inspira_5dp"
+            android:layout_marginEnd="@dimen/view_inspira_40dp"
+            android:text="@string/inspira_condition_item_description"
+            android:textColor="@color/gris_escala_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txvInspireConditionItemTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txvInspireConditionItemTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwInspireConditionItemDetail"
+            android:layout_width="@dimen/view_inspira_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_inspira_8dp"
+            android:layout_marginEnd="@dimen/view_inspira_40dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txvInspireConditionItemTitle"
+            app:layout_constraintTop_toBottomOf="@id/txvInspireConditionItemDescription"
+            tools:itemCount="@integer/two"
+            tools:listitem="@layout/item_inspire_travel_conditions_legend_detail" />
+
+        <TextView
+            android:id="@+id/txvInspireConditionItemNote"
+            style="@style/AppTheme.Inspire.TextView.Small"
+            android:layout_width="@dimen/view_inspira_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_inspira_8dp"
+            android:layout_marginEnd="@dimen/view_inspira_40dp"
+            android:textColor="@color/gris_escala_4"
+            android:textSize="@dimen/view_inspira_10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txvInspireConditionItemTitle"
+            app:layout_constraintTop_toBottomOf="@id/rvwInspireConditionItemDetail"
+            tools:text="*" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

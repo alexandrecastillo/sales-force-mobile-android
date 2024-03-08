@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Span Count -->
+    <integer name="shortcuts_grid_count">3</integer>
+
+    <!-- Loading -->
+    <integer name="loading_duration">1000</integer>
+
+</resources>

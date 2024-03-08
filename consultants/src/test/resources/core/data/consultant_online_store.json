@@ -1,0 +1,69 @@
+{
+    "consultantOnlineStore": [
+        {
+            "campaign": "202013",
+            "region": "12",
+            "zone": "1206",
+            "section": "A",
+            "consultant_code": "0765122",
+            "campaign_subscription": "202009",
+            "is_subscribed": true,
+            "share": true,
+            "buy": false,
+            "sale": 0,
+            "orders": 1
+        },
+        {
+            "campaign": "202013",
+            "region": "12",
+            "zone": "1206",
+            "section": "A",
+            "consultant_code": "0807855",
+            "campaign_subscription": "",
+            "is_subscribed": false,
+            "share": false,
+            "buy": false,
+            "sale": 0,
+            "orders": 0
+        },
+        {
+            "campaign": "202013",
+            "region": "12",
+            "zone": "1206",
+            "section": "A",
+            "consultant_code": "0281561",
+            "campaign_subscription": "",
+            "is_subscribed": false,
+            "share": false,
+            "buy": false,
+            "sale": 0,
+            "orders": 1
+        },
+        {
+            "campaign": "202013",
+            "region": "12",
+            "zone": "1206",
+            "section": "A",
+            "consultant_code": "0175550",
+            "campaign_subscription": "",
+            "is_subscribed": false,
+            "share": false,
+            "buy": false,
+            "sale": 0,
+            "orders": 1
+        },
+        {
+            "campaign": "202013",
+            "region": "12",
+            "zone": "1206",
+            "section": "A",
+            "consultant_code": "0362883",
+            "campaign_subscription": "",
+            "is_subscribed": false,
+            "share": false,
+            "buy": false,
+            "sale": 0,
+            "orders": 1
+        }
+    ]
+}

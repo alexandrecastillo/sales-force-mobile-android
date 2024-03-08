@@ -1,0 +1,34 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="biz.belcorp.salesforce.modules.termsconditions">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_termsconditions">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application
+        android:hasCode="false"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:hasCode">
+
+        <activity
+            android:name=".features.dialog.fragment.TermsActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

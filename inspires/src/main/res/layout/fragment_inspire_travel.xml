@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inspira_background"
+    android:clickable="true"
+    android:elevation="@dimen/view_inspira_10dp"
+    android:fillViewport="true"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flyInspireTravelCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabInspireTravel"
+        style="@style/NavigationTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/white"
+        app:tabIndicatorColor="@color/indicator_inspire"
+        app:tabIndicatorHeight="@dimen/view_inspira_2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/indicator_inspire"
+        app:tabTextAppearance="@style/AppTheme.Inspire.TextView.Normal.Bold"
+        app:tabTextColor="@color/gris_escala_4" />
+
+    <FrameLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

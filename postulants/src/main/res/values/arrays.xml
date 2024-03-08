@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_genero">
+        <item>Mujer</item>
+        <item>Hombre</item>
+    </string-array>
+    <string-array name="array_tipodocumento">
+        <item>Cédula de Identidad</item>
+        <item>Pasaporte</item>
+    </string-array>
+    <string-array name="select_documento">
+        <item>Cámara</item>
+        <item>Galería</item>
+    </string-array>
+
+    <string-array name="select_documento_photo_pdf">
+        <item>Cámara</item>
+        <item>Galería</item>
+        <item>Documento pdf</item>
+    </string-array>
+
+    <string-array name="motivos_rechazos">
+        <item>INCONSISTENCIA EN LA INFORMACIÓN</item>
+        <item>NO LE INTERESA EL NEGOCIO</item>
+        <item>NO ES POSIBLE CONTACTARLA</item>
+        <item>NO ACREDITÓ SU DOMICILIO DE RESIDENCIA</item>
+        <item>PRESENTA DEUDA FINANCIERA EXTERNA</item>
+        <item>MENOR DE EDAD</item>
+        <item>BELCORP NO TIENE COBERTURA</item>
+    </string-array>
+
+    <string-array name="motivos_rechazos_val">
+        <item>2</item>
+        <item>6</item>
+        <item>8</item>
+        <item>1</item>
+        <item>9</item>
+        <item>7</item>
+        <item>5</item>
+    </string-array>
+
+</resources>

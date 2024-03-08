@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button Styles -->
+    <style name="Widget.Button.Green">
+        <item name="backgroundTint">@color/button_bg_green_color_selector</item>
+        <item name="android:backgroundTint">@color/button_bg_green_color_selector</item>
+        <item name="android:textColor">@color/button_text_color_selector</item>
+    </style>
+
+    <style name="Widget.Button.Green.Rounded">
+        <item name="cornerRadius">@dimen/content_inset_large</item>
+        <item name="android:paddingTop">@dimen/content_inset_tiny</item>
+        <item name="android:paddingBottom">@dimen/content_inset_tiny</item>
+        <item name="backgroundTint">@color/button_bg_green_color_selector</item>
+        <item name="android:backgroundTint">@color/button_bg_green_color_selector</item>
+        <item name="android:textColor">@color/button_text_color_selector</item>
+    </style>
+
+    <style name="Widget.Button.Green.Variant">
+        <item name="backgroundTint">@color/button_bg_green_variant_color_selector</item>
+        <item name="android:backgroundTint">@color/button_bg_green_variant_color_selector</item>
+        <item name="android:textColor">@color/button_text_color_selector</item>
+    </style>
+
+    <style name="Widget.Button.Green.Rounded.Variant">
+        <item name="cornerRadius">@dimen/content_inset_large</item>
+        <item name="android:paddingTop">@dimen/content_inset_tiny</item>
+        <item name="android:paddingBottom">@dimen/content_inset_tiny</item>
+        <item name="backgroundTint">@color/button_bg_green_variant_color_selector</item>
+        <item name="android:backgroundTint">@color/button_bg_green_variant_color_selector</item>
+        <item name="android:textColor">@color/button_text_color_selector</item>
+    </style>
+
+    <style name="Widget.Button.OutlinedButton.Green">
+        <item name="strokeColor">@color/button_bg_green_color_selector</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/button_bg_green_color_selector</item>
+    </style>
+
+
+    <style name="Widget.Button.OutlinedButton.Green.Variant">
+        <item name="strokeColor">@color/white</item>
+        <item name="backgroundTint">@color/button_dialog_bg_green_selector</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.Button.Red">
+        <item name="backgroundTint">@color/mi_ruta_eliminar_red</item>
+        <item name="android:backgroundTint">@color/mi_ruta_eliminar_red</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.Button.Black.Variant">
+        <item name="backgroundTint">@color/button_bg_black_color_selector</item>
+        <item name="android:backgroundTint">@color/button_bg_black_color_selector</item>
+    </style>
+
+    <style name="Widget.Button.OutlinedButton.Black">
+        <item name="strokeColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="Widget.Button.OutlinedButton.Black.Variant">
+        <item name="strokeColor">@color/black</item>
+        <item name="rippleColor">@color/colorSpotShadow</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/mi_ruta_eliminar_red</item>
+    </style>
+
+    <style name="Widget.Button.OutlinedButton.Black.Rounded">
+        <item name="strokeColor">@color/dark_text</item>
+        <item name="rippleColor">@color/colorSpotShadow</item>
+        <item name="cornerRadius">@dimen/content_inset_less</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.Button.OutlinedButton.White.Rounded">
+        <item name="strokeColor">@color/white</item>
+        <item name="rippleColor">@color/colorSpotShadow</item>
+        <item name="cornerRadius">@dimen/content_inset_less</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.Button.Blue">
+        <item name="backgroundTint">@color/rdd_accent</item>
+        <item name="android:backgroundTint">@color/rdd_accent</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.Button.Blue.Rounded">
+        <item name="cornerRadius">@dimen/ds_radius_4</item>
+        <item name="android:paddingStart">@dimen/content_inset_double</item>
+        <item name="android:paddingEnd">@dimen/content_inset_double</item>
+    </style>
+
+    <style name="Widget.Button.Blue.Rounded.R8">
+        <item name="cornerRadius">@dimen/ds_radius_8</item>
+        <item name="android:paddingStart">@dimen/content_inset_medium</item>
+        <item name="android:paddingEnd">@dimen/content_inset_medium</item>
+    </style>
+
+    <style name="Widget.Button.Blue.Rounded.Outlined">
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">@dimen/one</item>
+    </style>
+
+    <style name="Widget.Button.Blue.Rounded.R8.Outlined">
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">@dimen/one</item>
+    </style>
+
+    <style name="Widget.Button.Black">
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/content_inset_tiny</item>
+        <item name="text_size">@dimen/text_size_body</item>
+    </style>
+    <!-- End Button Styles -->
+
+
+    <!-- Switch Styles -->
+    <style name="MySwitchAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:textColor">@color/mi_ruta_accent</item>
+    </style>
+
+    <style name="SwitchRdd">
+        <item name="android:thumb">@drawable/switch_thumb_rdd</item>
+        <item name="track">@drawable/switch_track_rdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SwitchBuscarAppearance" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/mi_ruta_datetime_picker</item>
+    </style>
+
+    <style name="unete_switch">
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="track">@drawable/switch_track_rdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- End Switch Styles -->
+
+
+    <!-- TabLayout Styles -->
+    <style name="tab_rdd_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/mulish_bold</item>
+    </style>
+
+    <style name="TextAppearanceTabRdd" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <!-- End TabLayout Styles -->
+
+
+    <!-- RatingBar Styles -->
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/black_70</item>
+        <item name="colorControlActivated">@color/consultant_save_success</item>
+    </style>
+    <!-- End RatingBar Style -->
+
+
+    <!-- Card Styles -->
+    <style name="CardViewConsultantGroupStyle" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginTop">16.5dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="CardStyle" parent="CardView">
+        <item name="android:background">@color/white</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <!-- End Card Styles -->
+
+
+    <!-- Chechbox Styles -->
+    <style name="CheckboxRdd" parent="Base.Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/rdd_accent</item>
+        <item name="colorControlActivated">@color/rdd_accent</item>
+    </style>
+    <!-- End Checkbox Styles -->
+
+    <!-- Date/Time Picker Styles -->
+    <style name="DatetimePickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">#0000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/datetime_picker_text</item>
+    </style>
+
+    <style name="FechaHoraPickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">#0000</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:textColor">#252628</item>
+        <item name="android:textSize">@dimen/datetime_picker_text</item>
+    </style>
+    <!-- End Date/Time Picker Styles -->
+
+    <!-- DropDown Styles -->
+    <style name="Widget.AppCompat.Spinner.DropDown.Default">
+        <item name="android:background">@null</item>
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+    <!-- End DropDown Styles -->
+
+
+    <style name="inputText_style" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="WidgetFullScreenDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textAppearance">@style/inputText_style</item>
+
+    </style>
+
+    <!--    <item name="android:background">@drawable/box_spinner</item>-->
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">@color/magenta</color>
+    <color name="colorAccent">@color/magenta</color>
+
+    <color name="textColorPrimary">@color/black</color>
+    <color name="textColorSecondary">#454549</color>
+    <color name="textColorTernary">#909094</color>
+    <color name="textColorPrimaryVariant">#2c2654</color>
+    <color name="textColorPrimaryInverse">@color/white</color>
+    <color name="textColorSecondaryInverse">@color/white</color>
+    <color name="textColorTernaryInverse">@color/white</color>
+    <color name="textColorTernaryVariant">#7F7E7E</color>
+
+    <color name="colorBackground">#fafafd</color>
+    <color name="colorSurface">@color/white</color>
+    <color name="colorShadow">#1e000000</color>
+    <color name="colorSpotShadow">#A9A9AC</color>
+
+    <color name="colorSeparator">@color/gray_2</color>
+    <color name="colorBackgroundSoftGreen">#CFEFD9</color>
+    <color name="colorBackgroundSoftRed">#FEE6EC</color>
+    <color name="colorTextIndicator">#39BBB1</color>
+    <color name="colorDivider">#EAEAEC</color>
+    <color name="colorNewCycleTip">#E7F7F6</color>
+    <color name="colorCollectionTip">#3D38BE62</color>
+
+    <!-- Billing colors -->
+    <color name="colorIcon">#2f3676</color>
+    <color name="colorBillingAdvancementIndicator">#FCE1E1</color>
+    <color name="colorDigitalKpiIndicator">#E0F5EE</color>
+    <color name="colorDigitalKpiDescription">#3BC392</color>
+
+    <color name="colorPurple">#817BD0</color>
+
+    <!-- Sale & Orders colors -->
+    <color name="colorBackgroundTip">#FDEBEB</color>
+
+    <color name="red">#DE1435</color>
+    <color name="colorTitleCard">#E81C36</color>
+
+    <color name="color_text_consultant_item">#2C2654</color>
+
+    <color name="color_consultants_new_cycle">#f33162</color>
+    <color name="color_consultants_segment">#fcab53</color>
+    <color name="color_consultants_new_postulant">#6f85ff</color>
+
+    <color name="shadow_start">#26000000</color>
+    <color name="shadow_end">#00000000</color>
+
+    <color name="gray_home">#768ea3</color>
+
+    <color name="colorButtonVariant">#28B3A4</color>
+
+    <color name="colorRddPrimaryDark">#0e428d</color>
+    <color name="loading_transparent">#aa000022</color>
+    <color name="colorNotCovered">#EB4444</color>
+
+    <!-- Notification badge -->
+    <color name="colorDefaultBadge">#B52975</color>
+
+    <color name="tab_indicator_color">@color/magenta</color>
+    <color name="tab_background_color">#C4C4C4</color>
+
+    <color name="background_search">#EAEAEA</color>
+    <color name="text_section_my_partner">#DEBB8A</color>
+    <color name="background_partner_option">#EDEDED</color>
+
+
+</resources>

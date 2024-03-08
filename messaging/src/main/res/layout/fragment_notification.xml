@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_toolbar_dark"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabNotifications"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ds_elevation_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:tabTextAppearance="@style/TextAppearance.TabLayout.Tab" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabNotifications">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/titleToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:lineSpacingExtra="@dimen/content_inset_tiny"
+                android:text="@string/today"
+                android:textAppearance="@style/TextAppearance.DS.Title2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/container"
+                app:layout_goneMarginStart="@dimen/zero"
+                tools:text="@string/today" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTodayNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleToday"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_notification_messaging" />
+
+            <androidx.emoji.widget.EmojiTextView
+                android:id="@+id/tvEmptyListToday"
+                android:text="@string/notification_empty_list_today"
+                android:textColor="@color/textColorPrimaryVariant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                app:layout_constraintHorizontal_bias="0"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerTodayNotification"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/titleOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:clickable="false"
+                android:lineSpacingExtra="@dimen/content_inset_tiny"
+                android:text="@string/others"
+                android:textAppearance="@style/TextAppearance.DS.Title2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmptyListToday"
+                tools:text="@string/others"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerOtherNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleOthers"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_notification_messaging" />
+
+            <androidx.emoji.widget.EmojiTextView
+                android:id="@+id/tvEmptyListOthers"
+                android:text="@string/notification_empty_list_others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:textColor="@color/textColorPrimaryVariant"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                android:textStyle="normal"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerOtherNotification"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navFeatureInspiresProgram"
+    app:startDestination="@id/inspiresFragment">
+
+    <fragment
+        android:id="@+id/inspiresFragment"
+        android:name="biz.belcorp.salesforce.modules.inspires.features.dashboard.InspireDashboardFragment"
+        android:label="InspiresProgramFragment"
+        tools:layout="@layout/fragment_inspire_dashboard" />
+
+</navigation>

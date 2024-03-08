@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_postulante"
+    style="@style/item_postulante_card"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppThemeUnete">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/item_postulante_card_body">
+
+            <LinearLayout
+                android:id="@+id/header"
+                style="@style/item_postulante_header"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtId"
+                        style="@style/item_postulante_name"
+                        android:visibility="gone"
+                        tools:text="Codigo Consultora"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtNombres"
+                        style="@style/item_postulante_name"
+                        tools:text="Nombre Apellido" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/item_postulante_status_box"
+                    android:background="@drawable/background_unete_evaluacion_box">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvUserType"
+                        style="@style/item_postulante_status_box_label"
+                        android:text="@string/enevaluacion"
+                        android:textColor="@color/unete_evaluacion" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/body"
+                style="@style/item_postulante_body"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lyDiasEspera"
+                    style="@style/item_postulante_dato_layout">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtDiasEspera"
+                        style="@style/item_postulante_dato"
+                        android:textAlignment="viewStart"
+                        tools:text="10 días en espera" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyNroDocumento"
+                    style="@style/item_postulante_dato_layout">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtNroDocumento"
+                        style="@style/item_postulante_dato"
+                        android:textAlignment="viewStart"
+                        tools:text="@string/unete_listado_documento" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lySeccion"
+                    style="@style/item_postulante_dato_layout">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtSeccion"
+                        style="@style/item_postulante_dato"
+                        android:textAlignment="viewStart"
+                        tools:text="@string/unete_listado_seccion" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyFuente"
+                    style="@style/item_postulante_dato_layout">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtFuente"
+                        style="@style/item_postulante_dato"
+                        android:textAlignment="viewStart"
+                        tools:text="@string/unete_listado_fuente" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyDireccion"
+                    style="@style/item_postulante_dato_layout">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtDireccion"
+                        style="@style/item_postulante_dato"
+                        android:textAlignment="viewStart"
+                        tools:text="Direccion Calle " />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltValidacionGZ"
+                    style="@style/item_postulante_dato_layout"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/chkBoxValidacionGZ"
+                        style="@style/item_postulante_dato"
+                        android:layout_marginStart="@dimen/margin_20dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:layout_marginBottom="@dimen/margin_10dp"
+                        android:buttonTint="@color/boton_step_color"
+                        android:text="@string/textoValidacionGZ"
+                        android:textAlignment="viewStart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyCondiciones"
+                    style="@style/item_postulante_dato_layout"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtCondiciones"
+                        style="@style/item_postulante_dato"
+                        android:textAlignment="viewStart" />
+
+                    <LinearLayout
+                        android:id="@+id/ly3Condiciones"
+                        style="@style/item_postulante_dato_layout"
+                        android:layout_marginTop="@dimen/unete_evaluacion_marginTop"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/lyCondicionCrediticia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="@dimen/unete_evaluacion_marginRight"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivCondicionCrediticia"
+                                style="@style/item_postulante_dato"
+                                android:background="@drawable/icon_crediticia_invalido"
+                                android:contentDescription="@string/app_name" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyCondicionTelefono"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="@dimen/margin_underline"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivCondicionTelefono"
+                                style="@style/item_postulante_dato"
+                                android:background="@drawable/icon_telefono_invalido" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyCondicionUbicacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivCondicionUbicacion"
+                                style="@style/item_postulante_dato"
+                                android:background="@drawable/icon_ubicacion_invalido" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyPasos"
+                    style="@style/item_postulante_dato_layout">
+
+                    <com.stepstone.stepper.StepperLayout
+                        android:id="@+id/stpPasos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:ms_showBottomNavigation="false"
+                        app:ms_stepperType="tabs"
+                        tools:theme="@style/AppTheme" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtOffline"
+                    style="@style/unete_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/unete_postulante_offline"
+                    android:textAlignment="center"
+                    android:textColor="@color/unete_error"
+                    android:textSize="@dimen/size_12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/section_unete_action" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-1dp"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/divisorSuperior"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divisorInferior"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divisorVertical1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="@+id/divisorInferior"
+        app:layout_constraintStart_toStartOf="@+id/divisorInferior"
+        app:layout_constraintTop_toTopOf="@+id/divisorSuperior" />
+
+    <View
+        android:id="@+id/divisorVertical2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="@+id/divisorInferior"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical3"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical1"
+        app:layout_constraintTop_toTopOf="@+id/divisorSuperior" />
+
+    <View
+        android:id="@+id/divisorVertical3"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="@+id/divisorInferior"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical4"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical2"
+        app:layout_constraintTop_toTopOf="@+id/divisorSuperior" />
+
+    <View
+        android:id="@+id/divisorVertical4"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="@+id/divisorInferior"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical5"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical3"
+        app:layout_constraintTop_toTopOf="@+id/divisorSuperior" />
+
+    <View
+        android:id="@+id/divisorVertical5"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="@+id/divisorInferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divisorSuperior" />
+
+    <TextView
+        android:id="@+id/textZona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical2"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ZONA" />
+
+    <TextView
+        android:id="@+id/textUltimaCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical3"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C02" />
+
+    <TextView
+        android:id="@+id/textPenultimaCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical4"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C01" />
+
+    <TextView
+        android:id="@+id/textAntepenultimaCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divisorVertical5"
+        app:layout_constraintStart_toEndOf="@+id/divisorVertical4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

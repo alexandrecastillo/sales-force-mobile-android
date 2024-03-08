@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/search_item_simple_height">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_item_simple_height"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/content_inset_normal"
+        android:paddingEnd="@dimen/content_inset_normal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_subtitle"
+        tools:text="Registrada" />
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clCabeceraContenedor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="@dimen/icon_size_big"
+        android:layout_height="@dimen/icon_size_big"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_circle"
+        android:contentDescription="@null"
+        android:padding="@dimen/content_inset_tiniest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar"
+        tools:backgroundTint="@color/magenta" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_less"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/mulish_bold"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fernana Maria Ruiz" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDigitalSegment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_less"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/segmento"
+        tools:text="Consultora Mixta MTO" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/segmento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_less"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintTop_toBottomOf="@id/txtNombre">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgIndicadorSegmento"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:paddingEnd="@dimen/content_inset_tiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtSegmento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_oval"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSegmento"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/gray_5"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgIndicadorSegmento"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nueva 1d1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cumpleanos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/txtNombre"
+        app:layout_constraintTop_toBottomOf="@+id/txtDigitalSegment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCumpleanos"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginTop="@dimen/content_inset_tiniest"
+            android:contentDescription="@null"
+            android:tint="@color/gray_5"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/txtFechaCumpleanos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cumpleanos" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtFechaCumpleanos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginTop="@dimen/content_inset_half"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/gray_5"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imgCumpleanos"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="0dp"
+            tools:text="02 de Marzo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/redes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cumpleanos">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgWhatsapp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/imgCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_wsp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCorreo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/imgTelefono"
+            app:layout_constraintStart_toEndOf="@id/imgCorreo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_email" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTelefono"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgCorreo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_telephone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

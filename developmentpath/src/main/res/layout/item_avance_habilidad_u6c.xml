@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/content_inset_small">
+
+    <ImageView
+        android:id="@+id/image_estrella_favorito"
+        android:layout_width="@dimen/rdd_margin_low"
+        android:layout_height="@dimen/rdd_margin_low"
+        android:contentDescription="@null"
+        android:paddingStart="0dp"
+        android:paddingTop="@dimen/rdd_margin_start_tiny"
+        android:paddingEnd="@dimen/rdd_margin_start_tiny"
+        app:layout_constraintBottom_toTopOf="@id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@id/progress_avance_habilidad"
+        app:layout_constraintStart_toEndOf="@id/progress_avance_habilidad"
+        app:layout_constraintTop_toTopOf="@id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_estrella_amarillo_habilidad" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progress_avance_habilidad"
+        android:layout_width="@dimen/rdd_padding_start_tiny"
+        android:layout_height="@dimen/rdd_padding_start_tiny"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        app:cpb_background_progressbar_color="@color/background_progress_new"
+        app:cpb_background_progressbar_width="2dp"
+        app:cpb_progressbar_color="@color/estado_positivo"
+        app:cpb_progressbar_width="2.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_habilidad_icono"
+        android:layout_width="@dimen/content_inset_medium"
+        android:layout_height="@dimen/content_inset_medium"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@+id/progress_avance_habilidad"
+        app:layout_constraintStart_toStartOf="@+id/progress_avance_habilidad"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad" />
+
+    <TextView
+        android:id="@+id/text_porcentaje_cumplimiento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rdd_margin_start_tiny"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.04"
+        android:textColor="@color/text_porcentaje_texto"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/progress_avance_habilidad"
+        app:layout_constraintStart_toStartOf="@+id/progress_avance_habilidad"
+        app:layout_constraintTop_toBottomOf="@+id/progress_avance_habilidad"
+        tools:text="90%" />
+
+    <TextView
+        android:id="@+id/text_habilidad_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/rdd_margin_min_tiny"
+        android:layout_marginEnd="@dimen/content_inset_less"
+        android:layout_marginBottom="@dimen/content_inset_half"
+        android:fontFamily="@font/mulish_regular"
+        android:lineSpacingExtra="@dimen/rdd_margin_min_tiny"
+        android:textColor="@color/text_porcentaje_texto"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_cumplimiento_campania_x_menos_5"
+        app:layout_constraintStart_toEndOf="@+id/progress_avance_habilidad"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Desarrolla a otros" />
+
+    <ImageView
+        android:id="@+id/image_cumplimiento_campania_x"
+        android:layout_width="@dimen/rdd_margin_start"
+        android:layout_height="@dimen/rdd_margin_start"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@id/text_campania_x"
+        app:layout_constraintStart_toStartOf="@id/text_campania_x"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_equis_avance_habilidades" />
+
+    <TextView
+        android:id="@+id/text_campania_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/campania_ejemplo"
+        android:textSize="@dimen/size_title_ruta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_cumplimiento_campania_x_menos_1"
+        android:layout_width="@dimen/rdd_margin_start"
+        android:layout_height="@dimen/rdd_margin_start"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@+id/text_campania_x_menos_1"
+        app:layout_constraintStart_toStartOf="@+id/text_campania_x_menos_1"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_equis_avance_habilidades" />
+
+    <TextView
+        android:id="@+id/text_campania_x_menos_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/campania_ejemplo"
+        android:textSize="@dimen/size_title_ruta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toStartOf="@id/text_campania_x"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_cumplimiento_campania_x_menos_2"
+        android:layout_width="@dimen/rdd_margin_start"
+        android:layout_height="@dimen/rdd_margin_start"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@+id/text_campania_x_menos_2"
+        app:layout_constraintStart_toStartOf="@+id/text_campania_x_menos_2"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_equis_avance_habilidades" />
+
+    <TextView
+        android:id="@+id/text_campania_x_menos_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/campania_ejemplo"
+        android:textSize="@dimen/size_title_ruta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_campania_x_menos_1"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_cumplimiento_campania_x_menos_3"
+        android:layout_width="@dimen/rdd_margin_start"
+        android:layout_height="@dimen/rdd_margin_start"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@+id/text_campania_x_menos_3"
+        app:layout_constraintStart_toStartOf="@+id/text_campania_x_menos_3"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_equis_avance_habilidades" />
+
+    <TextView
+        android:id="@+id/text_campania_x_menos_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/campania_ejemplo"
+        android:textSize="@dimen/size_title_ruta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_campania_x_menos_2"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_cumplimiento_campania_x_menos_4"
+        android:layout_width="@dimen/rdd_margin_start"
+        android:layout_height="@dimen/rdd_margin_start"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@+id/text_campania_x_menos_4"
+        app:layout_constraintStart_toStartOf="@id/text_campania_x_menos_4"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_equis_avance_habilidades" />
+
+    <TextView
+        android:id="@+id/text_campania_x_menos_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/campania_ejemplo"
+        android:textSize="@dimen/size_title_ruta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_campania_x_menos_3"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_cumplimiento_campania_x_menos_5"
+        android:layout_width="@dimen/rdd_margin_start"
+        android:layout_height="@dimen/rdd_margin_start"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="@+id/text_campania_x_menos_5"
+        app:layout_constraintStart_toStartOf="@+id/text_campania_x_menos_5"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        app:srcCompat="@drawable/ic_equis_avance_habilidades" />
+
+    <TextView
+        android:id="@+id/text_campania_x_menos_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/campania_ejemplo"
+        android:textSize="@dimen/size_title_ruta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_avance_habilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_campania_x_menos_4"
+        app:layout_constraintTop_toTopOf="@+id/progress_avance_habilidad"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

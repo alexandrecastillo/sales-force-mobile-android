@@ -1,0 +1,231 @@
+apply plugin: "org.sonarqube"
+
+sonarqube {
+
+    if (project.hasProperty("buildType") && project.hasProperty("flavorType")) {
+        String buildType = project.property("buildType").toString()
+        String flavorType = project.property("flavorType").toString()
+        String fullAndroidVariant = flavorType + buildType.capitalize()
+
+        androidVariant fullAndroidVariant
+    }
+
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.verbose", true
+        property "sonar.host.url", "http://192.168.99.100:9000"
+        property "sonar.projectName", "FFVV 2.0 - Android - "
+        property "sonar.projectKey", "biz.belcorp.salesforce"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.projectVersion", "0.1"
+        property "sonar.issuesReport.html.enable", "true"
+        property "sonar.issuesReport.console.enable", "true"
+
+        property "sonar.coverage.jacoco.xmlReportPaths", findAllReports()
+        property "detekt.sonar.kotlin.config.path", "${rootProject.projectDir}/detekt-config.yml"
+
+        property "sonar.java.coveragePlugin", "jacoco"
+    }
+}
+
+project(":app") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":core") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":components") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":messaging") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":auth") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":billing") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":brightpath") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":calculator") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":consultants") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":creditinquiry") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":developmentmaterial") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":developmentpath") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":kpis") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":orders") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":postulants") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":virtualmethodology") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":termsconditions") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/java"
+            property "sonar.exclusions", "src/main/java/**/di/**"
+        }
+    }
+}
+
+project(":digital") {
+    sonarqube {
+        skipProject = false
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+project(":inspires") {
+    sonarqube {
+        skipProject = true
+        properties {
+            property "sonar.sources", "src/main/kotlin"
+            property "sonar.exclusions", "src/main/kotlin/**/di/**"
+        }
+    }
+}
+
+String findAllReports() {
+    def file = "${rootProject.buildDir}/reports"
+
+    def sonarEnabledProjects = rootProject.subprojects
+        .findAll { p -> p.sonarqube.getProperties().get("skipProject") == false }
+        *.name
+        .collect { projectName -> "$file/jacocoTestReport-${projectName}.xml" }
+        .join(",")
+
+    return sonarEnabledProjects
+}

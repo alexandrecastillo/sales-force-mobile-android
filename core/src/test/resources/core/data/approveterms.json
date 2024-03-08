@@ -1,0 +1,12 @@
+{
+    "ApprovedTerms": {
+        "terms": [
+            {
+                "campaign": "202019",
+                "term_code": "LINKSE",
+                "checked": true,
+                "active": true
+            }
+        ]
+    }
+}

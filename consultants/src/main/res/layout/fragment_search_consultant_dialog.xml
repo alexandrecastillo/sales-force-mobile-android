@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_toolbar_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <biz.belcorp.mobile.components.design.selector.bar.view.SelectorBar
+        android:id="@+id/selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/content_inset_normal"
+        android:paddingTop="@dimen/content_inset_tiniest"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:ignore="RtlSymmetry"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvTitleSelector,tvDescriptionSelector"
+        app:layout_constraintBottom_toTopOf="@id/tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selector"
+        app:layout_goneMarginTop="@dimen/zero" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selector"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:text="@string/text_consultant_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDescriptionSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/textColorPrimaryVariant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleSelector"
+        tools:text="Tu seccion - Socia Empresaria"
+        tools:visibility="visible" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        style="@style/Widget.Fractal.TabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescriptionSelector" />
+
+    <FrameLayout
+        android:id="@+id/frameSearchConsultant"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

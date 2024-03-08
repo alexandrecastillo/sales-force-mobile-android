@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <biz.belcorp.mobile.components.design.labeledittext.LabelEditText
+        android:id="@+id/letPAV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_other_20"
+        android:nextFocusRight="@id/letPBV"
+        app:edittext_hint="@string/calculator_default_number_hint"
+        app:edittext_maxLength="3"
+        app:edittext_maxLines="1"
+        app:edittext_textAlignment="center"
+        app:label_orientation="bottom"
+        app:label_text="@string/calculator_label_pav"
+        app:label_textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/letPBV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <biz.belcorp.mobile.components.design.labeledittext.LabelEditText
+        android:id="@+id/letPBV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_other_20"
+        android:nextFocusRight="@id/letIngresos"
+        app:edittext_hint="@string/calculator_default_number_hint"
+        app:edittext_maxLength="3"
+        app:edittext_maxLines="1"
+        app:edittext_textAlignment="center"
+        app:label_orientation="bottom"
+        app:label_text="@string/calculator_label_pbv"
+        app:label_textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/letIngresos"
+        app:layout_constraintStart_toEndOf="@id/letPAV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <biz.belcorp.mobile.components.design.labeledittext.LabelEditText
+        android:id="@+id/letIngresos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_other_20"
+        app:edittext_hint="@string/calculator_default_number_hint"
+        app:edittext_maxLength="3"
+        app:edittext_maxLines="1"
+        app:edittext_textAlignment="center"
+        app:label_orientation="bottom"
+        app:label_text="@string/calculator_label_Ingresos"
+        app:label_textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/letCapit"
+        app:layout_constraintStart_toEndOf="@id/letPBV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <biz.belcorp.mobile.components.design.labeledittext.LabelEditText
+        android:id="@+id/letCapit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_other_20"
+        app:edittext_hint="@string/calculator_default_number_hint"
+        app:edittext_maxLength="3"
+        app:edittext_maxLines="1"
+        app:edittext_textAlignment="center"
+        app:label_orientation="bottom"
+        app:label_text="@string/calculator_label_capitalizacion"
+        app:label_textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/txvRecoveryGoalPercentage"
+        app:layout_constraintStart_toEndOf="@id/letIngresos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvRecoveryGoalPercentage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ds_padding_40dp"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_other_4"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:gravity="center"
+        android:text="@string/calculator_recovery_goal_percentage"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letCapit"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="85%" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/calculator_recovery_goal_percentage_label"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption"
+        app:layout_constraintEnd_toEndOf="@id/txvRecoveryGoalPercentage"
+        app:layout_constraintStart_toStartOf="@id/txvRecoveryGoalPercentage"
+        app:layout_constraintTop_toBottomOf="@id/txvRecoveryGoalPercentage" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="letPAV,letPBV,letIngresos,letCapit,textView1"/>
+
+    <View
+        android:id="@+id/vwLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ds_divider_horizontal_height"
+        android:layout_marginTop="@dimen/ds_margin_12dp"
+        android:layout_marginBottom="@dimen/ds_margin_small"
+        android:background="@color/gray_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

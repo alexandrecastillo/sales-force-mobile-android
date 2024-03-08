@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/includedConsultantInfoView"
+        layout="@layout/view_consultant_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/includedConsultantIndicatorView"
+        layout="@layout/view_consultant_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includedConsultantInfoView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContainerAmounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includedConsultantIndicatorView">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitleDebt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_debt"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/textColorTernaryVariant"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/title_debt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAmountDebt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleDebt"
+            tools:text="S/ 999.999" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitleOrdersSb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/title_orders_sb"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/textColorTernaryVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/title_orders_sb" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAmountOrderSb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleOrdersSb"
+            tools:text="S/ 999.999" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContainerAmounts2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clContainerAmounts">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_debt"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/textColorTernaryVariant"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/title_debt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAmountValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleAmount"
+            tools:text="S/ 999.999" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleAmount2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/title_indicator_multi_brand"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/textColorTernaryVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/title_indicator_multi_brand" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAmountValue2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/titleAmount2"
+            tools:text="@string/title_indicator_multi_brand_yes" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/includedViewBottomGiftDescription"
+        layout="@layout/view_bottom_gift_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clContainerAmounts2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/mi_ruta_accent"
+        android:gravity="center_vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/content_inset_small"
+            android:paddingTop="@dimen/content_inset_normal"
+            android:paddingRight="@dimen/content_inset_small"
+            android:paddingBottom="@dimen/content_inset_normal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/rdd_reconocimiento_titulo"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_subtitle"
+                app:layout_constraintStart_toEndOf="@id/imageView4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_habilidades_subtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/rdd_reconocimiento_subtitulo"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView19"
+                app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_delete_x" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_medal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecognition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ly_datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/content_inset_normal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgIconConsultant"
+                android:layout_width="@dimen/icon_size_big"
+                android:layout_height="@dimen/icon_size_big"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/content_inset_normal"
+                android:layout_height="@dimen/content_inset_normal"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="@id/imgIconConsultant"
+                app:layout_constraintEnd_toEndOf="@id/imgIconConsultant"
+                app:srcCompat="@drawable/ic_check_green_rdd" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNamePersonReco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="@dimen/text_size_subtitle"
+                app:layout_constraintStart_toEndOf="@+id/imgIconConsultant"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPersonTypeReco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_tiniest"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintStart_toEndOf="@id/imgPointTypeReco"
+                app:layout_constraintTop_toBottomOf="@id/txtNamePersonReco" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPointTypeReco"
+                android:layout_width="@dimen/content_inset_small"
+                android:layout_height="@dimen/content_inset_small"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="@id/txtPersonTypeReco"
+                app:layout_constraintStart_toStartOf="@id/txtNamePersonReco"
+                app:layout_constraintTop_toTopOf="@id/txtPersonTypeReco" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imagePerfilSeNivel"
+                android:layout_width="@dimen/content_inset_normal"
+                android:layout_height="@dimen/content_inset_normal"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txtPersonTypeReco"
+                app:layout_constraintStart_toEndOf="@+id/txtPersonTypeReco"
+                app:srcCompat="@drawable/ic_rdd_nivel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textPerfilSeNivelRec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="#8a8a8e"
+                android:textSize="@dimen/text_size_caption"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txtPersonTypeReco"
+                app:layout_constraintStart_toEndOf="@+id/imagePerfilSeNivel" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerComportamientos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgIconConsultant"
+                app:layout_constraintVertical_bias="0"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="6"
+                tools:layoutManager="GridLayoutManager"
+                tools:listitem="@layout/item_reconocimiento_comportamiento"
+                tools:spanCount="2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRecognition"
+        style="@style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_large"
+        android:layout_marginEnd="@dimen/content_inset_large"
+        android:layout_marginBottom="@dimen/content_inset_small"
+        android:backgroundTint="@color/colorButtonVariant"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_reconocimiento_reconocer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/content_inset_less"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

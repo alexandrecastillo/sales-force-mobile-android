@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flCabeceraDesempenio"
+        style="@style/CardViewConsultantGroupStyle"
+        android:layout_marginBottom="@dimen/content_inset_tiny"
+        android:focusable="true"
+        android:padding="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_consultant_profile_data"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center_vertical"
+            android:text="@string/text_desempenio_ultimas_seis_campanias"
+            android:textColor="@color/perfil_text_section"
+            android:textSize="@dimen/text_size_subtitle" />
+
+        <ImageView
+            android:id="@+id/iv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llDesempenio"
+        style="@style/CardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rdd_margin_min_tiny"
+        android:padding="@dimen/content_inset_normal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/flCabeceraDesempenio"
+        tools:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDesempenio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

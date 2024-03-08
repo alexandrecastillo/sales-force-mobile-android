@@ -1,0 +1,165 @@
+<resources>
+
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="activity_indicator_margin">10dp</dimen>
+    <dimen name="margin_view_text">16dp</dimen>
+
+    <dimen name="activity_regular_margin">5dp</dimen>
+    <dimen name="size_label_value">14sp</dimen>
+
+    <dimen name="zone_text_size">10sp</dimen>
+    <dimen name="min_text_size">8sp</dimen>
+    <dimen name="component_shadow_size">4dp</dimen>
+
+    <dimen name="medium_sp">15sp</dimen>
+
+    <!--Unete listadop-->
+    <dimen name="size_label_value_max">16sp</dimen>
+    <dimen name="size_icon_search">24dp</dimen>
+    <dimen name="size_component_none">0dp</dimen>
+    <dimen name="width_view_decorate">10dp</dimen>
+    <dimen name="margin_view_decorate">12dp</dimen>
+    <dimen name="height_wrapper_input">48dp</dimen>
+    <dimen name="height_input_item">48dp</dimen>
+    <dimen name="padding_innner_wrapper">8dp</dimen>
+    <dimen name="padding_item_filter_divider">1dp</dimen>
+    <dimen name="padding_item_filter">8dp</dimen>
+    <dimen name="height_innner_wrapper">64dp</dimen>
+    <dimen name="size_card_elevartion">2dp</dimen>
+    <dimen name="dimen_height_card_filter">64dp</dimen>
+    <dimen name="dimen_width_button_action_search">56dp</dimen>
+    <dimen name="margin_left_uspinner">5dp</dimen>
+    <dimen name="margin_lateral_input">15dp</dimen>
+    <dimen name="margin_view_card_all">10dp</dimen>
+    <dimen name="margin_view_card_all_min">5dp</dimen>
+    <dimen name="width_type_document">160dp</dimen>
+    <dimen name="margin_sides_grown_consultant_card">20dp</dimen>
+    <dimen name="margin_top_bottom_grown_consultant_card">8dp</dimen>
+    <dimen name="dimen_min_height_consultant_item_view">60dp</dimen>
+    <dimen name="dimen_min_size_grown_consultant_item_view">4dp</dimen>
+    <dimen name="dimen_default_42p">42dp</dimen>
+    <dimen name="dimen_default_24p">24dp</dimen>
+    <dimen name="dimen_default_20p">20dp</dimen>
+    <dimen name="dimen_default_16p">16dp</dimen>
+    <dimen name="dimen_default_sides_4dp">4dp</dimen>
+    <dimen name="dimen_default_sides_2dp">2dp</dimen>
+    <dimen name="dimen_text_size_consultant_level_desc">12sp</dimen>
+    <dimen name="dimen_icon_vector">32dp</dimen>
+    <dimen name="dimen_text_size_sales_indicator_main_value">40sp</dimen>
+    <dimen name="dimen_default_margin">8dp</dimen>
+    <dimen name="dialog_main_padding_sides">18dp</dimen>
+    <dimen name="dialog_main_padding_top">24dp</dimen>
+    <dimen name="dialog_main_padding_bottom">8dp</dimen>
+    <dimen name="dimen_margin_top_between_indicators">20dp</dimen>
+    <dimen name="dimen_square_height">20dp</dimen>
+    <dimen name="dimen_square_min_width">28dp</dimen>
+    <dimen name="text_size_consultora_nivel_segmento_dot">10sp</dimen>
+    <dimen name="unete_pr_2_layout_marginTop">12dp</dimen>
+    <dimen name="margin_0dp">0dp</dimen>
+    <dimen name="margin_1dp">1dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_9dp">9dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_11dp">11dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_13dp">13dp</dimen>
+    <dimen name="margin_14dp">14dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="margin_36dp">36dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+    <dimen name="dimen_104dp">104dp</dimen>
+
+    <dimen name="unete_status_circle">18dp</dimen>
+    <dimen name="unete_evaluacion_marginTop">10dp</dimen>
+    <dimen name="unete_evaluacion_marginRight">10dp</dimen>
+    <dimen name="margin_underline">10dp</dimen>
+    <dimen name="size_12sp">12sp</dimen>
+    <dimen name="size_11sp">11sp</dimen>
+    <dimen name="size_10sp">10sp</dimen>
+    <dimen name="size_14sp">14sp</dimen>
+    <dimen name="size_16sp">16sp</dimen>
+    <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_40sp">40sp</dimen>
+    <dimen name="size_60sp">60sp</dimen>
+
+<!--    <item name="unete_status_border_width" format="float" type="dimen">0.5dp</item>-->
+
+    <dimen name="unete_status_border_width" format="float" type="dimen">0.5dp</dimen>
+    <dimen name="unete_indicador_padding">5dp</dimen>
+
+
+    <!-- Dialog Condiciones -->
+    <dimen name="dialog_condicion_paddingEnd_1">18dp</dimen>
+    <dimen name="dialog_condicion_paddingStart_1">18dp</dimen>
+    <dimen name="dialog_condicion_paddingBottom_1">8dp</dimen>
+    <dimen name="dialog_condicion_paddingBottom_2">16dp</dimen>
+    <dimen name="dialog_condicion_paddingTop_1">24dp</dimen>
+    <dimen name="dialog_condicion_paddingTop_2">30dp</dimen>
+    <dimen name="dialog_condicion_paddingTop_3">5dp</dimen>
+    <dimen name="dialog_condicion_paddingTop_4">20dp</dimen>
+    <dimen name="dialog_condicion_paddingRight_1">50dp</dimen>
+    <dimen name="dialog_condicion_paddingLeft_1">50dp</dimen>
+    <dimen name="dialog_condicion_size_value">12sp</dimen>
+    <dimen name="dialog_condicion_size_value_2">14sp</dimen>
+    <dimen name="dialog_condicion_cardview_radius">8dp</dimen>
+
+    <!--Indicator size-->
+    <dimen name="indicator_title">15sp</dimen>
+    <dimen name="indicator_table_header">10sp</dimen>
+    <dimen name="indicator_table_header_percentage">30sp</dimen>
+    <dimen name="indicator_table_item">12sp</dimen>
+    <dimen name="indicator_request_vta">17.5sp</dimen>
+    <dimen name="indicator_label">13sp</dimen>
+    <dimen name="indicator_value_little">40sp</dimen>
+    <dimen name="indicator_value_medium">50sp</dimen>
+    <dimen name="indicator_value_big">60sp</dimen>
+
+    <!--Perfil-->
+    <dimen name="size_hint">12sp</dimen>
+    <dimen name="size_value">14sp</dimen>
+    <dimen name="margin_textview_all">12dp</dimen>
+    <dimen name="margin_textview_col">8dp</dimen>
+    <dimen name="margin_view_under">4dp</dimen>
+    <dimen name="size_component_min">1dp</dimen>
+    <dimen name="padding_box_all">10dp</dimen>
+    <dimen name="width_image_perfil">48dp</dimen>
+    <dimen name="height_image_perfil">32dp</dimen>
+
+    <dimen name="margin_center">80dp</dimen>
+
+    <dimen name="activity_big_margin">20dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin_negative">-16dp</dimen>
+    <dimen name="activity_little_margin">4dp</dimen>
+    <dimen name="activity_text_view_size">17dp</dimen>
+    <dimen name="sections_bar_size">80dp</dimen>
+    <dimen name="card_view_sections_width">190dp</dimen>
+    <dimen name="card_view_terms_and_conditions_height">60dp</dimen>
+    <dimen name="development_ranking_productividad_height">60dp</dimen>
+
+    <!--Sections drill down sizes-->
+    <dimen name="sections_drilldown_title">13sp</dimen>
+    <dimen name="sections_drilldown_consultant">11sp</dimen>
+
+    <dimen name="table_width">100dp</dimen>
+    <dimen name="table_height">40dp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+
+    <dimen name="margin_left_validacion_GZ">20dp</dimen>
+    <dimen name="margin_bottom_validacion_GZ">10dp</dimen>
+    <dimen name="margin_top_validacion_GZ">10dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+
+</resources>

@@ -1,0 +1,84 @@
+import biz.belcorp.salesforce.Config
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Versions
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileOptions {
+        sourceCompatibility Versions.Android.javaVersion
+        targetCompatibility Versions.Android.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = Versions.Android.javaVersion.toString()
+    }
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+    compileSdkVersion Versions.Android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion Versions.Android.minSdkVersion
+        targetSdkVersion Versions.Android.targetSdkVersion
+        versionCode Versions.Android.appVersionCode
+        versionName Versions.Android.appVersionName
+    }
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        test.java.srcDirs += "src/sharedtest/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+    buildTypes {
+        release {
+            debuggable false
+        }
+        stage {
+            debuggable !Config.App.isCiServer
+        }
+        develop {
+            debuggable true
+        }
+        review {
+            debuggable true
+        }
+    }
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+    flavorDimensions "perfil"
+    productFlavors {
+        multiprofile {
+            dimension "perfil"
+        }
+        businesspartners {
+            dimension "perfil"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    api project(":core")
+
+    implementation Deps.kotlin
+    implementation Deps.Android.appCompat
+    implementation Deps.Android.androidKTX
+
+    implementation Deps.Libs.firebaseCore
+    implementation Deps.Libs.firebaseAnalytics
+
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.androidTestExt
+    androidTestImplementation Deps.Test.espressoCore
+
+    implementation Deps.Libs.gson
+
+}

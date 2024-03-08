@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_item_partner"
+    android:elevation="8dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerNoCover"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sectionNoC"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:text="@string/no_cover_section"
+            android:textColor="@color/text_section_my_partner"
+            app:layout_constraintBottom_toTopOf="@+id/guideline14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/partnerProjectionNoCover" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.DS.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:text="@string/no_cover_section"
+            android:textColor="@color/red"
+            app:layout_constraintBottom_toBottomOf="@+id/partnerProjectionNoCover"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline14" />
+
+        <LinearLayout
+            android:id="@+id/partnerProjectionNoCover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_options_partner"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_campaign_projection"
+                app:tint="@color/magenta" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.DS.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/campaign_projection"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerCover"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/section"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text_section_my_partner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Seccion A" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productive"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/textColorTernary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/section"
+            tool:text="Productiva" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_consultant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/section" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/consultantName"
+            style="@style/TextAppearance.DS.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            tool:text="Name consultant" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/level"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/my_partner_label"
+            android:textColor="@color/textColorTernary"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/partnerLevel"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/level"
+            app:layout_constraintEnd_toEndOf="@+id/consultantName"
+            app:layout_constraintStart_toEndOf="@+id/level"
+            app:layout_constraintTop_toTopOf="@+id/level"
+            tool:text="Oro" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lastTransactionLabel"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/last_transaction"
+            android:textColor="@color/textColorTernary"
+            app:layout_constraintStart_toStartOf="@+id/level"
+            app:layout_constraintTop_toBottomOf="@+id/level" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lastTransaction"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/lastTransactionLabel"
+            app:layout_constraintEnd_toEndOf="@+id/consultantName"
+            app:layout_constraintStart_toEndOf="@+id/lastTransactionLabel"
+            app:layout_constraintTop_toTopOf="@+id/lastTransactionLabel"
+            tool:text="Exitosa" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addressLabel"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/address"
+            android:textColor="@color/textColorTernary"
+            app:layout_constraintStart_toStartOf="@+id/lastTransactionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/lastTransactionLabel" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/address"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/consultantName"
+            app:layout_constraintStart_toEndOf="@+id/addressLabel"
+            app:layout_constraintTop_toTopOf="@+id/addressLabel"
+            tool:text="Calle John Neper 121 San Borja" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phoneLabel"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/phone"
+            android:textColor="@color/textColorTernary"
+            app:layout_constraintStart_toStartOf="@+id/addressLabel"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phone"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+
+            android:drawableEnd="@drawable/whatsapp_icon"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/phoneLabel"
+            app:layout_constraintStart_toEndOf="@+id/phoneLabel"
+            app:layout_constraintTop_toTopOf="@+id/phoneLabel"
+            tool:text="+51 99001732" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/projectionLabel"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/projection"
+            android:textColor="@color/textColorTernary"
+            app:layout_constraintStart_toStartOf="@+id/phoneLabel"
+            app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/projection"
+            style="@style/TextAppearance.DS.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/projectionLabel"
+            app:layout_constraintEnd_toEndOf="@+id/productive"
+            app:layout_constraintStart_toEndOf="@+id/projectionLabel"
+            app:layout_constraintTop_toTopOf="@+id/projectionLabel"
+            tool:text="2 de 3 Campañas para subir de nivel" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/partnerProfile"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_options_partner"
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/partnerProjection"
+            app:layout_constraintStart_toStartOf="@+id/projectionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/projectionLabel">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_consultant"
+                app:tint="@color/magenta" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.DS.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/partner_profile"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/partnerChangeLevel"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_options_partner"
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/projection"
+            app:layout_constraintStart_toEndOf="@+id/partnerProjection"
+            app:layout_constraintTop_toBottomOf="@+id/projectionLabel">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_change_level"
+                app:tint="@color/magenta" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.DS.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/change_level"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/partnerProjection"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_options_partner"
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/partnerProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/partnerProfile">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_campaign_projection"
+                app:tint="@color/magenta" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.DS.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/campaign_projection"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

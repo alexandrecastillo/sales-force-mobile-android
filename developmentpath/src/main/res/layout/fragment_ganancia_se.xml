@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_corners_4"
+    android:paddingStart="@dimen/content_inset_large"
+    android:paddingTop="@dimen/content_inset_medium"
+    android:paddingEnd="@dimen/content_inset_large"
+    android:paddingBottom="@dimen/ds_padding_other_6">
+
+    <biz.belcorp.mobile.components.charts.bar.Bar
+        android:id="@+id/barChartGananciaSe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chart_height"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:bar_axisColor="@color/gray_2"
+        app:bar_axisWidth="@dimen/chart_axisWidth"
+        app:bar_barWidth="@dimen/chart_barWidth"
+        app:bar_captionBottomPadding="@dimen/chart_captionBottomPaddingSmall"
+        app:bar_captionLineSpacing="@dimen/chart_captionLineSpacingSmall"
+        app:bar_cornerRadius="@dimen/chart_cornerRadius"
+        app:bar_itemSubtitleColor="@color/ambar"
+        app:bar_itemSubtitleTextSize="@dimen/text_size_caption"
+        app:bar_itemTitleTextSize="@dimen/text_size_caption"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:bar_maxValue="100"
+        tools:bar_minValue="0"
+        tools:bar_previewData="preview2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGainSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barChartGananciaSe">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_venta"
+            tools:srcCompat="@drawable/ic_venta" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCatalogSaleSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiniest"
+            android:fontFamily="@font/mulish_bold"
+            android:scrollHorizontally="false"
+            android:text="@string/ganancia_table_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclvGananciaSE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clGainSubtitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMontoPromedioSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/ganancia_promedio"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rclvGananciaSE"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMontoPromedio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:fontFamily="@font/mulish_regular"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMontoPromedioSubtitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="350,030,899" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/graficoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="barChartGananciaSe,clGainSubtitle,rclvGananciaSE,txtMontoPromedioSubtitle,txtMontoPromedio"
+        tools:visibility="visible" />
+
+    <include
+        layout="@layout/include_empty_grafico"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

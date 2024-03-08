@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_zona_gerente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/mi_ruta_accent"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.15"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@id/layout_campania"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ZONA 6011 - NINA ESPEJO APELLIDOCONMUCHOSCARACTERES" />
+
+        <FrameLayout
+            android:id="@+id/layout_campania"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_campania_dashboard_rdd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_campania"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.3dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/morado_unete"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:text="C-01" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrera_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="text_zona_gerente, layout_campania"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_etiquetas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrera_etiquetas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="view_contenedor_nueva,view_contenedor_estable" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_numerador_visitas_zona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_zona_gerente"
+            tools:text="15" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_denominador_visitas_zona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/denominador_avance"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_numerador_visitas_zona"
+            app:layout_constraintStart_toEndOf="@+id/text_numerador_visitas_zona"
+            tools:text="/42" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_gerentes_visitadas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/socias_zona_visitadas"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/barrera_etiquetas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_numerador_visitas_zona" />
+
+        <ProgressBar
+            android:id="@+id/progress_visitas_zona"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:progressDrawable="@drawable/pd_rdd_visitadas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_etiquetas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_gerentes_visitadas"
+            tools:progress="46" />
+
+        <View
+            android:id="@+id/view_contenedor_nueva"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/rdd_dashboard_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/text_etiqueta_nueva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_etiquetas"
+            app:layout_constraintTop_toTopOf="@id/text_etiqueta_nueva" />
+
+        <ImageView
+            android:id="@+id/image_etiqueta_nueva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@null"
+            android:src="@drawable/circulo_gz_nueva"
+            app:layout_constraintBottom_toBottomOf="@+id/text_etiqueta_nueva"
+            app:layout_constraintEnd_toStartOf="@+id/text_etiqueta_nueva"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/view_contenedor_nueva"
+            app:layout_constraintTop_toTopOf="@+id/text_etiqueta_nueva" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_etiqueta_nueva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/gz_nueva"
+            android:textColor="@color/mi_ruta_eliminar_title"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_etiqueta_estado_productividad"
+            app:layout_constraintEnd_toEndOf="@id/view_contenedor_nueva"
+            app:layout_constraintStart_toEndOf="@+id/image_etiqueta_nueva"
+            app:layout_constraintTop_toBottomOf="@id/barrera_titulo" />
+
+        <View
+            android:id="@+id/view_contenedor_estable"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/rdd_dashboard_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/text_etiqueta_estado_productividad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_etiquetas"
+            app:layout_constraintTop_toTopOf="@+id/text_etiqueta_estado_productividad" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_etiqueta_estado_productividad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/rdd_dashboard_text"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/view_contenedor_estable"
+            app:layout_constraintStart_toStartOf="@+id/view_contenedor_estable"
+            app:layout_constraintTop_toBottomOf="@id/text_etiqueta_nueva"
+            tools:text="No productiva" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_etiqueta_nueva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="
+            view_contenedor_nueva,
+            text_etiqueta_nueva,
+            image_etiqueta_nueva"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_etiqueta_productividad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="view_contenedor_estable,text_etiqueta_estado_productividad"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

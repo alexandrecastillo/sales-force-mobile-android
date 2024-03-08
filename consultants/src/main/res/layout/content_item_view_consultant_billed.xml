@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/includedConsultantInfoView"
+        layout="@layout/view_consultant_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/includedConsultantSingleAmountView"
+        layout="@layout/view_single_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includedConsultantInfoView" />
+
+    <LinearLayout
+        android:id="@+id/clContainerAmounts2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includedConsultantSingleAmountView">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/textColorTernaryVariant"
+            tools:text="@string/title_debt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAmountValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/content_inset_tiny"
+            android:textAppearance="@style/TextAppearance.DS.Caption"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="S/ 999.999" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/includedViewBottomGiftDescription"
+        layout="@layout/view_bottom_gift_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clContainerAmounts2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

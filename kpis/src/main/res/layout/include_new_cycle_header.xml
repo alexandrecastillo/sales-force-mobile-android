@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="En C09 vas logrando" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:background="@drawable/shape_new_cycle_box"
+        android:padding="@dimen/ds_padding_other_2"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@+id/subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimaryVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/summaryInner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.6"
+            tools:text="5 de 9 Consultoras 6D6"
+            tools:textAlignment="textStart" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/summaryInner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:paddingStart="@dimen/ds_margin_small"
+            android:text="@string/text_newcycle_tooltip"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            android:textColor="@color/magenta"
+            android:textSize="@dimen/text_size_label"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/subtitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            tools:ignore="RtlSymmetry"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/summaryOuter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/text_newcycle_tooltip"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/magenta"
+        android:textSize="@dimen/text_size_label"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/box"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

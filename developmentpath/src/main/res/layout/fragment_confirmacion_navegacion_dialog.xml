@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog_rdd">
+
+    <ImageView
+        android:id="@+id/image_alerta_eliminar_consultora"
+        android:layout_width="@dimen/ds_icon_big_size"
+        android:layout_height="@dimen/ds_icon_big_size"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_alerta_eliminar_consultora" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRutaEliminarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_boton_confirmacion"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/margin_boton_confirmacion"
+        android:gravity="center_horizontal"
+        android:lineSpacingMultiplier="@dimen/rdd_line_spacing"
+        android:textColor="@color/mi_ruta_eliminar_title"
+        android:textSize="@dimen/indicator_detail_sub_value"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_alerta_eliminar_consultora"
+        tools:text="@string/rdd_confirmacion_registrar_evento" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCancel"
+        style="@style/Widget.Button.OutlinedButton.Black"
+        android:layout_width="0dp"
+        android:text="@string/dialogs_cancel"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_boton_confirmacion"
+        android:layout_marginTop="@dimen/margin_boton_confirmacion"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonOk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRutaEliminarTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOk"
+        style="@style/Widget.Button.Magenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/margin_boton_confirmacion"
+        android:layout_marginEnd="@dimen/margin_boton_confirmacion"
+        android:layout_marginBottom="@dimen/ds_margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancel"
+        app:layout_constraintTop_toBottomOf="@+id/tvRutaEliminarTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

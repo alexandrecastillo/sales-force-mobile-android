@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/content_inset_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_descripcion_acuerdo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="#243039"
+        android:textSize="@dimen/text_size_subtitle"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Enfocarse en la venta de Studio Look, como producto de lanzamiento." />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_fecha_acuerdo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_descripcion_acuerdo"
+        tools:text="29 de junio"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_eliminar_acuerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/action_delete"
+        android:textColor="@color/estado_negativo"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrera_medio" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_editar_acuerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/action_edit"
+        android:textColor="@color/estado_positivo"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrera_medio" />
+
+    <EditText
+        android:id="@+id/et_descripcion_acuerdo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLength="500"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Enfocarse en la venta de Studio Look, como producto de lanzamiento."
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_cancelar_acuerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/action_cancel"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrera_medio" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_guardar_acuerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/action_save"
+        android:textColor="@color/negativo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrera_medio" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrera_medio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tv_descripcion_acuerdo,tv_fecha_acuerdo,et_descripcion_acuerdo" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrera_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txt_guardar_acuerdo,txt_cancelar_acuerdo,txt_eliminar_acuerdo,txt_editar_acuerdo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

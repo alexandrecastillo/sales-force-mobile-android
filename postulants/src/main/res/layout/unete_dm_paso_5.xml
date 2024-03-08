@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/ll_no_documents_needed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_center"
+            app:srcCompat="@drawable/ic_postulante_sin_doc" />
+
+        <TextView
+            style="@style/unete_paso_indicacion"
+            android:layout_margin="@dimen/activity_indicator_margin"
+            android:text="@string/no_necesario_documentos" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_documents_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/unete_paso_indicacion"
+            android:text="@string/adjunta_documentos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rwListado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_unete_documento" />
+
+    </LinearLayout>
+
+</LinearLayout>

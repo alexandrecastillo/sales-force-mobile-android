@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:id="@+id/llDocument"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dp16"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            custom:layout_constraintStart_toStartOf="parent">
+
+            <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+                android:id="@+id/spnTipoDocumento"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                custom:hint="@string/tipo_documento"
+                custom:validateIconVisible="false" />
+
+            <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+                android:id="@+id/txtDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:hint="@string/documento_identidad"
+                custom:validateIconVisible="true" />
+
+        </LinearLayout>
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtApellidoPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp16"
+            custom:hint="@string/apellito_paterno"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/llDocument" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:layout_marginTop="@dimen/ds_padding_normal"
+            android:gravity="center"
+            android:textColor="@color/colorBgNoInternet"
+            android:textSize="@dimen/size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConsultar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwMessages"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp16"
+            android:layout_marginTop="@dimen/ds_padding_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConsultar"
+            style="@style/Widget.Button.Purple.Variant"
+            android:layout_marginTop="@dimen/dp16"
+            android:paddingHorizontal="@dimen/ds_padding_40dp"
+            android:text="@string/consultar"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/txtApellidoPaterno" />
+
+        <RelativeLayout
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

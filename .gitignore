@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+/build
+/buildSrc/build
+/captures
+.externalNativeBuild
+*detekt-config.yml
+bundletool*.jar
+google_play.json
+*libobjectbox-jni-macos-x64.dylib
+*libobjectbox-jni-linux-x64.so
+db.json.bak

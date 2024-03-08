@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="calculator">#1C50A8</color>
+    <color name="white_transparent_70">#B3FFFFFF</color>
+    <color name="color_warning_basic">#eb6c7b</color>
+    <color name="primary_color">#b9007e</color>
+    <color name="estado_positivo">#38be62</color>
+    <color name="estado_negativo">#e81c36</color>
+    <color name="color_calculator_table_dark">#29597FFF</color>
+    <color name="color_calculator_table_ligth">#14597FFF</color>
+    <color name="grey">#454549</color>
+    <color name="pink_primary">#BC488B</color>
+    <color name="violet_labels">#A90061</color>
+    <color name="disabled_input_stroke">#C4C4C4</color>
+    <color name="disabled_input_background">#EFEFEF</color>
+    <color name="disabled_label_color">#909094</color>
+    <color name="background_color">#FAFAFD</color>
+    <color name="orders_disabled">#9E9EA1</color>
+    <color name="orders_divider">#E9E9E9</color>
+    <color name="green_achieved">#038356</color>
+</resources>

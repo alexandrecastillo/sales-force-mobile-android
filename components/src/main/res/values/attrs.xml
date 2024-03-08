@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="listDivider" format="integer" />
+    <attr name="listLightDivider" format="integer" />
+    <attr name="bgSelectorBarSelectedColor" format="color" />
+    <attr name="bgSelectorBarNonSelectedColor" format="color" />
+    <attr name="dimenBorderRadius" format="dimension" />
+    <attr name="selectableItemBackgroundColor" format="integer" />
+</resources>

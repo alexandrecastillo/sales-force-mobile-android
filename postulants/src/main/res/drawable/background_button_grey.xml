@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="12dp" />
+
+    <padding
+        android:bottom="@dimen/size_card_elevartion"
+        android:left="@dimen/margin_lateral_input"
+        android:right="@dimen/margin_lateral_input"
+        android:top="@dimen/size_card_elevartion" />
+
+    <solid android:color="@color/gris_escala_2" />
+
+</shape>

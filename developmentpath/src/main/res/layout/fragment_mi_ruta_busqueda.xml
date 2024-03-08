@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_filtro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/tv_filtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rdd_caja_busqueda"
+            android:completionThreshold="0"
+            android:fontFamily="@font/mulish_regular"
+            android:hint="@string/rdd_buscador_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:paddingBottom="8dp"
+            android:paddingEnd="48dp"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/btn_limpiar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="?android:selectableItemBackground"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tv_filtro"
+            app:layout_constraintEnd_toEndOf="@id/tv_filtro"
+            app:layout_constraintTop_toTopOf="@id/tv_filtro"
+            app:srcCompat="@drawable/ic_rdd_limpiar_busqueda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:srcCompat="@drawable/ic_calendario_equis" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/mi_ruta_no_existen_planificadas"
+                android:textColor="@color/rdd_no_visitas_text"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

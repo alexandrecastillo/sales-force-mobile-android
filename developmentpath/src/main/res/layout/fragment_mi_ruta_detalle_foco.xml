@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_viewpager_focus">
+
+            <ImageView
+                android:id="@+id/iv_detail_focus"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/ic_rdd_marker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_detail_content_focus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/mi_ruta_foco_texto"
+                android:textSize="18sp"
+                android:fontFamily="@font/mulish_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_detail_focus" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_detail_subcontent_focus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mulish_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_content_focus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>

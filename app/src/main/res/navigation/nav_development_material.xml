@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navFeatureDevelopmentMaterial"
+    app:startDestination="@id/developmentMaterialFragment">
+
+    <fragment
+        android:id="@+id/developmentMaterialFragment"
+        android:name="biz.belcorp.salesforce.modules.developmentmaterial.features.materials.MaterialesDesarrolloFragment"
+        android:label="MaterialesDesarrolloFragment"
+        tools:layout="@layout/fragment_materiales_desarrollo" />
+
+</navigation>

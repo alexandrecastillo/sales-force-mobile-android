@@ -1,0 +1,215 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgNex"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/app_name"
+        android:rotation="-90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:rotation="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/consultant_profile_green_on"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNex"
+        app:layout_constraintEnd_toStartOf="@+id/imgNex"
+        app:layout_constraintStart_toEndOf="@+id/imgback"
+        app:layout_constraintTop_toTopOf="@+id/imgback"
+        tools:text="RETENCIÓN DE ACTIVAS U6C" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/rdd_dashboard_seleccion_persona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgNex" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/tvActivasFinales"
+        app:layout_constraintEnd_toStartOf="@+id/tvActivasFinales"
+        app:layout_constraintTop_toTopOf="@+id/tvActivasFinales"
+        app:srcCompat="@drawable/ic_point_venta_up" />
+
+    <TextView
+        android:id="@+id/tvActivasFinales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/activas_finales_c18"
+        android:textColor="@color/mi_ruta_success"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/grafico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="@id/imgNex"
+        app:layout_constraintStart_toStartOf="@id/imgback"
+        app:layout_constraintTop_toBottomOf="@+id/tvActivasFinales">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="0dp"
+            android:layout_height="202dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDot"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtValCx1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/porcentaje_normal"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtValCx2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/barChart"
+            app:layout_constraintTop_toBottomOf="@+id/barChart"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="110%" />
+
+        <TextView
+            android:id="@+id/txtValCx2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/porcentaje_normal"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx1"
+            app:layout_constraintEnd_toStartOf="@+id/txtValCx3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtValCx1"
+            tools:text="110%" />
+
+        <TextView
+            android:id="@+id/txtValCx3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/porcentaje_normal"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx2"
+            app:layout_constraintEnd_toStartOf="@+id/txtValCx4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtValCx2"
+            tools:text="110%" />
+
+        <TextView
+            android:id="@+id/txtValCx4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/porcentaje_normal"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx3"
+            app:layout_constraintEnd_toStartOf="@+id/txtValCx5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtValCx3"
+            tools:text="110%" />
+
+        <TextView
+            android:id="@+id/txtValCx5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/porcentaje_normal"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx4"
+            app:layout_constraintEnd_toStartOf="@+id/txtValCx6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtValCx4"
+            tools:text="110%" />
+
+        <TextView
+            android:id="@+id/txtValCx6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:textColor="@color/porcentaje_normal"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtValCx5"
+            app:layout_constraintEnd_toEndOf="@+id/barChart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtValCx5"
+            tools:text="110%" />
+
+        <ImageView
+            android:id="@+id/ivDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/barChart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/barChart"
+            app:layout_constraintVertical_bias="1"
+            app:srcCompat="@drawable/ic_point_venta_up" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/real_activas_u6c"
+        android:textColor="@color/light_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grafico" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

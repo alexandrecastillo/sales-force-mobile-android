@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="perfil_sin_correo">Sin correo</string>
+    <string name="rol_posible_consultora">Posible consultora</string>
+
+    <!-- Tab acuerdos -->
+    <string name="perfil_avance_comportamiento">AVANCE DE COMPORTAMIENTOS U6C</string>
+    <string name="perfil_campania_campania">CAMPAÑA A CAMPAÑA</string>
+    <string name="perfil_no_reconocida">¡Aún no la has reconocido!</string>
+    <string name="perfil_no_reconocida_reconocer">RECONOCER</string>
+    <string name="perfil_avance_comportamientos_u6c">Avance de Comportamientos U6C</string>
+    <string name="perfil_acuerdos_campania_actual">Acuerdos %s</string>
+
+    <!--Tab Perfil -->
+    <string name="perfil_tab_seccion_titulo">Sección %1$s</string>
+    <string name="perfil_tab_nivel_socia">Nivel</string>
+    <string name="perfil_tab_segmento_consultora">Segmento</string>
+    <string name="perfil_tab_seccion_socia">Socia</string>
+    <string name="perfil_sin_correo_datos">No hay correo registrado</string>
+    <string name="perfil_sin_autorizadas_datos">No es posible validar</string>
+
+    <!-- Tab acompaniamiento -->
+    <string name="acompaniamiento_tab_titulo_historial_visitas">Historial de visitas realizadas %1$s</string>
+
+    <!-- Sección puntos para regalo -->
+    <string name="perfil_regalo_campania">Campaña %1$s</string>
+    <string name="perfil_regalo_nivel">NIVEL %1$s : %2$s</string>
+    <string name="perfil_regalo_puntos">%1$s PTOS.</string>
+    <string name="perfil_regalo_indicador">VA %1$s PUNTO%2$s, <![CDATA[<b>LE FALTAN %3$s</b>]]></string>
+    <string name="perfil_regalo_alcanzado">¡LLEGÓ AL PUNTAJE!</string>
+    <string name="perfil_placeholder_regalo">El puntaje del concurso vigente no está disponible.</string>
+    <string name="perfil_placeholder_siguientes">DESLIZA PARA VER LOS SIGUIENTES GRÁFICOS</string>
+    <string name="cargando">Cargando…</string>
+    <string name="titulo_comportamientos_habilidades">Comportamientos</string>
+
+    <!-- Prepararse es clave -->
+    <string name="title_prepararse_es_clave">Prepararse es clave</string>
+    <string name="summary_descripcion_por_rol">Conoce el perfil de la %s</string>
+
+    <!-- Sección datos de la cobranza -->
+    <string name="perfil_dni">DNI</string>
+    <string name="perfil_origen_pedido">Origen de pedido</string>
+    <string name="perfil_monto_pedido">Monto de pedido</string>
+    <string name="perfil_saldo_pendiente">Saldo pendiente</string>
+    <string name="perfil_datos">Datos</string>
+    <string name="perfil_datos_cobranza">Datos de la cobranza</string>
+    <string name="perfil_estado_cuenta">Estado de cuenta</string>
+    <string name="perfil_cdr">CDR</string>
+    <string name="perfil_sin_cdr">NO REGISTRA CDR.</string>
+    <string name="titulo_metas_consultora">Metas de la consultora</string>
+    <string name="prepararse_es_clave">Prepararse es Clave</string>
+
+    <!-- Sección Venta de Catálogo -->
+    <string name="label_venta_pedido_alto_valor">Pedido de Alto Valor</string>
+    <string name="label_venta_pedido_bajo_valor">Pedido de Bajo Valor</string>
+    <string name="title_venta_catalogo_u6c">Venta Catálogo U6C</string>
+    <string name="title_venta_catalogo">Venta Catálogo</string>
+    <string name="title_monto_facturado">MONTO FACTURADO</string>
+    <string name="title_venta_promedio_u6c">VENTA PROMEDIO U6C</string>
+    <string name="title_primera_facturacion">PRIMERA FACTURACIÓN</string>
+    <string name="title_ultima_factuacion">ÚLTIMA FACTURACIÓN</string>
+    <string name="label_descripcion_indicador">%s %s</string>
+    <string name="title_ganancia">Ganancia</string>
+    <string name="title_ganancia_moneda_nacional_u6c">Ganancia en Moneda Nacional U6C</string>
+    <string name="mensaje_no_tiene_ventas">No tiene ventas.</string>
+    <string name="mensaje_no_tiene_ganancias">No tiene ganancias.</string>
+
+    <!-- Sección Marcas y Categorias -->
+    <string name="title_marcas_categorias_u3c">Marcas y categorías últimas 3 campañas</string>
+    <string name="mensaje_no_tiene_marcas">Sin marcas disponibles.</string>
+    <string name="categories_with_no_products">Lo sentimos, no hay información\nactual para esta Consultora</string>
+    <string name="marca_mas_vendida">Marca más vendida:</string>
+    <string name="marca_por_impulsar">Marca por impulsar:</string>
+
+    <!-- Sección Lo mas Vendido -->
+    <string name="label_promedio">Promedio</string>
+    <string name="title_productos_mas_vendidos_u6c">Productos más vendidos U3C</string>
+    <string name="mensaje_no_tiene_productos_mas_vendidos">Sin productos más vendidos.</string>
+
+    <!-- Sección Digital -->
+    <string name="message_digital_empty_data">Aún no tenemos información.</string>
+
+    <!-- Metas consultora -->
+    <string name="listar_meta_consultora_titulo">META</string>
+    <string name="listar_meta_consultora_boton">AGREGAR META</string>
+    <string name="listar_meta_consultora_vacio">😞 No hay meta registrada</string>
+    <string name="listar_meta_consultora_inicio">Campaña Inicio: %1$s</string>
+    <string name="listar_meta_consultora_fin">Campaña Fin: %1$s</string>
+    <string name="listar_meta_consultora_comentario">Comentario: %1$s</string>
+    <string name="crear_meta_consultora_titulo">Agregar meta</string>
+    <string name="crear_meta_consultora_monto_titulo">¿Cuánto es la meta? (Moneda Nacional)</string>
+    <string name="crear_meta_consultora_monto_hint">Ingresa la meta</string>
+    <string name="crear_meta_consultora_campanias_titulo">Campañas:</string>
+    <string name="crear_meta_consultora_campania_inicio_titulo">Campaña inicio:</string>
+    <string name="crear_meta_consultora_campania_fin_titulo">Campaña fin:</string>
+    <string name="crear_meta_consultora_comentario_titulo">Comentarios</string>
+    <string name="crear_meta_consultora_comentario_hint">Agrega un comentario</string>
+    <string name="crear_meta_consultora_guardar">Guardar meta</string>
+    <string name="resultado_meta_real">Meta vs Real %1$s</string>
+    <string name="resultado_cx">Resultados %1$s</string>
+    <string name="resultado_meta">META</string>
+    <string name="resultado_real">REAL</string>
+    <string name="meta_real_no_data">No hay data asignada</string>
+    <string name="resultado_no_data">No hay data asignada</string>
+
+    <!-- Cobranza y Estado de cuenta -->
+    <string name="btn_cobranza_y_estado_de_cuenta">Ver cobranza y estado de cuenta</string>
+    <string name="title_cobranza_y_estado_de_cuenta">Cobranza y estado de cuenta</string>
+    <string name="perfil_datos_cobranza_v2">Cobranza</string>
+    <string name="perfil_datos_estado_de_cuenta_v2">Estado de cuenta</string>
+
+    <!-- Cobranza y Ganancia -->
+    <string name="btn_cobranza_y_ganancia">Ver cobranza y ganancia %1$s</string>
+    <string name="btn_cobranza_y_ganancia_do_data">No se encontró datos de cobranza y ganancia</string>
+    <string name="title_cobranza_y_ganancia">Cobranza y ganancia %1$s</string>
+    <string name="datos_monto_facturado_neto">Monto facturado neto</string>
+    <string name="datos_ganancia_total">Ganancia Total</string>
+    <string name="datos_monto_recuperado">Monto recuperado</string>
+    <string name="datos_ganancia_6d6">Ganancia 6d6</string>
+    <string name="datos_saldo_deuda">Saldo de deuda</string>
+    <string name="datos_ganancia_pedido_alto_valor">Ganancia Pedido Alto Valor</string>
+    <string name="datos_consultoras_con_deuda">Consultoras con deuda</string>
+    <string name="datos_ganancia_cambio_nivel">Ganancia cambio de nivel</string>
+    <string name="datos_recuperacion">Recuperación</string>
+    <string name="datos_btn_actualizar_datos">Actualizar datos</string>
+    <string name="datos_cobranza_ganancia_actualizado">Datos de cobranza y ganancia actualizado</string>
+
+    <!-- Ingresos Extras -->
+    <string name="title_ingresos_extra">¿Vende marcas de la competencia?</string>
+    <string name="summary_ingresos_extra">Marcas que la consultora también vende</string>
+    <string name="action_agregar_otras_marcas">Agregar otras marcas</string>
+    <string name="schedule_visit">Horario de visita</string>
+    <string name="title_agregar_marcas">Agregar marcas</string>
+    <string name="marcas">Marcas</string>
+    <string name="main_categorie_label">Categoria principal en la competencia</string>
+    <string name="last_campaign_update">Ultima Actualización: %s</string>
+
+    <!-- Acuerdos + reconocimientos -->
+    <string name="acuerdos_reconocimientos_titulo_campania">ACUERDOS C%1$s</string>
+
+    <!-- Acuerdos -->
+    <string name="acuerdos_consolidado_titulo">Historial U6C</string>
+    <string name="acuerdos_consolidado_subtitulo">¿Se cumplieron los acuerdos?</string>
+    <string name="acuerdos_consolidado_cumplido">Sí</string>
+    <string name="acuerdos_consolidado_no_cumplido">No</string>
+    <string name="acuerdos_consolidado_ninguno">-</string>
+    <string name="acuerdos_vacio">No se registraron acuerdos en la campaña</string>
+    <string name="acuerdos_historicos_vacio">Aún no se registraron acuerdos en las últimas tres campañas</string>
+    <string name="acuerdos_historicos_no_cumplidos">Acuerdos registrados U3C</string>
+    <string name="acuerdos_historicos_no_cumplidos_vacio">Todos tus acuerdos fueron cumplidos.</string>
+    <string name="acuerdos_historicos_cumplidos">Acuerdos cumplidos</string>
+    <string name="acuerdos_historicos_cumplidos_vacio">Aún no tienes acuerdos cumplidos.</string>
+    <string name="cumplir_acuerdo">Acuerdo cumplido</string>
+    <string name="quitar_cumplimiento_acuerdo">Restablecer acuerdo</string>
+    <string name="acuerdos_historicos_item_titulo">Campaña %1$s</string>
+
+    <string name="texto_hoy_es_su_cumpleanios">🎁Hoy es su cumpleaños</string>
+    <string name="texto_hoy_es_su_aniversario">🎁Hoy es su aniversario</string>
+
+    <string name="data_not_available">Data no disponible</string>
+    <string name="text_no_hay_data_disponible">No hay data disponible.</string>
+    <string name="text_no_hay_archivos_disponible">No hay documentos disponibles.</string>
+
+    <!-- Metas socia -->
+    <string name="label_nueva_meta">Registra hasta 3 metas de la Socia y motívala a alcanzarlas.</string>
+    <string name="hint_ejemplo_descripcion_meta">Ej.: La meta de María es lograr que sus 2 hijos estudien en la Universidad.</string>
+    <string name="mensaje_error_guardar_meta">No se pudo guardar la meta.</string>
+    <string name="mensaje_error_eliminar_meta">No se pudo eliminar la meta.</string>
+    <string name="mensa_error_editar_meta">No se pudo editar la meta.</string>
+
+    <!-- Registro Visitas-->
+    <string name="registro_visitas_invalido">"No se puede registrar dos visitas el mismo día."</string>
+
+    <!-- Herramientas Digitales -->
+    <string name="title_uso_herramientas_digitales">Uso de herramientas digitales</string>
+    <string name="mensaje_no_tiene_herramientas_digitales">Sin herramientas digitales.</string>
+
+    <string name="mensaje_no_tiene_venta_ganancia">Sin datos de venta y ganancia.</string>
+
+    <!-- Tips -->
+    <string name="title_tips_desarrollo">Tips de Desarrollo</string>
+    <string name="title_te_recomendamos" tools:ignore="TypographyEllipsis">Te recomendamos...</string>
+    <string name="mensaje_no_tiene_tips">Sin tips.</string>
+    <string name="btn_compartir">Compartir</string>
+
+    <string name="title_novedades">Novedades</string>
+    <string name="title_materiales">Materiales</string>
+    <string name="title_incentivos">Incentivos</string>
+
+    <string name="title_venta">Venta</string>
+    <string name="label_precio">Precio</string>
+
+    <string name="msg_open_video_error">A ocurrido un error al intentar abrir el vídeo</string>
+
+    <string name="concursos_brillante_nivel">Nivel actual: %s</string>
+    <string name="concursos_brillante_puntos">Tiene: %d puntos</string>
+    <string name="concursos_title_nivel">Nivel %s: %d ptos</string>
+    <string name="concursos_puntos_nivel">%d PTOS</string>
+
+    <string name="title_programa_brillante">Programa brillante</string>
+    <string name="title_regalo_por_pedido">Regalo por pedido</string>
+    <string name="regalos_por_pedido_vacio">No tiene regalos por pedido</string>
+    <string name="programa_brillante_vacio">No hay información de programa brillante</string>
+
+    <!-- Novedades -->
+    <string name="url_video_youtube">https://img.youtube.com/vi/%s/0.jpg</string>
+    <string name="txt_compartir_documento">%1$s\n\nClic en enlace:\n%2$s</string>
+
+    <!-- Sale -->
+    <string name="text_campaign_with_prefix">C%s</string>
+    <string name="text_gain_subtitle">%s Ganancia C%s</string>
+    <string name="text_actives_retention_cx">RETENCIÓN ACTIVAS VS C%s</string>
+
+    <string name="text_successful">Exitosa</string>
+    <string name="text_not_successful">No Exitosa</string>
+
+</resources>

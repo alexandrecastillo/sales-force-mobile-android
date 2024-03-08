@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_mapa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_view_mi_ruta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progress_layout_map_mi_ruta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_dialog_rdd"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progress_map_mi_ruta"
+                style="@style/SwitchBuscarAppearance"
+                android:layout_width="@dimen/content_inset_double"
+                android:layout_height="@dimen/content_inset_double"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginBottom="@dimen/content_inset_less"
+                android:indeterminateTint="@color/mi_ruta_success"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_mapa_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/rdd_margin_min_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/rdd_mapa_progress"
+                android:textColor="@color/mi_ruta_success"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progress_map_mi_ruta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/progress_map_mi_ruta"
+                app:layout_constraintTop_toTopOf="@+id/progress_map_mi_ruta" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            android:layout_marginBottom="@dimen/content_inset_normal"
+            android:background="@drawable/background_card_rdd_mapa_opciones"
+            android:elevation="@dimen/ds_elevation_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/divider_mapa"
+                android:layout_width="@dimen/content_inset_tiniest"
+                android:layout_height="0dp"
+                android:background="@color/rdd_mapa_card_divider"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/button_rdd_mapa_actualizar_ruta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/button_rdd_mapa_actualizar_ruta" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_mapa_cercanas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                android:theme="@style/SwitchBuscarAppearance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_rdd_mapa_texto_cercanas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_light"
+                android:text="@string/rdd_mapa_text_cercanas"
+                android:textColor="@color/rdd_mapa_card_text"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/divider_mapa"
+                app:layout_constraintStart_toEndOf="@+id/switch_mapa_cercanas"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_rdd_mapa_actualizar_ruta"
+                style="@style/Widget.Button.Green.Rounded"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:layout_marginBottom="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/rdd_mapa_button_actualizar_ruta"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divider_mapa"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

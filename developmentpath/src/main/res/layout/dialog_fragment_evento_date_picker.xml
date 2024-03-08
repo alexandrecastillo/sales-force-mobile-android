@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/rdd_widget_size_large"
+        android:background="@color/rdd_accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_fragm_datetime_picker_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_less"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginBottom="@dimen/content_inset_small"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_white_back_arrow" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_fragm_datetime_picker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_less"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/rdd_agregareventos_fechapicker_titulo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/datetime_picker_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_fragm_datetime_picker_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/button_fragm_datetime_picker_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_title">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/mi_ruta_datetime_dia"
+            android:textColor="@color/mi_ruta_datetime_picker_text"
+            android:textSize="@dimen/datetime_picker_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/number_picker_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/rdd_widget_size"
+            android:layout_marginEnd="@dimen/rdd_widget_size"
+            android:background="@drawable/datetime_picker_background"
+            app:layout_constraintBottom_toBottomOf="@+id/text_datetime_picker_date_separator1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_datetime_picker_date_separator1" />
+
+        <NumberPicker
+            android:id="@+id/number_picker_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:focusableInTouchMode="true"
+            android:theme="@style/DatetimePickerTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/number_picker_month"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_datetime_picker_date_separator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/content_inset_small"
+            android:paddingBottom="@dimen/content_inset_small"
+            android:text="@string/mi_ruta_datetime_date_separetor"
+            android:textSize="@dimen/text_size_headline_5"
+            app:layout_constraintBottom_toBottomOf="@+id/number_picker_day"
+            app:layout_constraintEnd_toStartOf="@+id/number_picker_month"
+            app:layout_constraintStart_toEndOf="@+id/number_picker_day"
+            app:layout_constraintTop_toTopOf="@+id/number_picker_day" />
+
+        <NumberPicker
+            android:id="@+id/number_picker_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:theme="@style/DatetimePickerTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/number_picker_year"
+            app:layout_constraintStart_toEndOf="@+id/number_picker_day"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_datetime_picker_date_separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mi_ruta_datetime_date_separetor"
+            android:textSize="@dimen/text_size_headline_5"
+            app:layout_constraintBottom_toBottomOf="@+id/number_picker_day"
+            app:layout_constraintEnd_toStartOf="@+id/number_picker_year"
+            app:layout_constraintStart_toEndOf="@+id/number_picker_month"
+            app:layout_constraintTop_toTopOf="@+id/number_picker_day" />
+
+        <NumberPicker
+            android:id="@+id/number_picker_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:theme="@style/DatetimePickerTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/number_picker_month"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_fragm_datetime_picker_save"
+        style="@style/Widget.Button.Blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/content_inset_normal"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_agregareventos_fechapicker_guardar"
+        android:textSize="@dimen/datetime_picker_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+{
+    "LegalTerms": [
+        {
+            "term_code": "TC",
+            "description": "Términos y Condiciones",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/terminos.pdf",
+            "position": 1,
+            "active": true
+        },
+        {
+            "term_code": "PP",
+            "description": "Politica de Privacidad",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/politicas.pdf",
+            "position": 2,
+            "active": true
+        },
+        {
+            "term_code": "LINKSE",
+            "description": "Términos y Condiciones de Link de SE",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/terminos.pdf",
+            "position": 3,
+            "active": true
+        }
+    ]
+}

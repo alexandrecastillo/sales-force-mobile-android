@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kpis -->
+    <item name="ic_kpis_collection" type="drawable">@drawable/ic_collection</item>
+    <item name="ic_kpis_cycle_new_consultants" type="drawable">@drawable/ic_group_consultants</item>
+    <item name="ic_kpis_sale_orders_sales" type="drawable">@drawable/ic_sale_orders</item>
+    <item name="ic_kpis_sale_order_billing" type="drawable">@drawable/ic_sale_orders</item>
+    <item name="ic_kpis_retention_capi" type="drawable">@drawable/ic_retention_capi</item>
+</resources>

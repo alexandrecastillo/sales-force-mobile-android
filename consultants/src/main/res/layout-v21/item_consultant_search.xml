@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvBilling"
+    style="@style/Widget.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/content_inset_less"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContainerSegment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSegment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvSegment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_circle"
+                app:tint="@color/magenta" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSegment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_tiniest"
+                android:fontFamily="@font/mulish_bold"
+                android:textAppearance="@style/TextAppearance.DS.Label"
+                android:textColor="@color/magenta"
+                app:layout_constraintBottom_toBottomOf="@id/ivSegment"
+                app:layout_constraintStart_toEndOf="@id/ivSegment"
+                app:layout_constraintTop_toTopOf="@id/ivSegment"
+                tools:text="Nivel Diamante" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContainerUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            app:layout_constraintEnd_toStartOf="@+id/clContainerNumbers"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clContainerSegment">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_woman"
+                app:tint="@color/colorIcon" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUser"
+                style="@style/Widget.TextView.Description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_tiniest"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/mulish_bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                android:textColor="@color/textColorPrimaryVariant"
+                app:layout_constraintBottom_toBottomOf="@id/ivUser"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivUser"
+                tools:text="LUZ YANETH RODRIGUEZ" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContainerNumbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivWhatsApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_inset_less"
+                app:layout_constraintEnd_toStartOf="@id/ivPhoneNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_whatsapp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_phone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:background="@drawable/bg_red_soft"
+            android:fontFamily="@font/mulish_regular"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.DS.Label"
+            android:textColor="@color/negativo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clContainerUser"
+            tools:text="Rechazado por monto mínimo"
+            tools:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContainerAmounts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvIndicator">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clContainerSingleAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitleDebtSingle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/title_orders_amount"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_label"
+                    android:letterSpacing="@dimen/letter_spacing_consultant_label"
+                    app:layout_constraintBottom_toBottomOf="@id/tvAmountDebtSingle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvAmountDebtSingle"
+                    tools:text="@string/title_orders_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAmountDebtSingle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_tiny"
+                    android:textAppearance="@style/TextAppearance.DS.Body"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvTitleDebtSingle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="S/ 999.999" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clContainerCompoundAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitleDebt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/title_debt"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_label"
+                    android:letterSpacing="@dimen/letter_spacing_consultant_label"
+                    app:layout_constraintEnd_toStartOf="@id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:textAllCaps="true"
+                    tools:text="@string/title_debt" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAmountDebt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_tiny"
+                    android:textAppearance="@style/TextAppearance.DS.Body"
+                    android:textColor="@color/color_text_consultant_item"
+                    app:layout_constraintEnd_toEndOf="@id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleDebt"
+                    tools:text="S/ 999.999" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitleOrdersSb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/title_orders_sb"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_label"
+                    android:letterSpacing="@dimen/letter_spacing_consultant_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guideline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:textAllCaps="true"
+                    tools:text="@string/title_orders_sb" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAmountOrderSb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_tiny"
+                    android:textAppearance="@style/TextAppearance.DS.Body"
+                    android:textColor="@color/color_text_consultant_item"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guideline"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleOrdersSb"
+                    tools:text="S/ 999.999" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/one"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:background="@color/colorSeparator"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clContainerAmounts"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGiftDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_tiny"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.DS.Label"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator"
+            app:textAllCaps="false"
+            tools:text="🎁Pasando pedido en C08 recibe la bonificación"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

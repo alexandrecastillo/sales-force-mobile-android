@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:paddingBottom="@dimen/ds_margin_medium"
+    tools:paddingTop="@dimen/ds_margin_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:minWidth="@dimen/content_inset_double"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/colorNewCycle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5d5" />
+
+    <biz.belcorp.mobile.components.design.miniprogressbar.ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:miniprogressbar_fontFamily="@font/mulish_bold"
+        android:layout_marginStart="@dimen/content_inset_less"
+        app:miniprogressbar_progressDrawableHeight="@dimen/content_inset_small"
+        app:miniprogressbar_progressDrawableTint="@color/colorNewCycle"
+        app:miniprogressbar_progressDrawableWidth="match_parent"
+        app:miniprogressbar_progressMarginText="@dimen/ds_margin_medium"
+        app:miniprogressbar_progressPaddingLeftText="@dimen/ds_margin_small"
+        app:miniprogressbar_textAppearance="@style/TextAppearance.DS.Body"
+        app:miniprogressbar_textGravity="top_start"
+        tools:miniprogressbar_currentProgress="70"
+        tools:miniprogressbar_maxProgress="100"
+        tools:miniprogressbar_text="70%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

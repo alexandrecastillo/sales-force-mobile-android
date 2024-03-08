@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kpis -->
+    <color name="colorGreenLight">#38BE62</color>
+    <color name="colorGreenBrighLight">#EFFAF2</color>
+    <color name="colorCycleNewsLight">#1439BBB1</color>
+    <color name="colorSubTitle">#474A4F</color>
+    <color name="colorTitleCard">#E81C36</color>
+    <color name="colorTitleImgInfoButton">#B9007E</color>
+    <color name="grid_yellow">#F4B10B</color>
+    <color name="colorGainHeaderLabel">#7F7E7E</color>
+    <color name="colorPostulantGridRetentionLabel">#7F7E7E</color>
+    <color name="colorGrayLabel">@color/colorPostulantGridRetentionLabel</color>
+    <color name="colorGridRetentionValue">#2C2654</color>
+    <color name="colorSaleOrders">#A3F4B10B</color>
+    <color name="colorNewCycle">#A339BBB1</color>
+    <color name="colorRetentionCapi">#A3EB4444</color>
+    <color name="colorCollection">#A338BE62</color>
+    <color name="colorIcon">#2C2654</color>
+    <color name="colorPositive">@color/positivo</color>
+    <color name="colorMagenta">@color/magenta</color>
+    <color name="colorBillingButton">#B52975</color>
+    <color name="colorTabIndicator">@color/colorBillingButton</color>
+    <color name="colorRetentionTooltipBackground">#FEE6EC</color>
+    <color name="colorGainTooltipBackground">#CFEFD9</color>
+    <color name="colorRangeLabel">@color/colorPostulantGridRetentionLabel</color>
+    <color name="colorDividerMultiProfile">#EFEFEF</color>
+    <color name="colorRetentionCapitalizationGrid">#EB5757</color>
+</resources>

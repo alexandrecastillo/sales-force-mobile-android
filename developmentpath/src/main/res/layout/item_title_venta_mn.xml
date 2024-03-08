@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgDow"
+        android:layout_width="@dimen/content_inset_small"
+        android:layout_height="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_tiniest"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCampania"
+        app:layout_constraintEnd_toStartOf="@+id/txtCampania"
+        app:layout_constraintTop_toTopOf="@+id/txtCampania"
+        app:srcCompat="@drawable/icon_venta_mn_down" />
+
+    <ImageView
+        android:id="@+id/imgUp"
+        android:layout_width="@dimen/content_inset_small"
+        android:layout_height="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_tiniest"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCampania"
+        app:layout_constraintEnd_toStartOf="@+id/txtCampania"
+        app:layout_constraintTop_toTopOf="@+id/txtCampania"
+        app:srcCompat="@drawable/icon_venta_mn_up" />
+
+    <TextView
+        android:id="@+id/txtCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/content_inset_normal"
+        android:layout_marginStart="@dimen/content_inset_medium"
+        android:fontFamily="@font/mulish_bold"
+        android:text="C10"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintEnd_toStartOf="@+id/txtFvValue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/txtFvValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:layout_marginEnd="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/ranking_sales_title_1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtCampania"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="@dimen/content_inset_tiniest"
+        android:layout_height="@dimen/content_inset_medium"
+        android:background="@color/baground_space_venta_mn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtVentaNeta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtFvValue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVentaNeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:layout_marginEnd="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/ranking_sales_title_2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toStartOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/content_inset_tiniest"
+        android:layout_height="@dimen/content_inset_medium"
+        android:background="@color/baground_space_venta_mn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtPercentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtVentaNeta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPercentage"
+        android:layout_width="@dimen/ranking_cell_width_large"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/ranking_sales_title_3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvKpi"
+    style="@style/Widget.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="@dimen/card_min_height">
+
+    <include layout="@layout/include_kpi_sale_orders_multiprofile_billing" />
+
+</androidx.cardview.widget.CardView>

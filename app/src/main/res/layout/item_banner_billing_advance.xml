@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/banner_min_height">
+
+    <View
+        android:id="@+id/viewBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:background="@drawable/ripple_billing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconBanner"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_standing"
+        app:layout_constraintBottom_toBottomOf="@id/viewBanner"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@id/viewBanner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleBanner"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_tiniest"
+        android:gravity="center_vertical"
+        android:text="@string/billing_banner_title"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvDescriptionBanner"
+        app:layout_constraintEnd_toEndOf="@+id/viewBanner"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/viewBanner"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDescriptionBanner"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        android:text="@string/billing_banner_description"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBanner"
+        app:layout_constraintEnd_toEndOf="@+id/viewBanner"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleBanner"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleBanner"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

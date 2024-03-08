@@ -1,0 +1,243 @@
+{
+  "project_info": {
+      "project_number": "725610931883",
+      "firebase_url": "https://belcorp-sales-force.firebaseio.com",
+      "project_id": "belcorp-sales-force",
+      "storage_bucket": "belcorp-sales-force.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:ecb3a89d0601b77becf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.businesspartners"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:244ab9c66760674fecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.businesspartners.develop"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:416fa712cc6e36edecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.businesspartners.review"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:5154a4b62b741c65ecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.businesspartners.stage"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:b3faf904384d5b29ecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.multiprofile"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:939d8015cd5bce77ecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.multiprofile.develop"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:003489b5460eccb6ecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.multiprofile.review"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+          "mobilesdk_app_id": "1:725610931883:android:a73ce35198bc3d78ecf9ee",
+        "android_client_info": {
+            "package_name": "biz.belcorp.salesforce.multiprofile.stage"
+        }
+      },
+      "oauth_client": [
+        {
+            "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+            "current_key": "AIzaSyA0qX9m6S0XwUxRcbdmBxLn-d9EF_Ite14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+                "client_id": "725610931883-i4h14qm7nqlk02belrn9el3f6obckvk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

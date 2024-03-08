@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="digital_toolbar_title">Indicadores Digitales</string>
+    <string name="text_billing_ua_with_hyphen">"%s - "</string>
+
+    <string name="title_digital_consultant_list">Estás viendo el listado de consultoras de:</string>
+
+    <string name="digital_filter_all">Todos</string>
+    <string name="digital_filter_subscribed">Registrada</string>
+    <string name="digital_filter_no_subscribed">No Registrada</string>
+    <string name="digital_filter_buy">Vende</string>
+    <string name="digital_filter_no_buy">No Vende</string>
+    <string name="digital_filter_share">Comparte</string>
+    <string name="digital_filter_no_share">No Comparte</string>
+
+    <string name="digital_child_information_subscribed">%s - Registradas a %s</string>
+    <string name="digital_child_information_share">%s - Comparte a %s</string>
+    <string name="digital_child_information_buy">%s - Vende por %s</string>
+
+    <string name="digital_header_title_subscribed">Registrada a %s</string>
+    <string name="digital_header_title_share">Comparte %s</string>
+    <string name="digital_header_title_buy">Vende por %s</string>
+
+    <string name="digital_header_percentage_value">%d%%</string>
+    <string name="digital_header_progress_value">%d de %d</string>
+
+    <string name="digital_header_description_1_subscribed">Registradas a\n%s</string>
+    <string name="digital_header_description_1_share">Comparte\n%s</string>
+    <string name="digital_header_description_1_buy">Venden por\n%s</string>
+
+    <string name="digital_header_description_2_subscribed">Consultoras están registradas a\n%s en C%s.</string>
+    <string name="digital_header_description_2_share">Consultoras comparten\n%s en C%s.</string>
+    <string name="digital_header_description_2_buy">Consultoras venden por\n%s en C%s.</string>
+
+    <string name="column_header_gz">Zona/\nSecciones</string>
+    <string name="column_header_gr">Region/\nZonas</string>
+    <string name="column_header_dv">Pais/\nRegiones</string>
+
+    <string name="digital_header_grid_subscribed">REGISTRADA</string>
+    <string name="digital_header_grid_subscribed_percentage">REGISTRADA(%)</string>
+    <string name="digital_header_grid_share">COMPARTE</string>
+    <string name="digital_header_grid_share_percentage">COMPARTE(%)</string>
+    <string name="digital_header_grid_buy">VENDE</string>
+    <string name="digital_header_grid_buy_percentage">VENDE(%)</string>
+
+    <string name="digital_subtitle_detail_gz">Consolidado por sección %s</string>
+    <string name="digital_subtitle_detail_gr">Consolidado por zona %s</string>
+    <string name="digital_subtitle_detail_dv">Consolidado por región %s</string>
+    <string name="digital_subtitle_detail_se">Listado de Consultoras</string>
+
+    <string name="digital_text_data_no_available">Aún no hay información de esta %s</string>
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+        android:id="@+id/indicatorGoalSales"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:indicatorGoalBar_currentProgress="28"
+        tools:indicatorGoalBar_currentTarget="300 Pedidos"
+        tools:indicatorGoalBar_enableAnimation="false"
+        tools:indicatorGoalBar_goalDescription="Meta 8,500"
+        tools:indicatorGoalBar_goalMessage=""
+        tools:indicatorGoalBar_goalMessageColor="@color/magenta"
+        tools:indicatorGoalBar_maxProgress="100"
+        tools:indicatorGoalBar_progress_height="@dimen/content_inset_small"
+        tools:indicatorGoalBar_type="default" />
+
+    <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+        android:id="@+id/indicatorGoalOrders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicatorGoalSales"
+        tools:indicatorGoalBar_currentProgress="28"
+        tools:indicatorGoalBar_currentTarget="300 Pedidos"
+        tools:indicatorGoalBar_enableAnimation="false"
+        tools:indicatorGoalBar_goalDescription="Meta 8,500"
+        tools:indicatorGoalBar_goalMessage=""
+        tools:indicatorGoalBar_goalMessageColor="@color/magenta"
+        tools:indicatorGoalBar_maxProgress="100"
+        tools:indicatorGoalBar_progress_height="@dimen/content_inset_small"
+        tools:indicatorGoalBar_type="default" />
+
+    <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+        android:id="@+id/indicatorGoalPMNP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicatorGoalOrders"
+        tools:indicatorGoalBar_currentProgress="28"
+        tools:indicatorGoalBar_currentTarget="300 Pedidos"
+        tools:indicatorGoalBar_enableAnimation="false"
+        tools:indicatorGoalBar_goalDescription="Meta 8,500"
+        tools:indicatorGoalBar_goalMessage=""
+        tools:indicatorGoalBar_goalMessageColor="@color/magenta"
+        tools:indicatorGoalBar_maxProgress="100"
+        tools:indicatorGoalBar_progress_height="@dimen/content_inset_small"
+        tools:indicatorGoalBar_type="default" />
+
+    <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+        android:id="@+id/indicatorGoalActivesActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicatorGoalPMNP"
+        tools:indicatorGoalBar_currentProgress="28"
+        tools:indicatorGoalBar_currentTarget="300 Pedidos"
+        tools:indicatorGoalBar_enableAnimation="false"
+        tools:indicatorGoalBar_goalDescription="Meta  8,500"
+        tools:indicatorGoalBar_goalMessage=""
+        tools:indicatorGoalBar_goalMessageColor="@color/magenta"
+        tools:indicatorGoalBar_maxProgress="100"
+        tools:indicatorGoalBar_progress_height="@dimen/content_inset_small"
+        tools:indicatorGoalBar_type="default"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleRanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicatorGoalPMNP"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:text="Detalle de Pedidos"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRanges"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintVertical_bias="0"
+        android:scrollbars="none"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        tools:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleRanges"
+        tools:listitem="2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/rangeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvTitleRanges,rvRanges" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/consultant_profile_green_on"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@drawable/ic_warning" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_version_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/update_app_version"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_version_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/update_version_description"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_version_remind_later"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:clickable="true"
+            android:fontFamily="@font/mulish_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/remind_me_later"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/vw_separator"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#aab2b8"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_version_update"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:clickable="true"
+            android:fontFamily="@font/mulish_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/update" />
+
+    </LinearLayout>
+
+</LinearLayout>

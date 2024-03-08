@@ -1,0 +1,66 @@
+#!/bin/bash
+
+action=$1
+build_variant=$2
+
+PROPERTY_FILE=config/key.properties
+
+function getProperty {
+   PROP_KEY=$1
+   PROP_VALUE=`cat $PROPERTY_FILE | grep "$PROP_KEY" | cut -d'=' -f2`
+   echo $PROP_VALUE
+}
+
+store_path=$(getProperty "store.file")
+store_password=$(getProperty "store.password")
+store_alias=$(getProperty "key.alias")
+
+bundle_path=app/build/outputs/bundle/$build_variant
+
+FILE_PATH=`find $bundle_path -name "*.aab"`
+file=$(basename "$FILE_PATH")
+fname="${file%.*}"
+
+function install-aab {
+
+    rm $bundle_path/$fname.apks
+
+    java -jar config/bundletool.jar build-apks --bundle=$bundle_path/$fname.aab --output=$bundle_path/$fname.apks --ks=$store_path --ks-key-alias=$store_alias --ks-pass=pass:$store_password --overwrite --connected-device
+
+    java -jar config/bundletool.jar install-apks --apks=$bundle_path/$fname.apks --modules=_ALL_
+
+}
+
+function build-apk {
+
+    java -jar config/bundletool.jar build-apks --bundle=$bundle_path/$fname.aab --output=$bundle_path/$fname.apks --ks=$store_path --ks-key-alias=$store_alias --ks-pass=pass:$store_password --overwrite --mode=universal
+
+    rm $bundle_path/$fname.apk
+    unzip -a $bundle_path/$fname.apks -d $bundle_path
+    rm $bundle_path/$fname.apks
+    rm $bundle_path/toc.pb
+
+    mv -i -f $bundle_path/universal.apk $bundle_path/$fname.apk
+
+}
+
+function install-apk {
+
+    adb install -f $bundle_path/$fname.apk
+
+}
+
+case $action in
+    "--install-aab")
+        echo "Installing on connected device"
+        install-aab
+        ;;
+	"--build-apk")
+	    echo "Generating universal apk"
+		build-apk
+		;;
+	"--install-apk")
+	    echo "Installing on connected device"
+	    install-apk
+		;;
+esac

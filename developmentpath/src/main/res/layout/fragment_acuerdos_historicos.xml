@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/background_color">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTituloNoCumplidos"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/acuerdos_historicos_no_cumplidos"
+        android:textColor="@color/magenta"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAcuerdosNoCumplidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloNoCumplidos"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_acuerdo_historico_detalle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewSinAcuerdosNoCumplidos"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_double"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:layout_marginEnd="@dimen/content_inset_double"
+        android:gravity="center"
+        android:paddingBottom="@dimen/content_inset_less"
+        android:text="@string/acuerdos_historicos_no_cumplidos_vacio"
+        android:textColor="@color/gray_4"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloNoCumplidos"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barreraAcuerdosNoCumplidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewTituloNoCumplidos,recyclerViewAcuerdosNoCumplidos,textViewSinAcuerdosNoCumplidos" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTituloCumplidos"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:text="@string/acuerdos_historicos_cumplidos"
+        android:textColor="@color/magenta"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/barreraAcuerdosNoCumplidos"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAcuerdosCumplidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloCumplidos"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_acuerdo_historico_detalle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewSinAcuerdosCumplidos"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_double"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:layout_marginEnd="@dimen/content_inset_double"
+        android:gravity="center"
+        android:paddingBottom="@dimen/content_inset_less"
+        android:text="@string/acuerdos_historicos_cumplidos_vacio"
+        android:textColor="@color/gray_4"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloCumplidos"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewSinAcuerdos"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_double"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_double"
+        android:gravity="center"
+        android:text="@string/acuerdos_historicos_vacio"
+        android:textColor="@color/gray_4"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloNoCumplidos"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

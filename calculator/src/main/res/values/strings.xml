@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">calculator</string>
+
+    <string name="calculator_dashboard_titulo">MI PROYECCIÓN DE CAMPAÑA</string>
+    <string name="calculator_dashboard_titulo_resultado">Posible ganancia</string>
+    <string name="calculator_dashboard_titulo_sub">y logra tus <b>Sueños</b> esta</string>
+    <string name="calculator_dashboard_titulo_sub_resultado">para lograr tus <b>Sueños</b> esta</string>
+    <string name="calculator_dashboard_tab_nivel_actual">ESTIMACIÓN</string>
+    <string name="calculator_disclaimer_message">Completa únicamente las celdas activas y recuerda dar click en <b>Guardar</b> al final de la pantalla para que tus cambios se registren</string>
+    <string name="calculator_dashboard_tab_otro_nivel">PROGRESO</string>
+    <string name="calculator_dashboard_tab_otro_nivel_ganarias">Ganarías</string>
+    <string name="calculator_dashboard_tab_otro_nivel_information">Selecciona un nivel para calcular cuál sería tu\n ganancia aproximada.</string>
+    <string name="calculator_dashboard_tab_otro_nivel_pedidos"><![CDATA[<b>%s</b>]]> Pedidos cómo mínimo</string>
+    <string name="calculator_dashboard_tab_otro_nivel_minimo"><![CDATA[<b>%s</b>]]> Venta Mínima</string>
+    <string name="calculator_dashboard_tab_otro_nivel_cambias"><![CDATA[Si cambias de Nivel tienes <br> un bono adicional de:]]></string>
+    <string name="calculator_dashboard_tab_otro_nivel_recuerda">Esta ganancia podría incrementar ya que solo se considera el pago por pedidos.</string>
+    <string name="calculator_dashboard_tab_otro_nivel_no_descapitalizar">No Descapitalizar</string>
+    <string name="calculator_dashboard_tab_otro_nivel_descapitalizar">%1$s de capitalización</string>
+    <string name="calculator_dashboard_tab_otro_nivel_cambias_bono">+ %1$s</string>
+    <string name="calculator_dashboard_tab_otro_nivel_ganancia">%1$s %2$s</string>
+    <string name="calculator_result_could_you_win">Podrías ganar en %s</string>
+    <string name="calculator_message_error_complete_dynamic">Debe ingresar los %1$s objetivos</string>
+    <string name="calculator_status_none">Estado</string>
+    <string name="calculator_status_successful">Exitosa</string>
+    <string name="calculator_status_unsuccessful">No exitosa</string>
+    <string name="calculator_label_pav">PAV</string>
+    <string name="calculator_label_pbv">PBV</string>
+    <string name="calculator_label_Ingresos">Ingresos</string>
+    <string name="calculator_label_capitalizacion">Capit.</string>
+
+    <string name="calculator_action_label_delete">Eliminar</string>
+    <string name="calculator_action_label_add">Agregar</string>
+
+    <string name="calculator_sales_goal">🏁 Tu meta de venta es: %1$s %2$s</string>
+    <string name="calculator_order_goal">🏁 Tu meta de pedido es: %s</string>
+    <string name="calculator_active_consultants">⭐ Tienes %d Consultoras Activas</string>
+    <string name="calculator_label_extra_profit">Ganancia Extra</string>
+    <string name="calculator_label_bonus">Selecciona bono</string>
+    <string name="calculator_bonus_input_text">Ingresa la cantidad</string>
+    <string name="calculator_detail_competition_input_text">Ingresa el nivel</string>
+    <string name="calculator_recovery_goal_percentage">%.0f%%</string>
+    <string name="calculator_recovery_goal_percentage_label">Cobranza</string>
+    <string name="calculator_change_level_message">💡 Puedes subir de nivel logrando los resultados de %s</string>
+    <string name="calculator_result_info">*Ganancia aproximada mostrada</string>
+    <string name="calculator_result_be_succeful">Ser exitosa</string>
+    <string name="calculator_result_be_unsucceful">No exitosa</string>
+    <string name="calculator_result_new_calculation">Nuevo cálculo</string>
+    <string name="calculator_result_save_calculation">Guardar ganancia</string>
+    <string name="calculator_result_save_failed">No se puedo guardar el cálculo</string>
+    <string name="calculator_result_you_must_attain">Deberás lograr:</string>
+    <string name="calculator_result_order_gain" formatted="false">%s %s</string>
+    <string name="calculator_result_order_gain_plus" formatted="false">+ %s %s</string>
+    <string name="calculator_label_remember_that">Recuerda que:</string>
+    <string name="calculator_label_contests_campaign">Concursos %s</string>
+    <string name="calculator_message_error_complete">Debe ingresar los cuatro objetivos</string>
+    <string name="calculator_message_error_contest_pair">Debe ingresar Concurso adicional</string>
+    <string name="calculator_message_error_bonus_exists">El bono ya fue agregado</string>
+    <string name="calculator_message_error_contest_exists">El concurso ya fue agregado</string>
+    <string name="calculator_label_also">Además:</string>
+    <string name="calculator_label_calculation">Calcular</string>
+    <string name="calculator_default_number_hint">0</string>
+    <string name="calculator_message_level_change">¿Subirás de Nivel esta campaña?</string>
+    <string name="calculator_result_change_level_to"><![CDATA[Si cambias de Nivel a %s tienes un bono adicional de:]]></string>
+    <string name="calculator_label_capitalization_extended">Capitalización</string>
+    <string name="calculator_label_choose_bonus">Selecciona bono</string>
+    <string name="calculator_comisiona_exitosa"><![CDATA[Comisionarás de acuerdo al rango del pedido,<br> siendo %1$s <font color=#38BE62><b>\'Exitosa\':</b></font>]]></string>
+    <string name="calculator_rango">Rango</string>
+    <string name="calculator_message_sales_goal">La meta de venta aún no ha sido cargada. Esto podría afectar el éxito de la campaña.</string>
+    <string name="calculator_message_orders_goal">La meta de pedidos aún no ha sido cargada. Esto podría afectar el éxito de la campaña.</string>
+    <string name="text_dot">●</string>
+    <string name="calculator_comision">Comisión por pedido</string>
+    <string name="calculator_mx_recuperacion_pedido">Recuerda que para comisionar debes recuperar el <![CDATA[<font color=#597FFF><b> 90% del pedido</b></font>]]> como mínimo.</string>
+    <string name="calculator_comisiona_no_exitosa">Comisión por pedido siendo %1$s <![CDATA[<b><font color=#e81d36>\'No Exitosa\': </font>S/ %2$s</b>]]></string>
+    <string name="calculator_i">i</string>
+    <string name="calculator_action_label_ok">Entendido</string>
+    <string name="calculator_information">Información</string>
+    <string name="calculator_rango_message"><![CDATA[En <font color=#597FFF><b>C-%1$s</b></font> cobraste <font color=#597FFF><b>%2$s</b></font>]]></string>
+    <string name="capitalization_title">Capitalización</string>
+    <string name="projected_income_title">¿Cuántos ingresos\nvoy a lograr?</string>
+    <string name="projected_reentries_title">¿Cuántos reingresos\nvoy a lograr?</string>
+    <string name="section_pegs_title">PEGs\nde mi sección</string>
+    <string name="retained_pegs_title">¿Cuántos PEGs voy\na retener?</string>
+    <string name="projected_expenses_title">Egresos\nProyectados</string>
+    <string name="projected_capitalization_title">Capitalización\nProyectada</string>
+    <string name="initial_actives_title">Activas\niniciales</string>
+    <string name="final_actives_title">Activas finales\nproyectadas</string>
+    <string name="active_retention_title">RETENCIÓN DE ACTIVAS</string>
+    <string name="active_retention_6d6_percentage_disclaimer">¡Ten presente que no estás\nproyectando retener todas\ntus consultoras 6d6!</string>
+    <string name="active_retention_percentage">%1$s%</string>
+    <string name="campaign_projection_fetch_error">Error al recuperar datos</string>
+    <string name="orders_title">Pedidos</string>
+    <string name="orders_current_goal_title">Objetivo de pedidos para la campaña</string>
+    <string name="orders_low_value_title">Pedidos de\nbajo valor</string>
+    <string name="orders_low_value_plus_title">Pedidos de\nbajo valor Plus</string>
+    <string name="orders_high_value_title">Pedidos de\nAlto valor</string>
+    <string name="orders_high_value_plus_title">Pedidos de\nAlto valor Plus</string>
+    <string name="gain_per_order_title">Ganancia\n pedido</string>
+    <string name="gain_per_order_projected_title">Ganancia\n proyectada</string>
+    <string name="total_order_title">Total Pedidos</string>
+    <string name="total_gain_title">Total Ganancia</string>
+    <string name="goal_achieved">Cumple Objetivo</string>
+    <string name="goal_not_achieved">No cumple objetivo</string>
+    <string name="total_gain_number">%1$s%2$s</string>
+    <string name="projected_activity">ACTIVIDAD PROYECTADA</string>
+    <string name="pegs_projected_cx">PEGs PROYECTADAS PARA CX+1</string>
+    <string name="retencion_ciclo_de_nuevas_title">Retención ciclo de nuevas 6d6</string>
+    <string name="retencion_ciclo_de_nuevas_ingresos_amount">En campaña CX - 5 tuviste 7 ingresos</string>
+    <string name="save_projection">Guardar</string>
+    <string name="estimate">Estimados</string>
+    <string name="achieved">Logrados</string>
+    <string name="projection_success_message">¡CON TU PROYECCIÓN\nESTÁS LOGRANDO EL ÉXITO!</string>
+    <string name="projection_not_achieved_message">¡TEN EN CUENTA QUE NO\nESTÁS PROYECTANDO ÉXITO!</string>
+    <string name="cycle_news_profit_proyected_6d6_title">Ganancia 6d6 \n proyectada</string>
+    <string name="cycle_news_profit_proyected_6d6_title_low">Ganancia 6d6 bajo\n valor proyectada</string>
+    <string name="cycle_news_profit_proyected_6d6_title_high">Ganancia 6d6 alto\n valor proyectada</string>
+    <string name="cycle_news_profit_proyected_6d6_title_high_multimark">Ganancia 6d6 alto\n valor multimarca\n proyectada</string>
+
+    <string name="cycle_6d6_percentage_proyected_title">\% 6d6 PROYECTADO</string>
+    <string name="cycle_news_profit_proyected_6d6_function">%1$s %2$s</string>
+    <string name="capitalization">CAPITALIZACIÓN</string>
+    <string name="earning_capi_point">GANANCIA POR PUNTO\nDE CAPI</string>
+    <string name="earning_capi">GANANCIA\nCAPITALIZACIÓN</string>
+    <string name="sixdsix_multi_brand">6d6 Alto Valor\nMultimarca</string>
+
+
+</resources>

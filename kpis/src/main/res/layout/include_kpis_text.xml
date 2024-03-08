@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textColor="@color/textColorPrimaryVariant"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Vas reteniendo" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textColor="@color/textColorPrimaryVariant"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="3 de 4\nConsultoras 6d6" />
+
+</merge>

@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="biz.belcorp.salesforce.modules.orders">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_orders">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application
+        android:hasCode="false"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:hasCode" />
+
+</manifest>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/content_inset_less">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvChildHeaderLabel"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="GAINING AMOUNT OF: " />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvChildHeaderAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreenLight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="S/ 1.000.000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKpiDetailedChildContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        tools:listitem="@layout/view_left_aligned_grid_kpi_content"
+        tools:itemCount="2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/tvChildHeaderLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

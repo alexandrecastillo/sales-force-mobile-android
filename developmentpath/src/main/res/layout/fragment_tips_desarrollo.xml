@@ -1,0 +1,46 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.HeaderIconTextCustomView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hitIcon="@drawable/ic_woman"
+        app:hitTitle="@string/title_tips_de_desarrollo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:hitTitle="Tips de Desarrollo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTipsDesarrollo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_tips_desarrollo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_rounded"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:padding="@dimen/content_inset_double"
+        android:text="@string/message_digital_empty_data"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

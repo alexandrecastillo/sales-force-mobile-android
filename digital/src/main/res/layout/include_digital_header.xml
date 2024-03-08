@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:minHeight="200dp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/viewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager"
+        app:tabBackground="@drawable/tab_pager_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvFakeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Vende por Mi Tienda Online"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/btnPrevPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/content_inset_normal"
+        android:src="@drawable/selector_chevron_left"
+        app:layout_constraintBottom_toBottomOf="@id/btnNextPage"
+        app:layout_constraintEnd_toStartOf="@id/btnNextPage"
+        app:layout_constraintTop_toTopOf="@id/btnNextPage" />
+
+    <ImageView
+        android:id="@+id/btnNextPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/content_inset_normal"
+        android:src="@drawable/selector_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@id/tvFakeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFakeTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/viewPagerGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btnNextPage, btnPrevPage, viewPager, viewPagerIndicator" />
+
+</merge>

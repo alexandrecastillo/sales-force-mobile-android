@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutEventoDetalleHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/rdd_accent"
+        android:padding="@dimen/ds_padding_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/botonRetroceder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_white_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ds_padding_normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_rdd_lapiz_blanco"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textTituloEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:layout_marginTop="@dimen/ds_margin_medium"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ds_title_1_size"
+            app:layout_constraintStart_toEndOf="@id/botonRetroceder"
+            app:layout_constraintTop_toBottomOf="@id/botonRetroceder"
+            tools:text="Encuentro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutRegistrado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_extra_large"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_extra_large"
+        android:background="@drawable/background_evento_registrado"
+        android:paddingStart="@dimen/ds_padding_normal"
+        android:paddingTop="@dimen/ds_padding_medium"
+        android:paddingEnd="@dimen/ds_padding_normal"
+        android:paddingBottom="@dimen/ds_padding_medium"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEventoDetalleHeader"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivEventoRegistrado"
+            android:layout_width="@dimen/ds_icon_small_size"
+            android:layout_height="@dimen/ds_icon_small_size"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_check_success" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textEventoRegistrado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/rdd_evento_registrado"
+            android:textColor="@color/estado_positivo"
+            android:textSize="@dimen/ds_body_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivEventoRegistrado"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Este evento se registró y se dio por terminado" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutEliminado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_extra_large"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_extra_large"
+        android:background="@drawable/backgorund_evento_eliminado"
+        android:paddingStart="@dimen/ds_padding_normal"
+        android:paddingTop="@dimen/ds_padding_medium"
+        android:paddingEnd="@dimen/ds_padding_normal"
+        android:paddingBottom="@dimen/ds_padding_medium"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutRegistrado"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textEventoEliminado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/rdd_evento_ya_eliminado"
+            android:textColor="@color/estado_negativo"
+            android:textSize="@dimen/ds_body_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Este evento fue eliminado por tu Gerente Regional" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textUbicacionTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_extra_large"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_agregareventos_hint_ubicacion"
+        android:textColor="@color/rdd_accent"
+        android:textSize="@dimen/ds_body_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEliminado" />
+
+    <ImageView
+        android:id="@+id/imageUbicacion"
+        android:layout_width="@dimen/ds_icon_medium_size"
+        android:layout_height="@dimen/ds_icon_medium_size"
+        app:layout_constraintStart_toStartOf="@id/textUbicacionTitulo"
+        app:layout_constraintTop_toBottomOf="@id/textUbicacionTitulo"
+        app:srcCompat="@drawable/ic_eventordd_ubicacion"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textUbicacionValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_small"
+        android:layout_marginEnd="@dimen/ds_margin_extra_large"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintBottom_toBottomOf="@id/imageUbicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageUbicacion"
+        app:layout_constraintTop_toTopOf="@id/imageUbicacion"
+        tools:text="Av.Pardo y Aliaga 652, Belcorp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textFechaTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_extra_large"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_editarevento_fechahora"
+        android:textColor="@color/rdd_accent"
+        android:textSize="@dimen/ds_body_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textUbicacionValor" />
+
+    <ImageView
+        android:id="@+id/imageFecha"
+        android:layout_width="@dimen/ds_icon_medium_size"
+        android:layout_height="@dimen/ds_icon_medium_size"
+        app:layout_constraintStart_toStartOf="@id/textFechaTitulo"
+        app:layout_constraintTop_toBottomOf="@id/textFechaTitulo"
+        app:srcCompat="@drawable/ic_eventordd_hora"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textFechaValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_small"
+        android:layout_marginEnd="@dimen/ds_margin_extra_large"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintBottom_toTopOf="@id/textHoraValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageFecha"
+        app:layout_constraintTop_toTopOf="@id/imageFecha"
+        tools:text="Lunes, 25 Junio de 2018" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textHoraValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_small"
+        android:layout_marginEnd="@dimen/ds_margin_extra_large"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintBottom_toBottomOf="@id/imageFecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageFecha"
+        app:layout_constraintTop_toBottomOf="@id/textFechaValor"
+        tools:text="02:15pm - 04:15pm" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textAlertaTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_extra_large"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_agregareventos_alerta"
+        android:textColor="@color/rdd_accent"
+        android:textSize="@dimen/ds_body_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHoraValor" />
+
+    <ImageView
+        android:id="@+id/imageAlerta"
+        android:layout_width="@dimen/ds_icon_medium_size"
+        android:layout_height="@dimen/ds_icon_medium_size"
+        app:layout_constraintStart_toStartOf="@id/textAlertaTitulo"
+        app:layout_constraintTop_toBottomOf="@id/textAlertaTitulo"
+        app:srcCompat="@drawable/ic_eventordd_alerta"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textAlertaValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_small"
+        android:layout_marginEnd="@dimen/ds_margin_extra_large"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintBottom_toBottomOf="@id/imageAlerta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageAlerta"
+        app:layout_constraintTop_toTopOf="@id/imageAlerta"
+        tools:text="15 minutos antes" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmarEvento"
+        style="@style/Widget.Button.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ds_margin_normal"
+        android:layout_marginRight="@dimen/ds_margin_normal"
+        android:layout_marginBottom="@dimen/ds_margin_other_5"
+        android:text="@string/rdd_agregareventos_registrar"
+        android:fontFamily="@font/mulish_regular"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutEliminarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/ds_padding_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirmarEvento"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textEliminarEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:fontFamily="@font/mulish_bold"
+            android:paddingStart="@dimen/ds_padding_small"
+            android:paddingEnd="@dimen/ds_padding_small"
+            android:text="@string/rdd_eliminarevento_titulo"
+            android:textColor="@color/mi_ruta_eliminar_red"
+            android:textSize="@dimen/ds_body_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ds_height_separator_small"
+            android:layout_marginTop="@dimen/one"
+            android:background="@color/mi_ruta_eliminar_red"
+            app:layout_constraintEnd_toEndOf="@id/textEliminarEvento"
+            app:layout_constraintStart_toStartOf="@id/textEliminarEvento"
+            app:layout_constraintTop_toBottomOf="@id/textEliminarEvento" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

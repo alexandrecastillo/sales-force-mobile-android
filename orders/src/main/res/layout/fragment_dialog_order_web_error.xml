@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/popup_width"
+    android:layout_height="250dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/popup_width"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_buttons"
+        android:layout_centerHorizontal="true"
+        android:background="#35bdb2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal|bottom">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/ic_error" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_gz_consultant_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="LA OPERACIÓN NO SE REALIZÓ"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_gz_consultant_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="Revisa tu conexión a internet\no vuelve a intentarlo más tarde"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="@dimen/popup_width"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center"
+            android:text="ACEPTAR"
+            android:textColor="#243039" />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="10dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/triangle_lock" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_x_white" />
+
+    <View
+        android:id="@+id/view_close"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

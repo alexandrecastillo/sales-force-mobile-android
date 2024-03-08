@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSales"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/magenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/billing_catalog_sale_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSalesDescription"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_half"
+        app:layout_constraintStart_toStartOf="@id/tvSales"
+        app:layout_constraintTop_toBottomOf="@id/tvSales" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOrders"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:textColor="@color/magenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSalesDescription"
+        tools:text="@string/billing_orders_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOrdersDescription"
+        style="@style/TextAppearance.DS.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_half"
+        app:layout_constraintStart_toStartOf="@id/tvOrders"
+        app:layout_constraintTop_toBottomOf="@id/tvOrders" />
+
+</merge>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/picture_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <biz.belcorp.mobile.components.login.LoginView
+            android:id="@+id/loginView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_margin_normal"
+            android:layout_marginRight="@dimen/ds_margin_normal"
+            android:layout_marginBottom="@dimen/ds_margin_other_2"
+            android:padding="@dimen/ds_padding_large"
+            android:theme="@style/Widget.LoginView"
+            app:fieldFontFamily="@font/mulish_bold"
+            app:fieldPasswordIcon="@drawable/ic_padlock"
+            app:fieldStrokeColor="@color/black"
+            app:fieldTextError="@string/required_field"
+            app:fieldTextHintColor="@color/gray_5"
+            app:fieldTextSize="@dimen/text_size_subtitle"
+            app:fieldUserIcon="@drawable/ic_woman"
+            app:layout_constraintBottom_toTopOf="@+id/btnSupport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:loginBackground="@drawable/shape_login"
+            app:loginButtonBackgroundColor="@color/black"
+            app:loginButtonText="@string/action_login"
+            app:loginButtonWidthMode="wrap_content"
+            app:loginTitle="@string/app_name"
+            app:loginTitleAlignment="center"
+            app:loginTitleFontFamily="@font/mulish_bold"
+            app:loginTitleTextAllCaps="true"
+            app:loginTitleTextColor="@color/magenta"
+            app:loginTitleTextSize="@dimen/text_size_title_2"
+            app:loginType="business" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAppVersion"
+            style="@style/Widget.TextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black_alpha"
+            android:paddingStart="@dimen/content_inset_tiny"
+            android:paddingTop="@dimen/content_inset_tiny"
+            android:paddingEnd="@dimen/content_inset_normal"
+            android:paddingBottom="@dimen/content_inset_tiny"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Versión 4.1.3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnSupport"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginEnd="@dimen/ds_margin_small"
+            android:layout_marginBottom="@dimen/ds_margin_small"
+            android:alpha="0"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:padding="@dimen/ds_padding_small"
+            android:src="@drawable/ic_padlock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,332 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppThemeUnete">
+
+    <include
+        android:id="@+id/sections_navigation_bar_detail"
+        android:visibility="gone"
+        layout="@layout/sections_navigation_bar" />
+
+    <LinearLayout
+        android:id="@+id/estadoBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.USpinner
+            android:id="@+id/spnEstados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_component_none"
+            android:layout_marginEnd="@dimen/margin_left_uspinner"
+            custom:validateIconVisible="false" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchBox"
+        style="@style/CardView.Unete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_height_card_filter"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/size_component_none"
+        app:cardElevation="@dimen/size_component_none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_unete_search"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_consultant_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_wrapper_input"
+                android:layout_alignTop="@id/btn_search"
+                android:layout_alignBottom="@id/btn_search"
+                android:layout_toStartOf="@id/btn_search"
+                android:gravity="center_vertical"
+                android:hint="@string/postulante_name_hint"
+                android:textColorHint="@color/gray_label">
+
+                <EditText
+                    android:id="@+id/txtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_lateral_input"
+                    android:layout_marginEnd="@dimen/margin_lateral_input"
+                    android:background="@color/white"
+                    android:cursorVisible="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_label_dark"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/size_value" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_search"
+                android:layout_width="@dimen/dimen_width_button_action_search"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/background_unete_search_icon"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/size_icon_search"
+                    android:layout_height="@dimen/size_icon_search"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_lupa" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvwFiltroAprobado"
+        style="@style/CardView.Unete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/size_component_none"
+        app:cardElevation="@dimen/size_card_elevartion">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_filtro_aprobado"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_innner_wrapper"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:id="@+id/rl_right"
+                    android:layout_width="@dimen/width_view_decorate"
+                    android:layout_height="@dimen/height_wrapper_input"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/margin_view_decorate"
+                    android:clickable="false">
+
+                    <View
+                        android:layout_width="@dimen/size_component_none"
+                        android:layout_height="@dimen/size_component_none"
+                        android:clickable="false" />
+
+                    <ImageView
+                        android:id="@+id/ivwFiltroAprobado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/triangle_purple" />
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_filtro_aprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rl_right"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/gray_label">
+
+
+                    <EditText
+                        android:id="@+id/edtFiltroAprobado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_view_text"
+                        android:background="@color/white"
+                        android:cursorVisible="true"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_filtro_aprobado_hint"
+                        android:inputType="textNoSuggestions"
+                        android:singleLine="true"
+                        android:tag="-1"
+                        android:textColor="@color/gray_label_dark"
+                        android:textColorHint="@color/gray_label"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/size_label_value_max" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lvwFiltroAprobado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvwFiltroTipoDePago"
+        style="@style/CardView.Unete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/size_component_none"
+        app:cardElevation="@dimen/size_card_elevartion">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_filtro_tipodepago"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_innner_wrapper"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:id="@+id/rl_right_tipodepago"
+                    android:layout_width="@dimen/width_view_decorate"
+                    android:layout_height="@dimen/height_wrapper_input"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/margin_view_decorate"
+                    android:clickable="false">
+
+                    <View
+                        android:layout_width="@dimen/size_component_none"
+                        android:layout_height="@dimen/size_component_none"
+                        android:clickable="false" />
+
+                    <ImageView
+                        android:id="@+id/ivwFiltroTipoDePago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/triangle_purple" />
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_filtro_tipodepago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rl_right_tipodepago"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/gray_label">
+
+
+                    <EditText
+                        android:id="@+id/edtFiltroTipoDePago"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_view_text"
+                        android:background="@color/white"
+                        android:cursorVisible="true"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_filtro_aprobado_hint"
+                        android:inputType="textNoSuggestions"
+                        android:singleLine="true"
+                        android:tag="-1"
+                        android:textColor="@color/gray_label_dark"
+                        android:textColorHint="@color/gray_label"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/size_label_value_max" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lvwFiltroTipoDePago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtListadoEmpty"
+        style="@style/TextViewUneteListadoDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="sans-serif"
+        android:text="@string/unete_listado_empty"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_label_value"
+        android:visibility="gone" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvwListadoFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_view_text"
+        android:fontFamily="sans-serif"
+        android:gravity="start"
+        android:textAlignment="textStart"
+        android:textColor="@color/subtitle_unete"
+        android:textSize="@dimen/size_label_value"
+        android:visibility="gone" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rwListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rwPreListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

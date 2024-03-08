@@ -1,0 +1,214 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/include_toolbar_light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        app:layout_constraintBottom_toTopOf="@id/btnGuardar"
+        app:layout_constraintTop_toBottomOf="@id/app_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTipoMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:text="@string/tit_cual_es_su_meta"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <biz.belcorp.salesforce.modules.developmentpath.widgets.MainSpinner
+                android:id="@+id/spinnerMetas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintTop_toBottomOf="@id/textViewTipoMeta"
+                tools:layout_height="36dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:text="@string/crear_meta_consultora_monto_titulo"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/spinnerMetas" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:background="@drawable/background_text_component"
+                android:hint="@string/crear_meta_consultora_monto_hint"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="@dimen/content_inset_normal"
+                android:paddingTop="@dimen/content_inset_less"
+                android:paddingEnd="@dimen/content_inset_normal"
+                android:paddingBottom="@dimen/content_inset_less"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/textViewMonto" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCampanias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:text="@string/crear_meta_consultora_campanias_titulo"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/magenta"
+                app:layout_constraintTop_toBottomOf="@id/editTextMonto" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCampaniaInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:text="@string/crear_meta_consultora_campania_inicio_titulo"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCampanias" />
+
+            <biz.belcorp.salesforce.modules.developmentpath.widgets.MainSpinner
+                android:id="@+id/spinnerCampaniaInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCampaniaInicio"
+                tools:layout_height="24dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewCampaniaFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:text="@string/crear_meta_consultora_campania_fin_titulo"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/textViewCampanias" />
+
+            <biz.belcorp.salesforce.modules.developmentpath.widgets.MainSpinner
+                android:id="@+id/spinnerCampaniaFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/verticalGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/textViewCampaniaFin"
+                tools:layout_height="24dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewComentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:text="@string/crear_meta_consultora_comentario_titulo"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/spinnerCampaniaInicio" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextComentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:background="@drawable/background_text_component"
+                android:hint="@string/crear_meta_consultora_comentario_hint"
+                android:inputType="textCapSentences"
+                android:maxLength="500"
+                android:maxLines="1"
+                android:paddingStart="@dimen/content_inset_normal"
+                android:paddingTop="@dimen/content_inset_less"
+                android:paddingEnd="@dimen/content_inset_normal"
+                android:paddingBottom="@dimen/content_inset_less"
+                android:textAppearance="@style/TextAppearance.DS.Body"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/textViewComentario" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuardar"
+        style="@style/Widget.Button.Magenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        android:enabled="false"
+        android:text="@string/crear_meta_consultora_guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp">
+
+        <View
+            android:id="@+id/viewAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circulo_azul_calendario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/inicialesTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/viewAvatar"
+            app:layout_constraintEnd_toEndOf="@id/viewAvatar"
+            app:layout_constraintStart_toStartOf="@id/viewAvatar"
+            app:layout_constraintTop_toTopOf="@id/viewAvatar"
+            tools:text="AH" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewNombres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/mulish_bold"
+            android:lineSpacingMultiplier="1.15"
+            android:textColor="#252628"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/layoutBotonPlanificar"
+            app:layout_constraintStart_toEndOf="@id/viewAvatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Ada Higueras" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="#494b4e"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/layoutBotonPlanificar"
+            app:layout_constraintStart_toEndOf="@id/viewAvatar"
+            app:layout_constraintTop_toBottomOf="@id/textViewNombres"
+            tools:text="R01 - Productiva" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grupoFechaPlanificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="imageViewIconoFecha,textViewFecha"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageViewIconoFecha"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/viewAvatar"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescripcion"
+            app:srcCompat="@drawable/ic_calendario_success" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/estado_positivo"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewIconoFecha"
+            app:layout_constraintStart_toEndOf="@id/imageViewIconoFecha"
+            app:layout_constraintTop_toTopOf="@id/imageViewIconoFecha"
+            tools:text="25 de junio" />
+
+        <LinearLayout
+            android:id="@+id/layoutBotonPlanificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/viewAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewAvatar"
+            tools:background="@drawable/background_rdd_boton_planificar">
+
+            <ImageView
+                android:id="@+id/iconoIzquierdaPlanificar"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_check_success" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewBotonPlanificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/mulish_bold"
+                android:letterSpacing="0.15"
+                android:textSize="12sp"
+                tools:targetApi="lollipop"
+                tools:text="@string/planificar"
+                tools:textColor="@color/rdd_accent" />
+
+            <ImageView
+                android:id="@+id/iconoDerechaPlanificar"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_asignar_rdd_accent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

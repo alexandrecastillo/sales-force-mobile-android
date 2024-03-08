@@ -1,0 +1,30 @@
+package biz.belcorp.salesforce.modules.consultants.core.domain.constants
+
+object BeautyConsultantConstants {
+
+    const val CONSULTORA_BRILLANTE = "BRILLANTE"
+    const val CONSULTORA_TOPACIO = "TOPACIO"
+    const val CONSULTORA_PERLA = "PERLA"
+    const val CONSULTORA_AMBAR = "ÁMBAR"
+    const val CONSULTORA_AAMBAR = "AMBAR"
+    const val CONSULTORA_CORAL = "CORAL"
+    const val CONSULTORA_CONSULTORA = "CONSULTORA"
+
+    private const val CONSULTORA_BRILLANTE_CODIGO = 5
+    private const val CONSULTORA_TOPACIO_CODIGO = 4
+    private const val CONSULTORA_PERLA_CODIGO = 3
+    private const val CONSULTORA_AMBAR_CODIGO = 2
+    private const val CONSULTORA_CORAL_CODIGO = 1
+    private const val CONSULTORA_CONSULTORA_CODIGO = 0
+
+    val LEVEL_MAP: HashMap<String, Int> = hashMapOf(
+        CONSULTORA_BRILLANTE to CONSULTORA_BRILLANTE_CODIGO,
+        CONSULTORA_TOPACIO to CONSULTORA_TOPACIO_CODIGO,
+        CONSULTORA_PERLA to CONSULTORA_PERLA_CODIGO,
+        CONSULTORA_AMBAR to CONSULTORA_AMBAR_CODIGO,
+        CONSULTORA_AAMBAR to CONSULTORA_AMBAR_CODIGO,
+        CONSULTORA_CORAL to CONSULTORA_CORAL_CODIGO,
+        CONSULTORA_CONSULTORA to CONSULTORA_CONSULTORA_CODIGO,
+        "" to CONSULTORA_CONSULTORA_CODIGO
+    )
+}

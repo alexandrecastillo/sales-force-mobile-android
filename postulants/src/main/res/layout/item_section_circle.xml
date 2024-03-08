@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_5dp"
+    android:background="@drawable/selector_section_circle"
+    android:fontFamily="@font/mulish_regular"
+    android:gravity="center"
+    android:maxLines="2"
+    android:textColor="@color/gray_home"
+    android:textSize="@dimen/medium_sp" />
+

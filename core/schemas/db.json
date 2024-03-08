@@ -1,0 +1,5007 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:90809204725183336",
+      "lastPropertyId": "6:7024301576123749535",
+      "name": "OptionEntity",
+      "properties": [
+        {
+          "id": "1:5782778308831430475",
+          "name": "code",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:4732790721983989807",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "3:5993973725868396287",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:7157384460773027108",
+          "name": "position",
+          "type": 5
+        },
+        {
+          "id": "5:3296146013410750178",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "6:7024301576123749535",
+          "name": "active",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7068956765220635147",
+      "lastPropertyId": "8:6245480659636041923",
+      "name": "NotificationEntity",
+      "properties": [
+        {
+          "id": "1:4486589652594516626",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:7878851056978751078",
+          "name": "code",
+          "type": 6
+        },
+        {
+          "id": "3:7051942328436249410",
+          "name": "topic",
+          "type": 9
+        },
+        {
+          "id": "4:3733257987497083597",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "5:9158689993737085926",
+          "name": "message",
+          "type": 9
+        },
+        {
+          "id": "6:5031840045106054543",
+          "name": "data",
+          "type": 9
+        },
+        {
+          "id": "7:9063348377681334960",
+          "name": "date",
+          "type": 6
+        },
+        {
+          "id": "8:6245480659636041923",
+          "name": "seen",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:2966728466802121808",
+      "lastPropertyId": "5:3722981907282575475",
+      "name": "SaleOrdersOrderEntity",
+      "properties": [
+        {
+          "id": "1:4040563598901846949",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3308136422538709076",
+          "name": "range",
+          "type": 9
+        },
+        {
+          "id": "3:3214782863159370994",
+          "name": "amount",
+          "type": 5
+        },
+        {
+          "id": "4:8776583243427115979",
+          "name": "position",
+          "type": 5
+        },
+        {
+          "id": "5:3722981907282575475",
+          "name": "saleOrdersOrderParentCode",
+          "indexId": "1:302186570544050935",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "SaleOrdersEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:1931479968755588176",
+      "lastPropertyId": "5:5025220226897404076",
+      "name": "SaleOrdersSaleEntity",
+      "properties": [
+        {
+          "id": "1:4946050404987694988",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4562939186097918139",
+          "name": "range",
+          "type": 9
+        },
+        {
+          "id": "3:3464485078542415020",
+          "name": "amount",
+          "type": 8
+        },
+        {
+          "id": "4:6925828491693867858",
+          "name": "position",
+          "type": 5
+        },
+        {
+          "id": "5:5025220226897404076",
+          "name": "saleOrdersSaleParentCode",
+          "indexId": "2:7637818230697547792",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "SaleOrdersEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:5101069127914376057",
+      "lastPropertyId": "39:3051400234418975221",
+      "name": "SaleOrdersEntity",
+      "properties": [
+        {
+          "id": "1:8035212182707496927",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:4757392565825039061",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:4227456570676446561",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:5689681198594622550",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:1474782670023809910",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "6:1558636905835410025",
+          "name": "netSale",
+          "type": 8
+        },
+        {
+          "id": "7:8435620203062667650",
+          "name": "netSaleGoal",
+          "type": 8
+        },
+        {
+          "id": "8:1727933867847189438",
+          "name": "fulfillmentNetSalePercentage",
+          "type": 8
+        },
+        {
+          "id": "9:6937949230444911517",
+          "name": "catalogSale",
+          "type": 8
+        },
+        {
+          "id": "10:4098753438830751556",
+          "name": "catalogSaleGoal",
+          "type": 8
+        },
+        {
+          "id": "11:8958881939762168387",
+          "name": "fulfillmentCatalogSalesPercentage",
+          "type": 8
+        },
+        {
+          "id": "12:6222373237687100822",
+          "name": "orders",
+          "type": 5
+        },
+        {
+          "id": "13:3043569387953550127",
+          "name": "ordersGoal",
+          "type": 5
+        },
+        {
+          "id": "14:8766589148118808702",
+          "name": "highValueOrders",
+          "type": 5
+        },
+        {
+          "id": "15:6321057163734598741",
+          "name": "lowValueOrders",
+          "type": 5
+        },
+        {
+          "id": "16:707623331478171029",
+          "name": "averageAmount",
+          "type": 8
+        },
+        {
+          "id": "17:1042088809318990884",
+          "name": "fulfillmentOrderAveragePercentage",
+          "type": 8
+        },
+        {
+          "id": "18:3596619600411586054",
+          "name": "activityPercentage",
+          "type": 8
+        },
+        {
+          "id": "19:6717681560721630921",
+          "name": "activityGoal",
+          "type": 8
+        },
+        {
+          "id": "20:7090740874630561872",
+          "name": "activityPegs",
+          "type": 5
+        },
+        {
+          "id": "21:929178816471344965",
+          "name": "fulfillmentActivityPercentage",
+          "type": 8
+        },
+        {
+          "id": "22:779518273473783657",
+          "name": "activesInitials",
+          "type": 5
+        },
+        {
+          "id": "23:526607875619558568",
+          "name": "activesFinals",
+          "type": 5
+        },
+        {
+          "id": "24:6198384009734946814",
+          "name": "activesFinalsLastYear",
+          "type": 5
+        },
+        {
+          "id": "25:2187023575025367924",
+          "name": "activesRetentionPercentage",
+          "type": 8
+        },
+        {
+          "id": "26:3664287600226671802",
+          "name": "activesRetentionGoal",
+          "type": 8
+        },
+        {
+          "id": "27:2661653078844509095",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "28:7650787375039247328",
+          "name": "averageAmountGoal",
+          "type": 8
+        },
+        {
+          "id": "29:6427603508946408618",
+          "name": "fulfillmentOrderPercentage",
+          "type": 8
+        },
+        {
+          "id": "30:6199765513490298147",
+          "name": "fulfillmentRetentionPercentage",
+          "type": 8
+        },
+        {
+          "id": "31:7716889483571542479",
+          "name": "multibrandPercentage",
+          "type": 9
+        },
+        {
+          "id": "32:8286721153377399188",
+          "name": "multibrandActives",
+          "type": 9
+        },
+        {
+          "id": "33:3829236597775612162",
+          "name": "multibrandNoMultibrandActives",
+          "type": 9
+        },
+        {
+          "id": "34:7698614043395515116",
+          "name": "multibrandLastCampaign",
+          "type": 9
+        },
+        {
+          "id": "35:1744629646854012838",
+          "name": "multibrandVsLastCampaign",
+          "type": 9
+        },
+        {
+          "id": "36:2958616334970684263",
+          "name": "multibrandNumVsLastCampaign",
+          "type": 9
+        },
+        {
+          "id": "37:1087690045607027671",
+          "name": "multibrandActivesHighValue",
+          "type": 9
+        },
+        {
+          "id": "38:6294618289125062588",
+          "name": "multibrandOrdersHighValue",
+          "type": 9
+        },
+        {
+          "id": "39:3051400234418975221",
+          "name": "multibrandHighValueNumVsLastCampaign",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:2503514897702572612",
+      "lastPropertyId": "5:3229709370741820879",
+      "name": "RejectedOrderEntity",
+      "properties": [
+        {
+          "id": "1:4116840439424659218",
+          "name": "code",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7371147301941073383",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:5588514711237342394",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:4249061497952219100",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:3229709370741820879",
+          "name": "section",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:3032719446561594359",
+      "lastPropertyId": "4:6178906197643815610",
+      "name": "RejectedOrderDetailEntity",
+      "properties": [
+        {
+          "id": "1:6950219021923019536",
+          "name": "code",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2907231589967959909",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:2562470820931976974",
+          "name": "quantity",
+          "type": 5
+        },
+        {
+          "id": "4:6178906197643815610",
+          "name": "rejectedOrderParentCode",
+          "indexId": "3:6981031191937918919",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "RejectedOrderEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:5929713743812415377",
+      "lastPropertyId": "64:3331239561448475319",
+      "name": "ConsultantEntity",
+      "properties": [
+        {
+          "id": "1:541562433711985366",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6659046880638719271",
+          "name": "consultantId",
+          "type": 5
+        },
+        {
+          "id": "3:1329546646300945732",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:6491363135759273332",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "5:6785023763611099278",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "6:5984302518822596454",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "7:4864180195268359013",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "8:7539169135521750725",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "9:1541337483953759587",
+          "name": "address",
+          "type": 9
+        },
+        {
+          "id": "10:7423477277570818487",
+          "name": "phone",
+          "type": 9
+        },
+        {
+          "id": "11:8913252940422513163",
+          "name": "isPeg",
+          "type": 1
+        },
+        {
+          "id": "12:5473370372290847525",
+          "name": "isNew",
+          "type": 1
+        },
+        {
+          "id": "13:2768245335770914888",
+          "name": "shortSegmentCode",
+          "type": 9
+        },
+        {
+          "id": "14:7810247095225316472",
+          "name": "segmentDescription",
+          "type": 9
+        },
+        {
+          "id": "15:7429437484220700460",
+          "name": "constancyNew",
+          "type": 9
+        },
+        {
+          "id": "16:2185316916341491660",
+          "name": "brightSegmentCode",
+          "type": 9
+        },
+        {
+          "id": "17:2978510152993377217",
+          "name": "brightSegmentDescription",
+          "type": 9
+        },
+        {
+          "id": "18:7277642975829427643",
+          "name": "birthday",
+          "type": 9
+        },
+        {
+          "id": "19:1450373482565480341",
+          "name": "campaignAdmission",
+          "type": 9
+        },
+        {
+          "id": "22:6398245932951598665",
+          "name": "pendingDebt",
+          "type": 8
+        },
+        {
+          "id": "23:190660813006500214",
+          "name": "orderAmount",
+          "type": 8
+        },
+        {
+          "id": "24:2845532532930411042",
+          "name": "document",
+          "type": 9
+        },
+        {
+          "id": "26:3207382151431864482",
+          "name": "catalogSales",
+          "type": 8
+        },
+        {
+          "id": "27:3026137754914365887",
+          "name": "checkDigit",
+          "type": 9
+        },
+        {
+          "id": "28:1662212598134370827",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "29:877585574996830924",
+          "name": "surname",
+          "type": 9
+        },
+        {
+          "id": "30:7640224033859028109",
+          "name": "secondName",
+          "type": 9
+        },
+        {
+          "id": "31:1710368346958866670",
+          "name": "secondSurname",
+          "type": 9
+        },
+        {
+          "id": "32:6313846214908477101",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "33:710081199160805772",
+          "name": "anniversaryDate",
+          "type": 9
+        },
+        {
+          "id": "34:3046023050718174230",
+          "name": "constancyEstablished",
+          "type": 9
+        },
+        {
+          "id": "35:7288711906426006080",
+          "name": "constancyU6C",
+          "type": 1
+        },
+        {
+          "id": "36:377881372773252269",
+          "name": "constancyU18C",
+          "type": 1
+        },
+        {
+          "id": "37:1179780192610263091",
+          "name": "stateCode",
+          "type": 9
+        },
+        {
+          "id": "38:7416536541494002442",
+          "name": "stateDescription",
+          "type": 9
+        },
+        {
+          "id": "39:8382283774335065384",
+          "name": "isAuthorized",
+          "type": 1
+        },
+        {
+          "id": "40:4243876199978885609",
+          "name": "isPotentialEntry",
+          "type": 1
+        },
+        {
+          "id": "41:2188327671871261522",
+          "name": "isPotentialReentry",
+          "type": 1
+        },
+        {
+          "id": "43:2380511961780147626",
+          "name": "billingLastCampaign",
+          "type": 9
+        },
+        {
+          "id": "44:1938434403936699098",
+          "name": "orderRange",
+          "type": 9
+        },
+        {
+          "id": "45:5880839366688063001",
+          "name": "isOrderSent",
+          "type": 1
+        },
+        {
+          "id": "46:2876756643251008659",
+          "name": "collectionPercentage",
+          "type": 8
+        },
+        {
+          "id": "47:8099860618956026001",
+          "name": "reentriesU18C",
+          "type": 5
+        },
+        {
+          "id": "48:7569451519034027190",
+          "name": "isNewInconstant",
+          "type": 1
+        },
+        {
+          "id": "49:8886180172597697371",
+          "name": "billingFirstCampaign",
+          "type": 9
+        },
+        {
+          "id": "50:6599325233193644775",
+          "name": "billingOrderStatus",
+          "type": 5
+        },
+        {
+          "id": "51:7123681083172878943",
+          "name": "sbAmount",
+          "type": 8
+        },
+        {
+          "id": "52:6820904612204158142",
+          "name": "shareCatalog",
+          "type": 1
+        },
+        {
+          "id": "53:8437663210232167376",
+          "name": "addressReference",
+          "type": 9
+        },
+        {
+          "id": "54:4373408233147174547",
+          "name": "hasCashPayment",
+          "type": 1
+        },
+        {
+          "id": "55:7794240429411538618",
+          "name": "lastModified",
+          "type": 9
+        },
+        {
+          "id": "56:781088440455080109",
+          "name": "orderMtoAmount",
+          "type": 8
+        },
+        {
+          "id": "59:3821754742317090366",
+          "name": "multiMarca",
+          "type": 1
+        },
+        {
+          "id": "60:3189848160782274944",
+          "name": "suggestedMessage",
+          "type": 9
+        },
+        {
+          "id": "61:2114012567161670131",
+          "name": "digitalSegment",
+          "type": 9
+        },
+        {
+          "id": "64:3331239561448475319",
+          "name": "multicategory",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:3654619303986457293",
+      "lastPropertyId": "20:8433203515299518096",
+      "name": "NewCycleEntity",
+      "properties": [
+        {
+          "id": "1:9068614947160579016",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:5323721705057787938",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:2988927965057811005",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:1624314669561394281",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:5178750192876879272",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "6:2946931905841803614",
+          "name": "highValueOrders6d6",
+          "type": 5
+        },
+        {
+          "id": "7:8964037195540338293",
+          "name": "highValueOrders5d5",
+          "type": 5
+        },
+        {
+          "id": "8:4594020096258187594",
+          "name": "highValueOrders4d4",
+          "type": 5
+        },
+        {
+          "id": "9:3382129482524967052",
+          "name": "highValueOrders3d3",
+          "type": 5
+        },
+        {
+          "id": "10:8550997594393842227",
+          "name": "highValueOrders2d2",
+          "type": 5
+        },
+        {
+          "id": "11:4263759009065280885",
+          "name": "highValueOrders1d1",
+          "type": 5
+        },
+        {
+          "id": "12:9171074005643230309",
+          "name": "highValueOrdersRetentionPercentage",
+          "type": 8
+        },
+        {
+          "id": "13:5478178000005399016",
+          "name": "lowValueOrders6d6",
+          "type": 5
+        },
+        {
+          "id": "14:7395329932617593176",
+          "name": "lowValueOrders5d5",
+          "type": 5
+        },
+        {
+          "id": "15:2700944104379924272",
+          "name": "lowValueOrders4d4",
+          "type": 5
+        },
+        {
+          "id": "16:327125199514807052",
+          "name": "lowValueOrders3d3",
+          "type": 5
+        },
+        {
+          "id": "17:1987272692085312331",
+          "name": "lowValueOrders2d2",
+          "type": 5
+        },
+        {
+          "id": "18:7388097694686086928",
+          "name": "lowValueOrders1d1",
+          "type": 5
+        },
+        {
+          "id": "19:2818918609989325831",
+          "name": "lowValueOrdersRetentionPercentage",
+          "type": 8
+        },
+        {
+          "id": "20:8433203515299518096",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:1746363964566582239",
+      "lastPropertyId": "12:346969810243374973",
+      "name": "UaEntity",
+      "properties": [
+        {
+          "id": "1:2244752542071268385",
+          "name": "code",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:1485101418942737298",
+          "name": "country",
+          "type": 9
+        },
+        {
+          "id": "3:830201236166415738",
+          "name": "consultantId",
+          "type": 9
+        },
+        {
+          "id": "4:5142349322534541375",
+          "name": "consultantName",
+          "type": 9
+        },
+        {
+          "id": "5:2129574008895418254",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "6:2122055522171790312",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "7:6756359453629487657",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "8:2375854606881234722",
+          "name": "isCovered",
+          "type": 1
+        },
+        {
+          "id": "9:6308025440109528051",
+          "name": "rol",
+          "type": 9
+        },
+        {
+          "id": "10:8895435715731565222",
+          "name": "uaParentCode",
+          "indexId": "4:7456619622145379754",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "UaEntity"
+        },
+        {
+          "id": "11:2336257306654781900",
+          "name": "id",
+          "type": 6
+        },
+        {
+          "id": "12:346969810243374973",
+          "name": "description",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "11:6202776863109406692",
+      "lastPropertyId": "24:6860096039233463325",
+      "name": "CapitalizationEntity",
+      "properties": [
+        {
+          "id": "1:5933574882990445529",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:7337927739225131752",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:631232097182197854",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:9083957159949602783",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:6851729836108870831",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "6:599997043282406438",
+          "name": "capitalizationReal",
+          "type": 5
+        },
+        {
+          "id": "7:5553116362930390873",
+          "name": "capitalizationGoal",
+          "type": 5
+        },
+        {
+          "id": "8:1066058753663164304",
+          "name": "capitalizationProjected",
+          "type": 5
+        },
+        {
+          "id": "9:3286736010402798314",
+          "name": "capitalizationEntries",
+          "type": 5
+        },
+        {
+          "id": "10:5771755255075254750",
+          "name": "capitalizationEntriesGoal",
+          "type": 5
+        },
+        {
+          "id": "11:4421877011619406034",
+          "name": "capitalizationReentries",
+          "type": 5
+        },
+        {
+          "id": "12:271716740941551093",
+          "name": "capitalizationExpenses",
+          "type": 5
+        },
+        {
+          "id": "13:835231943834409929",
+          "name": "pegsReal",
+          "type": 5
+        },
+        {
+          "id": "14:4761067951138082396",
+          "name": "pegRetentionGoal",
+          "type": 5
+        },
+        {
+          "id": "15:5688725097817720349",
+          "name": "pegRetentionReal",
+          "type": 5
+        },
+        {
+          "id": "16:2127791353940287351",
+          "name": "pegRetentionPercentage",
+          "type": 8
+        },
+        {
+          "id": "17:5614475871885560445",
+          "name": "pegRetentionRemaining",
+          "type": 5
+        },
+        {
+          "id": "18:3929733359517643200",
+          "name": "potentialTotal",
+          "type": 5
+        },
+        {
+          "id": "19:428099285254978230",
+          "name": "potentialEntries",
+          "type": 5
+        },
+        {
+          "id": "20:9208570889135898823",
+          "name": "potentialReentries",
+          "type": 5
+        },
+        {
+          "id": "21:7857738638233422602",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "22:7785992844475344879",
+          "name": "capitalizationFulfillment",
+          "type": 8
+        },
+        {
+          "id": "23:1519423236784597268",
+          "name": "capitalizationProactive",
+          "type": 5
+        },
+        {
+          "id": "24:6860096039233463325",
+          "name": "capitalizationSuccess",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:7011312410944418350",
+      "lastPropertyId": "14:2384648462836522871",
+      "name": "PostulantKpiEntity",
+      "properties": [
+        {
+          "id": "1:1255710908972304434",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1438051389753922946",
+          "name": "currentCampaign",
+          "type": 9
+        },
+        {
+          "id": "3:6238678365422821960",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:1875978594851970205",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:7024035729685465247",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:9219804397279641618",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "7:1861972940846181054",
+          "name": "inEvaluation",
+          "type": 5
+        },
+        {
+          "id": "8:3409086346501167986",
+          "name": "preApproved",
+          "type": 5
+        },
+        {
+          "id": "9:8738365112449596959",
+          "name": "approved",
+          "type": 5
+        },
+        {
+          "id": "10:2586134893108084970",
+          "name": "rejected",
+          "type": 5
+        },
+        {
+          "id": "11:1426662913535337115",
+          "name": "conversion",
+          "type": 5
+        },
+        {
+          "id": "12:6639343590122776511",
+          "name": "daysOnHold",
+          "type": 5
+        },
+        {
+          "id": "13:9076329161414075590",
+          "name": "anticipatedEntries",
+          "type": 5
+        },
+        {
+          "id": "14:2384648462836522871",
+          "name": "preRegistered",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "13:290453544774391789",
+      "lastPropertyId": "13:8060794275296493377",
+      "name": "ConfigurationCountryEntity",
+      "properties": [
+        {
+          "id": "1:5477421515635014862",
+          "name": "code",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8750246215894188226",
+          "name": "country",
+          "type": 9
+        },
+        {
+          "id": "3:5353783430985610510",
+          "name": "countryName",
+          "type": 9
+        },
+        {
+          "id": "4:7136632841724370807",
+          "name": "currencySymbol",
+          "type": 9
+        },
+        {
+          "id": "5:1544238015795882832",
+          "name": "phoneCode",
+          "type": 9
+        },
+        {
+          "id": "6:4786881299957979431",
+          "name": "minimalOrderAmount",
+          "type": 6
+        },
+        {
+          "id": "7:8749174696266246632",
+          "name": "tippingPoint",
+          "type": 6
+        },
+        {
+          "id": "8:309650505160992968",
+          "name": "isPdv",
+          "type": 1
+        },
+        {
+          "id": "9:26512827912325335",
+          "name": "mainBrand",
+          "type": 9
+        },
+        {
+          "id": "10:5468153021106926486",
+          "name": "isGanaMas",
+          "type": 1
+        },
+        {
+          "id": "12:468735394736652309",
+          "name": "flagMto",
+          "type": 5
+        },
+        {
+          "id": "13:8060794275296493377",
+          "name": "flagShowProactive",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "14:7652534830565123768",
+      "lastPropertyId": "6:245504253320690577",
+      "name": "ConfigurationZoneEntity",
+      "properties": [
+        {
+          "id": "1:6738734707150571318",
+          "name": "code",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1687209841033990139",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:3332589101298524506",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:8633862075808990017",
+          "name": "isPdv",
+          "type": 1
+        },
+        {
+          "id": "5:1777181430062821946",
+          "name": "isDataReport",
+          "type": 1
+        },
+        {
+          "id": "6:245504253320690577",
+          "name": "configParentCode",
+          "indexId": "5:2663503978285258104",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ConfigurationCountryEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "15:7697458119511405738",
+      "lastPropertyId": "7:2902600377194813613",
+      "name": "SubOptionEntity",
+      "properties": [
+        {
+          "id": "1:1462175445761594518",
+          "name": "code",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:8986370852244101580",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "3:4510999541422443991",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:2724833580896501404",
+          "name": "position",
+          "type": 5
+        },
+        {
+          "id": "5:5719129196627643641",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "6:205639151578720685",
+          "name": "active",
+          "type": 1
+        },
+        {
+          "id": "7:2902600377194813613",
+          "name": "optionParentCode",
+          "indexId": "6:7127904435669476835",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "OptionEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "16:189780240841887965",
+      "lastPropertyId": "6:818467100391478522",
+      "name": "ProfitOrderEntity",
+      "properties": [
+        {
+          "id": "1:3765491869116072906",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5424246367550347142",
+          "name": "range",
+          "type": 9
+        },
+        {
+          "id": "3:3248871176886679634",
+          "name": "amount",
+          "type": 8
+        },
+        {
+          "id": "5:6155992644286065377",
+          "name": "profitParentCode",
+          "indexId": "7:5484755062168217649",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ProfitEntity"
+        },
+        {
+          "id": "6:818467100391478522",
+          "name": "position",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "17:2149079072406693073",
+      "lastPropertyId": "15:2805629414683984969",
+      "name": "CollectionEntity",
+      "properties": [
+        {
+          "id": "1:6166307333800221786",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:4973234276011739353",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "3:2931906096311499469",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:2639013024813618450",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:1975449959727742173",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:7551389327080072247",
+          "name": "percentage",
+          "type": 8
+        },
+        {
+          "id": "7:1299805625433555667",
+          "name": "ordersTotalGained",
+          "type": 8
+        },
+        {
+          "id": "8:4449382506790400610",
+          "name": "ordersMinimalCollectionPercentage",
+          "type": 8
+        },
+        {
+          "id": "9:7545013213634403219",
+          "name": "ordersTotalCollected",
+          "type": 5
+        },
+        {
+          "id": "10:1362819215811127893",
+          "name": "ordersTotal",
+          "type": 5
+        },
+        {
+          "id": "11:3954569465535113000",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "12:2857443233130965578",
+          "name": "invoicedSale",
+          "type": 8
+        },
+        {
+          "id": "13:2303248628235200138",
+          "name": "amountCollected",
+          "type": 8
+        },
+        {
+          "id": "14:1879712796149123665",
+          "name": "debtorConsultants",
+          "type": 5
+        },
+        {
+          "id": "15:2805629414683984969",
+          "name": "days",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "18:4337991772704880343",
+      "lastPropertyId": "20:4458808751609036637",
+      "name": "ProfitEntity",
+      "properties": [
+        {
+          "id": "1:4448970990436656720",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:6847222483560480176",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "3:613363465936791685",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:8600416000111129357",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:1886402548475222765",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:2018774868342992391",
+          "name": "total",
+          "type": 8
+        },
+        {
+          "id": "7:7891933018429182881",
+          "name": "competitionTotal",
+          "type": 8
+        },
+        {
+          "id": "8:4762263610797164237",
+          "name": "competitionCapitalization",
+          "type": 8
+        },
+        {
+          "id": "10:1111597418960529646",
+          "name": "competitionChangeLevel",
+          "type": 8
+        },
+        {
+          "id": "11:4872861313009881675",
+          "name": "competitionNewFixed",
+          "type": 8
+        },
+        {
+          "id": "12:7322371233605338383",
+          "name": "competitionProductsRelease",
+          "type": 8
+        },
+        {
+          "id": "13:6231053547961498061",
+          "name": "ordersTotal",
+          "type": 8
+        },
+        {
+          "id": "14:4204222961969014223",
+          "name": "ordersPotential",
+          "type": 8
+        },
+        {
+          "id": "15:6059018004380044410",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "16:4573310519823241115",
+          "name": "competition6d6_low_value",
+          "type": 8
+        },
+        {
+          "id": "17:5523692532509582972",
+          "name": "competition6d6_high_value",
+          "type": 8
+        },
+        {
+          "id": "18:3299938064480138724",
+          "name": "competition6d6_total",
+          "type": 8
+        },
+        {
+          "id": "19:5569774105520986989",
+          "name": "competition_tactic_bonus_level",
+          "type": 9
+        },
+        {
+          "id": "20:4458808751609036637",
+          "name": "competition_tactic_bonus_amount",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "19:608459371998659295",
+      "lastPropertyId": "6:3492315551582012741",
+      "name": "CollectionOrderEntity",
+      "properties": [
+        {
+          "id": "1:417502572945802900",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:883840686696077054",
+          "name": "range",
+          "type": 9
+        },
+        {
+          "id": "3:8875903918621971066",
+          "name": "collected",
+          "type": 5
+        },
+        {
+          "id": "4:1965637700353612046",
+          "name": "total",
+          "type": 5
+        },
+        {
+          "id": "5:5981397394611891413",
+          "name": "position",
+          "type": 5
+        },
+        {
+          "id": "6:3492315551582012741",
+          "name": "collectionParentCode",
+          "indexId": "8:6055873007651652691",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "CollectionEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "20:7319035420351938989",
+      "lastPropertyId": "29:2780974412857084065",
+      "name": "BusinessPartnerEntity",
+      "properties": [
+        {
+          "id": "1:606111696300437329",
+          "name": "code",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:91959288661752491",
+          "name": "partnerCode",
+          "type": 9
+        },
+        {
+          "id": "3:7358885492451600408",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:2744501339951757369",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:9121469902865850381",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:5593046785413223993",
+          "name": "document",
+          "type": 9
+        },
+        {
+          "id": "7:2006304369248051645",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "8:5273527772192075068",
+          "name": "secondName",
+          "type": 9
+        },
+        {
+          "id": "9:3308624648190753273",
+          "name": "firstSurname",
+          "type": 9
+        },
+        {
+          "id": "10:7004180985727112777",
+          "name": "secondSurname",
+          "type": 9
+        },
+        {
+          "id": "11:7298005465598894812",
+          "name": "birthDate",
+          "type": 9
+        },
+        {
+          "id": "12:5295895158722682233",
+          "name": "anniversaryDate",
+          "type": 9
+        },
+        {
+          "id": "13:41057008014642610",
+          "name": "levelCode",
+          "type": 9
+        },
+        {
+          "id": "14:7699612753515319734",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "15:6971813077567309275",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "16:1133601660226239509",
+          "name": "leaderClassification",
+          "type": 9
+        },
+        {
+          "id": "17:3852854857065356834",
+          "name": "campaignAdmission",
+          "type": 9
+        },
+        {
+          "id": "18:7641055249202000065",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "19:4201472123492362370",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "20:4369181499535780591",
+          "name": "address",
+          "type": 9
+        },
+        {
+          "id": "21:2118425492816661612",
+          "name": "cellphone",
+          "type": 9
+        },
+        {
+          "id": "22:328954548020341427",
+          "name": "homephone",
+          "type": 9
+        },
+        {
+          "id": "25:7449625412189412684",
+          "name": "pendingDebt",
+          "type": 8
+        },
+        {
+          "id": "26:6174209869884134267",
+          "name": "productivity",
+          "type": 9
+        },
+        {
+          "id": "27:1032201131975463686",
+          "name": "billingFirstCampaign",
+          "type": 9
+        },
+        {
+          "id": "28:5721351682030426086",
+          "name": "billingLastCampaign",
+          "type": 9
+        },
+        {
+          "id": "29:2780974412857084065",
+          "name": "successful",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "21:588481598154744946",
+      "lastPropertyId": "21:7934182588656868757",
+      "name": "ManagerDirectoryEntity",
+      "properties": [
+        {
+          "id": "1:6466169822698216407",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6884934890675015127",
+          "name": "consultantId",
+          "type": 5
+        },
+        {
+          "id": "3:7720206321063138204",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "4:5502860993860976613",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "5:8236265130284803635",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "6:4395086860114731356",
+          "name": "userName",
+          "type": 9
+        },
+        {
+          "id": "7:8573908346320975964",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "8:1352906765145229170",
+          "name": "secondName",
+          "type": 9
+        },
+        {
+          "id": "9:3605402908619337618",
+          "name": "surname",
+          "type": 9
+        },
+        {
+          "id": "10:5686636640499982305",
+          "name": "secondSurname",
+          "type": 9
+        },
+        {
+          "id": "11:2186408990041980863",
+          "name": "fullName",
+          "type": 9
+        },
+        {
+          "id": "12:329349225413394055",
+          "name": "document",
+          "type": 9
+        },
+        {
+          "id": "13:339541084963842097",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "14:7546598239272011718",
+          "name": "telephoneNumber",
+          "type": 9
+        },
+        {
+          "id": "15:1029324322239188447",
+          "name": "cellphoneNumber",
+          "type": 9
+        },
+        {
+          "id": "16:914421532944795333",
+          "name": "birthday",
+          "type": 9
+        },
+        {
+          "id": "17:8002105033994964297",
+          "name": "productivity",
+          "type": 9
+        },
+        {
+          "id": "18:788645664370360825",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "19:114096750358706496",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "20:4002248817320710358",
+          "name": "isNew",
+          "type": 1
+        },
+        {
+          "id": "21:7934182588656868757",
+          "name": "campaignsAsNew",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "22:5387708656432312031",
+      "lastPropertyId": "7:8840014771071331751",
+      "name": "BonificationEntity",
+      "properties": [
+        {
+          "id": "1:8506522986874078361",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7142894140698772127",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:3218587732379684117",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:779879996612570844",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:2461277783933534546",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:2867620175370616412",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "7:8840014771071331751",
+          "name": "amount",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "23:1638856031690647688",
+      "lastPropertyId": "31:384848191038136795",
+      "name": "DigitalSaleEntity",
+      "properties": [
+        {
+          "id": "1:2654122497191651520",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:1064517584293371230",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:696440500693765305",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:2722827454902174784",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:7788948354202379397",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "6:1832299114827586203",
+          "name": "ganamasIsSubscribed",
+          "type": 1
+        },
+        {
+          "id": "7:8670872343325080672",
+          "name": "ganamasCampaignSubscription",
+          "type": 9
+        },
+        {
+          "id": "8:4571715854904545817",
+          "name": "ganamasBuy",
+          "type": 1
+        },
+        {
+          "id": "9:3884605648638542157",
+          "name": "usabilityDigitalCatalog",
+          "type": 1
+        },
+        {
+          "id": "10:4928048511565464353",
+          "name": "usabilityMakeupApp",
+          "type": 1
+        },
+        {
+          "id": "14:2749102683370505342",
+          "name": "esikaAhoraBuy",
+          "type": 1
+        },
+        {
+          "id": "15:3173801048099010216",
+          "name": "esikaAhoraSuscribedTo",
+          "type": 1
+        },
+        {
+          "id": "16:3507700920264916248",
+          "name": "digitalCatalogSharedCatalogs",
+          "type": 5
+        },
+        {
+          "id": "17:1664819999898176341",
+          "name": "digitalCatalogReceiveOrders",
+          "type": 1
+        },
+        {
+          "id": "18:9112826940325490107",
+          "name": "digitalCatalogApproveOrders",
+          "type": 1
+        },
+        {
+          "id": "19:4600839302320093590",
+          "name": "buyDigitalOffers",
+          "type": 1
+        },
+        {
+          "id": "20:2824020594423949342",
+          "name": "openVirtualCoach",
+          "type": 1
+        },
+        {
+          "id": "21:8782415939046194735",
+          "name": "orderSentApp",
+          "type": 1
+        },
+        {
+          "id": "22:5345643292202183598",
+          "name": "uniqueIp",
+          "type": 1
+        },
+        {
+          "id": "23:4273382712202982286",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "24:7973742356835247483",
+          "name": "onlineStoreBuy",
+          "type": 1
+        },
+        {
+          "id": "25:4643662971768761288",
+          "name": "onlineStoreShare",
+          "type": 1
+        },
+        {
+          "id": "26:7161066729356649539",
+          "name": "onlineStoreIsSuscribed",
+          "type": 1
+        },
+        {
+          "id": "27:5080964995924782388",
+          "name": "onlineStoreCampaignSubscription",
+          "type": 9
+        },
+        {
+          "id": "28:7411663633591259562",
+          "name": "onlineStoreMtoSales",
+          "type": 8
+        },
+        {
+          "id": "29:2714157475719279727",
+          "name": "digitalCatalogReceivedPreOrders",
+          "type": 5
+        },
+        {
+          "id": "30:6887436741359319841",
+          "name": "digitalCatalogApprovedPreOrders",
+          "type": 5
+        },
+        {
+          "id": "31:384848191038136795",
+          "name": "digitalCatalogQuantitySharedCatalogs",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "24:6390712493953100376",
+      "lastPropertyId": "23:7387454982231398727",
+      "name": "DigitalSaleSeEntity",
+      "properties": [
+        {
+          "id": "1:2457533170431503656",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:5781290132234176854",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:4479558009888086044",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:2957232941737913000",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:6291191963062966680",
+          "name": "ganamasSubscribed",
+          "type": 5
+        },
+        {
+          "id": "6:5905071962701862852",
+          "name": "ganamasSubscribedBuyers",
+          "type": 5
+        },
+        {
+          "id": "7:4662535615186668326",
+          "name": "ganamasSubscribedNotBuyers",
+          "type": 5
+        },
+        {
+          "id": "8:8610462450646799382",
+          "name": "ganamasNotSubscribedBuyers",
+          "type": 5
+        },
+        {
+          "id": "9:5669113489344629005",
+          "name": "ganamasNotSubscribedNotBuyers",
+          "type": 5
+        },
+        {
+          "id": "10:621599126199219950",
+          "name": "digitalCatalogShareCatalog",
+          "type": 5
+        },
+        {
+          "id": "11:7415144671233736011",
+          "name": "digitalCatalogReceiveOrders",
+          "type": 5
+        },
+        {
+          "id": "12:7285659011008975890",
+          "name": "digitalCatalogApproveOrders",
+          "type": 5
+        },
+        {
+          "id": "13:8552416323969360755",
+          "name": "virtualCoachOpen",
+          "type": 5
+        },
+        {
+          "id": "14:8984858981690251364",
+          "name": "virtualCoachReceive",
+          "type": 5
+        },
+        {
+          "id": "15:2030974127102199484",
+          "name": "virtualCoachClick",
+          "type": 5
+        },
+        {
+          "id": "16:2513180814506200198",
+          "name": "makeupAppUsability",
+          "type": 5
+        },
+        {
+          "id": "18:5228471863266199245",
+          "name": "esikaAhoraSubscribed",
+          "type": 5
+        },
+        {
+          "id": "19:4639347091707852655",
+          "name": "uniqueIpPercentage",
+          "type": 8
+        },
+        {
+          "id": "20:3221630380114283387",
+          "name": "finalActiveConsultants",
+          "type": 5
+        },
+        {
+          "id": "21:8472362558346818438",
+          "name": "orderSentApp",
+          "type": 5
+        },
+        {
+          "id": "22:4498450856912727395",
+          "name": "multiBrand",
+          "type": 5
+        },
+        {
+          "id": "23:7387454982231398727",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "25:7522192009836029499",
+      "lastPropertyId": "16:4206905803677554194",
+      "name": "ConsultantSaleEntity",
+      "properties": [
+        {
+          "id": "1:3360439500244614542",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "2:8820333716829962621",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "3:1952408926898821682",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "4:5825773284828420993",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "5:3233141665977706804",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "6:1341622763755914757",
+          "name": "netSale",
+          "type": 8
+        },
+        {
+          "id": "7:5072093080574286698",
+          "name": "catalogSale",
+          "type": 8
+        },
+        {
+          "id": "8:3345745170368986032",
+          "name": "billedOrderAmount",
+          "type": 8
+        },
+        {
+          "id": "9:6148595227746709923",
+          "name": "isHighOrderValue",
+          "type": 1
+        },
+        {
+          "id": "12:3920586043202515041",
+          "name": "averageSaleLastSixCampaigns",
+          "type": 8
+        },
+        {
+          "id": "13:3065671104812496536",
+          "name": "gainAmount",
+          "type": 8
+        },
+        {
+          "id": "14:5910043250873703316",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "15:2721785619249141002",
+          "name": "constantU6c",
+          "type": 1
+        },
+        {
+          "id": "16:4206905803677554194",
+          "name": "brightPathPeriod_",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "26:2349955224856949732",
+      "lastPropertyId": "11:794472809681068426",
+      "name": "TopSalesCoBrandCategoriesEntity",
+      "properties": [
+        {
+          "id": "1:7792300734699300748",
+          "name": "brand",
+          "type": 9
+        },
+        {
+          "id": "3:1074768338370612044",
+          "name": "units",
+          "type": 5
+        },
+        {
+          "id": "4:542285129785695020",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:593675159300590894",
+          "name": "salesConsultantsBrandCategoriesParentCode",
+          "indexId": "9:5792238025797147161",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        },
+        {
+          "id": "9:1076472653511212172",
+          "name": "categoryOrder",
+          "type": 5
+        },
+        {
+          "id": "10:8449785017313055944",
+          "name": "categoryUnits",
+          "type": 5
+        },
+        {
+          "id": "11:794472809681068426",
+          "name": "categoryName",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "27:1658843430373720084",
+      "lastPropertyId": "5:5829239234911753129",
+      "name": "TopSalesCoBrandsEntity",
+      "properties": [
+        {
+          "id": "1:8734264071881775619",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "2:5947831973607888556",
+          "name": "units",
+          "type": 5
+        },
+        {
+          "id": "3:6892017050511663449",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:7575541985629917905",
+          "name": "salesConsultantsBrandsParentCode",
+          "indexId": "10:1916943674293896972",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        },
+        {
+          "id": "5:5829239234911753129",
+          "name": "salesSectionBrandsParentCode",
+          "indexId": "11:1380355657527039173",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesSeEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "28:1058474347415652305",
+      "lastPropertyId": "4:6457658113212604424",
+      "name": "TopSalesCoCategoriesEntity",
+      "properties": [
+        {
+          "id": "1:7294975355936561198",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "2:5822193364692792094",
+          "name": "units",
+          "type": 5
+        },
+        {
+          "id": "3:814811209721927327",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:6457658113212604424",
+          "name": "salesConsultantsCategoriesParentCode",
+          "indexId": "12:7425717275299747028",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "29:101891009621007024",
+      "lastPropertyId": "10:61168696356557002",
+      "name": "TopSalesCoEntity",
+      "properties": [
+        {
+          "id": "1:3202638404800765634",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:4068311660697879116",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:7882608257995313474",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:5461550744529178110",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:9189143404389259472",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "6:9013202667304624666",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "9:6011764610053590602",
+          "name": "topSellingBrand",
+          "type": 9
+        },
+        {
+          "id": "10:61168696356557002",
+          "name": "brandToPromote",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "30:8406080268336567094",
+      "lastPropertyId": "6:4984330835578034931",
+      "name": "TopSalesCoMultiMarkEntity",
+      "properties": [
+        {
+          "id": "3:317145656278539203",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:763645198109556216",
+          "name": "salesConsultantsMultiMarkParentCode",
+          "indexId": "13:3618660562286448269",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        },
+        {
+          "id": "5:7315716056446768248",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "6:4984330835578034931",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "31:5070881713025357915",
+      "lastPropertyId": "4:5431240713299814006",
+      "name": "TopSalesConsultantTopProductHistoryEntity",
+      "properties": [
+        {
+          "id": "1:5962569728034463748",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:2327996058246317070",
+          "name": "units",
+          "type": 5
+        },
+        {
+          "id": "3:4877430301110333620",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:5431240713299814006",
+          "name": "salesConsultantTopProductHistoryParentCode",
+          "indexId": "14:1821600791780534003",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoTopProductEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "32:5914728735500289948",
+      "lastPropertyId": "7:4359360267905973340",
+      "name": "TopSalesCoTopProductEntity",
+      "properties": [
+        {
+          "id": "1:3477965239715423985",
+          "name": "top",
+          "type": 5
+        },
+        {
+          "id": "2:6719977550957781223",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:7874867785323048206",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:4016359495040736232",
+          "name": "salesConsultantsTopProductsParentCode",
+          "indexId": "15:1308469459436964634",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        },
+        {
+          "id": "6:492119948426502151",
+          "name": "salesSectionTopProductsParentCode",
+          "indexId": "16:7578294931406864512",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesSeEntity"
+        },
+        {
+          "id": "7:4359360267905973340",
+          "name": "units",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "33:2922158670867426604",
+      "lastPropertyId": "5:7001871418648729802",
+      "name": "TopSalesSeEntity",
+      "properties": [
+        {
+          "id": "1:1199629510984094277",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:7620986369115281674",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:6378343734811959828",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:3328329454508089108",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:7001871418648729802",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "35:1244850068294837873",
+      "lastPropertyId": "4:4115971605637216289",
+      "name": "SuccessfuHistoricEntity",
+      "properties": [
+        {
+          "id": "1:7304803733384599164",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8106204180438187633",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:7319811106487061729",
+          "name": "value",
+          "type": 1
+        },
+        {
+          "id": "4:4115971605637216289",
+          "name": "partnerCode",
+          "indexId": "17:962114616700197099",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BusinessPartnerEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "36:4531472896393251256",
+      "lastPropertyId": "8:8386014730077681997",
+      "name": "RankingEntity",
+      "properties": [
+        {
+          "id": "1:2663175407562383851",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1217832656065510066",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:8305771001739326137",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:6815073777406147545",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:101723182626022188",
+          "name": "productivityPercentage",
+          "type": 8
+        },
+        {
+          "id": "6:3081983820033897187",
+          "name": "uniqueIpPercentage",
+          "type": 8
+        },
+        {
+          "id": "7:2579659078969948965",
+          "name": "retention6d6Percentage",
+          "type": 8
+        },
+        {
+          "id": "8:8386014730077681997",
+          "name": "activesGoalRetentionPercentage",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "37:3636479805242321918",
+      "lastPropertyId": "6:2412600378144291620",
+      "name": "TermsConditionsEntity",
+      "properties": [
+        {
+          "id": "1:891528563613000910",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2439052202736227414",
+          "name": "termsCode",
+          "type": 9
+        },
+        {
+          "id": "3:1290338761924087498",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:1676608707180202085",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "5:3578695405170756764",
+          "name": "position",
+          "type": 5
+        },
+        {
+          "id": "6:2412600378144291620",
+          "name": "active",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "38:6049573958620753725",
+      "lastPropertyId": "5:432854515880785215",
+      "name": "ApproveTermsConditionsEntity",
+      "properties": [
+        {
+          "id": "1:3657684416124671315",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3027348016424759167",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:5827919239944596643",
+          "name": "termsCode",
+          "type": 9
+        },
+        {
+          "id": "4:2988592744864676518",
+          "name": "checked",
+          "type": 1
+        },
+        {
+          "id": "5:432854515880785215",
+          "name": "active",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "39:5535541215749949805",
+      "lastPropertyId": "9:5603748390177307040",
+      "name": "TransactionAccountEntity",
+      "properties": [
+        {
+          "id": "1:8259406150715829917",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3664224299422841512",
+          "name": "consultantId",
+          "type": 5
+        },
+        {
+          "id": "3:346202479143191211",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:4552852860913631263",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:7017019853123068877",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:1608716698003511560",
+          "name": "transactionType",
+          "type": 9
+        },
+        {
+          "id": "7:5154700388904959729",
+          "name": "amount",
+          "type": 8
+        },
+        {
+          "id": "8:497975891639492134",
+          "name": "transactionDescription",
+          "type": 9
+        },
+        {
+          "id": "9:5603748390177307040",
+          "name": "transactionDate",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "40:7488879599359527703",
+      "lastPropertyId": "15:1184536701456144916",
+      "name": "DigitalInfoEntity",
+      "properties": [
+        {
+          "id": "1:5214492990326162081",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:5886668381838972629",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:5541300870064527070",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:123007011674939414",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:4709569924057501403",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "6:1352009751523256671",
+          "name": "actives",
+          "type": 5
+        },
+        {
+          "id": "7:7985101971912646411",
+          "name": "subscribed",
+          "type": 5
+        },
+        {
+          "id": "8:832086395019042526",
+          "name": "share",
+          "type": 5
+        },
+        {
+          "id": "9:6602359184590149190",
+          "name": "buy",
+          "type": 5
+        },
+        {
+          "id": "10:2952376170804394246",
+          "name": "subscribedActivesRatio",
+          "type": 7
+        },
+        {
+          "id": "11:3765368813154457759",
+          "name": "shareActivesRatio",
+          "type": 7
+        },
+        {
+          "id": "12:4329514402036176781",
+          "name": "shareSubscribedRatio",
+          "type": 7
+        },
+        {
+          "id": "13:6827254572875094593",
+          "name": "buyActivesRatio",
+          "type": 7
+        },
+        {
+          "id": "14:3088395311424012244",
+          "name": "buySubscribedRatio",
+          "type": 7
+        },
+        {
+          "id": "15:1184536701456144916",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "41:2744896912540862143",
+      "lastPropertyId": "12:2103105957866816359",
+      "name": "DigitalConsultantEntity",
+      "properties": [
+        {
+          "id": "1:1909122694146890215",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:6318948210036950681",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:6547216550129103135",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:6839094831980838240",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:3896997913254722298",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "6:8730452856546033396",
+          "name": "isSubscribed",
+          "type": 1
+        },
+        {
+          "id": "7:7110475665780728282",
+          "name": "share",
+          "type": 1
+        },
+        {
+          "id": "8:7431345652570816133",
+          "name": "buy",
+          "type": 1
+        },
+        {
+          "id": "9:2383372068890486617",
+          "name": "sale",
+          "type": 7
+        },
+        {
+          "id": "10:6755667762721908081",
+          "name": "orders",
+          "type": 5
+        },
+        {
+          "id": "11:8023170051454614612",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "12:2103105957866816359",
+          "name": "consultantParentCode",
+          "indexId": "18:3323764372628109826",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ConsultantEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "42:2928211874493020950",
+      "lastPropertyId": "23:159789337286596199",
+      "name": "DreamEntity",
+      "properties": [
+        {
+          "id": "2:8967871364755615176",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "3:72215229610509988",
+          "name": "amountToComplete",
+          "type": 5
+        },
+        {
+          "id": "4:5257897754416118112",
+          "name": "numberCampaignsToComplete",
+          "type": 5
+        },
+        {
+          "id": "5:334880669530755886",
+          "name": "dream",
+          "type": 9
+        },
+        {
+          "id": "6:1418925825862581777",
+          "name": "comment",
+          "type": 9
+        },
+        {
+          "id": "7:3815895655713453844",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "8:7765388585773675209",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "9:3642559723476440495",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "11:7664931574588582742",
+          "name": "campaignCreated",
+          "type": 9
+        },
+        {
+          "id": "12:4605891091978250571",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "13:435934998209417370",
+          "name": "dreamId",
+          "type": 9
+        },
+        {
+          "id": "14:3513437797979830461",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "15:5864284936748108271",
+          "name": "campaignEnd",
+          "type": 9
+        },
+        {
+          "id": "16:8517904126349716227",
+          "name": "dateCreated",
+          "type": 9
+        },
+        {
+          "id": "17:8729803365359816946",
+          "name": "dateEdited",
+          "type": 9
+        },
+        {
+          "id": "18:3558436794137636667",
+          "name": "dateCompleted",
+          "type": 9
+        },
+        {
+          "id": "23:159789337286596199",
+          "name": "totalGain",
+          "type": 7
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "43:5952004927104487029",
+      "lastPropertyId": "4:3882138392233297598",
+      "name": "DreamCampaignEntity",
+      "properties": [
+        {
+          "id": "1:7633122158436913822",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:35250675065421345",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:8919299407568615572",
+          "name": "gainAmount",
+          "type": 7
+        },
+        {
+          "id": "4:3882138392233297598",
+          "name": "dreamCollectionParentCode",
+          "indexId": "19:7287624188329073718",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DreamEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "44:4200088452660780363",
+      "lastPropertyId": "9:6724838249925668650",
+      "name": "TopSalesCoCategoriesProductsEntity",
+      "properties": [
+        {
+          "id": "1:902196912052014087",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "2:7794272994004825149",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:6064370753756434788",
+          "name": "sku",
+          "type": 9
+        },
+        {
+          "id": "4:3417686747638733156",
+          "name": "cuv",
+          "type": 9
+        },
+        {
+          "id": "6:2066493703066497516",
+          "name": "quantity",
+          "type": 5
+        },
+        {
+          "id": "7:262937623501227997",
+          "name": "amount",
+          "type": 8
+        },
+        {
+          "id": "8:37431185151585288",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "9:6724838249925668650",
+          "name": "salesConsultantCategoriesProductParentCode",
+          "indexId": "20:7222458721520657010",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoCategoriesEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "45:8798813843402662073",
+      "lastPropertyId": "4:1705349533732800972",
+      "name": "TopSalesMultiMarkHistoryEntity",
+      "properties": [
+        {
+          "id": "1:772019391321189318",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:1698074206114742523",
+          "name": "multimarca",
+          "type": 5
+        },
+        {
+          "id": "3:2548776861726713376",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:1705349533732800972",
+          "name": "salesConsultantsMultiMarkHistoryParentCode",
+          "indexId": "21:409181700801805299",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoMultiMarkEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "46:2263645565866978739",
+      "lastPropertyId": "4:5736430688644831157",
+      "name": "TopSalesCoMultiCategoryEntity",
+      "properties": [
+        {
+          "id": "1:4182438019945611309",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "2:7241417774143175021",
+          "name": "category",
+          "type": 9
+        },
+        {
+          "id": "3:7414122472638160381",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:5736430688644831157",
+          "name": "salesConsultantsMultiCategoriesCode",
+          "indexId": "22:4371916032934093564",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "47:1308472344770926079",
+      "lastPropertyId": "4:6474429912795544812",
+      "name": "TopSalesMultiCategoryHistoryEntity",
+      "properties": [
+        {
+          "id": "1:7824856556850719284",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:3099665831430875514",
+          "name": "bought",
+          "type": 5
+        },
+        {
+          "id": "3:750993824079816551",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:6474429912795544812",
+          "name": "salesConsultantsMultiMarkHistoryParentCode",
+          "indexId": "23:5278769728559924142",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoMultiCategoryEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "48:249712858035403440",
+      "lastPropertyId": "6:5890403216841846530",
+      "name": "TopSalesCoTriLbelEntity",
+      "properties": [
+        {
+          "id": "1:3052984419927927479",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "2:5393453857684532536",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4812470935765956202",
+          "name": "sku",
+          "type": 9
+        },
+        {
+          "id": "4:6021127044453957024",
+          "name": "cuv",
+          "type": 9
+        },
+        {
+          "id": "5:5199740357146572173",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "6:5890403216841846530",
+          "name": "salesConsultantsTrioLbelCode",
+          "indexId": "24:5960116836086435032",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "49:524027349222640882",
+      "lastPropertyId": "4:8745467615393987799",
+      "name": "TopSalesCoTrioLbelHistoryEntity",
+      "properties": [
+        {
+          "id": "1:5092485152843898440",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:4310205737718335337",
+          "name": "bought",
+          "type": 5
+        },
+        {
+          "id": "3:6050591296190659017",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:8745467615393987799",
+          "name": "salesConsultantsTrioLbelHistoryParentCode",
+          "indexId": "25:6482251202411873557",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoTriLbelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "50:8730760879458086322",
+      "lastPropertyId": "6:5330793079690737363",
+      "name": "TopSalesCoEsikaEntity",
+      "properties": [
+        {
+          "id": "1:905485788721642487",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "2:652794678092870381",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:1154182120433627155",
+          "name": "sku",
+          "type": 9
+        },
+        {
+          "id": "4:8416429225611077947",
+          "name": "cuv",
+          "type": 9
+        },
+        {
+          "id": "5:7078500799703656902",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "6:5330793079690737363",
+          "name": "salesConsultantsEsikaCode",
+          "indexId": "26:5699277394905678796",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "51:8562675362350940229",
+      "lastPropertyId": "4:4918727729019329468",
+      "name": "TopSalesCoEsikaHistoryEntity",
+      "properties": [
+        {
+          "id": "1:4338470702373631811",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:3149789297751780888",
+          "name": "bought",
+          "type": 5
+        },
+        {
+          "id": "3:3703391761348340632",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:4918727729019329468",
+          "name": "salesConsultantsEsikaHistoryParentCode",
+          "indexId": "27:1235915135970968355",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEsikaEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "52:3387681063058065746",
+      "lastPropertyId": "14:128345104671877707",
+      "name": "BusinessPartnerChangeLevelEntity",
+      "properties": [
+        {
+          "id": "1:8654582004333737511",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:1994327003720889671",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "3:6956707465445828983",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:2716526175668004299",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:2542539410140949858",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:2622991336765352423",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "7:8717256106952063637",
+          "name": "campaignRequirement",
+          "type": 5
+        },
+        {
+          "id": "8:7830151628379761901",
+          "name": "sectionSales",
+          "type": 8
+        },
+        {
+          "id": "9:7314133648392869471",
+          "name": "sectionOrders",
+          "type": 5
+        },
+        {
+          "id": "10:2707123439022082585",
+          "name": "gainAmountLowValue",
+          "type": 8
+        },
+        {
+          "id": "11:2038633330591583169",
+          "name": "gainAmountLowValuePlus",
+          "type": 8
+        },
+        {
+          "id": "12:6713635240329518583",
+          "name": "gainAmountHighValue",
+          "type": 8
+        },
+        {
+          "id": "13:6418547026323260437",
+          "name": "gainAmountHighValuePlus",
+          "type": 8
+        },
+        {
+          "id": "14:128345104671877707",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "53:7748899651519014460",
+      "lastPropertyId": "7:6696093948208376912",
+      "name": "BusinessPartnerChangeLevelLevelEntity",
+      "properties": [
+        {
+          "id": "1:3772271954875571530",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "2:4815628351215287884",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:9027214292404145753",
+          "name": "consecutiveCampaigns",
+          "type": 5
+        },
+        {
+          "id": "4:790791855767190128",
+          "name": "campaignsNotAccomplished",
+          "type": 5
+        },
+        {
+          "id": "5:7435829253012376672",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "6:3868561299550902045",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "7:6696093948208376912",
+          "name": "businessPartnerChangeLevelLevelParentCode",
+          "indexId": "28:7162771772178607512",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BusinessPartnerChangeLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "54:6894235160211327740",
+      "lastPropertyId": "5:6891478225539866115",
+      "name": "BusinessPartnerChangeLevelNextLevelEntity",
+      "properties": [
+        {
+          "id": "1:60241391388250977",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "2:841408876454544060",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "3:8367963434612541940",
+          "name": "campaigns_accomplished",
+          "type": 5
+        },
+        {
+          "id": "4:122878122522718490",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:6891478225539866115",
+          "name": "businessPartnerChangeLevelNextLevelParentCode",
+          "indexId": "29:4013533333918316569",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BusinessPartnerChangeLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "55:8238553566679556690",
+      "lastPropertyId": "5:1407647930840286321",
+      "name": "BusinessPartnerChangeLevelRequirementEntity",
+      "properties": [
+        {
+          "id": "1:1062856675371370446",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "2:5115831001865912558",
+          "name": "minimumSales",
+          "type": 5
+        },
+        {
+          "id": "3:2781093189025979732",
+          "name": "minimumOrders",
+          "type": 5
+        },
+        {
+          "id": "4:6965766636932948843",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:1407647930840286321",
+          "name": "businessPartnerChangeLevelRequirementParentCode",
+          "indexId": "30:8157507910597918274",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BusinessPartnerChangeLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "56:6646907298814763443",
+      "lastPropertyId": "5:8489125499542101248",
+      "name": "BusinessPartnerChangeOrdersEntity",
+      "properties": [
+        {
+          "id": "1:4757542701335056397",
+          "name": "requirement",
+          "type": 5
+        },
+        {
+          "id": "2:2825328322547036367",
+          "name": "real",
+          "type": 5
+        },
+        {
+          "id": "3:1027574618721699897",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "4:382834257153120057",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:8489125499542101248",
+          "name": "businessPartnerChangeNextLevelOrdersParentCode",
+          "indexId": "31:3381995278169781163",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BusinessPartnerChangeLevelNextLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "57:231331609082049924",
+      "lastPropertyId": "5:6157457933808146599",
+      "name": "BusinessPartnerChangeSalesEntity",
+      "properties": [
+        {
+          "id": "1:261267552430128280",
+          "name": "requirement",
+          "type": 5
+        },
+        {
+          "id": "2:7484476317314027294",
+          "name": "real",
+          "type": 7
+        },
+        {
+          "id": "3:2351371800490388597",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "4:8900768670920193420",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:6157457933808146599",
+          "name": "businessPartnerChangeNextLevelSalesParentCode",
+          "indexId": "32:2185774129059003604",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BusinessPartnerChangeLevelNextLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "58:4651229903952596092",
+      "lastPropertyId": "31:4306666663583544240",
+      "name": "CampaignProjectionEntity",
+      "properties": [
+        {
+          "id": "1:7334214668831218648",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1226513923804555272",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:5205998357209984290",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:3299219073115180041",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:1287450025083770580",
+          "name": "dateCreated",
+          "type": 9
+        },
+        {
+          "id": "6:1028794835420519323",
+          "name": "dateEdited",
+          "type": 9
+        },
+        {
+          "id": "7:1589058693026999353",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "8:2120636017071888540",
+          "name": "pegsInMySection",
+          "type": 5
+        },
+        {
+          "id": "9:6495077475929943908",
+          "name": "pegsRetentionExpected",
+          "type": 5
+        },
+        {
+          "id": "10:5711164459955412793",
+          "name": "pegsRetentionReal",
+          "type": 5
+        },
+        {
+          "id": "11:3973294845357890479",
+          "name": "initialActives",
+          "type": 5
+        },
+        {
+          "id": "12:7075109308017339905",
+          "name": "finalProjectedActives",
+          "type": 5
+        },
+        {
+          "id": "13:2383620566889346831",
+          "name": "projectedCapitalization",
+          "type": 5
+        },
+        {
+          "id": "14:239590005428953058",
+          "name": "entriesProjected",
+          "type": 5
+        },
+        {
+          "id": "15:857068946029215868",
+          "name": "entriesReal",
+          "type": 5
+        },
+        {
+          "id": "16:2225156822242693924",
+          "name": "reEntriesProjected",
+          "type": 5
+        },
+        {
+          "id": "17:5771522948097375299",
+          "name": "reEntriesReal",
+          "type": 5
+        },
+        {
+          "id": "18:70450732897690275",
+          "name": "finalsLastYearActives",
+          "type": 5
+        },
+        {
+          "id": "19:6431140341387330762",
+          "name": "ordersExpectedTotal",
+          "type": 5
+        },
+        {
+          "id": "20:3103493489206569540",
+          "name": "currentTotalOrders",
+          "type": 5
+        },
+        {
+          "id": "21:6448117485617244668",
+          "name": "ordersTotalGain",
+          "type": 7
+        },
+        {
+          "id": "22:3502691929056590624",
+          "name": "reEntriesLast5C",
+          "type": 5
+        },
+        {
+          "id": "23:569166240708900026",
+          "name": "retentionGain6d6Low",
+          "type": 7
+        },
+        {
+          "id": "24:5676417995982213394",
+          "name": "retentionGain6d6High",
+          "type": 7
+        },
+        {
+          "id": "25:1837430735081420164",
+          "name": "retentionGain6d6HighMultiBrand",
+          "type": 7
+        },
+        {
+          "id": "26:1931603990818212076",
+          "name": "capiGainByPointProjectionCurrent",
+          "type": 5
+        },
+        {
+          "id": "27:5474732413978082443",
+          "name": "capiGainByPointProjectionReal",
+          "type": 5
+        },
+        {
+          "id": "28:5886726625751534939",
+          "name": "capitalizationCurrent",
+          "type": 5
+        },
+        {
+          "id": "29:882052811438374077",
+          "name": "capitalizationReal",
+          "type": 5
+        },
+        {
+          "id": "30:5022193189713355795",
+          "name": "gainCurrent",
+          "type": 5
+        },
+        {
+          "id": "31:4306666663583544240",
+          "name": "gainReal",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "59:7457967223196673178",
+      "lastPropertyId": "8:1223709482014815095",
+      "name": "CampaignProjectionOrderEntity",
+      "properties": [
+        {
+          "id": "1:5402771588798489581",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1561553349318480844",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:8941655893090885306",
+          "name": "unitsExpected",
+          "type": 5
+        },
+        {
+          "id": "4:5950074614696867562",
+          "name": "unitsReal",
+          "type": 5
+        },
+        {
+          "id": "5:7978018567999228900",
+          "name": "gainPerOrder",
+          "type": 7
+        },
+        {
+          "id": "6:4845018302660094898",
+          "name": "gainPerOrderNotSuccess",
+          "type": 7
+        },
+        {
+          "id": "7:5017210223519023747",
+          "name": "gainPerOrderExpected",
+          "type": 7
+        },
+        {
+          "id": "8:1223709482014815095",
+          "name": "ordersCollectionParentCode",
+          "indexId": "33:3908442975915914191",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "CampaignProjectionEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "60:8136642086302586984",
+      "lastPropertyId": "6:497074011329663624",
+      "name": "CampaignProjectionRetentionEntity",
+      "properties": [
+        {
+          "id": "1:2413241436905762453",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5897944472511948048",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:1113429506571793392",
+          "name": "activeConsultant",
+          "type": 5
+        },
+        {
+          "id": "4:5189416084682978974",
+          "name": "retentionExpected",
+          "type": 5
+        },
+        {
+          "id": "5:3478634839089756878",
+          "name": "retentionReal",
+          "type": 5
+        },
+        {
+          "id": "6:497074011329663624",
+          "name": "campaignProjectionParentCode",
+          "indexId": "34:4659248693622578289",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "CampaignProjectionEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "61:8020374400374553841",
+      "lastPropertyId": "18:7520288851288578325",
+      "name": "RetentionEntity",
+      "properties": [
+        {
+          "id": "1:1998872951712660382",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:6194955929928089186",
+          "name": "profile",
+          "type": 9
+        },
+        {
+          "id": "3:8331624021094947426",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "4:5498700916044500170",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "5:3618981079512413215",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "6:1876235995479589315",
+          "name": "_3d3High",
+          "type": 8
+        },
+        {
+          "id": "7:278067992830195039",
+          "name": "_4d4High",
+          "type": 8
+        },
+        {
+          "id": "8:6880289766858778846",
+          "name": "_5d5High",
+          "type": 8
+        },
+        {
+          "id": "9:6446079417626047873",
+          "name": "_6d6High",
+          "type": 8
+        },
+        {
+          "id": "10:4159522657673241191",
+          "name": "retention_percentageHigh",
+          "type": 8
+        },
+        {
+          "id": "11:7175140832027847902",
+          "name": "_1d1Low",
+          "type": 8
+        },
+        {
+          "id": "12:4314224717937471178",
+          "name": "_2d2Low",
+          "type": 8
+        },
+        {
+          "id": "13:2736074318304901530",
+          "name": "_3d3Low",
+          "type": 8
+        },
+        {
+          "id": "14:260757908112552947",
+          "name": "_4d4Low",
+          "type": 8
+        },
+        {
+          "id": "15:8601543164491372335",
+          "name": "_5d5Low",
+          "type": 8
+        },
+        {
+          "id": "16:2775024508973597108",
+          "name": "_6d6Low",
+          "type": 8
+        },
+        {
+          "id": "17:2028448917446243416",
+          "name": "retention_percentageLow",
+          "type": 8
+        },
+        {
+          "id": "18:7520288851288578325",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "62:3414971026281048343",
+      "lastPropertyId": "5:2592709196592410005",
+      "name": "TopSalesCoBrandCategoriesCategoryEntity",
+      "properties": [
+        {
+          "id": "1:4855208015765628429",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5618631583249862637",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "3:7439865223623252323",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:3431601860779646760",
+          "name": "units",
+          "type": 5
+        },
+        {
+          "id": "5:2592709196592410005",
+          "name": "salesConsultantsBrandCategoriesCategoryParentCode",
+          "indexId": "35:229302491446275129",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoBrandCategoriesEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "63:7329848872611757217",
+      "lastPropertyId": "5:4842537666609544657",
+      "name": "TopSalesCoCategoriesProductsBuyCampaignEntity",
+      "properties": [
+        {
+          "id": "1:3223225553410474256",
+          "name": "campaign1",
+          "type": 9
+        },
+        {
+          "id": "2:1739821875081671618",
+          "name": "campaign2",
+          "type": 9
+        },
+        {
+          "id": "3:2511838832937533019",
+          "name": "campaign3",
+          "type": 9
+        },
+        {
+          "id": "4:2915701619946757254",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:4842537666609544657",
+          "name": "salesConsultantsCategoriesProductsBuyCampaignsParentCode",
+          "indexId": "36:5424817553702820774",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoCategoriesProductsEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "64:8014768658457117677",
+      "lastPropertyId": "4:8955396697001589875",
+      "name": "TopSalesCoCategoriesProductsImageProductsEntity",
+      "properties": [
+        {
+          "id": "1:7892659008693208772",
+          "name": "codsap",
+          "type": 9
+        },
+        {
+          "id": "2:8015607591757622881",
+          "name": "photoProduct",
+          "type": 30
+        },
+        {
+          "id": "3:2824168536071154712",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:8955396697001589875",
+          "name": "salesConsultantsCategoriesProductsImagesParentCode",
+          "indexId": "37:8847158882602283125",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoCategoriesProductsEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "65:2050195931321358252",
+      "lastPropertyId": "4:510318693397438184",
+      "name": "TopSalesCoEsikaImageEntity",
+      "properties": [
+        {
+          "id": "1:677995838636267694",
+          "name": "codsap",
+          "type": 9
+        },
+        {
+          "id": "2:6834511742696244219",
+          "name": "photoProduct",
+          "type": 30
+        },
+        {
+          "id": "3:7300534808642398849",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:510318693397438184",
+          "name": "salesConsultantsEsikaImagesParentCode",
+          "indexId": "38:5847390332842604667",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEsikaEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "66:2879827508440306535",
+      "lastPropertyId": "6:4463818681000016293",
+      "name": "TopSalesCoTriLbelStayEntity",
+      "properties": [
+        {
+          "id": "1:7944516074370672716",
+          "name": "order",
+          "type": 5
+        },
+        {
+          "id": "2:7394116514648358220",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:679333933406557253",
+          "name": "sku",
+          "type": 9
+        },
+        {
+          "id": "4:9094819812258079167",
+          "name": "cuv",
+          "type": 9
+        },
+        {
+          "id": "5:6581780745432173738",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "6:4463818681000016293",
+          "name": "salesConsultantsTrioLbelStayCodeParent",
+          "indexId": "39:7690845413163269280",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "67:457233823923687098",
+      "lastPropertyId": "4:21387729396497425",
+      "name": "TopSalesCoTrioLbelHistoryStayEntity",
+      "properties": [
+        {
+          "id": "1:569456243389398040",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:5775606155380746976",
+          "name": "bought",
+          "type": 5
+        },
+        {
+          "id": "3:982531278026388410",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:21387729396497425",
+          "name": "salesConsultantsTrioLbelStayHistoryCodeParent",
+          "indexId": "40:4019016155710541983",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoTriLbelStayEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "68:7473972175541554928",
+      "lastPropertyId": "4:5717942636056163025",
+      "name": "TopSalesCoTrioLbelImageEntity",
+      "properties": [
+        {
+          "id": "1:3971377310163907345",
+          "name": "codsap",
+          "type": 9
+        },
+        {
+          "id": "2:3554157436890061251",
+          "name": "photoProduct",
+          "type": 30
+        },
+        {
+          "id": "3:3917598567490821988",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:5717942636056163025",
+          "name": "salesConsultantsTrioLbelImagesParentCode",
+          "indexId": "41:7935102273228790284",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoTriLbelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "69:2275665065274655573",
+      "lastPropertyId": "4:2345041651660860156",
+      "name": "TopSalesCoTrioLbelStayImageEntity",
+      "properties": [
+        {
+          "id": "1:2666510606407763222",
+          "name": "codsap",
+          "type": 9
+        },
+        {
+          "id": "2:5111354127731449923",
+          "name": "photoProduct",
+          "type": 30
+        },
+        {
+          "id": "3:3760719864975450138",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:2345041651660860156",
+          "name": "salesConsultantsTrioLbelStayImagesParentCode",
+          "indexId": "42:5158647916942346576",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TopSalesCoTriLbelStayEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "70:8780550896536154583",
+      "lastPropertyId": "13:1810721171663312767",
+      "name": "BrightPathLevelEntity",
+      "properties": [
+        {
+          "id": "1:3317761658701387902",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7658770831214168426",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:8118984828830419361",
+          "name": "accumulativeSales",
+          "type": 8
+        },
+        {
+          "id": "4:2975116494552330368",
+          "name": "accumulativeOrders",
+          "type": 9
+        },
+        {
+          "id": "5:3996503888888649292",
+          "name": "hasOrder",
+          "type": 1
+        },
+        {
+          "id": "6:907656047764327544",
+          "name": "salesReal",
+          "type": 8
+        },
+        {
+          "id": "7:4586091824854696262",
+          "name": "salesAverage",
+          "type": 8
+        },
+        {
+          "id": "8:38830218495716304",
+          "name": "salesToRetainLevel",
+          "type": 8
+        },
+        {
+          "id": "9:8209739089670416944",
+          "name": "currentLevelSalesRequirement",
+          "type": 8
+        },
+        {
+          "id": "10:461426934814922391",
+          "name": "currentLevelOrderRequirement",
+          "type": 5
+        },
+        {
+          "id": "11:5472640531912933981",
+          "name": "campaignProgress",
+          "type": 5
+        },
+        {
+          "id": "12:1479740058092890145",
+          "name": "averageCurrentLevel",
+          "type": 8
+        },
+        {
+          "id": "13:1810721171663312767",
+          "name": "brightPathLevelParentCode",
+          "indexId": "43:6426789806506493415",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ConsultantSaleEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "71:2457989118140737749",
+      "lastPropertyId": "3:4439896701736721347",
+      "name": "BrightPathNextLevelEntity",
+      "properties": [
+        {
+          "id": "1:609489031887489153",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5777015566027329305",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4439896701736721347",
+          "name": "brightPathNextLevelParentCode",
+          "indexId": "44:1913933313090203761",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ConsultantSaleEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "72:6620752400481167589",
+      "lastPropertyId": "3:7953843854430826926",
+      "name": "BrightPathNextLevelOrderEntity",
+      "properties": [
+        {
+          "id": "1:2022545515904462507",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7079926726887922422",
+          "name": "requirement",
+          "type": 5
+        },
+        {
+          "id": "3:7953843854430826926",
+          "name": "brightPathNextLevelOrderParentCode",
+          "indexId": "45:2316708477290089745",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BrightPathNextLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "73:2622517120409283722",
+      "lastPropertyId": "5:8113040244371948873",
+      "name": "BrightPathNextLevelSalesEntity",
+      "properties": [
+        {
+          "id": "1:9175606206398190423",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7488671493523399656",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4155229483685006197",
+          "name": "salesRequirement",
+          "type": 8
+        },
+        {
+          "id": "4:5247301274485112962",
+          "name": "average",
+          "type": 8
+        },
+        {
+          "id": "5:8113040244371948873",
+          "name": "brightPathNextLevelSalesParentCode",
+          "indexId": "46:4481478014661012584",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BrightPathNextLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "74:2642933116533085421",
+      "lastPropertyId": "4:6957996340131635949",
+      "name": "BrightPeriodEntity",
+      "properties": [
+        {
+          "id": "1:7737524973490333411",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9166318235390888761",
+          "name": "orders",
+          "type": 5
+        },
+        {
+          "id": "3:3429280913382771419",
+          "name": "sale",
+          "type": 8
+        },
+        {
+          "id": "4:6957996340131635949",
+          "name": "brightPeriodParentCode",
+          "indexId": "47:6520490269795637512",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ConsultantSaleEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "75:3555331060985845286",
+      "lastPropertyId": "7:7786637420786592257",
+      "name": "CurrentPackEntity",
+      "properties": [
+        {
+          "id": "1:1390587765120983802",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2740233807877766244",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:1360091887994639452",
+          "name": "brandCode",
+          "type": 9
+        },
+        {
+          "id": "4:8048975536159795865",
+          "name": "brand",
+          "type": 9
+        },
+        {
+          "id": "5:1878729355102065957",
+          "name": "average",
+          "type": 8
+        },
+        {
+          "id": "6:4973650712611733331",
+          "name": "amount",
+          "type": 5
+        },
+        {
+          "id": "7:7786637420786592257",
+          "name": "currentPackParentCode",
+          "indexId": "48:531231265295743592",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ConsultantSaleEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "76:8018654574516237934",
+      "lastPropertyId": "4:6389719074015611472",
+      "name": "MyPartnerBillingInfoEntity",
+      "properties": [
+        {
+          "id": "1:7273753575076600705",
+          "name": "firstCampaign",
+          "type": 9
+        },
+        {
+          "id": "2:180524398198133401",
+          "name": "lastCampaign",
+          "type": 9
+        },
+        {
+          "id": "3:391977295621610025",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:6389719074015611472",
+          "name": "myPartnerBillingInfoParent",
+          "indexId": "49:247744731926609361",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "77:2210482222602015359",
+      "lastPropertyId": "12:2052555690059131055",
+      "name": "MyPartnerEntity",
+      "properties": [
+        {
+          "id": "1:2057817333559526927",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:2964011624466046076",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "3:9070801104378460772",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "4:6374375955894234151",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "5:8143369749721540528",
+          "name": "consultantId",
+          "type": 5
+        },
+        {
+          "id": "6:1863429113541378265",
+          "name": "consultantCode",
+          "type": 9
+        },
+        {
+          "id": "7:8030651766620966925",
+          "name": "anniversaryDate",
+          "type": 9
+        },
+        {
+          "id": "8:5606510974557733162",
+          "name": "admissionCampaign",
+          "type": 9
+        },
+        {
+          "id": "9:2429071168472610510",
+          "name": "pendingDebt",
+          "type": 8
+        },
+        {
+          "id": "10:5021651645402785006",
+          "name": "productivity",
+          "type": 9
+        },
+        {
+          "id": "11:4522548144886280736",
+          "name": "isSuccessful",
+          "type": 1
+        },
+        {
+          "id": "12:2052555690059131055",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "78:2547434093432780441",
+      "lastPropertyId": "4:1646372210123591372",
+      "name": "MyPartnerLevelEntity",
+      "properties": [
+        {
+          "id": "1:7907044881795889871",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "2:5236988866770418507",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3930906601363438615",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:1646372210123591372",
+          "name": "myPartnersLevelParent",
+          "indexId": "50:8081300113359243682",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "79:2511120132529861190",
+      "lastPropertyId": "5:3677325662825053687",
+      "name": "MyPartnerNextLevelEntity",
+      "properties": [
+        {
+          "id": "1:658442257266496122",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "2:98468169825531752",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "3:4145740035188162789",
+          "name": "campaignsAccomplished",
+          "type": 5
+        },
+        {
+          "id": "4:2094919864489883207",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:3677325662825053687",
+          "name": "myPartnerNextLevelParent",
+          "indexId": "51:7291155768325636923",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "80:3095584817110557166",
+      "lastPropertyId": "5:5257851308885165586",
+      "name": "MyPartnerNextLevelOrdersEntity",
+      "properties": [
+        {
+          "id": "1:8073201879197835438",
+          "name": "requirement",
+          "type": 5
+        },
+        {
+          "id": "2:4310193065894813516",
+          "name": "real",
+          "type": 5
+        },
+        {
+          "id": "3:2441353020040762962",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "4:1350606080181229082",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:5257851308885165586",
+          "name": "myPartnerNextLevelOrdersParent",
+          "indexId": "52:8116094818588669093",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerNextLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "81:1491822501923852748",
+      "lastPropertyId": "5:1314867860167253198",
+      "name": "MyPartnerNextLevelSalesEntity",
+      "properties": [
+        {
+          "id": "1:641363334287629050",
+          "name": "requirement",
+          "type": 5
+        },
+        {
+          "id": "2:8800503310808097408",
+          "name": "real",
+          "type": 8
+        },
+        {
+          "id": "3:6374923251545082988",
+          "name": "accomplished",
+          "type": 1
+        },
+        {
+          "id": "4:2598653301254476154",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "5:1314867860167253198",
+          "name": "myPartnerNextLevelSalesParent",
+          "indexId": "53:726430703669920497",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerNextLevelEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "82:4131589320338866734",
+      "lastPropertyId": "13:8089523568558785611",
+      "name": "MyPartnerPersonalInfoEntity",
+      "properties": [
+        {
+          "id": "1:3109510852352768409",
+          "name": "fullName",
+          "type": 9
+        },
+        {
+          "id": "2:1132571501835128619",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "3:660141859685735496",
+          "name": "surname",
+          "type": 9
+        },
+        {
+          "id": "4:7922548286673922392",
+          "name": "secondName",
+          "type": 9
+        },
+        {
+          "id": "5:6517565015481443625",
+          "name": "secondSurname",
+          "type": 9
+        },
+        {
+          "id": "6:8028107254657879045",
+          "name": "documentNumber",
+          "type": 9
+        },
+        {
+          "id": "7:7404404046424096766",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "8:2797994358222918449",
+          "name": "address",
+          "type": 9
+        },
+        {
+          "id": "9:7738558921827317181",
+          "name": "cellphoneNumber",
+          "type": 9
+        },
+        {
+          "id": "10:7049056557454141720",
+          "name": "telephoneNumber",
+          "type": 9
+        },
+        {
+          "id": "11:5291062597460985564",
+          "name": "birthday",
+          "type": 9
+        },
+        {
+          "id": "12:3456785137419806224",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "13:8089523568558785611",
+          "name": "myPartnerProfileInfoParent",
+          "indexId": "54:7201840763459961302",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "83:8503884968435721381",
+      "lastPropertyId": "4:82992847323774804",
+      "name": "MyPartnerSuccessfulHistoryEntity",
+      "properties": [
+        {
+          "id": "1:8006897040504900316",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "2:8559231378834427868",
+          "name": "value",
+          "type": 1
+        },
+        {
+          "id": "3:7263802791312473657",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:82992847323774804",
+          "name": "myPartnerIsSuccessfulHistoryParent",
+          "indexId": "55:4118140242755062559",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "MyPartnerEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "84:2691506055502724564",
+      "lastPropertyId": "4:1054729224746636496",
+      "name": "DreamBpCampaignEntity",
+      "properties": [
+        {
+          "id": "1:3169246437147479192",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2832052802997850482",
+          "name": "campaign",
+          "type": 9
+        },
+        {
+          "id": "3:6798012295878419587",
+          "name": "gainAmount",
+          "type": 7
+        },
+        {
+          "id": "4:1054729224746636496",
+          "name": "dreamBpCollectionParentCode",
+          "indexId": "56:627899787125654150",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DreamBpEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "85:6770909805995199970",
+      "lastPropertyId": "17:6549819245965784462",
+      "name": "DreamBpEntity",
+      "properties": [
+        {
+          "id": "1:2100102663557349567",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2997943859938941127",
+          "name": "dreamId",
+          "type": 9
+        },
+        {
+          "id": "3:7698602596456089962",
+          "name": "bpCode",
+          "type": 9
+        },
+        {
+          "id": "4:6784575880177160954",
+          "name": "amountToComplete",
+          "type": 5
+        },
+        {
+          "id": "5:7401600234774264817",
+          "name": "numberCampaignsToComplete",
+          "type": 5
+        },
+        {
+          "id": "6:68232338056479229",
+          "name": "dream",
+          "type": 9
+        },
+        {
+          "id": "7:2515433210013994568",
+          "name": "region",
+          "type": 9
+        },
+        {
+          "id": "8:6588075938969830186",
+          "name": "zone",
+          "type": 9
+        },
+        {
+          "id": "9:6380484969753494292",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "10:4059799651286671687",
+          "name": "comment",
+          "type": 9
+        },
+        {
+          "id": "11:4525490355182008478",
+          "name": "campaignCreated",
+          "type": 9
+        },
+        {
+          "id": "12:3601937700383101413",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "13:3883173860378192847",
+          "name": "campaignEnd",
+          "type": 9
+        },
+        {
+          "id": "14:2620923434315426391",
+          "name": "dateCreated",
+          "type": 9
+        },
+        {
+          "id": "15:1504809274092601531",
+          "name": "dateEdited",
+          "type": 9
+        },
+        {
+          "id": "16:3946391213163566791",
+          "name": "dateCompleted",
+          "type": 9
+        },
+        {
+          "id": "17:6549819245965784462",
+          "name": "totalGain",
+          "type": 7
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "85:6770909805995199970",
+  "lastIndexId": "56:627899787125654150",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    2000562447065875500,
+    2000562447065875459
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    6880187303637078893,
+    3742117440226352864,
+    1333913990960613499,
+    1146748150043836505,
+    2635008606699851909,
+    4079958073499561671,
+    7894081705853394571,
+    3592810268665734902,
+    1069992470200681197,
+    1039244403901221834,
+    3192390052633596489,
+    7605308787196103699,
+    2468428020416805359,
+    1799111085738669776,
+    5166455944475074351,
+    3827748796195443805,
+    5387863470547921255,
+    3454703636010231698,
+    3802609211099555948,
+    7275822593366374851,
+    3670267293134797041,
+    92201286144664159,
+    9079077910914884892,
+    6437552664419626061,
+    2210989487598653188,
+    8428207655953442073,
+    249408151742227707,
+    5486228926400938768,
+    6835439958307733442,
+    5338813229308293308,
+    6880187303637079000,
+    3742117440226352600,
+    1333913990960613400,
+    1146748150043836500,
+    2635008606699852000,
+    4079958073499561500,
+    7894081705853395000,
+    3592810268665734700,
+    1069992470200681200,
+    1039244403901221900,
+    3192390052633596400,
+    7605308787196104000,
+    2468428020416805400,
+    1799111085738669800,
+    5166455944475075000,
+    3827748796195443700,
+    5387863470547921000,
+    3454703636010232000,
+    3802609211099556000,
+    7275822593366374000,
+    3670267293134797000,
+    92201286144664160,
+    9079077910914885000,
+    6437552664419626000,
+    2210989487598653200,
+    8428207655953442000,
+    249408151742227700,
+    5486228926400939000,
+    6835439958307734000,
+    5338813229308293000,
+    8129774349464839000,
+    1424512908021857500,
+    8215816832540154000,
+    8129774349464838983,
+    1424512908021857603,
+    8215816832540153683,
+    3320205401047543570,
+    399346885188762847,
+    8825529038579232909,
+    86162343825967982,
+    6817775181835675563
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

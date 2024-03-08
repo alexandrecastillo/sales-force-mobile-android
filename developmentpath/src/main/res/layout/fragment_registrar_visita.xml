@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorButtonVariant"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="26dp"
+            android:layout_height="34dp"
+            android:background="?android:selectableItemBackground"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_white_back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/btn_back"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.07"
+            android:text="@string/mi_ruta_registrar_visita_title"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_back"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="lollipop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button_registrar_visita"
+        app:layout_constraintTop_toBottomOf="@id/ll_header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_today"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_registrar_visita_fecha"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_fecha_visita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/gris_escala_5"
+                    android:textSize="14sp"
+                    tools:text="Jueves, 7 de febrero" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_hora_visita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/gris_escala_5"
+                    android:textSize="14sp"
+                    tools:text="@string/text_hora_visita" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupoSwitchPasaPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="textViewTituloPasaPedido,switchPasaPedido" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTituloPasaPedido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/mulish_light"
+                android:textColor="@color/colorButtonVariant"
+                app:layout_constraintEnd_toStartOf="@id/switchPasaPedido"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_today"
+                tools:text="¿María pasará pedido esta campaña?" />
+
+            <biz.belcorp.salesforce.modules.developmentpath.widgets.CustomSwitchCompat
+                android:id="@+id/switchPasaPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewTituloPasaPedido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewTituloPasaPedido" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_consultant_acuerdos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/textViewTituloPasaPedido"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iconAcuerdo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_acuerdos" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewHintAcuerdo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:letterSpacing="0.07"
+                    android:text="@string/text_acuerdos_de_la_vista"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iconAcuerdo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iconAcuerdo"
+                    app:layout_constraintTop_toTopOf="@id/iconAcuerdo"
+                    tools:targetApi="lollipop" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_titulo_acuerdo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingMultiplier="1.15"
+                    android:text="@string/text_acuerdo"
+                    android:textColor="@color/gris_escala_4"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/textViewHintAcuerdo"
+                    tools:targetApi="lollipop" />
+
+
+                <LinearLayout
+                    android:id="@+id/layoutNuevoAcuerdo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/background_rdd_boton_asignar_habilidades"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_titulo_acuerdo">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_nueva_acuerdo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:letterSpacing="0.2"
+                        android:padding="2dp"
+                        android:text="@string/text_nuevo_acuerdo"
+                        android:textColor="@color/colorButtonVariant"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="lollipop" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/simbolo_mas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="9dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/simbolo_mas"
+                        android:textColor="@color/colorButtonVariant"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_nueva_acuerdo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/background_registrar_visita_acuerdo_nuevo"
+                    android:paddingBottom="18dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/layoutNuevoAcuerdo"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_comentario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="@dimen/text_size_body"
+                        app:boxStrokeColor="@color/black"
+                        app:errorEnabled="true"
+                        app:hintTextColor="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_comentario_acuerdo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:drawablePadding="@dimen/content_inset_tiny"
+                            android:fontFamily="@font/mulish_regular"
+                            android:hint="@string/tit_agregar_comentario"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="500"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@color/black"
+                            android:textSize="@dimen/text_size_body" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/btn_cancelar_ac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_comentario"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="27dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:letterSpacing="0.2"
+                        android:text="@string/tit_cancelar"
+                        android:textAllCaps="true"
+                        android:textColor="@color/estado_negativo"
+                        android:textSize="11sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="lollipop" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/btn_guardar_ac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_comentario"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="28dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:letterSpacing="0.2"
+                        android:text="@string/tit_guardar"
+                        android:textAllCaps="true"
+                        android:textColor="@color/estado_positivo"
+                        android:textSize="11sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="lollipop" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_acuerdos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/rl_nueva_acuerdo"
+                    tools:listitem="@layout/item_acuerdos" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_registrar_visita"
+        style="@style/Widget.Button.Black.Variant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_less"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.14"
+        android:text="@string/text_finalizar"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

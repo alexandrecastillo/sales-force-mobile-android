@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clFocoTrabajo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/content_inset_small"
+    android:layout_marginTop="@dimen/content_inset_tiny"
+    android:layout_marginEnd="@dimen/content_inset_small"
+    android:layout_marginBottom="@dimen/content_inset_tiny"
+    android:background="@drawable/border_layout_lightblue"
+    android:paddingStart="10dp"
+    android:paddingTop="@dimen/content_inset_small"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFocoTrabajo"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTituloFocoTrabajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:textColor="#454549"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFocoTrabajo"
+        tools:text="Promedio:" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSubtituloFocoTrabajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="#454549"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloFocoTrabajo"
+        tools:text="US$ 74.8" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibFocoTrabajo"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:background="@drawable/background_conversacion_desarrollo_numeracion"
+        android:backgroundTint="@color/mi_ruta_foco_texto"
+        android:clickable="false"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtituloFocoTrabajo"
+        app:srcCompat="@drawable/ic_mi_ruta_mas"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

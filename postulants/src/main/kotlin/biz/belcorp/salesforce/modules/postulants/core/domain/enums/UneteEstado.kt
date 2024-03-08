@@ -1,0 +1,18 @@
+package biz.belcorp.salesforce.modules.postulants.core.domain.enums
+
+enum class UneteEstado(val estado: Int) {
+    REGISTRADO(1),
+    GESTION_SAC(2),
+    EN_APROBACION_FFVV(3),
+    RECHAZADOS(4),
+    YA_CON_CODIGO(5),
+    GENERANDO_CODIGO(7),
+    EN_APROBACION_SAC(8),
+    PRE_INSCRITO(12),
+    PROACTIVO_FINALIZAR_14(14),
+    PROACTIVO_FINALIZAR_15(15),
+    PROACTIVO_FINALIZAR_16(16),
+    PROACTIVO_NO_INTERESADA(13),
+    PENDIENTE_CAMBIO_MODELO(19),
+    APROBACION_CAMBIO_MODELO(20)
+}

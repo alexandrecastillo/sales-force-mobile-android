@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Ingresos Extras -->
+    <item name="otra_marca_logo_unique" type="drawable">@drawable/marca_logo_unique</item>
+    <item name="otra_marca_logo_unique_disabled" type="drawable">
+        @drawable/marca_logo_unique_disabled
+    </item>
+    <item name="otra_marca_logo_natura" type="drawable">@drawable/marca_logo_natura</item>
+    <item name="otra_marca_logo_natura_disabled" type="drawable">
+        @drawable/marca_logo_natura_disabled
+    </item>
+    <item name="otra_marca_logo_avon" type="drawable">@drawable/marca_logo_avon</item>
+    <item name="otra_marca_logo_avon_disabled" type="drawable">@drawable/marca_logo_avon_disabled
+    </item>
+    <item name="otra_marca_logo_yanbal" type="drawable">@drawable/marca_logo_yanbal</item>
+    <item name="otra_marca_logo_yanbal_disabled" type="drawable">
+        @drawable/marca_logo_yanbal_disabled
+    </item>
+    <item name="otra_marca_logo_jafra" type="drawable">@drawable/marca_logo_jafra</item>
+    <item name="otra_marca_logo_jafra_disabled" type="drawable">
+        @drawable/marca_logo_jafra_disabled
+    </item>
+    <item name="otra_marca_logo_mary_kay" type="drawable">@drawable/marca_logo_marykay</item>
+    <item name="otra_marca_logo_mary_kay_disabled" type="drawable">
+        @drawable/marca_logo_marykay_disabled
+    </item>
+    <item name="otra_marca_logo_oriflame" type="drawable">@drawable/marca_logo_oriflame</item>
+    <item name="otra_marca_logo_oriflame_disabled" type="drawable">
+        @drawable/marca_logo_oriflame_disabled
+    </item>
+    <item name="otra_marca_logo_fuller" type="drawable">@drawable/marca_logo_fuller</item>
+    <item name="otra_marca_logo_fuller_disabled" type="drawable">
+        @drawable/marca_logo_fuller_disabled
+    </item>
+    <item name="otra_marca_logo_vogue" type="drawable">@drawable/marca_logo_vogue</item>
+    <item name="otra_marca_logo_vogue_disabled" type="drawable">
+        @drawable/marca_logo_vogue_disabled
+    </item>
+    <item name="otra_marca_logo_azzorti" type="drawable">@drawable/marca_logo_azzorti</item>
+    <item name="otra_marca_logo_azzorti_disabled" type="drawable">
+        @drawable/marca_logo_azzorti_disabled
+    </item>
+    <item name="otra_marca_logo_maybeline" type="drawable">@drawable/marca_logo_maybelline</item>
+    <item name="otra_marca_logo_maybeline_disabled" type="drawable">
+        @drawable/marca_logo_maybelline_disabled
+    </item>
+    <item name="otra_marca_logo_hinode" type="drawable">@drawable/marca_logo_hinode</item>
+    <item name="otra_marca_logo_hinode_disabled" type="drawable">
+        @drawable/marca_logo_hinode_disabled
+    </item>
+    <item name="otra_marca_logo_farmasi" type="drawable">@drawable/marca_logo_farmasi</item>
+    <item name="otra_marca_logo_farmasi_disabled" type="drawable">
+        @drawable/marca_logo_farmasi_disabled
+    </item>
+    <item name="otra_marca_logo_dupree" type="drawable">@drawable/marca_logo_dupree</item>
+    <item name="otra_marca_logo_dupree_disabled" type="drawable">
+        @drawable/marca_logo_dupree_disabled
+    </item>
+    <item name="otra_marca_logo_labda" type="drawable">@drawable/marca_logo_labda</item>
+    <item name="otra_marca_logo_labda_disabled" type="drawable">
+        @drawable/marca_logo_labda_disabled
+    </item>
+    <item name="otra_marca_logo_lecleire" type="drawable">@drawable/marca_logo_lecreire</item>
+    <item name="otra_marca_logo_lecleire_disabled" type="drawable">
+        @drawable/marca_logo_lecreire_disabled
+    </item>
+    <item name="otra_marca_logo_arabela" type="drawable">@drawable/marca_logo_arabela</item>
+    <item name="otra_marca_logo_arabela_disabled" type="drawable">
+        @drawable/marca_logo_arabela_disabled
+    </item>
+    <item name="otra_marca_logo_scentia" type="drawable">@drawable/marca_logo_scentia</item>
+    <item name="otra_marca_logo_scentia_disabled" type="drawable">
+        @drawable/marca_logo_scentia_disabled
+    </item>
+    <item name="otra_marca_logo_zermat" type="drawable">@drawable/marca_logo_zermat</item>
+    <item name="otra_marca_logo_zermat_disabled" type="drawable">
+        @drawable/marca_logo_zermat_disabled
+    </item>
+    <item name="otra_marca_logo_omnilife" type="drawable">@drawable/marca_logo_omnilife</item>
+    <item name="otra_marca_logo_omnilife_disabled" type="drawable">
+        @drawable/marca_logo_omnilife_disabled
+    </item>
+    <item name="otra_marca_logo_estilos" type="drawable">@drawable/marca_logo_estilos</item>
+    <item name="otra_marca_logo_estilos_disabled" type="drawable">
+        @drawable/marca_logo_estilos_disabled
+    </item>
+    <item name="otra_marca_logo_vacompany" type="drawable">@drawable/marca_logo_vacompany</item>
+    <item name="otra_marca_logo_vacompany_disabled" type="drawable">
+        @drawable/marca_logo_vacompany_disabled
+    </item>
+
+    <!-- Digital -->
+    <item name="ic_rdd_app_esika_conmigo" type="drawable">@drawable/icono_esikaconmigo</item>
+    <item name="ic_rdd_app_lbel_conmigo" type="drawable">@drawable/icono_lbelconmigo</item>
+    <item name="ic_rdd_acompaniamiento_digital" type="drawable">
+        @drawable/ic_acompanamiento_digital
+    </item>
+    <item name="ic_rdd_ofertas_digitales" type="drawable">@drawable/ic_ofertas_digitales</item>
+    <item name="ic_rdd_ip_unico" type="drawable">@drawable/ic_ip_unico</item>
+    <item name="ic_rdd_catalogo_digital" type="drawable">@drawable/icono_catdigital</item>
+    <item name="ic_rdd_asesor_de_belleza" type="drawable">@drawable/icono_asesorbelleza</item>
+    <item name="ic_rdd_skin_care" type="drawable">@drawable/icono_skincare</item>
+
+    <!-- Categorias -->
+    <item name="ic_category_productos" type="drawable">@drawable/icon_productos</item>
+    <item name="ic_category_fragancias" type="drawable">@drawable/icon_fragancias</item>
+    <item name="ic_category_maquillaje" type="drawable">@drawable/icon_maquillaje</item>
+    <item name="ic_category_tratamiento_facial" type="drawable">@drawable/icon_tratamiento_facial
+    </item>
+    <item name="ic_category_tratamiento_corporal" type="drawable">
+        @drawable/icon_tratamiento_corporal
+    </item>
+    <item name="ic_category_cuidado_depiel" type="drawable">@drawable/icon_cuidado_depiel</item>
+    <item name="ic_category_bijouterie" type="drawable">@drawable/icon_bijouterie</item>
+
+</resources>

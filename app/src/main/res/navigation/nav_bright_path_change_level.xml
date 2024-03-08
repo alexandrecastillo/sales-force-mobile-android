@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navBrightPathChangeLevel"
+    app:startDestination="@id/brightPathChangeLevel">
+
+    <fragment
+        android:id="@+id/brightPathChangeLevel"
+        android:name="biz.belcorp.salesforce.modules.brightpath.features.brightpath.BrightPathChangeLevelFragment"
+        android:label="BrightPathChangeLevel"
+        tools:layout="@layout/fragment_bright_path_change" />
+
+</navigation>

@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Widget styles -->
+
+    <style name="Widget.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="rippleColor">@color/colorSpotShadow</item>
+        <item name="cardCornerRadius">@dimen/ds_radius_4</item>
+        <item name="cardElevation">@dimen/ds_elevation_4</item>
+        <item name="cardMaxElevation">@dimen/ds_elevation_4</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:ambientShadowAlpha">1</item>
+        <item name="android:outlineAmbientShadowColor">@color/colorSpotShadow</item>
+        <item name="android:spotShadowAlpha">1</item>
+        <item name="android:outlineSpotShadowColor">@color/colorSpotShadow</item>
+    </style>
+
+</resources>

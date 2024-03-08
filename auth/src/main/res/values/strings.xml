@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="title_login_support">Acceso Soporte</string>
+    <string name="subtitle_login_support">Ingreso con credenciales corporativos</string>
+    <string name="action_login">Iniciar Sesión</string>
+    <string name="required_field">Campo requerido</string>
+
+    <string name="alerts_alert_2_content">Usuario o contraseña incorrectas</string>
+    <string name="alerts_alert_2_button">Volver a intentar</string>
+
+    <string name="login_auth_error">Datos incorrectos</string>
+    <string name="version_app">Versión %s</string>
+
+</resources>

@@ -1,0 +1,116 @@
+default_platform(:android)
+
+platform :android do
+
+    lane :share do |options|
+      aab = options[:aab]
+      marca = options[:marca]
+      shareBundle(aab: aab, marca: marca)
+    end
+
+    lane :internal do |options|
+      aab = options[:aab]
+      mapping = options[:mapping]
+      marca = options[:marca]
+      deployBundle(type: "internal", aab: aab, mapping: mapping, marca: marca)
+    end
+
+    lane :beta do |options|
+      aab = options[:aab]
+      mapping = options[:mapping]
+      marca = options[:marca]
+      deployBundle(type: "beta", aab: aab, mapping: mapping, marca: marca)
+    end
+
+    lane :release do |options|
+      aab = options[:aab]
+      mapping = options[:mapping]
+      marca = options[:marca]
+      deployBundle(type: "production", aab: aab, mapping: mapping, marca: marca)
+    end
+
+    ######################### PRIVATE LANES #########################
+
+    private_lane :deployBundle do |options|
+      type = options[:type]
+      aab = options[:aab]
+      mapping = options[:mapping]
+      marca = options[:marca]
+      package = ""
+      metadata = ""
+
+      if marca == "businesspartners"
+          package = "biz.belcorp.salesforce.businesspartners"
+          metadata = "fastlane/metadata/businesspartners"
+      elsif marca == "multiprofile"
+          package = "biz.belcorp.salesforce.multiprofile"
+          metadata = "fastlane/metadata/multiprofile"
+      end
+
+      upload_to_play_store(
+        track: type,
+        aab: aab,
+        package_name: package,
+        metadata_path: metadata,
+        skip_upload_images: true,
+        skip_upload_screenshots: true,
+        skip_upload_apk: true
+      )
+    end
+
+    private_lane :shareBundle do |options|
+      aab = options[:aab]
+      marca = options[:marca]
+      package = ""
+      app_name = ""
+
+      if marca == "businesspartners"
+          package = "biz.belcorp.salesforce.businesspartners"
+          app_name = "Gestiona tu negocio"
+      elsif marca == "multiprofile"
+          package = "biz.belcorp.salesforce.multiprofile"
+          app_name = "Crecer es Ganar"
+      end
+
+      download_url = upload_to_play_store_internal_app_sharing(
+        aab: aab,
+        package_name: package
+      )
+      notifyUrl(name: app_name, url: download_url)
+    end
+
+    ######################### SLACK LANES #########################
+
+    lane :notifyBuild do |options|
+        status = options[:status]
+        build_id = options[:build_id]
+        job_name = options[:job_name]
+        success = status == "STARTED" || status == "SUCCESS"
+        build_url = "https://devops.belcorp.biz/job/#{build_id}?name=#{job_name}"
+        payload = { 'Build URL' => build_url }
+        slack(
+            slack_url: "https://hooks.slack.com/services/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",
+            message: "Build #{status}",
+            payload: payload,
+            success: success,
+        )
+    end
+
+    lane :notifyUrl do |options|
+        app_ame = options[:name]
+        download_url = options[:url]
+        payload = { 'Download URL' => download_url }
+        icon = ":android:"
+        if download_url.include? "play.google.com"
+            icon = ":playstore:"
+        end
+        slack(
+            slack_url: "https://hooks.slack.com/services/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",
+            message: "#{icon} #{app_ame}",
+            payload: payload,
+            default_payloads: %i[git_branch last_git_commit_message],
+            success: true,
+        )
+    end
+
+end

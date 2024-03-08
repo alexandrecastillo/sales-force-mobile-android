@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/menu_notification_title"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/stories"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/menu_stories_title"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dimen_min_height_consultant_item_view"
+    android:padding="@dimen/ds_padding_medium">
+
+    <LinearLayout
+        android:id="@+id/llBeautyConsultantLevelDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_corner_consultant_lvl_pdv"
+        android:orientation="horizontal"
+        android:padding="@dimen/ds_padding_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivwDotColorConsultantLevelIcon"
+            android:layout_width="@dimen/dimen_min_size_grown_consultant_item_view"
+            android:layout_height="@dimen/dimen_min_size_grown_consultant_item_view"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:layout_marginEnd="@dimen/ds_margin_small"
+            android:background="@drawable/shape_amber_consultant_circle"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvwBeautyConsultantLevelVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_consultant_level_pdv"
+            android:textSize="@dimen/text_size_caption"
+            tools:text="CACAO" />
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvwBeautyConsultantConstancyVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_top_bottom_grown_consultant_card"
+        android:textColor="@color/text_color_consultant_level_pdv"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="@+id/llBeautyConsultantLevelDesc"
+        app:layout_constraintStart_toEndOf="@+id/llBeautyConsultantLevelDesc"
+        app:layout_constraintTop_toTopOf="@+id/llBeautyConsultantLevelDesc"
+        tools:text="3/6" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvConsultantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:fontFamily="@font/mulish_light"
+        android:maxLines="1"
+        android:textColor="@color/text_color_consultant_name_pdv"
+        app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llBeautyConsultantLevelDesc"
+        tools:text="NORA DARIA GUTIÉRREZ RAMOS" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvwConsultantCodeVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLines="1"
+        android:textColor="@color/text_color_consultant_code_pdv"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConsultantName"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Código: 0503213" />
+
+    <ImageView
+        android:id="@+id/ivwWhatsAppIcon"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_marginStart="@dimen/margin_top_bottom_grown_consultant_card"
+        android:layout_marginEnd="@dimen/margin_top_bottom_grown_consultant_card"
+        android:layout_marginBottom="@dimen/ds_margin_small"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:padding="@dimen/ds_margin_other_1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivwCallIcon"
+        app:layout_constraintStart_toEndOf="@+id/ConsultantEndIconBarrier"
+        app:layout_constraintTop_toTopOf="@+id/tvConsultantName"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_wsp2" />
+
+    <ImageView
+        android:id="@+id/ivwCallIcon"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_marginBottom="@dimen/ds_margin_small"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:padding="@dimen/ds_margin_other_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_llamada2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/ConsultantEndIconBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

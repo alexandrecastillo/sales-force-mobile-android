@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="KpiDetailTheme" parent="AppTheme">
+        <item name="bgSelectorBarSelectedColor">@color/magenta</item>
+        <item name="dimenBorderRadius">@dimen/ds_margin_small</item>
+    </style>
+
+    <style name="GridFilterTheme" parent="AppTheme">
+        <item name="bgSelectorBarSelectedColor">@color/magenta</item>
+        <item name="dimenBorderRadius">@dimen/ds_radius_100</item>
+    </style>
+
+</resources>

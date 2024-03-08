@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_aprobada"
+    style="@style/item_postulante_card">
+
+    <LinearLayout
+        android:id="@+id/body"
+        style="@style/item_postulante_body">
+
+        <LinearLayout
+            android:id="@+id/lyDatos"
+            style="@style/item_postulante_datos_layout">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNombres"
+                style="@style/item_postulante_name"
+                tools:text="Carmen Palomino" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNroDocumento"
+                style="@style/item_postulante_label_data"
+                android:text="@string/unete_listado_documento" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTelefonoCelular"
+                style="@style/item_postulante_label_data"
+                android:text="@string/unete_listado_telefono_celular" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtFuente"
+                style="@style/item_postulante_label_data"
+                android:text="@string/unete_listado_fuente" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtIngreso"
+                style="@style/item_postulante_label_data"
+                android:text="@string/unete_listado_ingreso" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTipoPago"
+                style="@style/item_postulante_label_data"
+                android:text="@string/unete_listado_tipo_pago" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDireccion"
+                style="@style/item_postulante_dato"
+                android:textAlignment="viewStart"
+                tools:text="@string/direccion" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtCorreo"
+                style="@style/item_postulante_dato"
+                android:textAlignment="viewStart"
+                tools:text="@string/correo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/item_postulante_action_layout"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnRechazar"
+                style="@style/item_postulante_action"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/rechazar"
+                android:textColor="#dc0e27"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnAprobar"
+                style="@style/item_postulante_action"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/aprobar"
+                android:textColor="#5b127b"
+                android:visibility="gone" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnWhatsapp"
+                style="@style/item_postulante_action"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/whatsapp"
+                android:textColor="@color/estado_positivo" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

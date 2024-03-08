@@ -1,0 +1,109 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/inspira_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivwInspiraHeaderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_inspira_8dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_medal" />
+
+        <TextView
+            android:id="@+id/tvwInspiraHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_8dp"
+            android:layout_marginTop="@dimen/view_inspira_8dp"
+            android:layout_marginEnd="@dimen/view_inspira_8dp"
+            android:layout_marginBottom="@dimen/view_inspira_8dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/conditions_header"
+            android:textColor="@color/black"
+            android:textSize="@dimen/view_inspira_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivwInspiraHeaderIcon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwInspiraCondiciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_16dp"
+            android:layout_marginTop="@dimen/view_inspira_16dp"
+            android:layout_marginEnd="@dimen/view_inspira_16dp"
+            android:background="@color/inspira_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvwInspiraHeaderTitle"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_inspire_travel_conditions" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clyInspiraConditionContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_16dp"
+            android:layout_marginTop="@dimen/view_inspira_32dp"
+            android:layout_marginEnd="@dimen/view_inspira_16dp"
+            android:paddingStart="@dimen/view_inspira_8dp"
+            android:paddingEnd="@dimen/view_inspira_8dp"
+            app:layout_constraintTop_toBottomOf="@id/rvwInspiraCondiciones">
+
+            <ImageView
+                android:id="@+id/ivwInspiraContentIcon"
+                android:layout_width="@dimen/view_inspira_24dp"
+                android:layout_height="@dimen/view_inspira_24dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_inspira_focus_team" />
+
+            <TextView
+                android:id="@+id/tvwInspiraContentTitle"
+                android:layout_width="@dimen/view_inspira_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/view_inspira_5dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/inspira_progress_legend_header"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_label_dark"
+                android:textSize="@dimen/view_inspira_14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivwInspiraContentIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivwInspiraContentIcon"
+                app:layout_constraintTop_toTopOf="@id/ivwInspiraContentIcon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwInspiraCondicionesLegend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_16dp"
+            android:layout_marginTop="@dimen/view_inspira_16dp"
+            android:layout_marginEnd="@dimen/view_inspira_16dp"
+            android:background="@color/inspira_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clyInspiraConditionContent"
+            tools:itemCount="@integer/one"
+            tools:listitem="@layout/item_inspire_travel_conditions" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

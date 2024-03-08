@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_message_to_send">Elige el mensaje que deseas enviar</string>
+    <string name="choose_consultants">Elija las consultoras para enviarles el mensaje de texto</string>
+    <string name="title_virtual_methodology">METODOLOGIA VIRTUAL</string>
+    <string name="consultants_contacts_options">TIENES MÁS OPCIONES</string>
+    <string name="must_select_contact">Debe seleccionar por lo menos un contacto de la lista</string>
+    <string name="permission">Permission must be granted in order to display contacts information</string>
+    <string name="name_contact">%1$s\n%2$s</string>
+    <string name="no_contacts_available">No hay contactos disponibles.</string>
+    <string name="no_facebook_available">Debe instalar Facebook para utilizar esta función.</string>
+    <string name="no_whatsapp_available">Debe instalar Whatsapp para utilizar esta función.</string>
+    <string name="share">Buscar</string>
+</resources>

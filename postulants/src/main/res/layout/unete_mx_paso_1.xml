@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        android:orientation="horizontal">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/edtPrimerNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:layout_weight="1"
+            custom:hint="@string/primer_nombre" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/edtSegundoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:layout_weight="1"
+            custom:hint="@string/segundo_nombre" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        android:orientation="horizontal">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/edtApellidoPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:layout_weight="1"
+            custom:hint="@string/apellito_paterno" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/edtApellidoMaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:layout_weight="1"
+            custom:hint="@string/apellito_materno" />
+
+    </LinearLayout>
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UDatePicker
+        android:id="@+id/edtFechaNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        custom:hint="@string/fecha_nacimiento"
+        custom:readOnly="true" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/edtDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        custom:hint="@string/rfc"
+        custom:validateIconVisible="true" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.UAutoCompleteTextView
+        android:id="@+id/edtCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        custom:hint="@string/correo" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.UAutoCompleteTextView
+        android:id="@+id/edtCorreoRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/correo_repeat"
+        android:inputType="textEmailAddress"
+        custom:disableCopyPaste="true" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/edtTelefonoCelular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        custom:hint="@string/telefono_celular" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/edtTelefonoFijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        custom:hint="@string/telefono_fijo" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        custom:hasSelection="true"
+        custom:hint="@string/genero" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/unete_obligatorio_label"
+        android:text="@string/campos_obligatorios" />
+
+</LinearLayout>

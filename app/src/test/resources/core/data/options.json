@@ -1,0 +1,137 @@
+{
+    "Options": [
+        {
+            "option_code": 1,
+            "option_type": "MP",
+            "description": "Inicio",
+            "position": 1,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 2,
+            "option_type": "MP",
+            "description": "Buscar",
+            "position": 2,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 6,
+            "option_type": "MP",
+            "description": "Calculadora",
+            "position": 3,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 4,
+            "option_type": "MP",
+            "description": "Pedidos web",
+            "position": 4,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 5,
+            "option_type": "MP",
+            "description": "Más",
+            "position": 5,
+            "url": "",
+            "active": true,
+            "sub_option": [
+                {
+                    "option_code": 1,
+                    "option_type": "ML",
+                    "description": "Consulta Crediticia",
+                    "position": 1,
+                    "url": "",
+                    "active": true
+                },
+                {
+                    "option_code": 2,
+                    "option_type": "ML",
+                    "description": "Metodología Virtual",
+                    "position": 2,
+                    "url": "",
+                    "active": true
+                },
+                {
+                    "option_code": 3,
+                    "option_type": "ML",
+                    "description": "Materiales de Desarrollo",
+                    "position": 3,
+                    "url": "",
+                    "active": true
+                },
+                {
+                    "option_code": 4,
+                    "option_type": "ML",
+                    "description": "Cerrar Sesión",
+                    "position": 4,
+                    "url": "",
+                    "active": true
+                }
+            ]
+        },
+        {
+            "option_code": 10,
+            "option_type": "SC",
+            "description": "Reportes de Campaña",
+            "position": 10,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 11,
+            "option_type": "SC",
+            "description": "Únete",
+            "position": 11,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 12,
+            "option_type": "SC",
+            "description": "Ruta de\nDesarrollo",
+            "position": 12,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 13,
+            "option_type": "SC",
+            "description": "Programa\nInspira",
+            "position": 13,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 14,
+            "option_type": "SC",
+            "description": "Camino\nBrillante",
+            "position": 14,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        },
+        {
+            "option_code": 15,
+            "option_type": "SC",
+            "description": "Academia",
+            "position": 15,
+            "url": "",
+            "active": true,
+            "sub_option": []
+        }
+    ]
+}
+

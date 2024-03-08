@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog_rdd">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_dialog_rdd_header"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/content_inset_normal"
+            android:paddingBottom="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/size_image_register_plan"
+                android:layout_height="@dimen/size_image_register_plan"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_rdd_calendar_white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_tiny"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/mi_ruta_registrar_visita_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title_2" />
+
+        </LinearLayout>
+
+        <biz.belcorp.salesforce.modules.developmentpath.features.mi_ruta.view.selector_fecha.SelectorFecha
+            android:id="@+id/selector_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rdd_margin_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_header"
+            app:title="mi_ruta_registrar_visita_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selector_fecha">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/rdd_margin_start"
+                android:layout_marginEnd="@dimen/rdd_margin_start"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/mi_ruta_registrar_visita_detalle"
+                android:textColor="@color/rdd_secondary_text" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_observaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_tiny"
+                android:spinnerMode="dialog" />
+
+            <View
+                android:id="@+id/separador"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/rdd_margin_start"
+                android:layout_marginTop="@dimen/content_inset_tiniest"
+                android:layout_marginEnd="@dimen/rdd_margin_start"
+                android:background="@color/black_20" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_registrar_visita_cancel"
+            style="@style/Widget.Button.OutlinedButton.Green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/rdd_margin_start"
+            android:layout_marginTop="@dimen/rdd_margin_start"
+            android:layout_marginEnd="@dimen/content_inset_tiny"
+            android:layout_marginBottom="@dimen/content_inset_medium"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/mi_ruta_registrar_visita_cancel"
+            android:textColor="@color/colorButtonVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_detalle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_save"
+            style="@style/Widget.Button.Green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginTop="@dimen/rdd_margin_start"
+            android:layout_marginEnd="@dimen/rdd_margin_start"
+            android:layout_marginBottom="@dimen/content_inset_medium"
+            android:background="@color/colorButtonVariant"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/mi_ruta_registrar_visita_accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_registrar_visita_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/ll_detalle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

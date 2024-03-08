@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/content_inset_normal"
+    android:paddingTop="@dimen/one"
+    android:paddingEnd="@dimen/content_inset_normal"
+    android:paddingBottom="@dimen/content_inset_small">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/ds_radius_4"
+        app:cardElevation="@dimen/ds_elevation_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/content_inset_normal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewPdf"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_file_pdf" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="2"
+                android:textColor="@color/gray_5"
+                android:textSize="@dimen/body"
+                app:layout_constraintEnd_toStartOf="@id/layoutAcciones"
+                app:layout_constraintStart_toEndOf="@id/imageViewPdf"
+                app:layout_constraintTop_toTopOf="@+id/imageViewPdf"
+                tools:text="Recomienda Consultoras para la Sección" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textCompartir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/btn_compartir"
+                android:textColor="@color/magenta"
+                android:textSize="@dimen/body"
+                app:layout_constraintStart_toStartOf="@id/textViewTitulo"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+
+            <LinearLayout
+                android:id="@+id/layoutAcciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewTitulo">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/botonAbrirPdf"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_margin="@dimen/content_inset_tiniest"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:layout_marginEnd="@dimen/content_inset_less"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_file_watch" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/botonDescargarPdf"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_margin="@dimen/content_inset_tiniest"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_download" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

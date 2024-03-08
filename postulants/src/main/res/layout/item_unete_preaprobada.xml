@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_pre_aprobada"
+    style="@style/item_postulante_card"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lltCabecera"
+            style="@style/item_postulante_card_body">
+
+            <LinearLayout
+                android:id="@+id/header"
+                style="@style/item_postulante_header"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtNombres"
+                        style="@style/item_postulante_name"
+                        tools:text="@string/two_spaces" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/item_postulante_status_box"
+                    android:background="@drawable/background_unete_preaprobada_box">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtDescPreparobada"
+                        style="@style/item_postulante_status_box_label"
+                        android:text="@string/preaprobada"
+                        android:textColor="@color/unete_preaprobado" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/etiquetaObservada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_3dp"
+                    android:background="@drawable/background_unete_observada"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_10dp"
+                        android:layout_height="@dimen/margin_10dp"
+                        android:layout_marginEnd="@dimen/margin_2dp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_warning" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/unete_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/unete_listado_en_obs"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/body"
+                    style="@style/item_postulante_body"
+                    android:layout_below="@id/etiquetaObservada">
+
+                    <LinearLayout
+                        android:id="@+id/lyDiasEspera"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtDiasEspera"
+                            style="@style/item_postulante_dato"
+                            android:text="@string/unete_listado_dias_espera"
+                            android:textAlignment="viewStart" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyNroDocumento"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtNroDocumento"
+                            style="@style/item_postulante_dato"
+                            android:textAlignment="viewStart"
+                            tools:text="@string/unete_listado_documento" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lySeccion"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtSeccion"
+                            style="@style/item_postulante_dato"
+                            android:textAlignment="viewStart"
+                            tools:text="@string/unete_listado_seccion" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyFuente"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtFuente"
+                            style="@style/item_postulante_dato"
+                            android:textAlignment="viewStart"
+                            tools:text="@string/unete_listado_fuente" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyTipoPago"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtTipoPago"
+                            style="@style/item_postulante_dato"
+                            android:textAlignment="viewStart"
+                            tools:text="@string/unete_listado_tipo_pago" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyPendienteCambio"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/item_postulante_dato"
+                            android:textAlignment="viewStart"
+                            android:text="@string/pendiente_cambio_modelo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyDireccion"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtDireccion"
+                            style="@style/item_postulante_dato"
+                            android:textAlignment="viewStart"
+                            tools:text="@string/direccion" />
+
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:id="@+id/lltValidacionGZ"
+                        style="@style/item_postulante_dato_layout"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <CheckBox
+                            android:id="@+id/chkBoxValidacionGZ"
+                            style="@style/item_postulante_dato"
+                            android:layout_marginLeft="@dimen/margin_left_validacion_GZ"
+                            android:layout_marginTop="@dimen/margin_top_validacion_GZ"
+                            android:layout_marginBottom="@dimen/margin_bottom_validacion_GZ"
+                            android:buttonTint="@color/boton_step_color"
+                            android:text="@string/textoValidacionGZ"
+                            android:textAlignment="viewStart" />
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lySeguroSocial"
+                        android:layout_width="120dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_14dp"
+                        android:layout_marginEnd="@dimen/unete_evaluacion_marginRight"
+                        android:background="@drawable/background_seguro_social"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ivSocialIcon"
+                            android:layout_width="@dimen/margin_13dp"
+                            android:layout_height="@dimen/margin_13dp"
+                            android:layout_marginStart="@dimen/margin_13dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_close_white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5dp"
+                            android:text="@string/seguro_social"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fest_text_size_12"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivSocialIcon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyPasos"
+                        style="@style/item_postulante_dato_layout">
+
+                        <com.stepstone.stepper.StepperLayout
+                            android:id="@+id/stpPasos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:ms_showBottomNavigation="false"
+                            app:ms_stepperType="tabs"
+                            tools:theme="@style/AppTheme" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtOffline"
+                        style="@style/unete_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/unete_postulante_offline"
+                        android:textAlignment="center"
+                        android:textColor="@color/unete_error"
+                        android:textSize="@dimen/size_12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/section_unete_action" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

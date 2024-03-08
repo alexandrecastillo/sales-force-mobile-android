@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Shortcuts -->
+    <item name="ic_shortcut_campaign_reports" type="drawable">@drawable/ic_campaign_reports</item>
+    <item name="ic_shortcut_unete" type="drawable">@drawable/ic_add_consultant</item>
+    <item name="ic_shortcut_development_path" type="drawable">@drawable/ic_rdd</item>
+    <item name="ic_shortcut_inspire_program" type="drawable">@drawable/ic_inspire</item>
+    <item name="ic_shortcut_bright_path" type="drawable">@drawable/ic_bright_path</item>
+    <item name="ic_shortcut_academy" type="drawable">@drawable/ic_academy</item>
+    <item name="ic_shortcut_ucb" type="drawable">@drawable/ic_academy</item>
+    <item name="ic_shortcut_digital" type="drawable">@drawable/ic_mobile</item>
+
+</resources>

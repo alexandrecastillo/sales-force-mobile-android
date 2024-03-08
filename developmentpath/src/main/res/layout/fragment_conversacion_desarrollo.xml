@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageTitulo"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:layout_marginTop="@dimen/content_inset_less"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_conversacion_desarrollo_phone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textTituloConversacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiny"
+            android:layout_marginEnd="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.05"
+            android:text="@string/preguntas_poderosas_titulo"
+            android:textColor="@color/titulo_conversacion"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageTitulo"
+            app:layout_constraintTop_toTopOf="@+id/imageTitulo"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutAprendizajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiniest"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_tiniest"
+            android:background="@drawable/background_conversacion_desarrollo"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTituloConversacion"
+            tools:ignore="UnusedAttribute">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageAprendizajes"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:background="@drawable/background_conversacion_desarrollo_numeracion"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textNumero1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_black"
+                android:gravity="center_horizontal"
+                android:text="@string/conversacion_desarrollo_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAprendizajes"
+                app:layout_constraintEnd_toEndOf="@+id/imageAprendizajes"
+                app:layout_constraintStart_toStartOf="@+id/imageAprendizajes"
+                app:layout_constraintTop_toTopOf="@+id/imageAprendizajes" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textAprendizajes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:letterSpacing="0.025"
+                android:text="@string/pregunta_aprendizajes"
+                android:textColor="@color/preguntas_desarrollo"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAprendizajes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageAprendizajes"
+                app:layout_constraintTop_toTopOf="@+id/imageAprendizajes"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFocosTrabajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiniest"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_tiniest"
+            android:background="@drawable/background_conversacion_desarrollo"
+            android:paddingVertical="@dimen/content_inset_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutAprendizajes"
+            tools:ignore="UnusedAttribute">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageFocosTrabajo"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:background="@drawable/background_conversacion_desarrollo_numeracion"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textNumero2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_black"
+                android:gravity="center_horizontal"
+                android:text="@string/conversacion_desarrollo_2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@+id/imageFocosTrabajo"
+                app:layout_constraintEnd_toEndOf="@+id/imageFocosTrabajo"
+                app:layout_constraintStart_toStartOf="@+id/imageFocosTrabajo"
+                app:layout_constraintTop_toTopOf="@+id/imageFocosTrabajo" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textFocosTrabajo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:letterSpacing="0.025"
+                android:text="@string/pregunta_focos_trabajo"
+                android:textColor="@color/preguntas_desarrollo"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageFocosTrabajo"
+                app:layout_constraintTop_toTopOf="@+id/imageFocosTrabajo"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFocosTrabajo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textFocosTrabajo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutHabilidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_tiniest"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_tiniest"
+            android:background="@drawable/background_conversacion_desarrollo"
+            android:paddingVertical="@dimen/content_inset_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutFocosTrabajo"
+            tools:ignore="UnusedAttribute">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageHabilidades"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:background="@drawable/background_conversacion_desarrollo_numeracion"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textNumero3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_black"
+                android:gravity="center_horizontal"
+                android:text="@string/conversacion_desarrollo_3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@+id/imageHabilidades"
+                app:layout_constraintEnd_toEndOf="@+id/imageHabilidades"
+                app:layout_constraintStart_toStartOf="@+id/imageHabilidades"
+                app:layout_constraintTop_toTopOf="@+id/imageHabilidades" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textHabilidades"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:letterSpacing="0.025"
+                android:text="@string/pregunta_habilidades"
+                android:textColor="@color/preguntas_desarrollo"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageHabilidades"
+                app:layout_constraintTop_toTopOf="@+id/imageHabilidades"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHabilidades"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textHabilidades" />
+
+            <LinearLayout
+                android:id="@+id/llAsignarHabilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:background="@drawable/background_rdd_boton_asignar_habilidades"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/content_inset_normal"
+                android:paddingTop="@dimen/content_inset_small"
+                android:paddingEnd="@dimen/content_inset_normal"
+                android:paddingBottom="@dimen/content_inset_small"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textHabilidades">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:letterSpacing="0.15"
+                    android:text="@string/rdd_asignar_habilidades"
+                    android:textColor="#2abeb3"
+                    android:textSize="@dimen/text_size_caption"
+                    tools:targetApi="lollipop" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="2dp"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_asignar_success" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageMensajeFinal"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHabilidades"
+            app:srcCompat="@drawable/ic_conversacion_desarrollo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textMensajeFinal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            android:layout_marginBottom="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_regular"
+            android:letterSpacing="0.025"
+            android:text="@string/preguntas_poderosas_mensaje_final"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageMensajeFinal"
+            tools:ignore="UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

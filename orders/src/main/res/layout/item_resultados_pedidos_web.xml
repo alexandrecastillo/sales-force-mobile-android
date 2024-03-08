@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sections_drilldown_detail_background">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_padding_medium"
+            android:layout_marginTop="@dimen/ds_padding_other_1"
+            android:layout_marginEnd="@dimen/ds_padding_medium"
+            android:layout_marginBottom="@dimen/ds_padding_other_1"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/layoutIndicador"
+                    android:layout_width="4dp"
+                    android:layout_height="0dp"
+                    android:background="@color/red_error"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_large"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/color_nombre_item_resultado"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Kevin Salazar"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCodigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:fontFamily="@font/mulish_light"
+                    android:text="@string/codigo"
+                    android:textColor="@color/gray_4"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNombre"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCodigoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvCodigo"
+                    app:layout_constraintEnd_toStartOf="@id/fabOpciones"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/tvCodigo"
+                    app:layout_constraintTop_toTopOf="@+id/tvCodigo"
+                    tools:text="010338263"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvMontoTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_other_1"
+                    android:fontFamily="@font/mulish_light"
+                    android:text="@string/monto_total"
+                    android:textColor="@color/gray_4"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCodigo"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvMontoTotalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvMontoTotal"
+                    app:layout_constraintEnd_toStartOf="@id/fabOpciones"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/tvMontoTotal"
+                    app:layout_constraintTop_toTopOf="@+id/tvMontoTotal"
+                    tools:text="493"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_other_1"
+                    android:fontFamily="@font/mulish_light"
+                    android:text="@string/estado_pedido"
+                    android:textColor="@color/gray_4"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMontoTotal"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvEstadoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvEstado"
+                    app:layout_constraintEnd_toStartOf="@id/fabOpciones"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/tvEstado"
+                    app:layout_constraintTop_toTopOf="@+id/tvEstado"
+                    tools:text="No Enviado"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOrigen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_other_1"
+                    android:fontFamily="@font/mulish_light"
+                    android:text="@string/origen"
+                    android:textColor="@color/gray_4"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEstado"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOrigenValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvOrigen"
+                    app:layout_constraintEnd_toStartOf="@id/fabOpciones"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/tvOrigen"
+                    app:layout_constraintTop_toTopOf="@+id/tvOrigen"
+                    tools:text="Web"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSaldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_other_1"
+                    android:fontFamily="@font/mulish_light"
+                    android:text="@string/saldo_pendiente"
+                    android:textColor="@color/gray_4"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toTopOf="@id/tvBloqueado"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSaldoValue"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOrigen"
+                    app:layout_goneMarginBottom="@dimen/ds_margin_large"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSaldoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSaldo"
+                    app:layout_constraintEnd_toStartOf="@id/fabOpciones"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/tvSaldo"
+                    app:layout_constraintTop_toTopOf="@+id/tvSaldo"
+                    tools:text="476.40"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvBloqueado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_other_1"
+                    android:layout_marginBottom="@dimen/ds_margin_large"
+                    android:fontFamily="@font/mulish_light"
+                    android:text="@string/bloqueado"
+                    android:textColor="@color/red_error"
+                    android:textSize="@dimen/text_size_body"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSaldo"
+                    tools:visibility="visible"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabOpciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    app:backgroundTint="@color/order_web"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/ic_plus"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/backgroundOpciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_background_opciones"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutOpciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

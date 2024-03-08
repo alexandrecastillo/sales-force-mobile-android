@@ -1,0 +1,137 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f6fc"
+    tools:context=".biz.belcorp.salesforce.modules.developmentpath.features.dashboard.avance.dv.avancevisitasequipos.AvanceVisitasEquiposFragment">
+
+    <ImageView
+        android:id="@+id/ivIcono"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_avance_visitas" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.07"
+        android:text="@string/titulo_avance_visitas_equipo"
+        android:textColor="#252628"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivIcono"
+        app:layout_constraintTop_toTopOf="@id/ivIcono"
+        tools:targetApi="lollipop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPorcentajeVisitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shadow_rdd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivIcono">
+
+        <biz.belcorp.salesforce.modules.developmentpath.widgets.CustomProgressView
+            android:id="@+id/cpvGr"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            app:fontFamily="@font/mulish_bold"
+            app:layout_constraintEnd_toStartOf="@+id/cpvGz"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:text="@string/gerente_regionales"
+            android:textColor="@color/meta_avance_campania"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cpvGr"
+            app:layout_constraintStart_toStartOf="@+id/cpvGr"
+            app:layout_constraintTop_toBottomOf="@+id/cpvGr" />
+
+        <biz.belcorp.salesforce.modules.developmentpath.widgets.CustomProgressView
+            android:id="@+id/cpvGz"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            app:fontFamily="@font/mulish_bold"
+            app:layout_constraintEnd_toStartOf="@+id/cpvSe"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cpvGr"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:text="@string/gerentes_de_zona"
+            android:textColor="@color/meta_avance_campania"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cpvGz"
+            app:layout_constraintStart_toStartOf="@+id/cpvGz"
+            app:layout_constraintTop_toBottomOf="@+id/cpvGz" />
+
+        <biz.belcorp.salesforce.modules.developmentpath.widgets.CustomProgressView
+            android:id="@+id/cpvSe"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            app:fontFamily="@font/mulish_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cpvGz"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:text="@string/socias_empresarias"
+            android:textColor="@color/meta_avance_campania"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cpvSe"
+            app:layout_constraintStart_toStartOf="@+id/cpvSe"
+            app:layout_constraintTop_toBottomOf="@+id/cpvSe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

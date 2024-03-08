@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/content_inset_tiniest">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pgbPorcentaje"
+        android:layout_width="@dimen/icon_size_large"
+        android:layout_height="@dimen/icon_size_large"
+        app:cpb_background_progressbar_color="#dfdfdf"
+        app:cpb_background_progressbar_width="@dimen/content_inset_tiny"
+        app:cpb_progressbar_width="@dimen/content_inset_tiny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:cpb_progress="50"
+        tools:cpb_progressbar_color="@color/positivo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivComportamiento"
+        android:layout_width="@dimen/content_inset_medium"
+        android:layout_height="@dimen/content_inset_medium"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/pgbPorcentaje"
+        app:layout_constraintEnd_toEndOf="@id/pgbPorcentaje"
+        app:layout_constraintStart_toStartOf="@id/pgbPorcentaje"
+        app:layout_constraintTop_toTopOf="@id/pgbPorcentaje"
+        tools:src="@drawable/ic_avance_comp_tres_se" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPorcentaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pgbPorcentaje"
+        tools:text="50%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

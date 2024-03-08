@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Billing colors -->
+    <color name="colorBillingIndicator">#66ffdddd</color>
+</resources>

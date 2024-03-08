@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/material_dimen_component_x2"
+    android:layout_marginTop="@dimen/material_dimen_component_x2"
+    android:layout_marginRight="@dimen/material_dimen_component_x2"
+    android:layout_marginBottom="@dimen/material_dimen_component_x2"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="@dimen/view_inspira_60dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/view_inspira_3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/material_dimen_component_x2">
+
+        <TextView
+            android:id="@+id/txvInspireTravelCardLabelDestination"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:layout_marginTop="@dimen/material_dimen_component_x2"
+            android:layout_marginEnd="@dimen/view_inspira_12dp"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/presentation_card_destination"
+            android:textColor="@color/dashboard_inspira_text"
+            android:textSize="@dimen/view_inspira_12sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivwInspireTravelCardLabelDestinationIcon"
+            android:layout_width="@dimen/view_inspira_24dp"
+            android:layout_height="@dimen/view_inspira_24dp"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txvInspireTravelCardDestination"
+            app:srcCompat="@drawable/ic_inspira_destino" />
+
+        <TextView
+            android:id="@+id/txvInspireTravelCardDestination"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_4dp"
+            android:layout_marginTop="@dimen/view_inspira_4dp"
+            android:layout_marginEnd="@dimen/view_inspira_12dp"
+            android:fontFamily="@font/mulish_bold"
+            android:maxLines="@integer/three"
+            android:textColor="@color/inspira_text_gray"
+            android:textSize="@dimen/view_inspira_14sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toEndOf="@id/ivwInspireTravelCardLabelDestinationIcon"
+            app:layout_constraintTop_toBottomOf="@id/txvInspireTravelCardLabelDestination"
+            tools:text="BRASIL" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <View
+            android:layout_width="@dimen/view_inspira_1dp"
+            android:layout_height="@dimen/material_dimen_constraint_default"
+            android:layout_marginTop="@dimen/material_dimen_component_x2"
+            android:background="@color/inspira_gray_super_light"
+            app:layout_constraintBottom_toTopOf="@id/barrier1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvInspireTravelCardCategoryTitle"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:layout_marginTop="@dimen/material_dimen_component_x2"
+            android:layout_marginEnd="@dimen/view_inspira_12dp"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/dashboard_inspira_text"
+            android:textSize="@dimen/view_inspira_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/presentation_card_current_level" />
+
+        <ImageView
+            android:id="@+id/ivwInspireTravelCardCategoryIcon"
+            android:layout_width="@dimen/material_dimen_component_x1"
+            android:layout_height="@dimen/material_dimen_component_x1"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/view_inspira_12dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/circle_rojo"
+            app:layout_constraintBottom_toBottomOf="@id/txvInspireTravelCardCategoryLabel"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="@id/txvInspireTravelCardCategoryLabel"
+            app:tint="@color/inspira_purple" />
+
+        <TextView
+            android:id="@+id/txvInspireTravelCardCategoryLabel"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_inspira_4dp"
+            android:layout_marginTop="@dimen/material_dimen_component_x1"
+            android:layout_marginEnd="@dimen/view_inspira_12dp"
+            android:fontFamily="@font/mulish_bold"
+            android:textAllCaps="true"
+            android:textColor="@color/inspira_text_gray"
+            android:textSize="@dimen/view_inspira_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivwInspireTravelCardCategoryIcon"
+            app:layout_constraintTop_toBottomOf="@id/txvInspireTravelCardCategoryTitle"
+            tools:text="DIAMANTE" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="txvInspireTravelCardLabelDestination,txvInspireTravelCardCategoryLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

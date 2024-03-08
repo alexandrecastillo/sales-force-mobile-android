@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rdd_dashboard_tab_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="120dp">
+
+            <ImageView
+                android:id="@+id/iconoTituloImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/tituloTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tituloTextView"
+                app:srcCompat="@drawable/ic_usuario" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tituloTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/mulish_bold"
+                android:letterSpacing="0.05"
+                android:lineSpacingMultiplier="1.15"
+                android:textColor="#252628"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/iconoTituloImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="lollipop"
+                tools:text="VISITA A LILIANA (SEGUNDO NOMBRE) CHUNG" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subtituloFechaTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33.5dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/rdd_planificarapido_ingresa_fecha"
+                android:textColor="#797a7d"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tituloTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/tituloTextView"
+                app:layout_constraintTop_toBottomOf="@id/tituloTextView" />
+
+            <biz.belcorp.salesforce.modules.developmentpath.widgets.SelectorFecha
+                android:id="@+id/selectorFecha"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="41dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtituloFechaTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subtituloHoraTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="33.5dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/rdd_planificarapido_ingresa_hora"
+                android:textColor="#797a7d"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tituloTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/tituloTextView"
+                app:layout_constraintTop_toBottomOf="@id/selectorFecha" />
+
+            <biz.belcorp.salesforce.modules.developmentpath.widgets.SelectorHora
+                android:id="@+id/selectorHora"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtituloHoraTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/botonCerrar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="15dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cerrar_dialogo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonPlanificar"
+        style="@style/Widget.Button.Blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/planificar"
+        app:layout_constraintBottom_toTopOf="@id/layoutCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/cancelar"
+            android:textColor="@color/estado_negativo"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/estado_negativo" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

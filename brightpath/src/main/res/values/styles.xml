@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewSectionDrillDownTitle" parent="@android:style/Widget.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minLines">3</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">@dimen/size_drill_down_section_title</item>
+    </style>
+
+    <style name="TextViewSectionDrillDownConsultant" parent="@android:style/Widget.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray_label</item>
+        <item name="android:textSize">@dimen/size_drill_down_section_consultant</item>
+        <item name="android:drawableEnd">@drawable/ic_sections_drilldown_arrow</item>
+        <item name="android:drawableRight">@drawable/ic_sections_drilldown_arrow</item>
+        <item name="android:layout_marginTop">@dimen/activity_indicator_margin</item>
+        <item name="android:padding">@dimen/content_inset_tiny</item>
+        <item name="android:minLines">1</item>
+        <item name="android:text">@string/no_consultant</item>
+        <item name="android:drawablePadding">@dimen/activity_regular_margin</item>
+    </style>
+
+    <style name="NavigationIndicatorTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabIndicatorHeight">@dimen/tab_highlight_size</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">fill</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/mulish_light</item>
+    </style>
+
+</resources>

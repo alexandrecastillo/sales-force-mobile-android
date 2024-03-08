@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/ambar"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/flDetailBussinesPartnerPostulantKpi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnGoToPostulantsKpi"
+                style="@style/Widget.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flDetailBussinesPartnerPostulantKpi"
+                app:rippleColor="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_inset_small">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/content_inset_tiny"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_woman_consultant"
+                        app:tint="@color/magenta" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvConsultantsNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_tiny"
+                        android:text="@string/action_go_to_postulant_kpi"
+                        android:textAlignment="textStart"
+                        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                        android:textColor="@color/default_magenta"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/calling_icon"
+                        app:layout_constraintStart_toEndOf="@+id/icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/calling_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/content_inset_tiny"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_arrow_right"
+                        app:tint="@color/default_magenta" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPotentialsKpiValues"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:background="@drawable/bg_corners_top_4"
+                android:padding="@dimen/content_inset_small"
+                app:layout_constraintCircleRadius="@dimen/ds_radius_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnGoToPostulantsKpi"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/includedCardViewPossiblePotentials"
+                layout="@layout/view_card_consultants_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvPotentialsKpiValues"
+                android:visibility="gone"/>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/bPostulantSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="flDetailBussinesPartnerPostulantKpi,btnGoToPostulantsKpi,includedCardViewPossiblePotentials" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvResultsLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:textAppearance="@style/TextAppearance.DS.Subtitle"
+                android:textColor="@color/textColorPrimary"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bPostulantSection"
+                app:rippleColor="@color/white"
+                tools:text="Tus Resultados CX" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPegKpiInfo"
+                style="@style/Widget.CardView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:cardElevation="@dimen/zero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvResultsLabel">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/content_inset_small">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPegsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_tiny"
+                        android:text="@string/retention_pegs_percentage"
+                        android:textAlignment="textStart"
+                        android:textAppearance="@style/TextAppearance.DS.Button"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvPegsValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPegsValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_tiny"
+                        android:textAlignment="textStart"
+                        android:textAppearance="@style/TextAppearance.DS.Button"
+                        android:textColor="@color/colorPrimaryText"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="%50" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCapitalizationKpiValues"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:background="@drawable/bg_corners_top_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvPegKpiInfo" />
+
+            <include
+                android:id="@+id/includedTipBottomView"
+                layout="@layout/view_tip_bottom"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCapitalizationKpiValues" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

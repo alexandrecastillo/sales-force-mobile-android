@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/txtTitleDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/group_5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_bold"
+            android:text="DATOS PARA LA VISITA"
+            android:textColor="@color/perfil_text_section"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ll_consultant_profile_visits_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_corner_radius"
+        android:layout_marginBottom="@dimen/rdd_margin_min_less"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/txtTitleDatos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_campania_puntaje_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_less"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/perfil_text_section"
+                android:textSize="@dimen/size_title_ruta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Campaña 11" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_puntaje_premio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/text_campania_puntaje_perfil"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/text_nivel_puntaje_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:layout_marginTop="@dimen/content_inset_less"
+                    android:fontFamily="@font/mulish_light"
+                    android:letterSpacing="0.03"
+                    android:lineSpacingExtra="2.1sp"
+                    android:textColor="@color/puntaje_perfil_text_nivel"
+                    android:textSize="@dimen/text_size_caption"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="NIVEL 1: 220 PTOS. " />
+
+                <TextView
+                    android:id="@+id/text_premio_puntaje_perfil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:layout_marginTop="@dimen/two"
+                    android:layout_marginEnd="@dimen/content_inset_less"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/mulish_bold"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_nivel_puntaje_perfil"
+                    tools:text="ES Kalos Edp 50 Ml" />
+
+                <TextView
+                    android:id="@+id/text_puntos_inicial_puntaje_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:layout_marginTop="@dimen/content_inset_normal"
+                    android:fontFamily="@font/mulish_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_premio_puntaje_perfil"
+                    tools:text="0 PTS." />
+
+                <TextView
+                    android:id="@+id/text_puntos_total_puntaje_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_light"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_puntos_inicial_puntaje_perfil"
+                    app:layout_constraintEnd_toEndOf="@+id/image_regalo_puntaje_perfil"
+                    app:layout_constraintStart_toStartOf="@+id/image_regalo_puntaje_perfil"
+                    app:layout_constraintTop_toTopOf="@+id/text_puntos_inicial_puntaje_perfil"
+                    tools:text="220 PTS." />
+
+                <ImageView
+                    android:id="@+id/image_regalo_puntaje_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_small"
+                    android:layout_marginEnd="@dimen/content_inset_less"
+                    android:layout_marginBottom="@dimen/rdd_margin_start"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_premio_no_alcanzado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_puntos_total_puntaje_perfil" />
+
+                <View
+                    android:id="@+id/view_porcentaje_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_regalo_puntaje_perfil"
+                    app:layout_constraintEnd_toStartOf="@id/view_porcentaje_imagen"
+                    app:layout_constraintHorizontal_weight="15"
+                    app:layout_constraintStart_toStartOf="@+id/image_regalo_puntaje_perfil"
+                    app:layout_constraintTop_toTopOf="@+id/image_regalo_puntaje_perfil" />
+
+                <View
+                    android:id="@+id/view_porcentaje_imagen"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_regalo_puntaje_perfil"
+                    app:layout_constraintEnd_toEndOf="@+id/image_regalo_puntaje_perfil"
+                    app:layout_constraintHorizontal_weight="85"
+                    app:layout_constraintStart_toEndOf="@id/view_porcentaje_progress"
+                    app:layout_constraintTop_toTopOf="@+id/image_regalo_puntaje_perfil" />
+
+                <ProgressBar
+                    android:id="@+id/progress_puntaje_perfil"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/content_inset_less"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:progress="78"
+                    android:progressDrawable="@drawable/custom_progress_regalo"
+                    app:layout_constraintBottom_toBottomOf="@id/image_regalo_puntaje_perfil"
+                    app:layout_constraintEnd_toStartOf="@id/view_porcentaje_imagen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/image_regalo_puntaje_perfil" />
+
+                <TextView
+                    android:id="@+id/text_puntaje_no_alcanzado_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_normal"
+                    android:layout_marginBottom="@dimen/content_inset_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/perfil_text_section"
+                    android:textSize="@dimen/text_size_subtitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_regalo_puntaje_perfil"
+                    tools:text="VA 20 PUNTOS, LE FALTAN 200" />
+
+                <TextView
+                    android:id="@+id/text_puntaje_alcanzado_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_normal"
+                    android:layout_marginBottom="@dimen/content_inset_normal"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/perfil_regalo_alcanzado"
+                    android:textColor="@color/perfil_text_section"
+                    android:textSize="@dimen/text_size_title_2"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_regalo_puntaje_perfil"
+                    tools:text="¡LLEGÓ AL PUNTAJE!" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/image_regalo_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_large"
+                android:contentDescription="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_campania_puntaje_perfil"
+                app:srcCompat="@drawable/ic_regalo_placeholder" />
+
+            <TextView
+                android:id="@+id/text_placeholder_puntaje_regalo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_large"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_large"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/perfil_placeholder_regalo"
+                android:textSize="@dimen/text_size_title_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_regalo_placeholder" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupo_sin_puntaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="image_regalo_placeholder,text_placeholder_puntaje_regalo"
+                tools:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progress_loading_puntaje"
+                android:layout_width="@dimen/contact_data_height"
+                android:layout_height="@dimen/contact_data_height"
+                android:layout_marginBottom="@dimen/rdd_margin_start_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

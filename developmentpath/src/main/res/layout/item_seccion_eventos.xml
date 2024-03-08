@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2.5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="77dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="2.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/rdd_evento" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_titulo_evento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="Encuentro" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_subtitulo_evento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/light_text"
+                android:textSize="12sp"
+                tools:text="10am - 11am" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_subtitulo_evento_todo_el_dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/light_text"
+                android:textSize="12sp"
+                android:text="@string/rdd_listar_evento_subtitulo_todoeldia" />
+
+            <LinearLayout
+                android:id="@+id/itemLayoutRegistrado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background_evento_registrado"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="4dp"
+                    app:srcCompat="@drawable/ic_check_success"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textEventoRegistrado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/rdd_item_evento_registrado"
+                    android:textColor="@color/estado_positivo"
+                    android:textSize="12sp"
+                    tools:text="Evento registrado" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

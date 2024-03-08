@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/rdd_menu_primary_vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_contacta_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/rdd_menu_primary_horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            app:srcCompat="@drawable/ic_rdd_contacto" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_contacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/rdd_primary_text"
+            android:textSize="16sp"
+            tools:text="Contacta a Perla:" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_opciones_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/rdd_menu_secondary_horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/rdd_menu_primary_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/rdd_menu_icon_size"
+                android:layout_height="@dimen/rdd_menu_icon_size"
+                app:srcCompat="@drawable/ic_rdd_phone" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:text="Teléfono"
+                android:textColor="@color/rdd_primary_text"
+                android:textSize="@dimen/text_size_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_whatsapp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/rdd_menu_primary_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/rdd_menu_icon_size"
+                android:layout_height="@dimen/rdd_menu_icon_size"
+                app:srcCompat="@drawable/ic_rdd_whatsapp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:text="Whatsapp"
+                android:textColor="@color/rdd_primary_text"
+                android:textSize="@dimen/text_size_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/rdd_menu_primary_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/rdd_menu_icon_size"
+                android:layout_height="@dimen/rdd_menu_icon_size"
+                app:srcCompat="@drawable/ic_rdd_sms" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:text="SMS"
+                android:textColor="@color/rdd_primary_text"
+                android:textSize="@dimen/text_size_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/rdd_menu_primary_vertical"
+            android:paddingEnd="@dimen/rdd_menu_primary_horizontal"
+            android:paddingStart="@dimen/rdd_menu_primary_horizontal"
+            android:paddingTop="@dimen/rdd_menu_primary_vertical"
+            tools:visibility="visible"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/rdd_menu_icon_size"
+                android:layout_height="@dimen/rdd_menu_icon_size"
+                app:srcCompat="@drawable/ic_icon_correo" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:text="Correo"
+                android:textColor="@color/rdd_primary_text"
+                android:textSize="@dimen/text_size_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_menu_ver_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_black_perfil" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/rdd_menu_ver_perfil"
+            android:textColor="@color/rdd_primary_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separador_ubicar_ver_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <LinearLayout
+        android:id="@+id/ll_ubicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/rdd_menu_primary_vertical"
+        android:paddingStart="@dimen/rdd_menu_primary_horizontal"
+        android:paddingEnd="@dimen/rdd_menu_primary_horizontal"
+        android:paddingTop="@dimen/rdd_menu_primary_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            app:srcCompat="@drawable/ic_rdd_marker" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Ubica su dirección en el mapa"
+            android:textColor="@color/rdd_primary_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separador_ubicar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <LinearLayout
+        android:id="@+id/ll_adicionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/rdd_menu_primary_vertical"
+        android:paddingStart="@dimen/rdd_menu_primary_horizontal"
+        android:paddingEnd="@dimen/rdd_menu_primary_horizontal"
+        android:paddingTop="@dimen/rdd_menu_primary_vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_adicionar"
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            app:srcCompat="@drawable/ic_calendario_adicionar_visita"
+            android:padding="4dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_adicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Planificar una visita adicional"
+            android:textColor="@color/colorButtonVariant"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separador_adicionar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <LinearLayout
+        android:id="@+id/ll_registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/rdd_menu_primary_vertical"
+        android:paddingStart="@dimen/rdd_menu_primary_horizontal"
+        android:paddingEnd="@dimen/rdd_menu_primary_horizontal"
+        android:paddingTop="@dimen/rdd_menu_primary_vertical">
+
+        <ImageView
+            android:id="@+id/iv_registrar"
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            app:srcCompat="@drawable/ic_rdd_registrar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Registra tu visita"
+            android:textColor="@color/colorButtonVariant"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <LinearLayout
+        android:id="@+id/ll_replanificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/rdd_menu_primary_vertical"
+        android:paddingStart="@dimen/rdd_menu_primary_horizontal"
+        android:paddingEnd="@dimen/rdd_menu_primary_horizontal"
+        android:paddingTop="@dimen/rdd_menu_primary_vertical">
+
+        <ImageView
+            android:id="@+id/iv_replanificar"
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            app:srcCompat="@drawable/ic_rdd_replanificar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_replanificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Replanifica"
+            android:textColor="@color/rdd_primary_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <LinearLayout
+        android:id="@+id/ll_eliminar_de_calendario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/rdd_menu_primary_vertical"
+        android:paddingStart="@dimen/rdd_menu_primary_horizontal"
+        android:paddingEnd="@dimen/rdd_menu_primary_horizontal"
+        android:paddingTop="@dimen/rdd_menu_primary_vertical">
+
+        <ImageView
+            android:id="@+id/iv_eliminar"
+            android:layout_width="@dimen/rdd_menu_icon_size"
+            android:layout_height="@dimen/rdd_menu_icon_size"
+            app:srcCompat="@drawable/ic_rdd_eliminar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rdd_menu_text_horizontal"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Elimínala de tu calendario"
+            android:textColor="@color/rdd_danger"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/inspira_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvwInspiraDashboardBeneficiosItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/inspira_background"
+        app:cardCornerRadius="@dimen/view_inspira_4dp"
+        app:cardElevation="@dimen/view_inspira_1dp"
+        app:cardMaxElevation="@dimen/view_inspira_2dp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/inspira_background">
+
+            <ImageView
+                android:id="@+id/imv_icon_inspira_beneficio"
+                android:layout_width="@dimen/view_inspira_24dp"
+                android:layout_height="@dimen/view_inspira_24dp"
+                app:srcCompat="@drawable/inspira_beneficio" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_inspira_3dp"
+                android:layout_marginTop="@dimen/view_inspira_3dp"
+                android:layout_marginBottom="@dimen/view_inspira_3dp"
+                android:layout_toRightOf="@+id/imv_icon_inspira_beneficio"
+                android:fontFamily="@font/mulish_bold"
+                android:text="@string/dashnoard_inspira_beneficios_title"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/view_inspira_14sp" />
+
+            <TextView
+                android:id="@+id/tv_inspira_beneficio_dashboard_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imv_icon_inspira_beneficio"
+                android:layout_marginTop="@dimen/view_inspira_8dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/dashnoard_inspira_beneficios_detail"
+                android:textSize="@dimen/view_inspira_14sp" />
+
+            <ImageView
+                android:id="@+id/imv_inspira_beneficio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_inspira_176dp"
+                android:layout_below="@+id/tv_inspira_beneficio_dashboard_detail"
+                android:layout_marginTop="@dimen/view_inspira_16dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/inspira_beneficios" />
+
+            <LinearLayout
+                android:id="@+id/ll_inspira_beneficio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imv_inspira_beneficio"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_inspira_16dp"
+                    android:layout_marginTop="@dimen/view_inspira_12dp"
+                    android:layout_marginBottom="@dimen/view_inspira_11dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_inspira_beneficio_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/dashnoard_inspira_beneficios_link_title"
+                        android:textColor="@color/dashboard_inspira_text"
+                        android:textSize="@dimen/view_inspira_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_inspira_beneficio_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/view_inspira_4dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/dashnoard_inspira_beneficios_link_detail"
+                        android:textColor="@color/gris_escala_5"
+                        android:textSize="@dimen/view_inspira_10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/view_inspira_32dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/view_inspira_16dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/view_inspira_24dp"
+                        android:layout_height="@dimen/view_inspira_24dp"
+                        app:srcCompat="@drawable/ic_right_arrow"
+                        app:tint="@color/black_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

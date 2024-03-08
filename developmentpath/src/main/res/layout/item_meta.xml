@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_inset_small"
+    android:background="@drawable/bg_item_meta">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Registra hasta 3 metas de la Socia y motívala a alcanzarlas." />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
+        tools:text="28 de Mayo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEliminar"
+        style="@style/Widget.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:text="@string/action_delete"
+        android:textAppearance="@style/TextAppearance.DS.Button"
+        android:textColor="@color/negativo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFecha" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEditar"
+        style="@style/Widget.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:text="@string/action_edit"
+        android:textAppearance="@style/TextAppearance.DS.Button"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="unete_aprobado">#179899</color>
+    <color name="unete_preaprobado">#009999</color>
+    <color name="unete_rechazado">#dc0e27</color>
+    <color name="unete_evaluacion">#009999</color>
+    <color name="unete_aceptar">#712192</color>
+    <color name="unete_cancelar">#637b92</color>
+    <color name="unete_text">#637b92</color>
+    <color name="unete_action">#712192</color>
+    <color name="unete_warning">#fdbd39</color>
+    <color name="unete_success">#009999</color>
+    <color name="unete_error">#e31c19</color>
+    <color name="unete_ok">#49cb19</color>
+    <color name="unete_neutral">#80637b92</color>
+    <color name="colorPrimaryDarkUnete">#768ea3</color>
+
+    <!-- Escala de grises -->
+    <color name="gris_escala_1">#F5F5F7</color>
+    <color name="gris_escala_2">#EAEAEC</color>
+    <color name="gris_escala_3">#D1D1D4</color>
+    <color name="gris_escala_4">#909094</color>
+    <color name="gris_escala_5">#454549</color>
+    <color name="gris_escala_6">#BFBFBF</color>
+
+    <color name="gray_home">#768ea3</color>
+    <color name="purple">#722789</color>
+    <color name="purple_70">#8f66aa</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="black">#000000</color>
+    <color name="black_70">#a2aebe</color>
+    <color name="black_50">#7e7e7e</color>
+    <color name="black_20">#e4e8ed</color>
+    <color name="black_10">#f2f2f2</color>
+    <color name="baground_profile">#f6f8fa</color>
+    <color name="background_search">#dfdfdf</color>
+    <color name="search_icon">#f5f5f5</color>
+
+    <!-- Mapa RDD -->
+    <color name="rdd_linea_mapa">#6b8bb5</color>
+    <color name="rdd_mapa_check_visitada">#2abeb3</color>
+    <color name="rdd_mapa_marker_bg_gray">#c1c1c1</color>
+    <color name="rdd_mapa_card_divider">#dcd9d9</color>
+    <color name="rdd_mapa_card_text">#1d1d26</color>
+    <color name="rdd_mapa_bg_transparent">#0000</color>
+    <color name="rdd_mapa_bg_text_hora">#99bcbcb8</color>
+
+    <color name="gray_label">#661d1d26</color>
+
+    <color name="subtitle_unete">#768ea3</color>
+
+    <color name="shadow_start">#26000000</color>
+    <color name="shadow_end">#00000000</color>
+
+    <color name="consultant_profile_green_on">#004292</color>
+    <color name="consultant_profile_green_off">#DBDDDD</color>
+
+    <color name="loading_transparent">#aa000022</color>
+
+    <color name="red">#F00</color>
+    <color name="green">#0F0</color>
+    <color name="blue">#00F</color>
+    <color name="yellow">#FF0</color>
+    <color name="cian_2">#00abdf</color>
+    <color name="white">#ffffff</color>
+    <color name="white_3">#fff</color>
+    <color name="white_5">#ffffffff</color>
+    <color name="black_3">#80000000</color>
+
+    <color name="gray_label_dark">#1d1d26</color>
+
+    <color name="purple_button">#70278e</color>
+    <color name="indicator_unete">#768EA3</color>
+
+    <color name="transparent">#FFFFFFFF</color>
+    <color name="white_transparent_20">#33FFFFFF</color>
+    <color name="white_transparent_30">#4DFFFFFF</color>
+    <color name="white_transparent_70">#B3FFFFFF</color>
+
+    <!-- Paleta oficial -->
+    <color name="primary_color">#b9007e</color>
+    <color name="gray_1">#f5f5f7</color>
+    <color name="gray_2">#eaeaec</color>
+    <color name="gray_3">#d1d1d4</color>
+    <color name="gray_4">#909094</color>
+    <color name="gray_5">#454549</color>
+    <color name="background_color">#f8f9fd</color>
+    <color name="faded_background_color">#a3ffffff</color>
+    <color name="rdd_establecida">#fcab53</color>
+    <color name="rdd_nueva">#f33162</color>
+    <color name="rdd_postulante">#6f85ff</color>
+    <color name="estado_positivo">#38be62</color>
+    <color name="estado_intermedio">#f5a623</color>
+    <color name="estado_negativo">#e81c36</color>
+    <color name="transparente">#00000000</color>
+    <color name="warning_message_color">#758da3</color>
+    <color name="indicator_unete_light">#96A9B9</color>
+
+    <color name="magenta">#B9007E</color>
+    <color name="magenta_transparent">#f9e6f2</color>
+    <color name="indicator_requests">#722789</color>
+    <color name="titles">#243039</color>
+    <color name="light_gray">#B9C0C5</color>
+    <color name="sections_drilldown_detail_background">#F8F8F9</color>
+    <color name="grey_dialog">#f8f9fa</color>
+    <color name="boton_step_color">#009999</color>
+    <color name="warning_red">#d90015</color>
+    <color name="social_security">#C4C4C4</color>
+    <color name="social_security_enable">#009999</color>
+    <color name="contact_postulant">#F6F6F6</color>
+
+</resources>

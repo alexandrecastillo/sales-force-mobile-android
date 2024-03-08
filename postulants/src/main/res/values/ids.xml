@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tag_type_view" type="id" />
+    <item name="tag_row" type="id" />
+    <item name="tag_column" type="id" />
+
+    <item name="item_unete_aprobada" type="id" />
+    <item name="item_unete_rechazada" type="id" />
+    <item name="item_unete_preaprobada" type="id" />
+    <item name="item_unete_evaluacion" type="id" />
+    <item name="item_unete_ingresos_anticipados" type="id" />
+    <item name="item_unete_pre_inscrito" type="id" />
+
+    <item name="item_unete_documento" type="id" />
+
+    <item name="unete_input_txtComponent" type="id" />
+    <item name="unete_input_txtInputLayout" type="id" />
+
+</resources>

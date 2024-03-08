@@ -1,0 +1,78 @@
+{
+  "KpiProfits": [
+    {
+      "campaign": "202003",
+      "profile": "SE",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "total": 525.5,
+      "competition": {
+        "total": 120.25,
+        "capitalization": 50.5,
+        "_6d6": 15.5,
+        "change_level": 14,
+        "new_fixed": 46.5,
+        "products_release": 23.5
+      },
+      "orders": {
+        "total": 400,
+        "potential": 53.2,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "MENOR A 370",
+            "amount": 600
+          },
+          {
+            "pos": 1,
+            "range": "MAYOR A 370",
+            "amount": 400
+          },
+          {
+            "pos": 2,
+            "range": "MAYOR A 600",
+            "amount": 200
+          }
+        ]
+      }
+    },
+    {
+      "campaign": "202004",
+      "profile": "SE",
+      "region": "09",
+      "zone": "0906",
+      "section": "A",
+      "total": 525.5,
+      "competition": {
+        "total": 120.25,
+        "capitalization": 50.5,
+        "_6d6": 15.5,
+        "change_level": 14,
+        "new_fixed": 46.5,
+        "products_release": 23.5
+      },
+      "orders": {
+        "total": 400,
+        "potential": 53.2,
+        "ranges": [
+          {
+            "pos": 0,
+            "range": "MENOR A 370",
+            "amount": 600
+          },
+          {
+            "pos": 1,
+            "range": "MAYOR A 370",
+            "amount": 400
+          },
+          {
+            "pos": 2,
+            "range": "MAYOR A 600",
+            "amount": 200
+          }
+        ]
+      }
+    }
+  ]
+}

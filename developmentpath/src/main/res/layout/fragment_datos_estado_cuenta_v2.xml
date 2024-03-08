@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/ds_margin_large">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/perfil_datos_estado_de_cuenta_v2"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSinEstadoCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:padding="@dimen/ds_padding_empty"
+            android:text="@string/data_not_available"
+            android:textColor="@color/gray_4"
+            android:textSize="@dimen/text_size_body"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sin categorias disponible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerEstadoCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/ds_margin_medium"
+            android:paddingBottom="@dimen/ds_margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="6"
+            tools:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_datos_estado_de_cuenta"
+            tools:spanCount="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

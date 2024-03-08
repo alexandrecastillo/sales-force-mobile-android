@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTituloIndicador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shadow_rdd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textTituloIndicador"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center_horizontal"
+                android:textAllCaps="true"
+                android:textColor="@color/gris_escala_5"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/informacion_historica_retencion_activas" />
+
+            <ImageView
+                android:id="@+id/imageAnterior"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/textTituloIndicador"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textTituloIndicador"
+                app:srcCompat="@drawable/ic_arrow_left" />
+
+            <ImageView
+                android:id="@+id/imagePosterior"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/textTituloIndicador"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textTituloIndicador"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+            <View
+                android:id="@+id/viewSeparador"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/one"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:background="@color/gris_escala_2"
+                app:layout_constraintEnd_toEndOf="@+id/imagePosterior"
+                app:layout_constraintStart_toStartOf="@+id/imageAnterior"
+                app:layout_constraintTop_toBottomOf="@+id/textTituloIndicador" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textSubtituloIndicador"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imagePosterior"
+                app:layout_constraintStart_toStartOf="@+id/imageAnterior"
+                app:layout_constraintTop_toBottomOf="@+id/viewSeparador"
+                tools:text="102.1% + 2.1% vs C18 2018" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutGraficoIndicador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_rdd"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTituloIndicador">
+
+            <ImageView
+                android:id="@+id/imageColorBarras"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:background="@drawable/background_leyenda_grafico"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textTituloGrafico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/gris_escala_5"
+                app:layout_constraintBottom_toBottomOf="@id/imageColorBarras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageColorBarras"
+                app:layout_constraintTop_toTopOf="@id/imageColorBarras"
+                tools:text="@string/informacion_historica_retencion_activas" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/graficoIndicador"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="13dp"
+                app:layout_constraintEnd_toEndOf="@+id/textTituloGrafico"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageColorBarras"
+                app:layout_constraintTop_toBottomOf="@+id/textTituloGrafico"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <include
+                android:id="@+id/layoutCuadroValores"
+                layout="@layout/layout_barras_gr_cuadro_valores"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/graficoIndicador"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/flGraficoInferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutGraficoIndicador" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

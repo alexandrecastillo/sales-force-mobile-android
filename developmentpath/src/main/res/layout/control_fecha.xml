@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/mi_ruta_registrar_visita_date"
+        android:textColor="@color/rdd_secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_fecha_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_rdd_fecha"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center_horizontal"
+        android:padding="12dp"
+        android:textColor="@color/rdd_primary_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_registrar_visita_fecha" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/mi_ruta_registrar_visita_hour"
+        android:textColor="@color/rdd_secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_registrar_visita_fecha_valor" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_dos_puntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/mi_ruta_registrar_visita_hour_separator"
+        android:textColor="@color/rdd_primary_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_registrar_visita_hora" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_hora_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/background_rdd_hora"
+        android:fontFamily="@font/mulish_bold"
+        android:padding="12dp"
+        android:textColor="@color/rdd_primary_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_registrar_visita_dos_puntos"
+        app:layout_constraintEnd_toStartOf="@+id/text_registrar_visita_dos_puntos"
+        app:layout_constraintTop_toTopOf="@+id/text_registrar_visita_dos_puntos" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_minutos_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/background_rdd_hora"
+        android:fontFamily="@font/mulish_bold"
+        android:padding="12dp"
+        android:textColor="@color/rdd_primary_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_registrar_visita_dos_puntos"
+        app:layout_constraintStart_toEndOf="@+id/text_registrar_visita_dos_puntos"
+        app:layout_constraintTop_toTopOf="@+id/text_registrar_visita_dos_puntos" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_registrar_visita_ampm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/rdd_primary_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_registrar_visita_dos_puntos"
+        app:layout_constraintStart_toEndOf="@+id/text_registrar_visita_minutos_valor"
+        app:layout_constraintTop_toTopOf="@+id/text_registrar_visita_dos_puntos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/content_inset_half"
+    android:paddingEnd="@dimen/content_inset_half"
+    tools:ignore="RtlSymmetry">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C08" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintEnd_toEndOf="@id/txtCampania"
+        app:layout_constraintStart_toStartOf="@id/txtCampania"
+        app:layout_constraintTop_toBottomOf="@id/txtCampania"
+        tools:text="6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+import biz.belcorp.salesforce.Config
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Versions
+
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileOptions {
+        sourceCompatibility Versions.Android.javaVersion
+        targetCompatibility Versions.Android.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = Versions.Android.javaVersion.toString()
+    }
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+    compileSdkVersion Versions.Android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion Versions.Android.minSdkVersion
+        targetSdkVersion Versions.Android.targetSdkVersion
+        versionCode Versions.Android.appVersionCode
+        versionName Versions.Android.appVersionName
+        vectorDrawables.useSupportLibrary = true
+
+        buildConfigField 'String', "API_ROUTE_GOOGLE", '"https://maps.googleapis.com/maps/api/directions/json?"'
+
+    }
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        test.java.srcDirs += "src/sharedtest/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+    buildTypes {
+        release {
+            debuggable false
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+        stage {
+            debuggable !Config.App.isCiServer
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+        develop {
+            debuggable true
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+        review {
+            debuggable true
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+    }
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+    flavorDimensions "perfil"
+    productFlavors {
+        multiprofile {
+            dimension "perfil"
+        }
+        businesspartners {
+            dimension "perfil"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":app")
+    api project(":core")
+
+    implementation Deps.Libs.belcorpComponentsOffers
+    implementation Deps.Libs.androidChart
+
+    implementation Deps.Libs.retrofit
+    implementation Deps.Libs.rxJava
+    implementation Deps.Libs.gson
+
+    implementation Deps.Libs.googleMap
+    implementation Deps.Libs.googleLocation
+
+    implementation Deps.Libs.stetho
+    implementation Deps.Libs.dbflow
+    implementation Deps.Libs.dbflowCore
+    implementation Deps.Libs.dbflowKotlin
+    implementation Deps.Libs.kinesis
+    implementation Deps.Libs.firebaseCore
+    implementation Deps.Libs.glide
+    kapt Deps.Libs.glideCompiler
+    implementation Deps.Libs.glideOkHttp
+    implementation Deps.Libs.circularprogressbar
+    implementation Deps.Libs.workManager
+    implementation Deps.Libs.workManagerKTX
+    implementation Deps.Libs.sectionedRecyclerViewAdapter
+    implementation Deps.Libs.androidChart
+
+    // Test
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.koinTest
+    testImplementation Deps.Test.kluent
+    testImplementation Deps.Test.mockk
+    testImplementation Deps.Test.androidTestCore
+    testImplementation Deps.Test.androidArchTestCore
+    testImplementation Deps.Test.roboelectric
+    testImplementation Deps.Test.roboelectricMulidex
+    androidTestImplementation Deps.Test.runner
+    androidTestImplementation Deps.Test.espressoCore
+    androidTestImplementation Deps.Test.mockkAndroid
+}
+
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'

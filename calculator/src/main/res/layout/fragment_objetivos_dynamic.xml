@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvwCalculatorCurrentOrdersRange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/ds_margin_medium"
+        android:paddingEnd="@dimen/ds_margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="@dimen/ds_no_margin"
+        tools:listitem="@layout/item_calculator_current_level_goal" />
+
+    <biz.belcorp.mobile.components.design.labeledittext.LabelEditText
+        android:id="@+id/letCalculatorCurrentIncome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        app:edittext_hint="@string/calculator_default_number_hint"
+        app:edittext_maxLength="3"
+        app:edittext_maxLines="1"
+        app:edittext_textAlignment="center"
+        app:label_orientation="bottom"
+        app:label_text="@string/calculator_label_Ingresos"
+        app:label_textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/letCalculatorCurrentCapitalization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvwCalculatorCurrentOrdersRange" />
+
+    <biz.belcorp.mobile.components.design.labeledittext.LabelEditText
+        android:id="@+id/letCalculatorCurrentCapitalization"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        app:edittext_hint="@string/calculator_default_number_hint"
+        app:edittext_maxLength="3"
+        app:edittext_maxLines="1"
+        app:edittext_textAlignment="center"
+        app:label_orientation="bottom"
+        app:label_text="@string/calculator_label_capitalization_extended"
+        app:label_textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tvInformation"
+        app:layout_constraintStart_toEndOf="@id/letCalculatorCurrentIncome"
+        app:layout_constraintTop_toBottomOf="@id/rvwCalculatorCurrentOrdersRange" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvIconInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_other_5"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:layout_marginEnd="@dimen/ds_margin_other_5"
+        android:background="@drawable/background_circle_textview"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/calculator_i"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letCalculatorCurrentCapitalization"
+        app:layout_constraintTop_toBottomOf="@id/rvwCalculatorCurrentOrdersRange" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_medium"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:text="@string/calculator_information"
+        android:textAlignment="center"
+        android:textSize="@dimen/fest_text_size_12"
+        android:textColor="@color/black"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letCalculatorCurrentCapitalization"
+        app:layout_constraintTop_toBottomOf="@+id/tvIconInformation" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="letCalculatorCurrentCapitalization,letCalculatorCurrentIncome,tvInformation"/>
+
+    <View
+        android:id="@+id/vwLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ds_divider_horizontal_height"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:background="@color/gray_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clyCalculatorCurrentInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:background="@drawable/shape_round_corner_message"
+        android:padding="@dimen/ds_margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/vwLine">
+
+        <ImageView
+            android:id="@+id/textView13"
+            android:layout_width="@dimen/ds_margin_normal"
+            android:layout_height="@dimen/ds_margin_normal"
+            android:background="@drawable/ic_observation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRangoMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_padding_small"
+            android:fontFamily="@font/mulish_regular"
+            tools:text="@string/calculator_rango_message"
+            android:textSize="@dimen/caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textView13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

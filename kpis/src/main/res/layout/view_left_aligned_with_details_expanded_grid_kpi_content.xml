@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedExpandedChildContentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Label"
+        android:textColor="@color/black"
+        android:letterSpacing="@dimen/letter_spacing_consultant_label"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Retencion 6d6" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedExpandedChildContentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="@color/color_text_consultant_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvKpiDetailedExpandedChildContentLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKpiDetailedExpandedChildContentLabel"
+        tools:text="S/ 1.000.000" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedChildContentDetailsExpanded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="#909094"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tvKpiDetailedExpandedChildContentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvKpiDetailedExpandedChildContentLabel"
+        tools:text="Retuviste 2 Consultoras 6d6" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedChildContentDetailsFirstRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="#909094"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/tvKpiDetailedExpandedChildContentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvKpiDetailedChildContentDetailsExpanded"
+        tools:text="1 Consultora 6d6 Bajo Valor" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedChildContentDetailsFirstRowValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="#909094"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvKpiDetailedExpandedChildContentValue"
+        app:layout_constraintTop_toTopOf="@+id/tvKpiDetailedChildContentDetailsFirstRow"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKpiDetailedChildContentDetailsFirstRow"
+        tools:text="S/ 50.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedChildContentDetailsSecondRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="#909094"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/tvKpiDetailedExpandedChildContentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvKpiDetailedChildContentDetailsFirstRow"
+        tools:text="1 Consultora 6d6 Alto Valor" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvKpiDetailedChildContentDetailsSeondRowValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textColor="#909094"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvKpiDetailedExpandedChildContentValue"
+        app:layout_constraintTop_toTopOf="@+id/tvKpiDetailedChildContentDetailsSecondRow"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKpiDetailedChildContentDetailsSecondRow"
+        tools:text="S/ 50.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

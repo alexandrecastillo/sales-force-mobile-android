@@ -1,0 +1,5 @@
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/mi_ruta_datetime_picker_background" />
+    <corners android:radius="36dp" />
+</shape>

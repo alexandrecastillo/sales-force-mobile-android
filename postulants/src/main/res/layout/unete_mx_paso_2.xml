@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hasSelection="true"
+        custom:hint="@string/unete_paso2_estado" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.UAutoCompleteTextView
+        android:id="@+id/edtDelegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hint="@string/unete_paso2_delegacion"
+        custom:textSize="16sp" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.UAutoCompleteTextView
+        android:id="@+id/edtCiudad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hint="@string/unete_paso2_ciudad"
+        custom:textSize="16sp" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/edtColonia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hint="@string/unete_paso2_colonia"
+        custom:textSize="16sp" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtCodigoPostal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hint="@string/unete_paso2_codigo_postal" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hint="@string/unete_paso2_direccion" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtEntreCalles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        custom:hint="@string/unete_paso2_entre_calles" />
+
+    <include
+        android:id="@+id/layout_pin_sms"
+        layout="@layout/layout_validate_mobile_number"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lyValidacionCrediticia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_section_title"
+            android:text="@string/unete_paso2_datos_validacion_crediticia" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="24dp"
+                android:layout_toStartOf="@id/swtTarjetaCredito"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/unete_text"
+                    android:text="@string/unete_paso2_tarjeta_credito"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/unete_text"
+                    android:text="@string/unete_paso2_tarjeta_credito_no" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swtTarjetaCredito"
+                style="@style/unete_switch"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/unete_text"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="24dp"
+                android:layout_toStartOf="@id/swtCreditoHipotecario"
+                android:gravity="center_vertical"
+                android:minLines="3"
+                android:text="@string/unete_paso2_credito_hipotecario"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swtCreditoHipotecario"
+                style="@style/unete_switch"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/unete_text"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="24dp"
+                android:layout_toStartOf="@id/swtCreditoAutomotriz"
+                android:gravity="center_vertical"
+                android:minLines="3"
+                android:text="@string/unete_paso2_credito_automotriz"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swtCreditoAutomotriz"
+                style="@style/unete_switch"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/unete_obligatorio_label"
+        android:layout_marginTop="16dp"
+        android:text="@string/campos_obligatorios" />
+
+</LinearLayout>

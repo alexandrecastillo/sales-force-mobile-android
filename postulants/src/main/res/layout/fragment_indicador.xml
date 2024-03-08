@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppThemeUnete">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:descendantFocusability="beforeDescendants"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true"
+        android:overScrollMode="never">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/indicator_unete"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/abl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_campaign_information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:layout_marginEnd="@dimen/margin_13dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="end"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_10sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/margin_14dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_white_back_arrow" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_indicator_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:layout_centerInParent="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="center"
+                            android:text="@string/unete_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/size_18sp" />
+
+
+                    </RelativeLayout>
+
+                    <include layout="@layout/view_indicator_header" />
+
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayoutIndicador"
+                        style="@style/NavigationIndicatorTabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:elevation="@dimen/activity_regular_margin"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:tabTextAppearance="@style/MineCustomTabText" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vw_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_shadow_size"
+                    android:layout_below="@id/abl_layout"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/shadow_bottom" />
+
+                <biz.belcorp.salesforce.components.widgets.viewpager.HeightWrappingViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/vw_shadow"
+                    android:background="@color/white"
+                    android:fillViewport="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAgregarPostulante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_5dp"
+                android:textSize="@dimen/size_16sp"
+                android:visibility="gone"
+                app:backgroundTint="@color/purple_button"
+                app:elevation="8dp"
+                app:fabSize="normal"
+                app:layout_anchor="@id/abl_layout"
+                app:layout_anchorGravity="bottom|right|end"
+                app:srcCompat="@drawable/ic_btn_nueva_candidata"
+                app:tint="@color/white" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/loading_transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</RelativeLayout>

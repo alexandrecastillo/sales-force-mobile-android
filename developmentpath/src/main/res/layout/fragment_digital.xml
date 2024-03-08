@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clContenedorDigital"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/content_inset_normal"
+    android:layout_marginEnd="@dimen/content_inset_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtSinDataDigital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:padding="@dimen/content_inset_double"
+        android:text="@string/data_not_available"
+        android:textAlignment="center"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContenedorLabelActivas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_label_activas_corner"
+        android:paddingStart="@dimen/content_inset_small"
+        android:paddingTop="@dimen/content_inset_tiny"
+        android:paddingEnd="@dimen/content_inset_small"
+        android:paddingBottom="@dimen/content_inset_tiny"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgActivas"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginTop="@dimen/content_inset_tiniest"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/txtTituloActivas"
+            app:layout_constraintEnd_toStartOf="@id/txtTituloActivas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTituloActivas"
+            app:srcCompat="@drawable/ic_woman_consultant" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTituloActivas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="98 activas a C18" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clContenedorLabelActivas"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:itemCount="3"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_digital_single" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surface_rounded"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:padding="@dimen/content_inset_double"
+        android:text="@string/message_digital_empty_data"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clContenedorLabelActivas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

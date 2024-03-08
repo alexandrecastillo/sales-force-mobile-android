@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navFeatureConsultants"
+    app:startDestination="@id/busquedaConsultoraFragment">
+
+    <fragment
+        android:id="@+id/busquedaConsultoraFragment"
+        android:name="biz.belcorp.salesforce.modules.consultants.features.search.BusquedaConsultoraFragment"
+        android:label="BusquedaConsultoraFragment"
+        tools:layout="@layout/fragment_busqueda_consultora" />
+
+</navigation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/content_inset_large"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/gray_5"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="17" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/gray_5"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintStart_toEndOf="@+id/textNumber"
+        app:layout_constraintTop_toTopOf="@id/textNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Suscritas y compran" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

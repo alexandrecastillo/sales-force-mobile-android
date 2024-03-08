@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvNoData"
+        style="@style/MulishTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/msg_warning_no_data_consolidado"
+        android:textAllCaps="true"
+        android:textColor="@color/warning_message_color"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/sections_navigation_bar_detail"
+        android:visibility="gone"
+        layout="@layout/sections_navigation_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <ImageView
+                android:id="@+id/ivArrowRight"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="-20dp"
+                android:layout_marginBottom="15dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="end"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_right_arrow" />
+
+            <biz.belcorp.salesforce.modules.postulants.features.widget.container.CustomHorizontalScrollview
+                android:id="@+id/hsvHeaderConsolidado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@id/ivArrowRight"
+                android:layout_toEndOf="@+id/rvLeft"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:scrollbars="none">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvConsolidado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </biz.belcorp.salesforce.modules.postulants.features.widget.container.CustomHorizontalScrollview>
+
+        </RelativeLayout>
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.container.NestedRecyclerView
+            android:id="@+id/lv_consolidado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

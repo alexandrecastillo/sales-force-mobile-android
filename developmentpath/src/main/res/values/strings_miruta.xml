@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_eliminar">ELIMINAR</string>
+    <string name="imposible_abrir_documento">No se puede abrir el documento</string>
+    <string name="text_permissions_hint">Por favor, ingresa a Permisos y luego activa %1$s</string>
+    <string name="si">SI</string>
+    <string name="no">NO</string>
+    <string name="text_acuerdos_de_la_vista">ACUERDOS DE LA VISITA</string>
+    <string name="text_finalizar">FINALIZAR</string>
+    <string name="text_nuevo_acuerdo">NUEVO ACUERDO</string>
+    <string name="title_get_LatLng">GUARDA LA UBICACIÓN</string>
+    <string name="text_phone">Teléfono</string>
+
+    <!--PERMISSIONS-->
+    <string name="text_phone_state_warning">Se necesita permiso para poder realizar llamadas</string>
+    <string name="text_external_storage_warning">Se necesita permiso para acceder a la memoria externa</string>
+    <string name="text_access_coarse_location_warning">Se necesita permiso para acceder su localizacion</string>
+    <string name="text_fine_location_warning">Se necesita permiso para acceder a su localizacion</string>
+    <string name="text_permissions_not_granted">Los permisos para esta característica están deshabilitados</string>
+    <string name="text_give_permissions_manually">Habilitar ahora</string>
+
+    <string name="text_ubicacion">Ubicación</string>
+
+    <!--Exception messages-->
+    <string name="exception_message_generic">Se ha producido un error de aplicación</string>
+    <string name="exception_message_no_connection">No hay conexión a internet</string>
+    <string name="exception_message_user_not_found">No se puede obtener los datos de usuario. Revisar su conección a internet</string>
+    <string name="not_found_service">Servicio no encontrado</string>
+    <string name="not_available_service">Servicio no disponible</string>
+    <string name="not_available_option">Opción no disponible</string>
+    <string name="credenciales_invalidas">Contraseña incorrecta</string>
+    <string name="solicitud_rechazada_mensaje">La solicitud ya ha sido rechazada</string>
+    <string name="title_digital_sale_esika_name">App Ésika Conmigo</string>
+    <string name="title_digital_sale_lbel_name">App L\'Bel Conmigo</string>
+    <string name="title_digital_sale_esika_description">¿Pasa pedidos por el App?</string>
+    <string name="title_digital_sale_esika_description_se">Nº de Consultoras que pasan pedido por el App</string>
+    <string name="label_digital_sale_campaign">C%s</string>
+    <string name="label_digital_sale_campaign_year">C%s - %s</string>
+    <string name="title_digital_sale_accompaniment_name">Acompañamiento Digital</string>
+    <string name="title_digital_sale_accompaniment_description">¿La consultora abre sus correos?</string>
+    <string name="title_digital_sale_online_store_name">Mi Tienda Online</string>
+    <string name="title_digital_sale_online_store_description_share">¿Comparte a sus clientes?</string>
+    <string name="title_digital_sale_online_store_description_buy">¿Ha tenido pedidos por %s?</string>
+    <string name="title_digital_sale_online_store_description_sale">Venta por Mi Tienda Online</string>
+    <string name="title_digital_sale_ganamas_name">Gana +</string>
+    <string name="title_digital_sale_ganamas_description">¿Compra Ofertas Gana +?</string>
+    <string name="title_digital_sale_ganamas_description_se">%1$s de %2$s Consultoras Suscritas hasta %3$s</string>
+    <string name="title_digital_sale_unique_ip_name">IP Único</string>
+    <string name="title_digital_sale_unique_ip_description">¿Es IP Único?</string>
+    <string name="title_digital_sale_unique_ip_description_se">Porcentaje de IP Único</string>
+    <string name="title_digital_sale_digital_catalog_name">Catálogo Digital</string>
+    <string name="title_digital_sale_digital_catalog_description">¿Comparte el catálogo a sus clientes?</string>
+    <string name="title_digital_sale_makeup_app_name">Asesor de belleza</string>
+    <string name="title_digital_sale_makeup_app_description">¿Tiene pedidos desde su asesor de belleza?</string>
+    <string name="label_digital_sale_subscribed">Suscrita desde %s</string>
+    <string name="label_digital_sale_unsubscribed">No Suscrita</string>
+    <string name="label_digital_sale_registered">Registrada desde %s</string>
+    <string name="label_digital_sale_unregistered">No Registrada</string>
+    <string name="label_digital_sale_subscribe_buyers">Suscritas y Compran</string>
+    <string name="label_digital_sale_subscribe_not_buyers">Suscritas y No Compran</string>
+    <string name="label_digital_sale_not_subscribe_buyers">No Suscritas y Compran</string>
+    <string name="label_digital_sale_not_subscribe_not_buyers">No Suscritas y No Compran</string>
+    <string name="percentage_string_format">%s%%</string>
+    <string name="label_digital_sale_actives">%1$s activas a %2$s</string>
+    <string name="title_digital_sale_digital_offer_name_se">Ofertas Digitales</string>
+    <string name="title_digital_sale_digital_offer_description_se">Nº de Consultoras que compran Ofertas Digitales</string>
+    <string name="title_digital_sale_digital_one">Veces compartiendo catálogo digital</string>
+    <string name="title_digital_sale_digital_two">Cantidad de pre-pedidos</string>
+    <string name="title_digital_sale_digital_three">Cantidad de pre-pedidos aprobados</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inspira_background">
+
+    <ImageView
+        android:id="@+id/ivwInspiraNotificationClose"
+        android:layout_width="@dimen/material_dimen_component_x6"
+        android:layout_height="@dimen/material_dimen_component_x6"
+        android:layout_margin="@dimen/material_dimen_component_x2"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="@dimen/material_dimen_component_x2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_button_close" />
+
+    <ImageView
+        android:id="@+id/ivwInspiraNotificationIcon"
+        android:layout_width="@dimen/view_inspira_160dp"
+        android:layout_height="@dimen/view_inspira_150dp"
+        android:layout_marginBottom="@dimen/material_dimen_component_x4"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@id/txvInspiraNotificationTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/inspira_avion" />
+
+    <TextView
+        android:id="@+id/txvInspiraNotificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/dialog_inspira_title"
+        android:textAlignment="center"
+        android:textSize="@dimen/view_inspira_18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvInspiraNotificationDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_dimen_component_x2"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/dialog_inspira_detail"
+        android:textAlignment="center"
+        android:textSize="@dimen/view_inspira_14sp"
+        app:layout_constraintTop_toBottomOf="@id/txvInspiraNotificationTitle" />
+
+    <Button
+        android:id="@+id/btnInspiraNotificationAccept"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_inspira_45dp"
+        android:layout_marginStart="@dimen/material_dimen_component_x4"
+        android:layout_marginTop="@dimen/material_dimen_component_x7"
+        android:layout_marginEnd="@dimen/material_dimen_component_x4"
+        android:background="@drawable/background_button_rdd_agregar_evento"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/dialog_inspira_button_accept"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txvInspiraNotificationDetail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

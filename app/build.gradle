@@ -1,0 +1,319 @@
+import biz.belcorp.salesforce.Config
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Versions
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'newrelic'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileOptions {
+        sourceCompatibility Versions.Android.javaVersion
+        targetCompatibility Versions.Android.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = Versions.Android.javaVersion.toString()
+        jvmTarget = '1.8'
+        noStdlib = true
+    }
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+    compileSdkVersion Versions.Android.compileSdkVersion
+    buildToolsVersion Versions.Android.buildToolsVersion
+    testOptions.unitTests.includeAndroidResources = true
+    defaultConfig {
+        applicationId Config.applicationId
+        minSdkVersion Versions.Android.minSdkVersion
+        targetSdkVersion Versions.Android.targetSdkVersion
+        versionCode Versions.Android.appVersionCode
+        versionName Versions.Android.appVersionName
+        testInstrumentationRunner Config.testInstrumentationRunner
+        multiDexEnabled true
+    }
+    dexOptions {
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+        jumboMode true
+        preDexLibraries true
+    }
+    bundle {
+        density {
+            enableSplit true
+        }
+        abi {
+            enableSplit true
+        }
+        language {
+            enableSplit false
+        }
+    }
+    packagingOptions {
+        excludes -= Config.Packaging.excludes
+        exclude "/META-INF/*.kotlin_module"
+    }
+    signingConfigs {
+        def env = new Properties()
+
+        env.load(new FileInputStream(rootProject.file(Config.Signing.env)))
+
+        ci {
+            storeFile rootProject.file(env[Config.Signing.storeFile])
+            storePassword env[Config.Signing.storePassword]
+            keyAlias env[Config.Signing.keyAlias]
+            keyPassword env[Config.Signing.keyPassword]
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled Config.App.isCiServer
+            signingConfig signingConfigs.ci
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
+                mappingFileUploadEnabled Config.App.isCiServer
+            }
+
+            manifestPlaceholders = [entorno_prefix: "", build_prefix: ""]
+
+            buildConfigField 'String', 'HOST', '"https://ffvvmobile.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api.belcorp.biz/"'
+        }
+        stage {
+            debuggable !Config.App.isCiServer
+            minifyEnabled Config.App.isCiServer
+            signingConfig signingConfigs.ci
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
+                mappingFileUploadEnabled Config.App.isCiServer
+            }
+
+            if (!Config.App.isCiServer) {
+                applicationIdSuffix ".stage"
+                manifestPlaceholders = [build_prefix: "Stage "]
+            } else {
+                manifestPlaceholders = [build_prefix: ""]
+            }
+
+            versionNameSuffix "-rc.${Versions.Android.appVersionCode}"
+
+            buildConfigField 'String', 'HOST', '"https://ffvvmobile.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api.belcorp.biz/"'
+        }
+        develop {
+            debuggable true
+            minifyEnabled Config.App.isCiServer
+            signingConfig signingConfigs.ci
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
+                mappingFileUploadEnabled Config.App.isCiServer
+            }
+
+            if (!Config.App.isCiServer) {
+                testCoverageEnabled true
+                applicationIdSuffix '.develop'
+                manifestPlaceholders = [build_prefix: "Develop "]
+            } else {
+                manifestPlaceholders = [build_prefix: ""]
+            }
+
+            versionNameSuffix "-nb.${Versions.Android.appVersionCode}"
+
+            buildConfigField 'String', 'HOST', '"https://ffvvmobileqa.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api-qa.belcorp.biz/"'
+        }
+        review {
+            debuggable true
+            minifyEnabled Config.App.isCiServer
+            signingConfig signingConfigs.ci
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
+                mappingFileUploadEnabled Config.App.isCiServer
+            }
+
+            if (!Config.App.isCiServer) {
+                testCoverageEnabled true
+                applicationIdSuffix '.review'
+            }
+
+            versionNameSuffix "-nb.${Versions.Android.appVersionCode}"
+            manifestPlaceholders = [build_prefix: "Review "]
+
+            buildConfigField 'String', 'HOST', '"https://ffvvmobileqa.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api-qa.belcorp.biz/"'
+        }
+    }
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        test.java.srcDirs += "src/sharedtest/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+    dynamicFeatures = [
+            ":auth",
+            ":kpis",
+            ":developmentpath",
+            ":virtualmethodology",
+            ":developmentmaterial",
+            ":postulants",
+            ":consultants",
+            ":orders",
+            ":billing",
+            ":creditinquiry",
+            ":calculator",
+            ":brightpath",
+            ":termsconditions",
+            ":digital",
+            ":inspires"
+    ]
+
+    flavorDimensions "perfil"
+    productFlavors {
+        multiprofile {
+            manifestPlaceholders = [app_name: "Crecer es Ganar 2.0",
+                                    appIcon : "@mipmap/ic_launcher"]
+            resValue "string", "app_name", "Crecer es Ganar 2.0"
+            resValue "string", "app_name_simple", "Crecer es Ganar"
+            resValue "drawable", "splash_screen", "@drawable/splash_screen_multiprofile"
+            buildConfigField "int", "productType", "2"
+            applicationIdSuffix ".multiprofile"
+
+            dimension "perfil"
+        }
+        businesspartners {
+            manifestPlaceholders = [app_name: "Gestiona tu Negocio 2.0",
+                                    appIcon : "@mipmap/ic_launcher_socias"]
+            resValue "string", "app_name", "Gestiona tu Negocio 2.0"
+            resValue "string", "app_name_simple", "Gestiona tu Negocio"
+            resValue "drawable", "splash_screen", "@drawable/splash_screen_partners"
+            buildConfigField "int", "productType", "1"
+            applicationIdSuffix ".businesspartners"
+
+            dimension "perfil"
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def project = Config.name
+            def profile = variant.productFlavors[0].name
+            def buildType = variant.buildType.name
+            def version = variant.versionName
+            outputFileName = "${project}-${profile}-${buildType}-${version}.apk"
+        }
+    }
+    tasks.whenTaskAdded { task ->
+        def exp = /bundle(\w+)((Review)|(Develop)|(Stage)|(Release))/
+        if (task.name ==~ exp) {
+            def project = Config.name
+            def version = Versions.Android.appVersionName
+            def buildVariant = task.name.substring("bundle".length()).uncapitalize()
+            def renameTaskName = "rename${buildVariant.capitalize()}Aab"
+            tasks.create(renameTaskName, Copy) {
+                def path = "${buildDir}/outputs/bundle/${buildVariant}"
+                from(path)
+                include "app.aab"
+                destinationDir file("${path}/")
+                rename "app.aab", "${project}-${buildVariant}-${version}.aab"
+            }
+            def deleteTaskName = "delete${buildVariant.capitalize()}Aab"
+            tasks.create(deleteTaskName, Delete) {
+                def path = "${buildDir}/outputs/bundle/${buildVariant}"
+                delete fileTree(path).matching {
+                    include "**/app.aab"
+                }
+            }
+            task.finalizedBy(renameTaskName, deleteTaskName)
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(":core")
+    api project(":components")
+    api project(":messaging")
+    api project(":analytics")
+
+    api Deps.kotlin
+    api Deps.kotlinCoroutines
+    api Deps.kotlinCoroutinesAndroid
+    api Deps.Libs.kotlinSerialization
+
+    api Deps.Android.navigationFragment
+    api Deps.Android.navigationUI
+    implementation Deps.Android.multidex
+
+    implementation Deps.Libs.firebaseCore
+    implementation Deps.Libs.firebaseAnalytics
+    implementation Deps.Libs.firebaseMessaging
+    implementation Deps.Libs.firebaseConfig
+    implementation Deps.Libs.firebasePerf
+    implementation Deps.Libs.firebaseCrashlytics
+
+    implementation Deps.Libs.glide
+    implementation Deps.Libs.glideOkHttp
+    kapt Deps.Libs.glideCompiler
+
+    implementation Deps.Libs.jsonwebtoken
+    implementation Deps.Libs.workManager
+    implementation Deps.Libs.rxJava
+    implementation Deps.Libs.rxAndroid
+    implementation Deps.Libs.workManagerKTX
+
+    implementation Deps.Libs.retrofit
+    implementation Deps.Libs.retrofitGsonConverter
+    implementation Deps.Libs.retrofitScalarsConverter
+    implementation Deps.Libs.retrofitKotlixConverter
+    implementation Deps.Libs.retrofitRxJavaAdapter
+    implementation Deps.Libs.okHttp
+    implementation Deps.Libs.okHttpInterceptor
+    implementation Deps.Libs.gson
+
+    implementation Deps.Libs.playCore
+
+    implementation Deps.Libs.stetho
+    implementation Deps.Libs.dbflow
+    implementation Deps.Libs.dbflowCore
+    implementation Deps.Libs.dbflowKotlin
+    implementation Deps.Libs.rootbeer
+    kapt Deps.Libs.dbflowProcessor
+
+    releaseImplementation Deps.Libs.objectbox
+    stageImplementation Deps.Libs.objectbox
+    developImplementation Deps.Libs.objectbox
+    reviewImplementation Deps.Libs.objectboxBrowser
+
+    // Test
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.koinTest
+    testImplementation Deps.Test.kluent
+    testImplementation Deps.Test.mockk
+    testImplementation Deps.Test.androidTestCore
+    testImplementation Deps.Test.androidTestExt
+    testImplementation Deps.Test.androidArchTestCore
+    testImplementation Deps.Test.roboelectric
+    testImplementation Deps.Test.roboelectricMulidex
+    testImplementation Deps.Test.coroutines
+    androidTestImplementation Deps.Test.runner
+    androidTestImplementation Deps.Test.espressoCore
+    androidTestImplementation Deps.Test.mockkAndroid
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.objectbox'
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'

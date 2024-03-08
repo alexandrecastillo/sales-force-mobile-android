@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/item_postulante_card">
+
+    <LinearLayout
+        style="@style/item_postulante_card_body"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/header"
+            style="@style/item_postulante_header"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtNombres"
+                    style="@style/item_postulante_name" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/item_postulante_status_box"
+                android:background="@drawable/background_unete_rechazada_box">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/item_postulante_status_box_label"
+                    android:text="@string/rechazada"
+                    android:textColor="@color/unete_rechazado" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/body"
+            style="@style/item_postulante_body">
+
+            <LinearLayout
+                android:id="@+id/lyDatos"
+                style="@style/item_postulante_datos_layout">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtNroDocumento"
+                    style="@style/item_postulante_label_data"
+                    android:text="@string/unete_listado_documento" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSeccion"
+                    style="@style/item_postulante_label_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unete_listado_seccion" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtFuente"
+                    style="@style/item_postulante_label_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unete_listado_fuente" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtDireccion"
+                    style="@style/item_postulante_dato"
+                    android:textAlignment="viewStart"
+                    tools:text="@string/direccion" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyStatus"
+                style="@style/item_postulante_status_layout">
+
+                <ImageView
+                    style="@style/item_postulante_status_circle"
+                    android:background="@drawable/circle_unete_rechazada"
+                    android:contentDescription="@string/app_name" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtStatus"
+                    style="@style/item_postulante_status_message"
+                    android:textColor="@color/unete_rechazado" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTipoRechazo"
+                style="@style/item_postulante_motivorechazo"
+                tools:text="@string/postulante_motivo_rechazo" />
+
+            <LinearLayout
+                android:id="@+id/lyMotivoRechazo"
+                style="@style/item_postulante_motivorechazo_layout">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtMotivoRechazo"
+                    style="@style/item_postulante_motivorechazo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOptions"
+            style="@style/item_postulante_action_layout"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnAprobar"
+                style="@style/item_postulante_action"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/aprobar"
+                android:textColor="#5b127b" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

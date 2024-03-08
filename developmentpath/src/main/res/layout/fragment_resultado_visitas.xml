@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/imageViewTitulo"
+        android:layout_width="@dimen/size_image_result_visit"
+        android:layout_height="@dimen/size_image_result_visit"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_resultadosvisitas" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:layout_marginEnd="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_resultado_visitas_titulo"
+        android:textColor="@color/mi_ruta_accent"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewTitulo"
+        app:layout_constraintTop_toTopOf="@id/imageViewTitulo" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grupoFelicitacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="imageViewFelicitacion,textViewTituloFelicitacion,textViewSubtituloFelicitacion"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageViewFelicitacion"
+        android:layout_width="@dimen/rdd_widget_size"
+        android:layout_height="@dimen/rdd_widget_size"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:contentDescription="@null"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewTitulo"
+        app:srcCompat="@drawable/ic_felicidades" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTituloFelicitacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:text="@string/rdd_congrats"
+        android:textColor="@color/dark_text"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewFelicitacion" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewSubtituloFelicitacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:text="@string/rdd_all_consultant_billed"
+        android:textColor="@color/dark_text"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloFelicitacion" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFacturaron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/btn_corner_radius"
+        app:cardElevation="@dimen/ds_default_elevation"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtituloFelicitacion">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewFacturaron"
+                android:layout_width="@dimen/size_image_result_visit"
+                android:layout_height="@dimen/size_image_result_visit"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewFacturaron"
+                app:srcCompat="@drawable/ic_pedido" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFacturaron"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:layout_marginBottom="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/dark_text"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/botonVerListaFacturadas"
+                app:layout_constraintStart_toEndOf="@id/imageViewFacturaron"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="10 Consultoras facturaron" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonVerListaFacturadas"
+                style="@style/Widget.Button.OutlinedButton.Black.Rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="@dimen/rdd_margin_start"
+                android:paddingTop="@dimen/content_inset_half"
+                android:paddingEnd="@dimen/rdd_margin_start"
+                android:paddingBottom="@dimen/content_inset_half"
+                android:text="@string/rdd_resultado_visitas_ver_lista"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintBottom_toBottomOf="@id/textViewFacturaron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewFacturaron" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNoFacturaron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/two"
+        app:cardElevation="@dimen/two"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@+id/cardFacturaron">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewNoFacturaron"
+                android:layout_width="@dimen/size_image_result_visit"
+                android:layout_height="@dimen/size_image_result_visit"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewNoFacturaron"
+                app:srcCompat="@drawable/ic_alert_red" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewNoFacturaron"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:layout_marginBottom="@dimen/content_inset_normal"
+                android:fontFamily="@font/mulish_regular"
+                android:lineSpacingMultiplier="@dimen/rdd_visit_line_spacing"
+                android:textColor="@color/dark_text"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/botonVerListaNoFacturadas"
+                app:layout_constraintStart_toEndOf="@id/imageViewNoFacturaron"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="20 Consultoras aún no facturaron" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonVerListaNoFacturadas"
+                style="@style/Widget.Button.OutlinedButton.Black.Rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="@dimen/rdd_margin_start"
+                android:paddingTop="@dimen/content_inset_half"
+                android:paddingEnd="@dimen/rdd_margin_start"
+                android:paddingBottom="@dimen/content_inset_half"
+                android:text="@string/rdd_resultado_visitas_ver_lista"
+                android:textSize="@dimen/text_size_caption"
+                app:layout_constraintBottom_toBottomOf="@id/textViewNoFacturaron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewNoFacturaron" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

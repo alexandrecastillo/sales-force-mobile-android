@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyCabeceraCobranza"
+        style="@style/CardViewConsultantGroupStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="2dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txtTitleCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/text_cobranza_campania"
+            android:textColor="@color/perfil_text_section"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageExpandirColapsar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyCobranza"
+        style="@style/CardStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:clickable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyCabeceraCobranza"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guia_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_monto_facturado_neto_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:text="@string/text_perfil_cobranza_monto_facturado_neto"
+            android:textColor="#8e8e93"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/guia_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_monto_facturado_neto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:textColor="#243039"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/guia_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_monto_facturado_neto_titulo"
+            tools:text="10,560.50" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_monto_recuperado_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:text="@string/text_perfil_cobranza_monto_recuperado"
+            android:textColor="#8e8e93"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/guia_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_monto_facturado_neto" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_monto_recuperado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:textColor="#243039"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/guia_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_monto_recuperado_titulo"
+            tools:text="10,560.50" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_saldo_deuda_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:text="@string/text_perfil_saldo_deuda"
+            android:textColor="#8e8e93"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_monto_recuperado" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_saldo_deuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:textColor="#243039"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_saldo_deuda_titulo"
+            tools:text="1,538.50" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_recuperacion_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:text="@string/text_perfil_cobranza_recuperacion"
+            android:textColor="#8e8e93"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guia_vertical"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_recuperacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:textColor="#243039"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guia_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_recuperacion_titulo"
+            tools:text="88%" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_consultoras_deuda_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:text="@string/text_perfil_consultoras_con_deuda"
+            android:textColor="#8e8e93"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guia_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_recuperacion" />
+
+        <TextView
+            android:id="@+id/tv_perfil_cobranza_consultoras_deuda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mulish_regular"
+            android:singleLine="true"
+            android:textColor="#243039"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guia_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perfil_cobranza_consultoras_deuda_titulo"
+            tools:text="18" />
+
+
+        <TextView
+            android:id="@+id/tvFechaSync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="#567baf"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_perfil_cobranza_saldo_deuda"
+            tools:text="Actualizado hoy a las 7:00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

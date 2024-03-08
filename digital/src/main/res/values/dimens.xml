@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="digital_chart_width">100dp</dimen>
+    <dimen name="default_indicator_size">4dp</dimen>
+    <dimen name="selected_indicator_size">6dp</dimen>
+
+    <dimen name="digital_header_title_end_margin">112dp</dimen>
+
+</resources>

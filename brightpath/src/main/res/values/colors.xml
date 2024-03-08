@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gris_escala_5">#454549</color>
+
+    <color name="shadow_start">#26000000</color>
+    <color name="shadow_end">#00000000</color>
+
+    <color name="indicator_bright_path">#6879f8</color>
+    <color name="indicator_bright_path_light">#6879f8</color>
+
+    <color name="white_transparent_20">#33FFFFFF</color>
+
+    <color name="color_gray_home">#768ea3</color>
+    <color name="gray_label">#661d1d26</color>
+    <color name="purple">#722789</color>
+
+    <!--    consultant-->
+    <color name="level_bronze">#C67F32</color>
+    <color name="level_gold">#E7A403</color>
+    <color name="level_silver">#849FAC</color>
+    <color name="level_platinum">#384249</color>
+    <color name="level_diamond">#8686CD</color>
+    <color name="color_persona_1">#8e8e93</color>
+    <color name="bg_line">#F0F0F0</color>
+    <color name="purple_value">#911190</color>
+
+
+</resources>

@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Planificación rápida -->
+    <string name="perfil_cantidad_productos_ppu_normal_dos_PAV">\u0020para un PAV.</string>
+    <string name="text_profile_most_sold_products_pos">%d° %s</string>
+    <string name="rdd_titulo_error_demanda">UPSS! NO PUDIMOS CONECTARNOS A INTERNET</string>
+    <string name="rdd_subtitulo_error_informacion_demanda">Verifica tu conexión para visualizar la información.</string>
+    <string name="rdd_subtitulo_error_perfil_demanda"><![CDATA[Verifica tu conexión para visualizar la información de tu&#160;]]></string>
+    <string name="rdd_subtitulo_normal_error_demanda">Verifica tu conexión para visualizar la planificación de tus </string>
+    <string name="rdd_subtitulo_bold_error_demanda">\u0020Socias Empresarias</string>
+
+    <plurals name="perfil_cantidad_productos_ppu_normal_uno">
+        <item quantity="one">En %s le faltó</item>
+        <item quantity="other">En %s le faltaron</item>
+    </plurals>
+
+    <plurals name="perfil_cantidad_productos_ppu_bold_uno">
+        <item quantity="one">\u0020%d producto</item>
+        <item quantity="other">\u0020%d productos</item>
+    </plurals>
+
+    <plurals name="perfil_cantidad_productos_ppu_bold">
+        <item quantity="one">\u0020%d producto</item>
+        <item quantity="other">\u0020%d productos</item>
+    </plurals>
+
+    <string name="accept">Aceptar</string>
+    <!-- Mi Ruta -->
+    <string name="mi_ruta_fragment_titulo">MI RUTA DE DESARROLLO</string>
+    <string name="rdd_informacion_campania">%1$s %2$s</string>
+    <string name="mi_ruta_tab_planificadas">Planificadas</string>
+    <string name="mi_ruta_tab_no_planificadas">No planificadas</string>
+    <string name="mi_ruta_titulo_item_seccion_no_planificadas">Contacta a %1$s</string>
+    <string name="mi_ruta_planificar_seccion_no_planificadas">Planifica aquí</string>
+    <string name="mi_ruta_planificar_tail_seccion_no_planificadas">&#160;esta visita</string>
+    <string name="mi_ruta_header_seccion_eventos">AGREGAR EVENTO</string>
+    <string name="mi_ruta_header_seccion_hoy">MIS VISITAS DE HOY</string>
+    <string name="mi_ruta_header_seccion_no_programadas">No programadas</string>
+    <string name="mi_ruta_header_seccion_no_planificadas">No planificadas</string>
+    <string name="mi_ruta_header_seccion_candidatas_proactivas">Posibles consultoras proactivas</string>
+    <string name="mi_ruta_header_seccion_candidatas_no_proactivas">Posibles consultoras no proactivas</string>
+    <string name="mi_ruta_visita_registrada">Ya realizaste esta visita</string>
+    <string name="mi_ruta_no_existen_planificadas">No tienes visitas planificadas</string>
+    <string name="mi_ruta_feriado">Feriado</string>
+
+    <string name="mi_ruta_contacta_a">Contacta a %1$s</string>
+    <string name="mi_ruta_switch_on">Mapa</string>
+    <string name="mi_ruta_switch_off">Lista</string>
+
+    <string name="socia_exitosa">Exitosa</string>
+    <string name="socia_no_exitosa">No exitosa</string>
+
+    <string name="rdd_buscador_hint">Buscar por nombre o segmento</string>
+
+    <!-- Fragment Dialog Datetime Picker -->
+    <string name="fragm_datetime_picker_title">%1$s - FECHA Y HORA</string>
+    <string name="mi_ruta_datetime_picker_save">GUARDAR</string>
+    <string name="mi_ruta_datetime_dia">DÍA</string>
+    <string name="mi_ruta_datetime_hora">HORA</string>
+    <string name="mi_ruta_datetime_date_separetor">/</string>
+    <string name="mi_ruta_datetime_hour_separator">:</string>
+
+    <!-- Fragment Dialog confirm eliminación de ruta-->
+    <string name="mi_ruta_eliminar_message">¿Estás segura que quieres eliminar a %1$s de tu calendario?</string>
+    <string name="mi_ruta_eliminar_title_confirm">Has eliminado a %1$s de tu calendario correctamente</string>
+    <string name="mi_ruta_eliminar_subtitle_confirm">Si quieres planificarla de nuevo, puedes encontrarla en No Planificadas</string>
+    <string name="mi_ruta_eliminar_cancel">CANCELAR</string>
+    <string name="mi_ruta_eliminar_confirm">ELIMINAR</string>
+    <string name="mi_ruta_eliminar_ok">OK, ENTENDIDO</string>
+
+    <!-- Fragment dialog registrado visita -->
+    <string name="mi_ruta_registrar_visita_title">REGISTRAR VISITA</string>
+    <string name="mi_ruta_registrar_visita_descripcion_pasa_pedido">¿|%1$s pasará pedido| esta campaña?</string>
+    <string name="mi_ruta_replanificar_visita_success_title">HAS REPLANIFICADO TU VISITA CON ÉXITO</string>
+    <string name="mi_ruta_planificar_visita_success_title">HAS PLANIFICADO TU VISITA CON ÉXITO</string>
+    <string name="mi_ruta_planificar_visita_adicional_success_title">HAS PLANIFICADO UNA VISITA ADICIONAL</string>
+    <string name="mi_ruta_replanificar_visita_success_fecha">La nueva fecha de visita es el %1$s</string>
+    <string name="mi_ruta_planificar_visita_success_fecha">La fecha de visita es el %1$s</string>
+    <string name="mi_ruta_replanificar_visita_success_hora">Hora: %1$s</string>
+    <string name="mi_ruta_replanificar_visita_success_aceptar">OK, ENTENDIDO</string>
+    <string name="mi_ruta_replanificar_visita_title">REPLANIFICA VISITA</string>
+    <string name="mi_ruta_planificar_visita_title">PLANIFICA UNA VISITA</string>
+    <string name="mi_ruta_registrar_visita_date">FECHA</string>
+    <string name="mi_ruta_registrar_visita_hour">HORA</string>
+    <string name="mi_ruta_registrar_visita_detail">DETALLE DE VISITA</string>
+    <string name="mi_ruta_registrar_visita_cancel">CANCELAR</string>
+    <string name="mi_ruta_registrar_visita_accept">REGISTRAR</string>
+    <string name="mi_ruta_planificar_replanificar_adicionar_visita_accept">GUARDAR</string>
+    <string name="mi_ruta_registrar_visita_date_value">%1$s&#160;&#160;/
+        &#160;&#160;%2$s&#160;&#160;/&#160;&#160;%3$s&#160;&#160;</string>
+    <string name="mi_ruta_registrar_visita_hour_separator">:</string>
+    <string name="mi_ruta_registrar_visita_detalle">DETALLE DE LA VISITA</string>
+    <string name="mi_ruta_registrar_visita_success">VISITA REGISTRADA</string>
+    <string name="mi_ruta_registrar_visita_success_ok">ACEPTAR</string>
+    <string name="mi_ruta_registrar_visita_error_obs">Debes seleccionar un detalle</string>
+    <string name="mi_ruta_replanificar_accion">REPLANIFICAR</string>
+    <string name="mi_ruta_planificar_accion">PLANIFICA</string>
+
+    <!-- Dialog replanificar success -->
+    <string name="mi_ruta_replanificar_success_title">HAS REPLANIFICADO TU VISITA CON ÉXITO</string>
+    <string name="mi_ruta_replanificar_success_subtitle">La nueva fecha de visita es %1$s Hora: %2$s</string>
+    <string name="mi_ruta_fecha_invalida">Debes elegir una fecha posterior a la actual</string>
+    <string name="mi_ruta_fecha_distinta_hoy">La fecha de registro debe ser hoy.</string>
+
+    <!-- Indicador GZ -->
+    <string name="rdd_indicador_salidas">MIS VISITAS REALIZADAS</string>
+    <string name="rdd_indicador_salidas_third_person">SUS VISITAS REALIZADAS</string>
+    <string name="rdd_indicador_visitas_se">VISITAS DE LAS SOCIAS EMPRESARIAS</string>
+    <string name="rdd_indicador_visitas_se_third_person">VISITAS DE SUS SOCIAS EMPRESARIAS</string>
+    <string name="rdd_indicador_separador">/</string>
+
+    <!-- Dashboard -->
+    <string name="rdd_dashboard_titulo">Rutas de desarrollo</string>
+    <string name="rdd_dashboard_foco">Foco de Campaña:</string>
+    <string name="rdd_dashboard_btn_ver_mi_ruta">Ver mi Ruta</string>
+    <string name="rdd_dashboard_btn_ver_ruta">VER RUTA</string>
+    <string name="rdd_dashboard_header_avance_socias">AVANCE DE LAS SOCIAS</string>
+    <string name="rdd_dashboard_descoberturada">DESCOBERTURADA</string>
+    <string name="rdd_dashboard_zona_descoberturada">ZONA %1$s - DESCOBERTURADA</string>
+    <string name="rdd_dashboard_tab_avance">AVANCE DE ZONA</string>
+    <string name="rdd_dashboard_tab_focos">FOCOS DE CAMPAÑA</string>
+    <string name="rdd_dashboard_tab_mi_seccion">MI SECCIÓN</string>
+    <string name="rdd_dashboard_tab_focos_titulo_seccion_coberturada">Sección %1$s - %2$s</string>
+    <string name="rdd_dashboard_tab_focos_titulo_seccion_descoberturada">Sección %1$s - Descoberturada</string>
+    <string name="rdd_dashboard_tab_focos_titulo_zona_coberturada">Zona %1$s - %2$s</string>
+    <string name="rdd_dashboard_tab_focos_titulo_zona_descoberturada">Zona %1$s - Descoberturada</string>
+    <string name="rdd_dashboard_tab_focos_titulo_region_coberturada">Región %1$s - %2$s</string>
+    <string name="rdd_dashboard_tab_focos_titulo_region_descoberturada">Región %1$s - Descoberturada</string>
+    <string name="rdd_asignacion_focos_titulo_focos">SELECCIONA LOS FOCOS PARA TU EQUIPO</string>
+    <string name="rdd_asignacion_focos_titulo_focos_propios">SELECCIONA TUS FOCOS</string>
+    <string name="rdd_asignacion_focos_titulo_personas">Asignar a:</string>
+    <string name="rdd_asignacion_focos_titulo_detalle_personas">%1$s (Sección %2$s) - %3$s</string>
+    <string name="rdd_dashboard_btn_asignar_foco">ASIGNAR FOCO</string>
+    <string name="rdd_dashboard_focos_zona_titulo">FOCOS DE LAS SOCIAS</string>
+    <string name="rdd_dashboard_focos_region_titulo">FOCOS DE MI EQUIPO</string>
+    <string name="rdd_dashboard_btn_editar_focos_text">EDITAR</string>
+    <string name="rdd_dashboard_btn_asignar_focos_text">ASIGNAR</string>
+    <string name="rdd_dashboard_titulo_focos_campania">FOCOS DE NEGOCIO</string>
+    <string name="rdd_dashboard_no_focos_habilidades">Aún no se han asignado</string>
+    <string name="rdd_dashboard_alerta_focos_asignados">Focos asignados</string>
+    <string name="rdd_dashboard_alerta_habilidades_asignadas">Habilidades asignadas</string>
+    <string name="rdd_dashboard_alerta_visita_planificada">¡Visita planificada!</string>
+    <string name="rdd_dashboard_title_new">¡Hola,%1$s!</string>
+    <string name="rdd_dashboard_subtitle_new">Bienvenida a tu Ruta de Desarrollo</string>
+    <string name="rdd_gz">Gerente de Zona</string>
+    <string name="rdd_gz_zone">Zona: %1$s</string>
+    <string name="rdd_gr_region">Región: %1$s</string>
+    <string name="rdd_gz_section">Sección: %1$s</string>
+    <string name="rdd_se_level">Nivel: %1$s</string>
+
+    <!-- Resultado de visitas -->
+    <string name="rdd_resultado_visitas_titulo">RESULTADO DE VISITAS</string>
+    <string name="rdd_resultado_visitas_ver_lista">VER LISTA</string>
+    <string name="rdd_resultado_visitas_cantidad_filtro">Resultados de tu búsqueda (%1$s)</string>
+    <string name="rdd_lista_resultado_visitas_titulo_facturadas">FACTURARON</string>
+    <string name="rdd_lista_resultado_visitas_titulo_no_facturadas">NO FACTURARON</string>
+    <string name="rdd_lista_resultado_visitas_subtitulo_facturadas">Consultoras que facturaron en %1$s</string>
+    <string name="rdd_lista_resultado_visitas_subtitulo_no_facturadas">Consultoras que aún no facturaron en %1$s</string>
+    <string name="rdd_lista_resultado_visitas_codigo_digitoverificador">Código: %1$s</string>
+    <string name="rdd_lista_resultado_visitas_monto_pedidoingresado">Pedido ingresado: %1$s</string>
+    <string name="rdd_lista_resultado_visitas_ver_pedidos_somosbelcorp">Ver consultoras con pedido en SomosBelcorp</string>
+    <string name="rdd_lista_resultado_visitas_error_ver_pedidos">Error al intentar obtener datos de pedidos</string>
+
+    <plurals name="rdd_resultado_visitas_titulo_consultoras_facturaron">
+        <item quantity="one">%1$s Consultora facturó</item>
+        <item quantity="other">%1$s Consultoras facturaron</item>
+    </plurals>
+    <plurals name="rdd_resultado_visitas_titulo_consultoras_no_facturaron">
+        <item quantity="one">%1$s Consultora aún no facturó</item>
+        <item quantity="other">%1$s Consultoras aún no facturaron</item>
+    </plurals>
+
+    <plurals name="rdd_lista_resultado_visitas_cantidad_total">
+        <item quantity="one">%1$s Consultora</item>
+        <item quantity="other">%1$s Consultoras</item>
+    </plurals>
+
+    <!-- Mapa -->
+    <string name="rdd_mapa_progress">Hallando ruta óptima&#8230;</string>
+    <string name="rdd_mapa_text_cercanas">Activa otras %s cercanas</string>
+    <string name="rdd_mapa_button_actualizar_ruta">Actualiza tu ruta</string>
+    <string name="rdd_mapa_ver_perfil">VER PERFIL COMPLETO</string>
+    <string name="rdd_mapa_sin_conexion">Estás desconectado.\nConéctate a internet e inténtalo de nuevo.</string>
+
+    <!-- Menu -->
+    <string name="rdd_menu_ver_perfil">Ver perfil completo</string>
+
+    <!-- Cabecera otra persona -->
+    <string name="rdd_cabecera_otra_persona_viendo">Estás viendo</string>
+    <string name="rdd_cabecera_otra_persona_detalle">**%1$s / %2$s %3$s -** %4$s</string>
+    <string name="rdd_cabecera_otra_persona_salir">Salir</string>
+    <string name="rdd_cabecera_otra_persona_ver_mas">Ver más</string>
+    <string name="rdd_cabecera_otra_persona_ver_menos">Ver menos</string>
+    <string name="rdd_cabecera_ver_menos_ico">-</string>
+    <string name="rdd_cabecera_ver_ruta">Ver ruta</string>
+    <string name="rdd_cabecera_back">Regresar a Mi Ruta de Desarrollo</string>
+    <string name="rdd_cabecera_confirmacion">¿Estás segura que quieres regresar a tu Ruta de Desarollo?</string>
+    <string name="rdd_confirmacion_registrar_evento">¿Deseas registrar el evento para darlo por terminado?</string>
+    <string name="rdd_confirmacion_ok">Aceptar</string>
+    <string name="rdd_confirmacion_registrar">Registrar</string>
+    <string name="rdd_confirmacion_cancel">Cancelar</string>
+
+    <!-- ReconocimientoEntity -->
+    <string name="rdd_reconocimiento_titulo">RECONÓCELA</string>
+    <string name="rdd_reconocimiento_subtitulo">Según lo que observaste durante la visita</string>
+    <string name="rdd_reconocimiento_visita_clientes"><b>Visita a sus clientes</b></string>
+    <string name="rdd_reconocimiento_conoce_novedades"><b>Conoce novedades</b> de campaña</string>
+    <string name="rdd_reconocimiento_crece_red"><b>Crece su red de clientes</b></string>
+    <string name="rdd_reconocimiento_cobra_antes"><b>Cobra</b> antes de entregar productos</string>
+    <string name="rdd_reconocimiento_usa_herramientas">Usa <b>herramientas digitales</b></string>
+    <string name="rdd_reconocimiento_utiliza_muestras"><b>Utiliza muestras</b> para vender</string>
+    <string name="rdd_reconocimiento_reconocer">RECONOCER (0/6)</string>
+    <string name="rdd_asignar_habilidad">ASIGNAR ( %1$d / %2$d )</string>
+    <string name="rdd_reconocer_habilidad">RECONOCER ( %1$d / %2$d )</string>
+    <string name="rdd_asignar_habilidades">ASIGNAR HABILIDADES</string>
+
+    <string-array name="text_tit_se">
+        <item>Intenta superar <b>su meta</b></item>
+        <item>Habla con <b>claridad y seguridad</b></item>
+        <item>Crea <b>experiencias de producto</b></item>
+        <item><b>Muestra interés</b> en las consultoras</item>
+        <item>Impulsa el uso de <b>medios digitales</b></item>
+        <item>Enseña a gestionar su <b>red de clientes</b></item>
+    </string-array>
+
+    <string name="rdd_reconocimiento_success_titulo">¡CONSULTORA RECONOCIDA CON ÉXITO!</string>
+    <string name="rdd_reconocimiento_success_subtitulo">Te sugerimos reconocerla cada campaña para que siga creciendo y ganando más.</string>
+
+    <!--  Dashboard SE -->
+    <string name="desarrollo_seccion_uc6">DESARROLLO DE LA SECCIÓN</string>
+    <string name="avance_visitas">AVANCE DE VISITAS</string>
+    <string name="avance_campania">AVANCE DE CAMPAÑA</string>
+    <string name="reconocimiento_gz">RECONOCIMIENTO A GERENTE DE ZONA</string>
+    <string name="denominador_avance">/%1$s</string>
+
+    <string name="consultoras_visitadas_plan">Consultoras visitadas del plan</string>
+    <string name="mis_focos_campania">MIS FOCOS DE CAMPAÑA</string>
+    <string name="mis_focos_sin_focos">No se asignaron foco aún.</string>
+    <string name="ver_mas">VER MÁS +</string>
+
+    <string name="valor_porcentaje" formatted="false">%1$d %%</string>
+
+    <!-- Dashboard GR -->
+    <string name="desarrollo_region">DESARROLLO DE LA REGIÓN</string>
+    <string name="comportamiento_gerentes">COMPORTAMIENTO DE GERENTAS</string>
+    <string name="dashboard_gr_tab_avance">AVANCE DE REGIÓN</string>
+    <string name="dashboard_gr_tab_focos">FOCOS DE CAMPAÑA</string>
+    <string name="desarrollo_region_parametro">DESARROLLO DE LA REGIÓN %1$s</string>
+    <string name="gerentes_zona_visitadas">Gerentes de zona visitadas del plan</string>
+    <string name="socias_zona_visitadas">Socias empresarias visitadas del plan</string>
+    <string name="hijas_parametro_visitadas">%1$s visitadas del plan</string>
+    <string name="avance_gerentes_zona">AVANCE DE GERENTES DE ZONA</string>
+    <string name="zona_nombre_paramentros">ZONA %1$s - %2$s</string>
+    <string name="gz_nueva">GZ Nueva</string>
+    <string name="gz_description_roles_progress">%1$s visitadas en la campaña</string>
+    <string name="gz_bp_make_visits_description">Socias realizan visitas a consultoras en la campaña</string>
+    <string name="gz_bp_eight_days_visits_description">%Socias registrando visitas durante 8 días o más</string>
+    <string name="se_visits_days_description">Registrando visitas de desarrollo en la campaña</string>
+    <string name="se_visits_days_title">%1$s días</string>
+
+    <!--Dashboard Pais -->
+    <string name="dashboard_dv_tab_avance">AVANCE DE PAÍS</string>
+    <string name="dashboard_dv_avance_campania">AVANCE DE CAMPAÑA</string>
+    <string name="dashboard_dv_pedidos_facturados">Pedidos Facturados:</string>
+    <string name="dashboard_dv_intencion_pase_pedido">Intención de pase de pedido:</string>
+    <string name="dashboard_dv_pedidos_facturados_porcentaje">Lograda al %1$d%%</string>
+    <string name="dashboard_dv_pedidos_facturados_meta">Meta:  %1$s</string>
+    <string name="dashboard_dv_x_dias">%1$d días</string>
+    <string name="dashboard_dv_dias_para_cierre">%1$s |para \ncierre País</string>
+    <string name="dashboard_dv_hoy">Hoy |es cierre País</string>
+    <string name="avance_gerentes_regionales">AVANCE DE GERENTES REGIONALES</string>
+    <string name="avance_region_titulo_coberturada">Región %1$s - %2$s</string>
+    <string name="avance_region_titulo_descoberturada">Región %1$s - Descoberturada</string>
+    <string name="dashboard_dv_desarrollo_habilidades">DESARROLLO HABILIDADES GR</string>
+    <string name="dashboard_intencion_pase_provisional">0</string>
+
+    <!--Desarrollo de UA -->
+    <string name="desarrollo_ua_avance_placeholder">DESARROLLO DE LA CAMPAÑA ANTERIOR</string>
+    <string name="desarrollo_ua_avance">DESARROLLO DE %1$s %2$s</string>
+    <string name="comportamientos_equipo">COMPORTAMIENTOS DE MI EQUIPO</string>
+    <string name="avance_de_comportamientos">AVANCE DE COMPORTAMIENTOS</string>
+
+    <!-- Reconocimiento Region GR -->
+    <string name="desarrollo_region_subtitle">Habilidades de Liderazgo de mi equipo</string>
+    <string name="campania_type_1">C-%s</string>
+    <string name="desarrollo_ua_title">DESARROLLO %s</string>
+
+    <!-- Indicador GR -->
+    <string name="mis_salidas">MIS SALIDAS REALIZADAS</string>
+    <string name="visitas_mis_se">VISITAS DE MIS SOCIAS EMPRESARIAS</string>
+    <string name="visitas_mis_gz">VISITAS DE MIS GERENTES DE ZONA</string>
+    <string name="numerador_rdd_indicador">%1$s/</string>
+
+    <!-- Indicador DV -->
+    <string name="titulo_mis_visitas">MIS VISITAS</string>
+    <string name="desarrollo_pais_title">DESARROLLO DEL PAÍS %s</string>
+    <string name="titulo_desarrollo_habilidades">DESARROLLO DE HABILIDADES GR</string>
+
+    <!--Reconocimiento hacia arriba -->
+    <string name="reconocimiento_detalle_titulo">¿CÓMO FUE LA SALIDA DE DESARROLLO?</string>
+    <string name="reconocimmiento_detalle_pregunta">
+        ¿El acompañamiento de esta campaña es clave para impulsar tus resultados de negocio?</string>
+    <string name="reconocimientog_gz_hint">Cuéntanos por qué&#8230;</string>
+    <string name="reconocimiento_gz_anonimo">Recuerda, este reconocimiento es anónimo.</string>
+    <string name="sin_reconocimientos">No hay reconocimientos disponibles.</string>
+    <string name="zona_arg">ZONA %1$s</string>
+    <string name="reconocimiento_a_placeholder">RECONOCIMIENTOS</string>
+    <string name="reconocimiento_a_placeholder_dv">RECONOCIMIENTOS A DIRECTOR DE VENTAS</string>
+    <string name="reconocimiento_a_rol">RECONOCIMIENTO A %1$s</string>
+
+    <!--Comportamientos -->
+    <string name="reconociminto_seccion_1">Visita a sus clientes.</string>
+    <string name="reconociminto_seccion_12"><Data><![CDATA[ <b>ABC</b> ]]> </Data></string>
+    <string name="reconociminto_seccion_2">Conoce novedades de campaña.</string>
+    <string name="reconociminto_seccion_3">Crece su red de clientes.</string>
+    <string name="reconociminto_seccion_4">Cobra antes de entregar productos.</string>
+    <string name="reconociminto_seccion_5">Usa herramientas digitales.</string>
+    <string name="reconociminto_seccion_6">Utiliza muestras para vender.</string>
+    <string name="reconoce_seccion_title">DESARROLLO DE LA SECCIÓN %1$s</string>
+
+    <!--Comportamientos -->
+    <string name="reconocimiento_zona_1">Intenta superar sus metas</string>
+    <string name="reconocimiento_zona_2">Habla con claridad y seguridad</string>
+    <string name="reconocimiento_zona_3">Crea experiencias de producto</string>
+    <string name="reconocimiento_zona_4">Muestra interés en las consultoras</string>
+    <string name="reconocimiento_zona_5">Impulsa el uso de medios digitales</string>
+    <string name="reconocimiento_zona_6">Enseña a gestionar su red de clientes</string>
+
+    <string name="rol_unidad_administrativa">%1$s %2$s</string>
+    <string name="guion_dos_campos">%1$s - %2$s</string>
+    <string name="resultado_wep">RESULTADO DE LOS FILTROS APLICADOS</string>
+
+    <!--Habilidades reconocidas -->
+    <string name="titulo_avance_habilidades">AVANCE DE HABILIDADES DE LIDERAZGO U6C</string>
+    <string name="link_avance_habilidades">AVANCE DE HABILIDADES U6C</string>
+    <string name="campania_ejemplo">C08</string>
+
+    <!--Metas personales -->
+    <string name="campo_descripcion_necesario">Necesita ingresar una meta.</string>
+    <string name="divisor_dos_parametros">%1$d/%2$d</string>
+    <string name="meta_guardada">Meta guardada.</string>
+
+    <!-- Mis foco -->
+    <string name="mis_focos_negocio">MIS FOCOS DE CAMPAÑA</string>
+
+    <!-- Mis habilidades -->
+    <string name="mis_habilidades">MIS HABILIDADES DE LIDERAZGO</string>
+
+    <!-- Eventos -->
+    <string name="rdd_agregareventos_titulo">AGREGAR EVENTO</string>
+    <string name="rdd_agregareventos_editar_titulo">EDITAR EVENTO</string>
+    <string name="rdd_agregareventos_guardar_cambios">GUARDAR CAMBIOS</string>
+    <string name="rdd_agregareventos_guardar">GUARDAR EVENTO</string>
+    <string name="rdd_agregareventos_registrar">Registrar Evento</string>
+    <string name="rdd_agregareventos_hint_titulo_evento">Título</string>
+    <string name="rdd_agregareventos_aviso_socias">Este evento se enviará a todas las Socias Empresarias</string>
+    <string name="rdd_agregareventos_aviso_gzs">Este evento se enviará a todas las Gerentes de Zona</string>
+    <string name="rdd_agregareventos_aviso_grs">Este evento se enviará a todas las Gerentes de Región</string>
+    <string name="rdd_agregareventos_todoeldia">Evento de todo el día</string>
+    <string name="rdd_agregareventos_hint_ubicacion">Ubicación</string>
+    <string name="rdd_agregareventos_hint_hora">Hora</string>
+    <string name="rdd_agregareventos_alerta">Alerta</string>
+    <string name="rdd_agregareventos_tiempo_ninguno">Ninguno</string>
+    <string name="rdd_agregareventos_tiempo_a_la_hora">A la hora del evento</string>
+    <string name="rdd_agregareventos_tiempo_antes">antes</string>
+    <string name="rdd_agregareventos_fechapicker_titulo">DÍA EVENTO</string>
+    <string name="rdd_agregareventos_fechapicker_guardar">CONFIRMAR DÍA</string>
+    <string name="rdd_agregareventos_horapicker_titulo">HORA EVENTO</string>
+    <string name="rdd_agregareventos_horapicker_inicio">HORA INICIO</string>
+    <string name="rdd_agregareventos_horapicker_fin">HORA FIN</string>
+    <string name="rdd_agregareventos_horapicker_guardar">CONFIRMAR HORA</string>
+    <string name="rdd_agregareventos_horapicker_error_comparacion">La hora final debe ser mayor a la hora inicial</string>
+    <string name="rdd_agregareventos_mensaje_exito">Se creó el evento correctamente</string>
+    <string name="rdd_agregareventos_compartircheckboxmensaje_socias">Compartir este evento con todas las socias empresarias</string>
+    <string name="rdd_agregareventos_compartircheckboxmensaje_gzs">Compartir este evento con todas las gerentes de zona</string>
+    <string name="rdd_agregareventos_compartircheckboxmensaje_grs">Compartir este evento con todas las gerentes de región</string>
+    <string name="rdd_agregareventos_error_generico">Error al crear evento</string>
+    <string name="rdd_agregareventos_error_fecha_fuera_periodo">La fecha está fuera del período de campaña</string>
+    <string name="rdd_agregareventos_error_fecha_antes_hoy">La fecha no puede ser antes a hoy</string>
+    <string name="rdd_agregareventos_error_hora_inicio_mayor_fin">La hora de inicio no puede ser mayor a la hora fin</string>
+    <string name="rdd_editarevento_fechahora">Fecha y hora</string>
+    <string name="rdd_editarevento_mensaje_exito">Se editó el evento correctamente</string>
+    <string name="rdd_eliminarevento_titulo">ELIMINAR EVENTO</string>
+    <string name="rdd_detalleevento_todoeldia">Todo el día</string>
+    <string name="rdd_eliminarevento_confirmacion">¿Estás segura que quieres eliminar este evento de tu calendario?</string>
+    <string name="rdd_planificarevento_confirmacion">¿Estás segura que quieres planificar este evento .......?</string>
+    <string name="rdd_listar_evento_subtitulo_todoeldia">Todo el día</string>
+    <string name="rdd_notificacion_alarma_titulo">Rutas de desarrollo</string>
+    <string name="rdd_notificacion_alarma_contenido">%1$s, tu evento %2$s empieza a las %3$s</string>
+    <string name="rdd_notificacion_cambio_crear_prefecha">desde las</string>
+    <string name="rdd_notificacion_cambio_editar_titulo">✎ Evento modificado</string>
+    <string name="rdd_notificacion_cambio_editar_descripcion">Ingresa a tu Ruta de Desarrollo para ver el evento modificado</string>
+    <string name="rdd_notificacion_cambio_eliminar_titulo">‼ Evento eliminado</string>
+    <string name="rdd_notificacion_cambio_eliminar_descripcion">Ingresa aquí para ver el día del evento eliminado</string>
+    <string name="rdd_eliminarevento_mensaje">Se eliminó el evento correctamente</string>
+    <string name="rdd_evento_ya_eliminado">Este evento ha sido eliminado por tu %1$s</string>
+    <string name="rdd_evento_registrado">Este evento se registró y se dio por terminado</string>
+    <string name="rdd_item_evento_registrado">Evento registrado</string>
+    <string name="rdd_perfil_reconocer_habilidades">RECONOCER</string>
+    <string name="rdd_habilidades_titulo">HABILIDADES DE LIDERAZGO</string>
+
+    <!-- Perfil -->
+    <string name="perfil_error_datos">Error al recuperar datos de perfil</string>
+
+    <!-- Perfil -->
+    <string name="perfil_general_codigo_co">CÓDIGO</string>
+    <string name="perfil_general_codigo_se">CÓDIGO CONSULTORA</string>
+    <string name="perfil_general_saldopendiente_co">SALDO PENDIENTE</string>
+    <string name="perfil_general_campaniaingreso">CAMPAÑA DE INGRESO</string>
+    <string name="perfil_general_ultimafacturacion">ÚLTIMA FACTURACIÓN</string>
+    <string name="perfil_general_documentoidentidad_co">DOC. IDENTIDAD</string>
+    <string name="perfil_general_cantidadreingresos_co">REINGRESOS U18C</string>
+    <string name="perfil_general_telefono_co">TELÉFONO</string>
+    <string name="perfil_general_aniversario_co">ANIVERSARIO</string>
+    <string name="perfil_general_correo_co">CORREO</string>
+    <string name="perfil_general_autorizada_co">AUTORIZADA</string>
+    <string name="perfil_general_payment_co">TIPO</string>
+    <string name="perfil_general_direccion_co">DIRECCIÓN</string>
+    <string name="perfil_general_reference_co">REFERENCIA</string>
+    <string name="perfil_general_seccion_se">SECCIÓN</string>
+    <string name="perfil_general_multi_marca">MULTIMARCA</string>
+    <string name="perfil_general_si_multi_marca">Sí</string>
+    <string name="perfil_general_no_multi_marca">No</string>
+
+    <string name="perfil_general_autorizada">Sí</string>
+    <string name="perfil_general_no_autorizada">No</string>
+
+    <string name="perfil_general_has_cash_payment">CON CRÉDITO</string>
+    <string name="perfil_general_has_not_cash_payment">SIN CRÉDITO</string>
+
+    <string name="perfil_datos_de_la_x">Datos de la %1$s</string>
+    <string name="profile">Perfil</string>
+    <string name="competence">Competencia</string>
+    <string name="accompaniment">Acompañamiento</string>
+    <string name="agreements">Acuerdos</string>
+    <string name="dream">Sueño</string>
+
+    <!--Perfil GR's -->
+    <string name="preguntas_poderosas_titulo">3 PREGUNTAS PODEROSAS PARA UNA CONVERSACIÓN DE DESARROLLO</string>
+    <string name="pregunta_aprendizajes">¿Cuáles fueron tus **aprendizajes** de la campaña anterior?</string>
+    <string name="pregunta_focos_trabajo">¿Cuáles serán tus **foco de trabajo** esta campaña? ¿Qué harás diferente para lograrlos?</string>
+    <string name="pregunta_habilidades">¿Qué **habilidades necesitas desarrollar** para lograr lo que te propones?</string>
+    <string name="preguntas_poderosas_mensaje_final">Al terminar la conversación, **regístrala,
+        reconoce las habilidades** que está desarrollando y escribe en la sección **acuerdos**
+        los compromisos pactados.</string>
+
+    <!-- Gráficos de resumen de regiones -->
+    <string name="grafico_region_promedio_titulo">Promedio (P$P)</string>
+    <string name="grafico_region_retencion_6d6_titulo">Retención 6d6</string>
+    <string name="grafico_region_retencion_activas_titulo">Retención Activas</string>
+    <string name="grafico_region_productivas_titulo">Productivas</string>
+    <string name="grafico_region_cambio_nivel_titulo">Cabio de Nivel</string>
+    <string name="grafico_region_rotacion_se_titulo">Rotación SE</string>
+
+    <string name="grafico_region_promedio_subtitulo">P$P U6C</string>
+
+    <string name="conversacion_desarrollo_1">1</string>
+    <string name="conversacion_desarrollo_2">2</string>
+    <string name="conversacion_desarrollo_3">3</string>
+    <string name="productividad_u3c">Productividad U3C</string>
+    <string name="productividad_u3c_zona">ZONA</string>
+
+    <!-- Información histórica de región -->
+    <string name="informacion_historica_titulo">INFORMACIÓN HISTÓRICA</string>
+    <string name="informacion_historica_retencion_activas">Retención Activas</string>
+
+    <string name="real_activas_u6c">* Real activas 6 últimas campañas</string>
+    <string name="activas_finales_c18">%d Activas Finales C18 - %d</string>
+
+    <plurals name="rdd_agregareventos_tiempo_minutos">
+        <item quantity="one">minuto</item>
+        <item quantity="other">minutos</item>
+    </plurals>
+    <plurals name="rdd_agregareventos_tiempo_horas">
+        <item quantity="one">hora</item>
+        <item quantity="other">horas</item>
+    </plurals>
+    <plurals name="rdd_agregareventos_tiempo_dias">
+        <item quantity="one">día</item>
+        <item quantity="other">días</item>
+    </plurals>
+    <plurals name="rdd_agregareventos_tiempo_semanas">
+        <item quantity="one">semana</item>
+        <item quantity="other">semanas</item>
+    </plurals>
+
+    <!-- Planificación rápida -->
+    <string name="rdd_planificacionrapida_titulo">PLANIFICA TUS VISITAS</string>
+    <string name="rdd_planificacionrapida_subtitulo">Planifica rápido y fácil. Te sugerimos visitar primero a las nuevas</string>
+    <string name="rdd_planificacionrapida_orden_hint">ORDENADO POR:</string>
+    <string name="rdd_planificacionrapida_orden_region">REGIÓN</string>
+    <string name="rdd_planificarapido_ingresa_fecha">Ingresa la fecha:</string>
+    <string name="rdd_planificarapido_ingresa_hora">Ingresa la hora:</string>
+    <string name="rdd_planificarapido_titulo">VISITA A %1$s</string>
+    <string name="dashboard_updated">Se actualizó la vista correctamente</string>
+
+    <!-- Error al obtener plan -->
+    <string name="rdd_plan_error_general">No se pudo recuperar el plan asociado</string>
+    <string name="rdd_plan_region_error">La región no ha sido planificada</string>
+    <string name="rdd_plan_zona_error">La zona no ha sido planificada</string>
+    <string name="rdd_plan_seccion_error">La sección no ha sido planificada</string>
+
+    <!-- Prepararse es clave Resultado SE -->
+
+    <string name="rst_venta_catalogo">VENTA CATÁLOGO</string>
+    <string name="rst_venta_neta">VENTA NETA</string>
+    <string name="rst_pedidos">PEDIDOS</string>
+    <string name="rst_capitalizacion">CAPITALIZACIÓN</string>
+    <string name="rst_ingresos">INGRESOS</string>
+    <string name="rst_reingresos">REINGRESOS</string>
+    <string name="rst_egresos">EGRESOS</string>
+    <string name="rst_actividad">ACTIVIDAD</string>
+    <string name="rst_posibles_egresos">POSIBLES EGRESOS</string>
+    <string name="rst_consultoras_6d6">CONSULTORAS 6D6</string>
+    <string name="rst_recuperacion">RECUPERACIÓN</string>
+    <string name="rst_consultoras_deuda">CONSULTORAS CON DEUDA</string>
+    <string name="rst_reteincion_activas">RETENCIÓN ACTIVAS VS %1$s</string>
+
+    <string name="venta_neta_u6c">Venta Neta U6C</string>
+    <string name="pedidos_u6c">Pedidos U6C</string>
+    <string name="ganancia_u6c">Ganancia U6C</string>
+    <string name="capitalizacion_u6c">Capitalización U6C</string>
+    <string name="retencionactivas_u6c">Retención de Activas U6C</string>
+    <string name="desempenio_u6c">Desempeño U6C</string>
+    <string name="marcas_categorias_u6c">Marcas y categorías U6C</string>
+    <string name="marcas_u6c">Marcas U3C</string>
+    <string name="penetracion_marca">Penetración de Marca</string>
+    <string name="ingresos">Ingresos</string>
+    <string name="reingresos">Reingresos</string>
+    <string name="egresos">Egresos</string>
+    <string name="capitalizacion_ing">Ing</string>
+    <string name="capitalizacion_reing">Reing</string>
+    <string name="capitalizacion_egr">Egr</string>
+    <string name="capitalizacion_capi">Capi</string>
+    <string name="retencionactivas_18">%s Activas Finales C18 - %s</string>
+    <string name="realactivas_u6c">* Real Activas U6C</string>
+    <string name="ganancia_promedio">Ganancia promedio U6C</string>
+    <string name="ventaneta_table_title">Venta Neta Moneda Nacional</string>
+    <string name="ganancia_table_title">Ganancia Aproximada Moneda Nacional</string>
+    <string name="monto_maximo">%s 💸</string>
+    <string name="realpedidos_u6c">* Real Pedidos U6C</string>
+    <string name="mensaje_empty_grafico">Oh… por el momento no hay\ninformación disponible</string>
+
+    <!-- Acompaniamiento -->
+    <string name="title_tips_de_desarrollo">Tips de Desarrollo</string>
+    <string name="title_planificada">Planificada</string>
+    <string name="title_no_planificada">No Planificada</string>
+    <string name="title_planificar">Planificar</string>
+    <string name="title_replanificar">Replanificar</string>
+    <string name="text_registrar_visita">Registrar visita</string>
+    <string name="titulo_progreso_de_la_consultora">Progreso de la Consultora</string>
+    <string name="titulo_en_el_periodo">En el periodo:</string>
+
+    <string name="concursos_puntos">%s ptos</string>
+    <string name="concursos_faltan_puntos">Te faltan %s puntos</string>
+    <string name="concursos_tienes_puntos_programa_brillante">Tienes: %s puntos</string>
+    <string name="concursos_faltan_puntos_programa_brillante">Te faltan %s puntos para pertenecer al Programa Brillante</string>
+
+    <!-- Firebase -->
+    <string name="evento_firebase_no_enviado">Error al enviar el evento firebase.</string>
+
+
+    <string name="text_datos_de_la_cobranza">Datos de la cobranza</string>
+    <string name="venta_ganancia">Venta Ganancia</string>
+    <string name="saldo_pendiente">Saldo Pendiente</string>
+    <string name="consultora_consecutiva">Consultora Consecutiva</string>
+    <string name="venta_facturada">Venta Facturada</string>
+    <string name="recaudacion_comisionable">Recaudación Comisionable</string>
+    <string name="ganancia">Ganancia</string>
+    <string name="recaudo_total">Recaudo Total</string>
+    <string name="recaudacion_no_comisionable">Recaudación no Comisionable</string>
+    <string name="ganancia_venta_retail">Ganancia Venta Retail</string>
+    <string name="venta_retail">Venta Retail</string>
+    <string name="text_estado_de_cuenta">Estado de cuenta</string>
+    <string name="porcentaje_maximo">100%</string>
+    <string name="porcentaje_promedio">50%</string>
+    <string name="porcentaje_cero">0%</string>
+    <string name="venta_neta_mn">VENTA NETA MN</string>
+    <string name="fuente_de_venta">Fuente de venta</string>
+    <string name="venta_neta">Venta Neta</string>
+    <string name="meta_venta">Meta de Venta</string>
+    <string name="suscrita">Suscrita</string>
+    <string name="no_suscrita">No suscrita</string>
+    <string name="compro">Compró</string>
+    <string name="compra">Compra</string>
+    <string name="no_compro">No compró</string>
+    <string name="text_ip_unico">IP Único</string>
+    <string name="suscrita_a">Suscrita a</string>
+    <string name="no_suscrita_a">No suscrita a</string>
+    <string name="gana_mas">GANA+</string>
+    <string name="str_empty">\u0020</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="message_agregar_nota">Añade comentarios como: horario ideal de visita,referencia de direccion,etc.</string>
+    <string name="simbolo_mas">+</string>
+    <string name="titulo_tus_datos">Tus datos</string>
+    <string name="titulo_resultados">Resultados</string>
+    <string name="titulo_actualiza_tus_telefonos_y_correo">Actualiza tus teléfonos y correo</string>
+    <string name="tit_nombre">NOMBRE:</string>
+    <string name="tit_doc_identidad">DOC IDENTIDAD:</string>
+    <string name="titi_cod_consultora">COD CONSULTORA:</string>
+    <string name="tit_seccion">SECCION:</string>
+    <string name="tit_zona">ZONA:</string>
+    <string name="tit_region">REGIÓN:</string>
+    <string name="tit_ubicarme">Ubicarme</string>
+    <string name="text_guardar">GUARDAR</string>
+    <string name="tit_email">E-MAIL</string>
+    <string name="tit_telefono_movil">TELEFÓNO MÓVIL</string>
+    <string name="tit_telefno_casa">TELEFÓNO EN CASA</string>
+    <string name="tit_seccion_lider">SECCION EN LA QUE ES LIDER:</string>
+    <string name="tit_territorio">TERRITORIO</string>
+    <string name="tit_georeferencia">GEOREFERENCIA</string>
+    <string name="tit_cual_es_su_meta">¿Cuál es su meta?</string>
+    <string name="tit_campanas">Campañas:</string>
+    <string name="tit_nueva_nota">NUEVA NOTA</string>
+    <string name="tit_agregar_comentario">Agregar comentario</string>
+    <string name="tit_guardar">Guardar</string>
+    <string name="tit_cancelar">Cancelar</string>
+
+    <string name="reconocida_success_consultora">¡CONSULTORA RECONOCIDA CON ÉXITO!</string>
+    <string name="reconocida_success_no_consultora">!RECONOCIDA CON EXITO!</string>
+
+    <string name="title_activity_list_consultant">ListConsultantActivity</string>
+    <string name="tit_venta_cat">VENTA CATÁLOGO</string>
+    <string name="tit_venta_cat_2">Venta Catálogo</string>
+    <string name="tit_venta">VENTA</string>
+    <string name="tit_capitalizacion">CAPITALIZACIÓN</string>
+    <string name="tit_retencion_6_de_6">RETENCIÓN 6 de 6</string>
+    <string name="descargar_datos_camapana">DESCARGAR DATOS \n CAMAPAÑA %1$s</string>
+    <string name="datos_para_planificacion">DATOS PARA PLANIFICACIÓN</string>
+    <string name="enEvaluacion">Evaluación</string>
+    <string name="aprobadas">Aprobadas</string>
+    <string name="preAprobadas">Pre-Aprobadas</string>
+    <string name="rechazadas">Rechazadas</string>
+    <string name="ingAnticipados">Ing. Anticipados</string>
+    <string name="buscar_candidatas">Buscar</string>
+    <string name="you_have_detail_cycle">En %1$s tienes</string>
+    <string name="you_achieve_detail_cycle">En %1$s lograste</string>
+    <string name="amount">%1$s %2$s</string>
+    <string name="of_conversion">de conversión</string>
+    <string name="dpi">D.P.I.</string>
+    <string name="evaluacion_detail">En evaluación</string>
+    <string name="pre_inscritas">Pre-Inscritas</string>
+    <string name="aprobada_detail">Aprobadas</string>
+    <string name="not_selected">Debe seleccionar una opción</string>
+    <string name="field_empty">Debe completar este campo</string>
+    <string name="consultora_recomendada_format">Valide el formato o la cantidad de digitos del campo</string>
+    <string name="preaprobada_detail">Pre-aprobadas</string>
+    <string name="ingresos_anticipados">Ing. Anticipados</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="validar">VALIDAR CRÉDITO</string>
+    <string name="ver_postulantes">Ver Postulantes</string>
+    <string name="unete_listado_empty">No hay postulantes %s en este momento</string>
+    <string name="text_ultima_facturacion">Última facturación</string>
+    <string name="text_codigo_de_cosultora">Código de consultora</string>
+    <string name="text_autorizada">Autorizada</string>
+    <string name="text_cantidad_reingresos_u18">Cant. reingresos U18C</string>
+    <string name="text_campana_de_ingreso">Campaña de ingreso</string>
+    <string name="text_hora_visita">(Hora de visita - %1$s)</string>
+    <string name="text_acuerdo">Registra acuerdos que esperas que se cumplan con el fin de desarrollarse en la campaña</string>
+    <string name="txt_message_acuerdos">No tiene acuerdos registrados.</string>
+    <string name="campaign_focus">Foco de la campaña</string>
+    <string name="acompaniamiento_subtitle">PROMUEVE LOS LANZAMIENTOS</string>
+    <string name="watch_more">VER MÁS +</string>
+    <string name="text_title_comp_obs">COMPORTAMIENTOS \nOBSERVADOS EN %1$s </string>
+    <string name="poco">Poco</string>
+    <string name="regular">Regular</string>
+    <string name="alto">Bastante</string>
+    <string name="reconocer">RECONOCER</string>
+    <string name="gracias_por_reconocer_a">¡GRACIAS POR RECONOCER A %s!</string>
+    <string name="calificar_rol">%s - %s</string>
+    <string name="calificar_message_hint">Cuéntanos por qué ...</string>
+    <string name="anonimo_mensaje">¡No te preocupes que este reconocimiento es anónimo!</string>
+    <string name="calificar_question_hint">¿Qué tanto sientes que te ayudó esta visita para cumplir tu meta de campaña?</string>
+    <string name="devuelto_sac_mensaje">Por favor, selecciona \"Ver información\" para editar y solucionar la observación</string>
+    <string name="devuelto_sac_mensaje_personalizado_paises">Por favor, selecciona \"Editar datos\" para solucionar la observación.</string>
+    <string name="titulo_progreso_u6c">PROGRESO DE \nCOMPORTAMIENTOS U6C</string>
+    <string name="documento_duplicado">Alerta</string>
+    <string name="documento_duplicado_mensaje">El documento de identidad %s ya existe.</string>
+    <string name="registro_duplicado_mensaje">La solicitud ya se encuentra registrada.</string>
+    <string name="unete_postulante_sac">Postulante se encuentra en evaluacion SAC.</string>
+    <string name="duplicate_mail">Correo ya utilizado.</string>
+    <string name="duplicate_celular">Celular ya utilizado.</string>
+    <string name="unete_valid_cedula_format">Debe llenar este campo</string>
+
+    <string name="text_habilidades_reconocidas">Habilidades reconocidas</string>
+    <string name="text_comportamientos_reconocidos">Comportamientos</string>
+    <string name="text_cancelar">CANCELAR</string>
+    <string name="reconocida_con_exito">¡RECONOCIDA CON ÉXITO!</string>
+    <string name="reconocida_sugerencia">Te sugerimos reconocer estas habilidades cada campaña para el desarrollo de tu %s</string>
+
+    <string name="campania_tipo_v">VENTA %s</string>
+    <string name="campania_tipo_f">FACTURACIÓN %s</string>
+    <string name="registro_metas">Registra hasta 3 metas de tu %s y motívala siempre a alcanzarlos.</string>
+    <string name="guardar_meta_gz">GUARDAR</string>
+    <string name="cancelar_meta_gz">CANCELAR</string>
+    <string name="nueva_meta_gz">NUEVA META</string>
+    <string name="meta_personal_gz">Meta Personal</string>
+    <string name="text_desempenio_ultimas_seis_campanias">Desempeño U6C</string>
+    <string name="percentage_graphic">%1$s%</string>
+    <string name="cobranza_ganancia">Cobranza y ganancia %1$s</string>
+    <string name="canancia_campania">Ganancia %1$s</string>
+    <string name="datos_como_consultora">Datos como consultora</string>
+
+    <!-- Otros -->
+    <string name="planificar">PLANIFICAR</string>
+    <string name="invoicing">Facturación</string>
+    <string name="sale">Venta</string>
+    <string name="titulo_avance_visitas_equipo">AVANCE DE VISITAS DE MI EQUIPO</string>
+    <string name="intencion_pedido_campania">Intención de Pase de Pedido C%s:</string>
+    <string name="gerente_regionales">Gerente Regionales</string>
+    <string name="gerentes_de_zona">Gerentes de Zona</string>
+    <string name="actualizacion_button_aceptar">Aceptar</string>
+    <string name="socias_empresarias">Socias Empresarias</string>
+    <string name="subtitulo_gerentes_regionales_visitadas_del_plan">Gerentes Regionales visitadas del plan</string>
+
+    <string name="default_prompt">Seleccione</string>
+    <string name="error_monto_vacio">Monto no debe estar vacío</string>
+    <string name="guardado_correctamente">Se grabó correctamente</string>
+    <string name="formato_nombre_completo">%s %s %s</string>
+    <string name="correo_invalido">No tiene formato de correo</string>
+    <string name="indicator_new_cicle_s2d2">2d2</string>
+    <string name="indicator_new_cicle_3d3">3d3</string>
+    <string name="indicator_new_cicle_4d4">4d4</string>
+    <string name="indicator_new_cicle_5d5">5d5</string>
+    <string name="indicator_new_cicle_6d6">6d6</string>
+    <string name="indicator_peg_consultoras">CONSULTORAS</string>
+    <string name="text_cero_value">0</string>
+    <string name="indicator_label_billed">FACTURADO</string>
+    <string name="text_indicador_unete_conversion">DE CONVERSIÓN</string>
+    <string name="text_indicator_joinup_waiting_days">DÍAS EN ESPERA</string>
+    <string name="text_indicator_joinup_pre_aprobadas">PRE-APROBADA</string>
+    <string name="text_indicator_joinup_evaluacion">EN EVALUACIÓN</string>
+    <string name="visitas_de_mi_equipo">VISITAS DE MI EQUIPO</string>
+    <string name="gr">GR:</string>
+    <string name="gz">GZ:</string>
+    <string name="se">SE:</string>
+    <string name="planificada">PLANIFICADA</string>
+    <string name="top_3">Top 3</string>
+    <string name="bottom_3">Bottom 3</string>
+    <string name="hyphen_space">- </string>
+    <string name="titulo_top_bottom_con_comparativa">Top y bottom de Zonas en C-%s: Real vs FdV</string>
+    <string name="titulo_top_bottom">Top y bottom de Zonas en C-%s:</string>
+
+    <string name="player_error">Error inicializando YouTube : %s</string>
+    <string name="detail_description_text">Identifica una variable de negocio que quieras priorizar. Escribe lo que se ha hecho, qué falta hacer y de dónde vendrán los resultados.</string>
+    <string name="habilidad_asignada_comportamiento_text">Identifica una variable de negocio que quieras priorizar. Escribe lo que se ha hecho, qué falta hacer y de dónde vendrán los resultados.</string>
+    <string name="rdd_habilidades_subtitulo_gz">Asigna %1$d habilidades que la impulsen a lograr sus objetivos</string>
+    <string name="rdd_habilidades_subtitulo_gr">Asígnate %1$d habilidades a desarrollar</string>
+
+    <string name="perfil_tab_zona_titulo">Zona %1$s</string>
+    <string name="text_gerente_zona">Gerente de Zona</string>
+    <string name="perfil_tab_estado_gz">Estado %1$s</string>
+    <string name="consultant">Consultora</string>
+    <string name="placeholder_autorizada">%1$s - %2$s</string>
+    <string name="text_datos_de_contacto">Datos de Contacto</string>
+    <string name="celular">Celular</string>
+    <string name="telefono_casa">Teléfono casa</string>
+    <string name="otro_telefono">Otro teléfono</string>
+    <string name="anadir">AÑADIR</string>
+    <string name="text_editar">EDITAR</string>
+    <string name="documento_identidad">Doc. Identidad</string>
+    <string name="direccion">Dirección</string>
+    <string name="correo">correo</string>
+    <string name="cumpleanos">Cumpleaños</string>
+    <string name="aniversario">Aniversario</string>
+    <string name="guardar">Guardar</string>
+    <string name="text_telefono">Telefono</string>
+    <string name="text_anadir_editar_otro_telefono">%s TELÉFONO</string>
+    <string name="text_otro_telefono_actualizado_con_exito">Se actualizó con éxito.</string>
+    <string name="text_otro_telefono_no_valido">Teléfono no válido.</string>
+    <string name="text_otro_telefono_vacio">Teléfono no puede estar vacío.</string>
+    <string name="text_correo">Correo</string>
+    <string name="text_correo_vacio">Correo no puede estar vacío.</string>
+    <string name="text_anadir_editar_correo">%s CORREO</string>
+    <string name="text_correo_no_valido">Correo no válido.</string>
+    <string name="text_correo_actualizado_con_exito">Se actualizó con éxito.</string>
+    <string name="text_cobranza_campania">Cobranza %1$s</string>
+    <string name="text_perfil_cobranza_monto_facturado_neto">Monto facturado neto</string>
+    <string name="text_perfil_cobranza_monto_recuperado">Monto recuperado</string>
+    <string name="text_perfil_saldo_deuda">Saldo de deuda</string>
+    <string name="text_perfil_cobranza_recuperacion">Recuperación</string>
+    <string name="text_perfil_consultoras_con_deuda">Consultoras con deuda</string>
+    <string name="updated">Actualizado %s</string>
+    <string name="perfil_cantidad_productos_ppu_normal_dos">\u0020para un Pedido de Alto Valor.</string>
+    <string name="perfil_cantidad_productos_ppu_normal_tres">\u0020Motívala a</string>
+    <string name="perfil_cantidad_productos_ppu_bold_dos">\u0020ganar más</string>
+    <string name="perfil_cantidad_productos_ppu_normal_cuatro">\u0020esta campaña.</string>
+    <string name="empty" />
+    <string name="mis_notas">Mis anotaciones</string>
+    <string name="cancelar_nota_gz">Cancelar</string>
+    <string name="guardar_nota_gz">Guardar</string>
+    <string name="text_resultados_campania_anterior">Resultados %s</string>
+    <string name="resultados_meta">META:</string>
+    <string name="resultados_real">REAL:</string>
+
+    <string name="rdd_all_consultant_billed">Todas tus consultoras facturaron</string>
+    <string name="rdd_congrats">¡FELICIDADES!</string>
+
+    <string name="guion">-</string>
+    <string name="data_for_section">Datos de la sección</string>
+
+    <string name="ranking_sales_net">Venta Neta MN</string>
+    <string name="ranking_retention_goal">% Secc >= meta de Retención de Activas</string>
+    <string name="ranking_productivity">SE Productivas	</string>
+    <string name="ranking_unique_ip">IP ÚNICO</string>
+    <string name="ranking_retention_6d6">% RET 6d6</string>
+
+    <string name="ranking_sales_title_1">FdV</string>
+    <string name="ranking_sales_title_2">Venta neta</string>
+    <string name="ranking_sales_title_3">Cumplimiento</string>
+    <string name="bright_path_level">Nivel camino brillante: %s</string>
+
+    <string name="add_dream_title">Agregar sueño</string>
+    <string name="what_your_dream_title">¿Cuál es su sueño?</string>
+    <string name="time_to_accomplish">¿Cuánto necesita para lograrlo?</string>
+    <string name="campaings_achieve">¿En cuantas campañas lo quiere lograr?</string>
+    <string name="comments">Comentarios</string>
+    <string name="add_comment">Agrega un comentario</string>
+    <string name="dream_description">Describe tu sueño</string>
+    <string name="save_dream">Guardar sueño</string>
+
+    <!-- Dream -->
+    <string name="dream_empty_question_1">¿CUÁL ES SU SUEÑO?</string>
+    <string name="dream_empty_question_2">¿CUÁNTO NECESITA PARA LOGARLO?</string>
+    <string name="dream_empty_question_3">¿EN CUÁNTAS CAMPAÑAS LO QUIERE LOGRAR?</string>
+    <string name="dream_empty_question_4">COMENTARIOS</string>
+    <string name="dream_empty_answer">-</string>
+    <string name="dream_empty_header_title">Sueño 1</string>
+    <string name="dream_header_title">Sueño de %1$s</string>
+    <string name="dream_accumulated_money">Lleva %1$s %2$s</string>
+    <string name="dream_remaining_money">Falta %1$s %2$s</string>
+    <string name="add_dream">Agregar sueño</string>
+    <string name="dream_empty_answer_suggest">Sueño pendiente de ser registrado, no te\nolvides de registrarlo con tu Consultora</string>
+    <string name="dream_fetch_error">Error al recuperar datos del sueño</string>
+    <string name="dream_campaign_remaining">%1$s / %2$s - %3$s</string>
+    <string name="dream_amount_remaining">%1$s %2$s</string>
+    <string name="dream_item_title">Campaña %1$d %2$s </string>
+    <string name="dream_item_value"> - %1$s</string>
+    <string name="dream_campaigns_numbers_title">Campañas</string>
+
+    <string name="dream_delete_title">¿Quieres eliminar el sueño seleccionado?</string>
+    <string name="dream_delete_cancel">No, dejar el sueño</string>
+    <string name="dream_delete_confirm">Sí, eliminar el sueño</string>
+    <string name="edit">EDITAR</string>
+    <string name="delete">ELIMINAR</string>
+    <string name="empty_value">Debe completar el campo</string>
+    <string name="dream_created">Sueño creado exitosamente</string>
+    <string name="dream_error">Error creando sueño</string>
+    <string name="edit_dream">Editar sueño</string>
+    <string name="dream_edited">Sueño editado exitosamente</string>
+
+
+    <!-- Bright Path -->
+    <string name="known_bright_path">Conoce el avance del Camino Brillante</string>
+    <string name="consultant_level">Consultora %1$s</string>
+    <string name="bright_path">Camino Brillante</string>
+    <string name="level_request">EXIGENCIAS POR NIVEL</string>
+    <string name="request">Pedidos</string>
+    <string name="total_sale">Venta acumulada por periodo</string>
+    <string name="progress_current_period"><![CDATA[Avance período vigente <%1$s>]]></string>
+    <string name="progress_current">Período vigente %1$s</string>
+    <string name="orders_placed">Pedidos realizados %1$s de %2$s</string>
+    <string name="pending_campaign">No te olvides de pasar pedido en las próximas\n </string>
+
+    <string name="level_orders_placed">%1$d a 6</string>
+
+    <string name="level_consultant">Consultora %1$s</string>
+
+    <string-array name="array_campaigns">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="multi_mark">Multimarca</string>
+    <string name="consultant_multi_mark">¿Es consultora multimarca?</string>
+    <string name="buy_multi_mark">Compra de Ésika, L’Bel Y Cyzone por Campaña</string>
+    <string name="sell_lbel">¿Vende L`bel?</string>
+    <string name="multicategor_a">Multicategoría</string>
+    <string name="buy_perfurm">Compra Fragancias</string>
+    <string name="buy_skin_care">Compra Tratamiento facial</string>
+    <string name="buy_make_up">Compra Maquillaje</string>
+    <string name="empty_data">Lo sentimos, no hay información\nactual para esta Consultora</string>
+    <string name="fragrances">Fragancias</string>
+    <string name="facial_treatment">Tratamiento\nFacial</string>
+    <string name="makeup">Maquillaje</string>
+    <string name="others">Otros</string>
+    <string name="buy_product">Compra %1$s</string>
+    <string name="products_lbel_title">El que prueba L’BEL se queda con L’BEL</string>
+    <string name="products_esika_title"><![CDATA[Más Bella & Segura en 3 minutos]]></string>
+    <string name="trio_lbel">Trio L’BEL</string>
+    <string name="see_detail_products_no_mx">Ver Detalle - Productos foco</string>
+    <string name="see_detail_product">Ver Detalle - Trio L’Bel</string>
+    <string name="product_bifasico">Compra Desmaquillador Bifásico</string>
+    <string name="compra_nocturne_s_rum">Compra Nocturne Sérum</string>
+    <string name="compra_infini_absol">Compra Infini Absolú</string>
+    <string name="compra_mithyka">Compra Mithyka</string>
+    <string name="compra_vibranza">Compra Vibranza</string>
+    <string name="compra_mega_full_size">Compra Mega Full Size</string>
+    <string name="compra_colorfix_duo_tattoo">Compra ColorFix Duo Tattoo</string>
+    <string name="campaign_progress_1">Llevas </string>
+    <string name="campaign_progress_2"> %1$s </string>
+    <string name="campaign_progress_3"> pedidos en</string>
+    <string name="campaign_progress_4"> %1$d </string>
+    <string name="campaign_progress_5"> campañas</string>
+    <string name="currentLevelAccumulated">Lleva acumulado en\n nivel %1$s a %2$s</string>
+    <string name="nextLevelAccumulated">Para subir a %1$s\n necesitas una venta de</string>
+    <string name="number_with_currency">%s %s</string>
+    <string name="currency_simbol">$ %1$s</string>
+    <string name="for_each_campaign">por cada una de las próximas</string>
+    <string name="to_stay_sell">PARA MANTENERTE COMO %1$s VENDE</string>
+    <string name="to_upgrade_sale">PARA SUBIR DE NIVEL A %1$s VENDE</string>
+    <string name="sells">Ventas</string>
+    <string name="empty_bright_path">Lo sentimos, no hay información\nactual para esta consultora</string>
+    <string name="current_period">AVANCE PERIODO VIGENTE %1$s</string>
+    <string name="amount_orders">PEDIDOS REALIZADOS %1$s DE 6</string>
+    <string name="current_campaign_format">C%1$s</string>
+</resources>

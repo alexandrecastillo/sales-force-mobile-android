@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txvCompetitionSelected"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ds_padding_40dp"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:background="@drawable/border_layout_black"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="start|center"
+        android:paddingStart="@dimen/ds_margin_normal"
+        android:paddingEnd="@dimen/ds_margin_medium"
+        android:text="@string/calculator_label_bonus"
+        android:textColor="@color/black"
+        android:textSize="@dimen/body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvCompetitionAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/calculator_detail_competition_input_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/body"
+        app:layout_constraintBottom_toBottomOf="@id/btnDetailCompetitionLevel"
+        app:layout_constraintEnd_toStartOf="@+id/btnDetailCompetitionLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnDetailCompetitionLevel" />
+
+    <TextView
+        android:id="@+id/btnDetailCompetitionLevel"
+        android:layout_width="@dimen/ds_padding_other_6"
+        android:layout_height="@dimen/ds_padding_40dp"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:background="@drawable/border_layout_black"
+        android:drawableEnd="@drawable/ic_arrow_down"
+        android:fontFamily="@font/mulish_regular"
+        android:paddingStart="@dimen/ds_margin_normal"
+        android:paddingEnd="@dimen/ds_margin_medium"
+        android:text="@string/calculator_default_number_hint"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txvCompetitionSelected" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="btnDetailCompetitionLevel" />
+
+    <biz.belcorp.mobile.components.design.button.Button
+        android:id="@+id/btnCompetitionBonusDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_large"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:fontFamily="@font/mulish_bold"
+        app:btn_color="@color/white"
+        app:btn_text="@string/calculator_action_label_delete"
+        app:btn_text_color="@color/negativo"
+        app:btn_text_underline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ds_divider_horizontal_height"
+        android:layout_margin="@dimen/ds_margin_normal"
+        android:background="@color/gray_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCompetitionBonusDelete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

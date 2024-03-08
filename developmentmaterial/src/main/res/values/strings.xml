@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="materiales_desarrollo_titulo">MATERIALES DE DESARROLLO</string>
+
+    <string name="campania_tipo_v">VENTA %s</string>
+    <string name="campania_tipo_f">FACTURACIÓN %s</string>
+
+</resources>

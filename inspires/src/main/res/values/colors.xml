@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black_text">#010000</color>
+
+    <color name="indicator_inspire">#9bc0f7</color>
+    <color name="indicator_inspire_light">#E5EEFA</color>
+    <color name="gray_label">#661d1d26</color>
+    <color name="gray_label_dark">#1d1d26</color>
+    <color name="light_gray">#B9C0C5</color>
+    <color name="gris_escala_4">#909094</color>
+    <color name="gris_escala_5">#454549</color>
+    <color name="verde">#38be62</color>
+    <color name="rojo">#e81c36</color>
+    <color name="red">#DE1435</color>
+    <color name="purple">#722789</color>
+    <color name="rdd_accent">#1e3b8b</color>
+    <color name="titles">#243039</color>
+    <color name="titles_2">#242F39</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="estado_positivo">#38be62</color>
+    <color name="estado_intermedio">#f5a623</color>
+    <color name="estado_negativo">#e81c36</color>
+
+    <!-- Dialog Inspira-->
+    <color name="inspira_background">#f9fafd</color>
+    <color name="dashboard_inspira_text">#9bc0f7</color>
+    <color name="inspira_green">#38be62</color>
+    <color name="inspira_purple">#722789</color>
+    <color name="inspira_text_gray">#454549</color>
+    <color name="inspira_gray_super_light">#eaeaec</color>
+    <color name="inspira_ranking_selected">#9AC1F3</color>
+    <color name="inspira_background_icon">#979797</color>
+    <color name="inspira_nivel_pre_bronce">#B67A60</color>
+    <color name="inspira_nivel_bronce">#B67A60</color>
+    <color name="inspira_nivel_plata">#838487</color>
+    <color name="inspira_nivel_oro">#AD8A47</color>
+    <color name="inspira_nivel_platinium">#857979</color>
+    <color name="inspira_nivel_diamante">#2F3993</color>
+
+</resources>

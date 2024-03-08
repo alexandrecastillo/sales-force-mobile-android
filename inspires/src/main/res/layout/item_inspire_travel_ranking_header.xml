@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/inspira_background"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/material_dimen_component_x2"
+    android:paddingTop="@dimen/material_dimen_component_x2"
+    android:paddingEnd="@dimen/material_dimen_component_x2"
+    android:paddingBottom="@dimen/material_dimen_component_x2">
+
+    <TextView
+        android:id="@+id/txvInspireRankingHeadPositionNumber"
+        android:layout_width="@dimen/material_dimen_constraint_default"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:text="@string/ranking_header_position"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_label_dark"
+        android:textSize="@dimen/view_inspira_10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txvInspireRankingHeadUsername"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvInspireRankingHeadUsername"
+        android:layout_width="@dimen/material_dimen_constraint_default"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/ranking_header_user"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_label_dark"
+        android:textSize="@dimen/view_inspira_10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txvInspireRankingHeadPoints"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintStart_toEndOf="@id/txvInspireRankingHeadPositionNumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvInspireRankingHeadPoints"
+        android:layout_width="@dimen/material_dimen_constraint_default"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/ranking_header_points"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_label_dark"
+        android:textSize="@dimen/view_inspira_10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@id/txvInspireRankingHeadUsername"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

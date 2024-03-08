@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/rdd_margin_min_less"
+    android:layout_marginTop="@dimen/button_corner_radius"
+    android:layout_marginEnd="@dimen/rdd_margin_min_less">
+
+    <TextView
+        android:id="@+id/tvCampania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/color_persona_1"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Campania 10" />
+
+    <ImageView
+        android:id="@+id/ivPuntoExito"
+        android:layout_width="@dimen/content_inset_normal"
+        android:layout_height="@dimen/content_inset_small"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:contentDescription="@null"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/content_inset_small"
+        android:src="@drawable/circulo_exitosa"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCampania"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/rdd_state"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintStart_toEndOf="@+id/ivPuntoExito"
+        app:layout_constraintTop_toBottomOf="@+id/tvCampania"
+        tools:text="Exitosa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_12dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_postulante_aprobada" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/unete_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:text="@string/unete_aprobada_title"
+        android:textColor="@color/unete_action"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMensaje"
+        style="@style/unete_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unete_aprobada_body"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAcept"
+        style="@style/Widget.Button.Purple.Common"
+        tools:text = "@string/unete_aceptar"
+        android:textSize="@dimen/dialog_condicion_size_value_2" />
+
+</LinearLayout>

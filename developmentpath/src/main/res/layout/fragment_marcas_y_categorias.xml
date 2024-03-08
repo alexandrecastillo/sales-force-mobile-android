@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/content_inset_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/title_marcas_categorias_u3c"
+        android:textColor="@color/magenta"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContenedorMarcas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSinMarcas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:padding="48dp"
+                android:text="@string/mensaje_no_tiene_marcas"
+                android:textColor="@color/gray_4"
+                android:textSize="@dimen/text_size_body"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Sin marcas disponible" />
+
+            <LinearLayout
+                android:id="@+id/ll_bars_chart_cyzone_container"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="90dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_first_container_cyzone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/marcas_categorias_color_one_chart"
+                    android:gravity="start"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_second_container_cyzone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:background="@color/marcas_categorias_color_two_chart"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_third_container_cyzone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/marcas_categorias_color_three_chart"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fourth_container_cyzone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/marcas_categorias_color_four_chart"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fifth__empty_container_cyzone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/mi_ruta_datetime_picker_background"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_brand_and_products_cyzone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ll_bars_chart_cyzone_container"
+                app:layout_constraintStart_toEndOf="@+id/ll_bars_chart_cyzone_container"
+                tools:text="Cyzone (3)" />
+
+            <LinearLayout
+                android:id="@+id/ll_bars_chart_esika_container"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="90dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_bars_chart_cyzone_container">
+
+                <LinearLayout
+                    android:id="@+id/ll_first_container_esika"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/marcas_categorias_color_one_chart"
+                    android:gravity="start"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_second_container_esika"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:background="@color/marcas_categorias_color_two_chart"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_third_container_esika"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/marcas_categorias_color_three_chart"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fourth_container_esika"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/marcas_categorias_color_four_chart"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fifth__empty_container_esika"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/mi_ruta_datetime_picker_background"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_brand_and_products_esika"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ll_bars_chart_esika_container"
+                app:layout_constraintStart_toEndOf="@+id/ll_bars_chart_esika_container"
+                tools:text="Ésika (13)" />
+
+            <LinearLayout
+                android:id="@+id/ll_bars_chart_lbel_container"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="90dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_bars_chart_esika_container">
+
+                <LinearLayout
+                    android:id="@+id/ll_first_container_lbel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/marcas_categorias_color_one_chart"
+                    android:gravity="start"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_second_container_lbel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="2"
+                    android:background="@color/marcas_categorias_color_two_chart"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_third_container_lbel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/marcas_categorias_color_three_chart"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fourth_container_lbel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/marcas_categorias_color_four_chart"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fifth__empty_container_lbel"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:background="@color/mi_ruta_datetime_picker_background"
+                    android:gravity="end"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_brand_and_products_lbel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ll_bars_chart_lbel_container"
+                app:layout_constraintStart_toEndOf="@+id/ll_bars_chart_lbel_container"
+                tools:text="L’Bel (0)" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContenedorCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clContenedorMarcas">
+
+            <LinearLayout
+                android:id="@+id/ll_categories_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_fragrance_container"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/background_fragrance_category"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_fragrance_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/selector_fragrance_color_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fragrance_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/fragrances"
+                        android:textColor="@color/selector_fragrance_color_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_facial_treatment_container"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/background_facial_treatment_category"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_facial_treatment_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/selector_facial_treatment_color_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_facial_treatment_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/facial_treatment"
+                        android:textAlignment="center"
+                        android:textColor="@color/selector_facial_treatment_color_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_makeup_container"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/background_makeup_category"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_makeup_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/selector_makeup_color_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_makeup_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/makeup"
+                        android:textAlignment="center"
+                        android:textColor="@color/selector_makeup_color_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_others_container"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/background_others_category"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_others_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/selector_others_color_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_others_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/others"
+                        android:textAlignment="center"
+                        android:textColor="@color/selector_others_color_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_categories_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clContenedorCategorias">
+
+            <LinearLayout
+                android:id="@+id/ll_not_success_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_not_success_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_warning_alert_new" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSinCategorias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_black"
+                    android:gravity="center"
+                    android:text="@string/categories_with_no_products"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="Sin categorias disponible" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_category" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

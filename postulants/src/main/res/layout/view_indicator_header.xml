@@ -1,0 +1,263 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/indicator_unete"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/margin_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_cycle_title_solicitudes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_14sp"
+            tools:text="@string/you_have_detail_cycle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_title_pre_inscritos"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/pre_inscritas"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14sp"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_title_regularizar_documento"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/regularizar_detail"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/evaluacion_detail"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/preaprobada_detail"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/aprobada_detail"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/ingresos_anticipados"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_indicator_margin"
+                android:minWidth="@dimen/dimen_40dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_pre_inscritas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:background="@color/white_transparent_20"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12sp"
+                    android:visibility="gone"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_regularizar_documento"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/activity_little_margin"
+                    android:background="@color/white_transparent_20"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12sp"
+                    android:visibility="gone"
+                    tools:text="5"
+                    tools:visibility="visible" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_evaluacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:background="@color/white_transparent_20"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12sp"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_preaprobadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:background="@color/white_transparent_20"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12sp"
+                    tools:text="2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_aprobadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/margin_4dp"
+                    android:background="@color/white_transparent_20"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12sp"
+                    tools:text="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_ing_anticipados"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:background="@color/white_transparent_20"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/margin_8dp"
+                    android:paddingEnd="@dimen/margin_8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12sp"
+                    tools:text="0" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_0dp"
+        android:paddingEnd="@dimen/margin_20dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_cycle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_14sp"
+            tools:text="@string/you_achieve_detail_cycle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_conversion_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_light"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_40sp"
+            tools:text="45%" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/of_conversion"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

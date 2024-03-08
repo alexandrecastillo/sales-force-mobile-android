@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/changeBrightPathToolbar"
+        layout="@layout/include_toolbar_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeBrightPathToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="16dp"
+                android:background="@drawable/background_level_bronze"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="@dimen/icon_size_big"
+                    android:layout_height="@dimen/icon_size_big"
+                    android:background="@drawable/background_circle"
+                    android:backgroundTint="@color/magenta"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/content_inset_tiniest"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_avatar" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgLevel"
+                    app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtConsultantName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_less"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Consultora Mixta MTO" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtConsultantLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_less"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Consultora Mixta MTO" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtConsultantCampaign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_less"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        tools:text="Consultora Mixta MTO\nConsultora Mixta MTO" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <ImageView
+                    android:id="@+id/imgLevel"
+                    android:layout_width="@dimen/icon_size_big"
+                    android:layout_height="@dimen/icon_size_big"
+                    android:background="@drawable/background_circle"
+                    android:contentDescription="@null"
+                    android:padding="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/level_bronze" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerLevel">
+
+
+                <LinearLayout
+                    android:id="@+id/linearEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/alerttriangle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/empty_state"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtBrightPathTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/know_your_levels"
+                        android:textAppearance="@style/TextAppearance.DS.Body"
+                        android:textColor="@color/magenta"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/imgLevelHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/path_diamond"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBrightPathTitle" />
+
+                    <LinearLayout
+                        android:id="@+id/constraintLayout28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgLevelHorizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgCurrentLevel"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/background_circle"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/level_gold" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/levelStay"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="1"
+                                android:text="@string/to_stay_level"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/you_must_achieve"
+                                    android:textColor="@color/textColorNotificationVariant"
+                                    android:textSize="12sp" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/levelStaySell"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    tools:text="@string/level_sale" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/levelStayOrders"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    tools:text="@string/level_orders" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/dividerNextLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/linarUpLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgNextLevel"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/background_circle"
+                                android:contentDescription="@null"
+                                app:srcCompat="@drawable/level_platinum" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/nextLevel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="1"
+                                android:text="@string/to_up_level"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:id="@+id/nextLevelContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/you_must_achieve"
+                                    android:textColor="@color/textColorNotificationVariant"
+                                    android:textSize="12sp" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/nextLevelSale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    tools:text="@string/level_sale" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/nextLevelOrder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    tools:text="@string/level_orders" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout30"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/black"
+                        android:padding="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout28">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/last_campaigns_result"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout30">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/empty"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="invisible" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c1Result"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C1"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c2Result"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C2"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c3Result"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C3"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/sell"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c1Sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C1"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c2Sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C2"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c3Sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C3"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_line"
+                            android:orientation="horizontal"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/orders"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c1Order"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C1"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c2Order"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C2"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c3Order"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C3"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/status"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c1Status"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/order_active_small"
+                                android:gravity="center"
+                                tools:text="C1"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c2Status"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/order_active_small"
+                                android:gravity="center"
+                                tools:text="C2"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c3Status"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/order_active_small"
+                                android:gravity="center"
+                                tools:text="C3"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/black"
+                        android:padding="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linear">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/result_current_campaign"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearCurrentCampaign"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/yourSales"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/your_current_sales"
+                                android:textColor="@color/textColorNotificationVariant"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/currentSalesAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                tools:text="100" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/textColorNotificationVariant" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/yourOrders"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/your_current_orders"
+                                android:textColor="@color/textColorNotificationVariant"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/currentOrders"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                tools:text="100" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearAccomplish"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearCurrentCampaign">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:id="@+id/imgAccomplishLevel"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/order_active" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/accomplishLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="@string/upgrade_level_accomplish"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearAccomplish">
+
+                        <LinearLayout
+                            android:id="@+id/linearCampaign"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toStartOf="@+id/imgLevelEnd"
+                            app:layout_constraintStart_toEndOf="@+id/imgLevelStart"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C1"
+                                android:text="@string/c1"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C2"
+                                android:text="@string/c2"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/c3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                tools:text="C3"
+                                android:text="@string/c3"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.2" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/starLevel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:gravity="center"
+                            android:textColor="@color/textColorNotificationVariant"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgLevelStart"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/imgLevelStart"
+                            tools:text="@string/level_orders" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/endLevel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:gravity="center"
+                            android:textColor="@color/textColorNotificationVariant"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgLevelEnd"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/guideline14"
+                            app:layout_constraintTop_toTopOf="@+id/imgLevelEnd"
+                            tools:text="@string/level_orders" />
+
+
+                        <SeekBar
+                            android:id="@+id/pathProgress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:max="4"
+                            android:progress="2"
+                            android:progressDrawable="@drawable/seekbar_bronze_progress_style"
+                            android:splitTrack="false"
+                            android:thumb="@null"
+                            android:enabled="false"
+                            android:focusable="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline14"
+                            app:layout_constraintStart_toEndOf="@+id/starLevel"
+                            app:layout_constraintTop_toBottomOf="@+id/linearCampaign" />
+
+                        <ImageView
+                            android:id="@+id/imgLevelStart"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/background_circle"
+                            android:contentDescription="@null"
+                            app:layout_constraintBottom_toBottomOf="@+id/pathProgress"
+                            app:layout_constraintStart_toStartOf="@+id/guideline12"
+                            app:layout_constraintTop_toTopOf="@+id/pathProgress"
+                            app:srcCompat="@drawable/level_gold" />
+
+                        <ImageView
+                            android:id="@+id/imgLevelEnd"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/background_circle"
+                            android:contentDescription="@null"
+                            app:layout_constraintBottom_toBottomOf="@+id/pathProgress"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline14"
+                            app:layout_constraintTop_toTopOf="@+id/pathProgress"
+                            app:srcCompat="@drawable/level_platinum" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/textColorNotificationVariant"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout34" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/accomplishCampaign"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/textColorNotificationVariant"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view"
+                        tools:text="@string/campaigns_to_upgrade" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linearWarning"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accomplishCampaign">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/alerttriangle" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/warning_accomplish"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constrainEarning"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearWarning">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout40"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:padding="4dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/projectEarning"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/projection_earnings"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout40">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lowValueTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:text="@string/low_value"
+                                    android:visibility="gone" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/highValueTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/high_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/highValuePlusTitle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/high_value_plus"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/black" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lowValue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    tools:text="10 de 15"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/highValue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    tools:text="8 de 12"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/highValuePlus"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    tools:text="4 de 6"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/bg_line"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_vertical"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp">
+
+                                <SeekBar
+                                    android:id="@+id/progressLowValue"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="10dp"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:progressDrawable="@drawable/seekbar_value_progress_style"
+                                    android:splitTrack="false"
+                                    android:thumb="@null"
+                                    android:visibility="gone" />
+
+                                <SeekBar
+                                    android:id="@+id/progressHighValue"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="10dp"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:progressDrawable="@drawable/seekbar_value_progress_style"
+                                    android:splitTrack="false"
+                                    android:thumb="@null"
+                                    android:visibility="gone" />
+
+                                <SeekBar
+                                    android:id="@+id/progressHighPlusValue"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="10dp"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:progressDrawable="@drawable/seekbar_value_progress_style"
+                                    android:splitTrack="false"
+                                    android:thumb="@null"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lowValueAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    tools:text="C1"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/highValueAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    tools:text="C2"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/highValuePlusAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    tools:text="C3"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/projectEarningFooter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:gravity="center"
+                                tools:text="@string/project_earning_as"
+                                android:textColor="@color/textColorNotificationVariant"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </ViewFlipper>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

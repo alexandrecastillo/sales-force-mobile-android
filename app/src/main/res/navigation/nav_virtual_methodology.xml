@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navFeatureVirtualMethodology"
+    app:startDestination="@id/virtualMethodologyFragment">
+
+    <fragment
+        android:id="@+id/virtualMethodologyFragment"
+        android:name="biz.belcorp.salesforce.modules.virtualmethodology.features.methodology.VirtualMethodologyFragment"
+        android:label="VirtualMethodologyFragment"
+        tools:layout="@layout/fragment_virtual_methodology">
+        <action
+            android:id="@+id/virtualMethodologyFragmentToVirtualMethodologyContactsFragment"
+            app:destination="@+id/virtualMethodologyContactsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/virtualMethodologyContactsFragment"
+        android:name="biz.belcorp.salesforce.modules.virtualmethodology.features.contacts.ListContactsFragment"
+        android:label="ListContactsFragment"
+        tools:layout="@layout/fragment_list_consultant">
+
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>

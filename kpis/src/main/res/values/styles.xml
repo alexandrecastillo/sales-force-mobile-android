@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Header.Title.Percent" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/text_size_title_2</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="TextAppearance.Retention.Single.Item.Label" parent="TextAppearance.DS.Button">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="TextAppearance.Gain.Single.Item.Label" parent="TextAppearance.DS.Button">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.NewCycle.Single.Item.Label" parent="TextAppearance.DS.Body">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:padding">@dimen/zero</item>
+    </style>
+
+    <style name="TextAppearance.NewCycle.Single.Item.Value" parent="TextAppearance.DS.Button">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:padding">@dimen/zero</item>
+    </style>
+
+    <style name="TextAppearance.NewCycle.MultiProfile.Single.Item.Label" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/colorGrayLabel</item>
+        <item name="simpleItemPadding">@dimen/content_inset_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.NewCycle.MultiProfile.Single.Item.Value" parent="TextAppearance.DS.Button">
+        <item name="simpleItemWidth">@dimen/zero</item>
+        <item name="simpleItemPadding">@dimen/content_inset_normal</item>
+    </style>
+
+    <style name="TextAppearance.Gain.Grid.Single.Item.Label" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Gain.Single.Item.Value" parent="TextAppearance.DS.Button">
+        <item name="android:textColor">@color/colorGreenLight</item>
+    </style>
+
+    <style name="TextAppearance.Gain.Grid.Single.Item.Value" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/colorGreenLight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Retention.Single.Item.Value" parent="TextAppearance.DS.Button">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.CompoundButton.Switch.31Days" >
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorAccent">@color/black</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="colorControlActivated">@color/colorGrayLabel</item>
+        <item name="android:colorForeground">@color/white</item>
+
+    </style>
+
+    <style name="TextAppearance.Digital.Grid.Header.NewCycle" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/colorNewCycle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Digital.Grid.Header.Retention" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/colorRetentionCapitalizationGrid</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Digital.Grid.Header.SaleOrders" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/colorSaleOrders</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Digital.Grid.Header.Collection" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/colorGreenLight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Digital.Grid.Cell" parent="TextAppearance.DS.Caption">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

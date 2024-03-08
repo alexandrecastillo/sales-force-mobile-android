@@ -1,0 +1,22 @@
+package biz.belcorp.salesforce.modules.digital.core.data.repository.digital.cloud.dto
+
+internal const val DIGITAL_FUNCTION_NAME_KEY = "OnlineStore"
+internal const val DIGITAL_FILTER_KEY = "paramsStore"
+internal const val DIGITAL_FILTER_TYPE_KEY = "ParamsStore"
+internal const val DIGITAL_COLLECTION_KEY = "kpiOnlineStore"
+internal const val DIGITAL_INPUT_KEY = "input"
+
+internal const val DIGITAL_CAMPAIGN_KEY = "campaign"
+internal const val DIGITAL_REGION_KEY = "region"
+internal const val DIGITAL_ZONE_KEY = "zone"
+internal const val DIGITAL_SECTION_KEY = "section"
+internal const val DIGITAL_PROFILE_KEY = "profile"
+internal const val DIGITAL_ACTIVES_KEY = "actives"
+internal const val DIGITAL_SUBSCRIBED_KEY = "subscribed"
+internal const val DIGITAL_SHARE_KEY = "share"
+internal const val DIGITAL_BUY_KEY = "buy"
+internal const val DIGITAL_SUBSCRIBED_ACTIVES_RATIO_KEY = "subscribed_actives_ratio"
+internal const val DIGITAL_SHARE_ACTIVES_RATIO_KEY = "share_actives_ratio"
+internal const val DIGITAL_SHARE_SUBSCRIBED_RATIO_KEY = "share_subscribed_ratio"
+internal const val DIGITAL_BUY_ACTIVES_RATIO_KEY = "buy_actives_ratio"
+internal const val DIGITAL_BUY_SUBSCRIBED_RATIO_KEY = "buy_subscribed_ratio"

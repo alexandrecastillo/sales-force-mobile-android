@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_avance_visitas"
+        android:layout_width="17.5dp"
+        android:layout_height="17.5dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_avancevisitas" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_avance_visitas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/avance_campania"
+        android:textColor="@color/mi_ruta_accent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_avance_visitas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_avance_visitas"
+        app:layout_constraintTop_toTopOf="@id/image_avance_visitas" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_consultants_visited"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_avance_visitas">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="13dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_consultants_visits_numerator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_consultants_visits_denominator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/dark_text"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_consultants_visits_numerator"
+                app:layout_constraintStart_toEndOf="@+id/text_consultants_visits_numerator"
+                tools:text="/42" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_visited_consultant_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/hijas_parametro_visitadas"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_consultants_visits_numerator"
+                tools:text="Socias empresarias visitadas del plan" />
+
+            <ProgressBar
+                android:id="@+id/progress_consultant_visited"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/custom_progress_regalo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_visited_consultant_description"
+                app:layout_goneMarginBottom="12dp"
+                tools:progress="78" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_new_consultants_visited"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_consultants_visited">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="13dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_new_consultants_visits_numerator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_new_consultants_visits_denominator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/dark_text"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_new_consultants_visits_numerator"
+                app:layout_constraintStart_toEndOf="@+id/text_new_consultants_visits_numerator"
+                tools:text="/42" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_new_visited_consultant_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_new_consultants_visits_denominator"
+                tools:text="Socias empresarias visitadas del plan" />
+
+            <ProgressBar
+                android:id="@+id/progress_new_consultant_visited"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/custom_progress_regalo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_new_visited_consultant_description"
+                app:layout_goneMarginBottom="12dp"
+                tools:progress="78" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_avance_visitas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_new_consultants_visited">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="13dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_numerador_visitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_denominador_visitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/dark_text"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_numerador_visitas"
+                app:layout_constraintStart_toEndOf="@+id/text_numerador_visitas"
+                tools:text="/42" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_hijas_visitadas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/hijas_parametro_visitadas"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_numerador_visitas"
+                tools:text="Socias empresarias visitadas del plan" />
+
+            <ProgressBar
+                android:id="@+id/progress_visitas"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/custom_progress_regalo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_hijas_visitadas"
+                app:layout_goneMarginBottom="12dp"
+                tools:progress="78" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_bp_quantity_visiting"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_avance_visitas">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="13dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_bp_make_visits_numerator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_bp_make_visits_denominator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/dark_text"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_bp_make_visits_numerator"
+                app:layout_constraintStart_toEndOf="@+id/text_bp_make_visits_numerator"
+                tools:text="/42" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_bp_visitits_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bp_make_visits_numerator"
+                tools:text="Socias empresarias visitadas del plan" />
+
+            <ProgressBar
+                android:id="@+id/progress_bp_quantity"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/custom_progress_regalo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bp_visitits_description"
+                app:layout_goneMarginBottom="12dp"
+                tools:progress="78" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_bp_quantity_visiting_eight_days"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_bp_quantity_visiting">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="13dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_bp_eight_days_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/dark_text"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_bp_visitits_eight_days_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bp_eight_days_number"
+                tools:text="%Socias registrando visitas durante 8 días o más" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

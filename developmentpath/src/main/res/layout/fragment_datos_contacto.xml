@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/flDatosContacto"
+        style="@style/CardViewConsultantGroupStyle"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:layout_marginBottom="@dimen/content_inset_tiny"
+        android:focusable="true"
+        android:padding="@dimen/content_inset_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvDatosContactoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center_vertical"
+            android:text="@string/text_datos_de_contacto"
+            android:textColor="@color/perfil_text_section"
+            android:textSize="@dimen/text_size_subtitle" />
+
+        <ImageView
+            android:id="@+id/iv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDatosContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_tiniest"
+        android:layout_marginTop="@dimen/rdd_margin_min_tiny"
+        android:layout_marginEnd="@dimen/content_inset_tiniest"
+        android:layout_marginBottom="@dimen/content_inset_tiny"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flDatosContacto"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llDatosContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/content_inset_normal"
+            android:paddingEnd="@dimen/content_inset_normal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <LinearLayout
+                    android:id="@+id/llCelularFavorito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_min_less"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/rdd_margin_min_less">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/celular"
+                        android:textColor="@color/gray_label"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <ImageView
+                        android:id="@+id/ivCelularFavorito"
+                        android:layout_width="@dimen/rdd_margin_start"
+                        android:layout_height="@dimen/rdd_margin_start"
+                        android:layout_marginStart="@dimen/rdd_margin_min_tiny"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_favorite_desactivated_svg" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCelular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCelularFavorito"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/rdd_margin_min_less"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low"
+                    tools:text="943578988" />
+
+                <LinearLayout
+                    android:id="@+id/llContactoCelular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivWhatsAppCelular"
+                        android:layout_width="@dimen/rdd_icon_medium"
+                        android:layout_height="@dimen/rdd_icon_medium"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/content_inset_small"
+                        android:src="@drawable/ic_whatsapp_outline" />
+
+                    <View
+                        android:layout_width="@dimen/one"
+                        android:layout_height="@dimen/datos_height"
+                        android:layout_marginLeft="@dimen/rdd_margin_min_tiny_high"
+                        android:layout_marginRight="@dimen/rdd_margin_min_tiny_high"
+                        android:background="@color/separator_color" />
+
+                    <ImageView
+                        android:id="@+id/ivLlamadaCelular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/content_inset_small"
+                        android:src="@drawable/ic_call_profile" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <RelativeLayout
+                android:id="@+id/flTelefonoCasa"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <LinearLayout
+                    android:id="@+id/llTelefonoCasaFavorito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_min_less"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/rdd_margin_min_less">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/telefono_casa"
+                        android:textColor="@color/gray_label"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <ImageView
+                        android:id="@+id/ivTelefonoCasaFavorito"
+                        android:layout_width="@dimen/rdd_margin_start"
+                        android:contentDescription="@string/app_name"
+                        android:layout_height="@dimen/rdd_margin_start"
+                        android:layout_marginStart="@dimen/rdd_margin_min_tiny"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_favorite_desactivated_svg" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvTelefonoCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llTelefonoCasaFavorito"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:focusable="false"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/rdd_margin_min_less"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low"
+                    tools:text="99999999999" />
+
+                <LinearLayout
+                    android:id="@+id/llContactoTelefonoCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivLlamadaTelefonoCasa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/content_inset_small"
+                        android:src="@drawable/ic_call_profile" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <RelativeLayout
+                android:id="@+id/flOtroTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <LinearLayout
+                    android:id="@+id/llOtroTelefonoFavorito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_min_less"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/rdd_margin_min_less">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/otro_telefono"
+                        android:textColor="@color/gray_label"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <ImageView
+                        android:id="@+id/ivOtroTelefonoFavorito"
+                        android:layout_width="@dimen/rdd_margin_start"
+                        android:layout_height="@dimen/rdd_margin_start"
+                        android:layout_marginStart="@dimen/rdd_margin_min_tiny"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_favorite_desactivated_svg" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvOtroTelefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llOtroTelefonoFavorito"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/rdd_margin_min_less"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low"
+                    tools:text="943578984545" />
+
+                <TextView
+                    android:id="@+id/tvAnadirOtroTelefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/rdd_margin_min_less"
+                    android:layout_marginEnd="@dimen/rdd_margin_high_value"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:text="@string/anadir"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/text_size_caption"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/llContactoOtroTelefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/rdd_margin_low"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvOtroTelefonoEditar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/text_editar"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/text_size_caption"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <View
+                        android:id="@+id/separadorEditar"
+                        android:layout_width="@dimen/one"
+                        android:layout_height="@dimen/datos_height"
+                        android:layout_marginStart="@dimen/rdd_margin_low"
+                        android:layout_marginEnd="@dimen/rdd_margin_min_tiny_high"
+                        android:background="@color/separator_color"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/tvWhatsAppOtroTelefono"
+                        android:layout_width="@dimen/rdd_icon_medium"
+                        android:layout_height="@dimen/rdd_icon_medium"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/content_inset_small"
+                        android:src="@drawable/ic_whatsapp_outline" />
+
+                    <View
+                        android:layout_width="@dimen/one"
+                        android:layout_height="@dimen/datos_height"
+                        android:layout_marginStart="@dimen/rdd_margin_min_tiny_high"
+                        android:layout_marginEnd="@dimen/rdd_margin_min_tiny_high"
+                        android:background="@color/separator_color" />
+
+                    <ImageView
+                        android:id="@+id/ivLlamadaOtroTelefono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/content_inset_small"
+                        android:src="@drawable/ic_call_profile" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/documento_identidad"
+                    android:textColor="@color/gray_label"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/tvDocumentoIdentidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start_high"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <FrameLayout
+                android:id="@+id/flDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/direccion"
+                    android:textColor="@color/gray_label"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/tvDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start_high"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low"
+                    tools:text="Av De la Alegria #1212" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/correo"
+                    android:textColor="@color/gray_label"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start_high"
+                    android:layout_toStartOf="@+id/llOpcionesCorreoElectronico"
+                    android:shrinkColumns="0">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvCorreoElectronico"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                            android:fontFamily="@font/mulish_regular"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textSize="@dimen/text_size_subtitle_low"
+                            tools:text="belcorp@belcorp.biz" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvAnadirCorreoElectronico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/rdd_margin_min_less"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:text="@string/anadir"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/text_size_caption"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/llOpcionesCorreoElectronico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/rdd_margin_low"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvCorreoElectronicoEditar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:text="@string/text_editar"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/text_size_caption"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <View
+                        android:id="@+id/vSeparadorOpcionesCorreo"
+                        android:layout_width="@dimen/one"
+                        android:layout_height="@dimen/datos_height"
+                        android:layout_marginLeft="@dimen/rdd_margin_low"
+                        android:layout_marginRight="@dimen/rdd_margin_low"
+                        android:background="@color/separator_color"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ivCorreoElectronico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/content_inset_small"
+                        android:src="@drawable/ic_mail" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <FrameLayout
+                android:id="@+id/flCumpleanios"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/cumpleanos"
+                    android:textColor="@color/gray_label"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/tvCumpleanos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start_high"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"
+                android:background="@color/sections_drilldown_detail_background" />
+
+            <FrameLayout
+                android:id="@+id/flAniversario"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rdd_padding_start_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/aniversario"
+                    android:textColor="@color/gray_label"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/tvAniversario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rdd_margin_start_high"
+                    android:layout_marginBottom="@dimen/rdd_margin_min_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:maxLines="1"
+                    android:textColor="@color/gray_label_dark"
+                    android:textSize="@dimen/text_size_subtitle_low" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

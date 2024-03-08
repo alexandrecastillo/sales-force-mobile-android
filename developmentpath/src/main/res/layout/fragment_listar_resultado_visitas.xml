@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rdd_dashboard_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rdd_accent"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_campaign_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/indicator_detail_campaign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Venta C-15" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_white_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_campaign_information" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_back"
+            app:layout_constraintTop_toTopOf="@id/btn_back"
+            tools:text="@string/rdd_lista_resultado_visitas_titulo_facturadas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/rdd_accent"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="10dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_cantidad_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="27 consultoras" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_subtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cantidad_total"
+                    tools:text="@string/rdd_lista_resultado_visitas_subtitulo_facturadas" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_scrollFlags="enterAlways">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_filtro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/rdd_accent"
+                    android:paddingStart="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tv_filtro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rdd_caja_busqueda"
+                        android:completionThreshold="1"
+                        android:fontFamily="@font/mulish_regular"
+                        android:hint="@string/rdd_buscador_hint"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="48dp"
+                        android:paddingBottom="8dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="12dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_limpiar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="?android:selectableItemBackground"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_filtro"
+                        app:layout_constraintEnd_toEndOf="@id/tv_filtro"
+                        app:layout_constraintTop_toTopOf="@id/tv_filtro"
+                        app:srcCompat="@drawable/ic_rdd_limpiar_busqueda"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_busqueda"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_filtro"
+                        app:layout_constraintEnd_toEndOf="@id/tv_filtro"
+                        app:layout_constraintTop_toTopOf="@id/tv_filtro"
+                        app:srcCompat="@drawable/ic_buscador_disabled"
+                        tools:visibility="visible" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/rdd_dashboard_bg"
+                    app:layout_constraintTop_toBottomOf="@id/cl_filtro">
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/grupo_ver_pedido_somosbelcorp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="tv_ver_pedido_somosbelcorp,
+                             switch_ver_pedido_somosbelcorp,
+                             espacio_arriba_switch,
+                             espacio_debajo_switch"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_ver_pedido_somosbelcorp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/mulish_regular"
+                        android:maxLines="1"
+                        android:text="@string/rdd_lista_resultado_visitas_ver_pedidos_somosbelcorp"
+                        android:textColor="@color/dark_text"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/switch_ver_pedido_somosbelcorp"
+                        app:layout_constraintEnd_toStartOf="@id/pb_ver_pedido"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/switch_ver_pedido_somosbelcorp" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_ver_pedido"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="4dp"
+                        android:indeterminate="true"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/switch_ver_pedido_somosbelcorp"
+                        app:layout_constraintEnd_toStartOf="@id/switch_ver_pedido_somosbelcorp"
+                        app:layout_constraintTop_toTopOf="@id/switch_ver_pedido_somosbelcorp"
+                        tools:visibility="visible" />
+
+                    <!-- espacio para poder ver la animación de resaltado al seleccionar el switch-->
+                    <View
+                        android:id="@+id/espacio_arriba_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@id/switch_ver_pedido_somosbelcorp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- espacio para poder ver la animación de resaltado al seleccionar el switch-->
+                    <View
+                        android:id="@+id/espacio_debajo_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/switch_ver_pedido_somosbelcorp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_ver_pedido_somosbelcorp"
+                        style="@style/SwitchRdd"
+                        android:layout_marginEnd="12dp"
+                        android:checked="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/espacio_arriba_switch" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/grupo_cantidad_resultados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="tv_cantidad_resultados"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_cantidad_resultados"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:textColor="@color/rdd_accent"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/espacio_debajo_switch"
+                        tools:text="@string/rdd_resultado_visitas_cantidad_filtro" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/grupo_sin_resultados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="iv_sin_resultados,tv_sin_resultados"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_sin_resultados"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginEnd="35dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_cantidad_resultados"
+                        app:srcCompat="@drawable/ic_noresultados_resultadovisitas" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_sin_resultados"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="55dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.15"
+                        android:text="Upss… no encontramos resultados.Vuelve a intentar."
+                        android:textColor="#808080"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_sin_resultados" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

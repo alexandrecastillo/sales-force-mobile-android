@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/uneteInput_box"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/unete_input_txtInputLayout"
+            style="@style/uneteInput_InputLayout"
+            android:layout_width="match_parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/unete_input_txtComponent"
+                style="@style/uneteInput_Input" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/icValidation"
+            style="@style/uneteInput_icon"
+            android:contentDescription="image" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMesssage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:singleLine="true"
+        android:text="Campo obligatorio"
+        android:textColor="#d90015"
+        android:textSize="11sp" />
+
+
+</LinearLayout>

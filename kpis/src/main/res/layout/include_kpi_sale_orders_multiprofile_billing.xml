@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSaleOrders"
+        android:paddingTop="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <biz.belcorp.mobile.components.design.indicatorheader.IndicatorHeader
+            android:id="@+id/indicatorHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_small"
+            app:indicatorHeader_backgroundIconColor="@color/colorSaleOrders"
+            app:indicatorHeader_disableAlpha="true"
+            app:indicatorHeader_disableBackgroundIconColor="true"
+            app:indicatorHeader_icon="@drawable/ic_kpis_collection"
+            app:indicatorHeader_iconColor="@color/colorIcon"
+            app:indicatorHeader_space="@dimen/content_inset_tiny"
+            app:indicatorHeader_textColor="@color/textColorPrimaryVariant"
+            app:indicatorHeader_textSize="@dimen/text_size_subtitle"
+            app:indicatorHeader_type="multiline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:indicatorHeader_text="@string/sale_orders_header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clHeader">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimaryVariant"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="En C09 puedes lograr" />
+
+        <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+            android:id="@+id/indicatorGoalSale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            app:indicatorGoalBar_enableAnimation="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:indicatorGoalBar_currentProgress="28"
+            tools:indicatorGoalBar_currentTarget="300 Pedidos"
+            tools:indicatorGoalBar_goalDescription="Meta 8,500"
+            tools:indicatorGoalBar_goalMessage=""
+            tools:indicatorGoalBar_goalMessageColor="@color/magenta"
+            tools:indicatorGoalBar_maxProgress="100"
+            tools:indicatorGoalBar_type="success" />
+
+
+        <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+            android:id="@+id/indicatorGoalOrders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_less"
+            app:indicatorGoalBar_enableAnimation="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/indicatorGoalSale"
+            tools:indicatorGoalBar_currentProgress="28"
+            tools:indicatorGoalBar_currentTarget="300 Pedidos"
+            tools:indicatorGoalBar_goalDescription="Meta 8,500"
+            tools:indicatorGoalBar_goalMessage=""
+            tools:indicatorGoalBar_goalMessageColor="@color/magenta"
+            tools:indicatorGoalBar_maxProgress="100"
+            tools:indicatorGoalBar_type="success" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

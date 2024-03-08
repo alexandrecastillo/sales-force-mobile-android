@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtTelefonoCelular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/telefono_celular" />
+
+    <include android:id="@+id/layout_pin_sms"
+        layout="@layout/layout_validate_mobile_number"
+        android:visibility="gone"/>
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtTelefonoFijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/telefono_fijo" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hasSelection="true"
+        custom:hint="@string/departamento" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnMunicipio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hasSelection="true"
+        custom:hint="@string/municipio" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtBarrio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/barrio" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/direccion" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chkAcceptTerms"
+                style="@style/unete_checkbox"
+                android:text="@string/co_terms_prefix" />
+
+            <TextView
+                android:id="@+id/txtGetTerms"
+                android:text="@string/co_terms_sufix"
+                style="@style/unete_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtErrorTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginEnd="@dimen/margin_36dp"
+            android:fontFamily="@font/mulish_regular"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="@string/co_terms_"
+            android:textColor="@color/warning_red"
+            android:textSize="@dimen/size_11sp"
+            tools:text="Campo obligatorio"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/uneteInput_box"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_text"
+            android:layout_weight="0.6"
+            android:text="@string/ha_sido_consultora" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swtConsultoraAnteriormente"
+            style="@style/unete_switch"
+            android:layout_weight="0.4"
+            android:checked="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/uneteInput_box"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_text"
+            android:layout_weight="0.6"
+            android:text="@string/consultora_recomendada" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swtRecomiendaConsultora"
+            style="@style/unete_switch"
+            android:layout_weight="0.4"
+            android:checked="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsultoraRecomienda"
+        style="@style/unete_section_exp"
+        android:layout_marginTop="12dp">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtCodigoConsultoraRecomienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/consultora_recomienda_cedula" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtNombreConsultoraRecomienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/consultora_recomienda_nombre"
+            custom:readOnly="true" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/unete_obligatorio_label"
+        android:text="@string/campos_obligatorios" />
+
+</LinearLayout>

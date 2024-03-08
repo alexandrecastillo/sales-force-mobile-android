@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ds_margin_botton_icon">24dp</dimen>
+    <dimen name="ds_margin_image_lateral">42dp</dimen>
+    <dimen name="height_box_group">50dp</dimen>
+    <dimen name="height_image_share">270dp</dimen>
+</resources>

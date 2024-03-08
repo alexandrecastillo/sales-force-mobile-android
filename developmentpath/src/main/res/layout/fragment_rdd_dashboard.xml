@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fl_barra_navegacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_height="50dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_cabecera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fl_barra_navegacion"
+                tools:layout_height="120dp" />
+
+            <View
+                android:id="@+id/viewEspacioCabecera"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/rdd_accent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/fl_cabecera" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/rdd_accent"
+                app:layout_constraintTop_toBottomOf="@id/viewEspacioCabecera"
+                app:tabIndicatorColor="@color/white_transparent_70"
+                app:tabIndicatorHeight="4dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/tab_rdd_text"
+                app:tabTextColor="@color/white" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_aviso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/estado_positivo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="50dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

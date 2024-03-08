@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_filtro_aprobado_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_input_item"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_item_filter"
+        android:paddingRight="@dimen/padding_item_filter"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_label_value_max" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_item_filter_divider"
+        android:background="@color/gray_label" />
+
+</LinearLayout>

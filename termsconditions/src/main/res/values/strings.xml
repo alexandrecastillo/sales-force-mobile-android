@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="legal_title">LEGALES</string>
+
+    <string name="campaign_type_v">VENTA %s</string>
+    <string name="campaign_type_f">FACTURACIÓN %s</string>
+    <string name="share_link_dear">Querida %s,\n\nAl dar click en el botón aceptas los términos y condiciones del uso de tu link de Socia Empresaria, y en especial declaras tomar conocimiento, aceptar y cumplir los derechos y obligaciones del contrato, cuya copia se encuentra en el link de abajo, asumiendo la responsabilidad de descargarlo y leerlo.</string>
+    <string name="share_link_description">Para continuar es necesario que aceptes los términos y condiciones.</string>
+    <string name="share_link_header">Recuerda que para utilizar tu link de manera correcta:</string>
+    <string name="share_link_term1">\u2022 Deberás usar contenido que cuide la imagen de nuestras Marcas.</string>
+    <string name="share_link_term2">\u2022 No se autoriza pagar publicidad en redes sociales.</string>
+    <string name="share_link_term3">\u2022 No está permitido publicar tu link en las redes sociales de nuestras Marcas.</string>
+    <string name="terms_label">Acepto los Términos y Condiciones.</string>
+    <string name="policy_label">Acepto la Política de privacidad.</string>
+    <string name="publicy_label">Autorizo el Envío de publicidad.</string>
+    <string name="terms_cond">Términos y Condiciones</string>
+    <string name="policy">Política de privacidad</string>
+    <string name="publicy">Envío de publicidad</string>
+    <string name="share_link_button">Generar Link</string>
+    <string name="btn_continue">Continuar</string>
+    <string name="understood">Entendido</string>
+    <string name="blocked_link_se_title">Enlace deshabilitado</string>
+    <string name="blocked_link_se_subtitle">El Enlace ha sido deshabilitado debido a un incumplimiento de los términos y condiciones. Comunícate con tu Gerente de Zona para solicitar el desbloqueo.</string>
+    <string name="empty_url">No se pudo obtener la url</string>
+    <string name="welcome_term_title">Te damos la bienvenida a \n%s</string>
+    <string name="welcome_term_subtitle">Aquí encontrarás todo lo que necesitas para gestionar las campañas.</string>
+    <string name="welcome_term_body">Para continuar, es necesario que acepte los Términos y Condiciones y la Política de Privacidad. Las demás opciones son facultativas.</string>
+</resources>

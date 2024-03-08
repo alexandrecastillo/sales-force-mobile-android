@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_inset_normal"
+    android:background="@drawable/surface_rounded">
+
+    <View
+        android:id="@+id/vIndicador"
+        android:layout_width="@dimen/content_inset_tiny"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_indicador_producto_mas_vendido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtNombreProducto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_other_2"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/gray_5"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toStartOf="@+id/txtTextoPromedio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1º Es Totalsec Deso Unisex 50ml" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCampaniasProducto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_2"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtTextoPromedio"
+        app:layout_constraintStart_toStartOf="@id/txtNombreProducto"
+        app:layout_constraintTop_toBottomOf="@id/txtNombreProducto"
+        tools:itemCount="6"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_campania_producto_mas_vendido"
+        tools:orientation="horizontal" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtValorPromedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_headline_4"
+        app:layout_constraintEnd_toEndOf="@id/txtTextoPromedio"
+        app:layout_constraintStart_toStartOf="@id/txtTextoPromedio"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0.50" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTextoPromedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:layout_marginBottom="@dimen/ds_margin_normal"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/label_promedio"
+        android:textColor="@color/gray_4"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtValorPromedio"
+        tools:text="Promedio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

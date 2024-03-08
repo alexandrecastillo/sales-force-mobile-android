@@ -1,0 +1,108 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="biz.belcorp.salesforce.modules.brightpath.features.container.consultants.ConsultantsIndicatorDetailFragment"
+    android:focusable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/indicator_bright_path"
+            >
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:elevation="@dimen/ds_no_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/view_top_header_indicator_info" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvIndicatorName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/content_inset_medium"
+                android:focusable="true"
+                android:fontFamily="@font/mulish_regular"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/app_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvGzConsultantAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_inset_small"
+                android:layout_marginTop="@dimen/content_inset_tiny"
+                android:layout_marginRight="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center"
+                android:maxLines="3"
+                android:minLines="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIndicatorName"
+                tools:text="99 Consultoras" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvGzConsultantDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/content_inset_small"
+                android:layout_marginRight="@dimen/content_inset_small"
+                android:layout_marginBottom="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_light"
+                android:gravity="center_horizontal|top"
+                android:maxLines="3"
+                android:minLines="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGzConsultantAmount"
+                tools:text="Pueden cambiar en C-02" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/uaSegmentsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <FrameLayout
+            android:id="@+id/frameConsultantsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

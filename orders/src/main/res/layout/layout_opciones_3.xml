@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingStart="@dimen/ds_padding_small"
+       android:paddingEnd="@dimen/ds_padding_small"
+       tools:layout_height="200dp"
+       tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/ivCerrar"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/ds_padding_large"
+        android:background="@drawable/background_order_web_close"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/ds_padding_medium"
+        android:src="@drawable/ic_order_web_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivOpcion1"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/ds_margin_medium"
+        android:background="@drawable/background_order_web_option"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/ds_padding_medium"
+        app:layout_constraintBottom_toTopOf="@id/ivOpcion2"
+        app:layout_constraintEnd_toStartOf="@id/ivCerrar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/ivOpcion2"
+        tools:src="@drawable/ic_order_web_lock"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOpcion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_light"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/ivOpcion1"
+        app:layout_constraintEnd_toStartOf="@id/ivOpcion1"
+        app:layout_constraintTop_toTopOf="@id/ivOpcion1"
+        tools:text="Llamar"/>
+
+    <ImageView
+        android:id="@+id/ivOpcion2"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/ds_margin_large"
+        android:background="@drawable/background_order_web_option"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/ds_padding_medium"
+        app:layout_constraintBottom_toBottomOf="@id/ivCerrar"
+        app:layout_constraintEnd_toStartOf="@id/ivCerrar"
+        app:layout_constraintTop_toTopOf="@id/ivCerrar"
+        tools:src="@drawable/ic_order_web_lock"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOpcion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_light"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/ivOpcion2"
+        app:layout_constraintEnd_toStartOf="@id/ivOpcion2"
+        app:layout_constraintTop_toTopOf="@id/ivOpcion2"
+        tools:text="Llamar"/>
+
+    <ImageView
+        android:id="@+id/ivOpcion3"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/ds_margin_medium"
+        android:background="@drawable/background_order_web_option"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/ds_padding_medium"
+        app:layout_constraintEnd_toStartOf="@id/ivCerrar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/ivOpcion2"
+        app:layout_constraintTop_toBottomOf="@id/ivOpcion2"
+        tools:src="@drawable/ic_order_web_lock"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOpcion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_margin_medium"
+        android:fontFamily="@font/mulish_light"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/ivOpcion3"
+        app:layout_constraintEnd_toStartOf="@id/ivOpcion3"
+        app:layout_constraintTop_toTopOf="@id/ivOpcion3"
+        tools:text="Llamar"/>
+
+</merge>

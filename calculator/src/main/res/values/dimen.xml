@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_label_calculator">13sp</dimen>
+    <dimen name="generic_dimen_component_36">36dp</dimen>
+    <dimen name="profit_extra_large">74dp</dimen>
+    <dimen name="margin_start_calculator_profit_text">79dp</dimen>
+    <dimen name="margin_end_calculator_profit_text">38dp</dimen>
+    <dimen name="generic_size_text_big">32sp</dimen>
+
+</resources>

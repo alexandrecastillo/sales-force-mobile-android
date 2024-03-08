@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_rdd">
+
+    <ImageView
+        android:id="@+id/imageProductividad"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:background="@drawable/background_rdd_grafico_top"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_rdd_grafico_top" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/productividad_u3c"
+        android:textColor="@color/gris_escala_5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProductividad"
+        app:layout_constraintStart_toEndOf="@+id/imageProductividad"
+        app:layout_constraintTop_toTopOf="@+id/imageProductividad" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerZonas"
+        android:layout_width="0dp"
+        android:paddingTop="1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        android:background="@color/gris_escala_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProductividad"
+        tools:listitem="@layout/item_productividad_region" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

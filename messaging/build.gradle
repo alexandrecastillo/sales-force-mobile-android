@@ -1,0 +1,113 @@
+import biz.belcorp.salesforce.Config
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Versions
+
+apply plugin: "com.android.library"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileOptions {
+        sourceCompatibility Versions.Android.javaVersion
+        targetCompatibility Versions.Android.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = Versions.Android.javaVersion.toString()
+    }
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+    compileSdkVersion Versions.Android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion Versions.Android.minSdkVersion
+        targetSdkVersion Versions.Android.targetSdkVersion
+        versionCode Versions.Android.appVersionCode
+        versionName Versions.Android.appVersionName
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+        }
+        stage {
+            debuggable !Config.App.isCiServer
+        }
+        develop {
+            debuggable true
+        }
+        review {
+            debuggable true
+        }
+    }
+
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        test.java.srcDirs += "src/sharedtest/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+    flavorDimensions "perfil"
+    productFlavors {
+        multiprofile {
+            dimension "perfil"
+        }
+        businesspartners {
+            dimension "perfil"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(":components")
+    api project(":core")
+    api project(":analytics")
+    implementation Deps.kotlinCoroutines
+    implementation Deps.kotlinCoroutinesAndroid
+    implementation Deps.Libs.kotlinSerialization
+
+    implementation Deps.Libs.retrofit
+    implementation Deps.Libs.gson
+
+    implementation Deps.kotlinCoroutines
+    implementation Deps.kotlinCoroutinesAndroid
+    implementation Deps.Libs.kotlinSerialization
+
+    implementation Deps.Android.navigationFragment
+    implementation Deps.Android.navigationUI
+    implementation Deps.Libs.koin
+    implementation Deps.Libs.koinScope
+    implementation Deps.Libs.koinViewModel
+
+    // Test
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.koinTest
+    testImplementation Deps.Test.kluent
+    testImplementation Deps.Test.mockk
+    testImplementation Deps.Test.androidTestCore
+    testImplementation Deps.Test.androidTestExt
+    testImplementation Deps.Test.androidArchTestCore
+    testImplementation Deps.Test.roboelectric
+    testImplementation Deps.Test.roboelectricMulidex
+    testImplementation Deps.Test.coroutines
+    androidTestImplementation Deps.Test.runner
+    androidTestImplementation Deps.Test.espressoCore
+    androidTestImplementation Deps.Test.mockkAndroid
+}
+
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kpis_title">Avance en Campaña %s</string>
+    <string name="title_toolbar_collection">Cobranza y Ganancia</string>
+    <string name="title_toolbar_newcycles">Ciclo de Nuevas</string>
+    <string name="title_toolbar_sales_and_orders">Venta y Pedidos</string>
+    <string name="title_detail_by_section">Detalle por sección</string>
+    <string name="title_detail_by_zone">Detalle por zona</string>
+    <string name="title_detail_by_region">Detalle por región</string>
+    <string name="title_newcycles_detail_gr">Consolidado por zonas en %s</string>
+    <string name="title_newcycles_detail_dv">Consolidado por región en %s</string>
+    <string name="title_collection_detail">Detalle por Sección</string>
+    <string name="title_consolidated">Consolidado</string>
+    <string name="title_consultants_with_debt">Consultoras con deuda</string>
+    <string name="title_zone_results">Resultados de la Zona en %s</string>
+    <string name="title_region_results">Resultados de la Región en %s</string>
+    <string name="title_country_results">Resultados del País en %s</string>
+    <string name="title_recovery">% Recuperación</string>
+    <string name="title_recovered">RECUPERADO %s</string>
+    <string name="title_invoiced">FACTURADO %s</string>
+    <string name="title_socia_level">Nivel de Socia</string>
+    <string name="title_socia_campaign_result">Resultado de Campaña</string>
+    <string name="header_label_new_cycles">%s 999 Consultoras 6D6 </string>
+    <string name="text_newcycle_tooltip">Podrás ganar hasta %1$s por cada 6D6 y %2$s por cada 6D6 AV que logres retener en la campaña.</string>
+    <string name="text_newcycle_tooltip_third_person">Ganará hasta %1$s por cada 6D6 y %2$s por cada 6D6 AV que logre retener en la campaña.</string>
+    <string name="title_newcycles_6d6">6D6</string>
+    <string name="title_newcycles_5d5">5D5</string>
+    <string name="title_newcycles_4d4">4D4</string>
+    <string name="title_newcycles_3d3">3D3</string>
+    <string name="title_newcycles_2d2">2D2</string>
+    <string name="title_newcycles_1d1">1D1</string>
+    <string name="title_high_value_newcycles_6d6">6D6 AV</string>
+    <string name="title_high_value_newcycles_5d5">5D5 AV</string>
+    <string name="title_high_value_newcycles_4d4">4D4 AV</string>
+    <string name="title_low_value_retained">Consultoras 6d6 retenidas</string>
+    <string name="title_low_value_retention">Retención 6d6</string>
+    <string name="title_retention_pegs">Retención\npegs</string>
+
+    <string name="title_high_value_retained">Consultoras 6d6 alto valor retenidas</string>
+    <string name="title_high_value_retention">Retención 6d6 alto valor</string>
+    <string name="title_high_value_retention_multiprofile">Retención 6d6 AV</string>
+    <string name="subtitle_newcyles_goal">En %s puedes lograr en tu Zona</string>
+    <string name="subtitle_sales_orders_gz_progress">Resultados por %1$s en %2$s</string>
+    <string name="header_single_gz">Sección</string>
+    <string name="header_single_gr">Zona</string>
+    <string name="header_single_dv">Región</string>
+    <string name="title_new_cycle_billing_detail">¡Tu Facturación detallada!</string>
+    <string name="title_searching_detail">Consultoras de la Sección</string>
+    <string name="kpi_billing_button_title">Avance de Facturación</string>
+    <string name="action_go_to_search">%s Consultoras en total</string>
+    <string name="action_go_to_postulant_kpi">Únete</string>
+    <string name="title_tab_consolidated">Ver %s</string>
+    <string name="subtitle_sales_orders_detail">Detalle por %1$s en %2$s</string>
+    <string name="subtitle_sales_orders_progress">Avance por %1$s en %2$s</string>
+    <string name="new_cycles_section_title">Sección</string>
+    <string name="header_gz">Secciones</string>
+    <string name="header_gr">Zonas</string>
+    <string name="header_dv">Regiones</string>
+    <string name="column_header_gz">Zona/\nSecciones</string>
+    <string name="column_header_gr">Region/\nZonas</string>
+    <string name="column_header_dv">Pais/\nRegiones</string>
+    <string name="title_sales_order_billing">En C%s vas logrando</string>
+    <string name="title_sales_order_billing_third">En C%s va logrando</string>
+    <string name="title_sales_order_sale">Tus Resultados C%s</string>
+    <string name="title_sales_order_sale_third">Resultados C%s</string>
+    <string name="goal_achievement">Cumplimiento de meta</string>
+    <string name="net_sale">Venta Neta</string>
+
+    <string name="subtitle_average">Promedio %s</string>
+    <string name="title_consultant_name">%s - %s</string>
+    <string name="ua_name">%s %s</string>
+    <string name="title_zone_information">Estás viendo el detalle de:</string>
+    <string name="empty" />
+    <string name="own_ua">Mi %s</string>
+
+    <!-- All -->
+    <string name="all_number_with_currency">%s %s</string>
+    <!-- End All-->
+
+    <!-- New Cycle -->
+    <string name="new_cycle_header">Ciclo de Nuevas</string>
+    <string name="new_cycle_campaign_title">En C%s puedes lograr</string>
+    <string name="new_cycle_campaign_title_third">En C%s puede lograr</string>
+    <string name="new_cycle_billing_title">Vas reteniendo</string>
+    <string name="new_cycle_billing_title_third">Va reteniendo</string>
+    <plurals name="new_cycle_consultants_billing">
+        <item quantity="one">%1$s de %2$s\nConsultora 6d6</item>
+        <item quantity="other">%1$s de %2$s\nConsultoras 6d6</item>
+    </plurals>
+    <plurals name="new_cycle_consultants">
+        <item quantity="one">%1$s Consultora 6d6</item>
+        <item quantity="other">%1$s Consultoras 6d6</item>
+    </plurals>
+    <plurals name="new_cycle_consultants_high_value">
+        <item quantity="one">%1$s Consultora\n6d6 Alto valor</item>
+        <item quantity="other">%1$s Consultoras\n6d6 Alto valor</item>
+    </plurals>
+    <plurals name="new_cycle_consultants_high_value_billing">
+        <item quantity="one">%1$s de %2$s\nConsultora\n6d6 Alto valor</item>
+        <item quantity="other">%1$s de %2$s\nConsultoras\n6d6 Alto valor</item>
+    </plurals>
+    <!-- End New Cycle -->
+
+    <!-- Collection -->
+    <string name="collection_header">Ganancia y Saldo</string>
+    <string name="collection_header_multi_profile">Cobranza</string>
+    <string name="collection_campaign_title">En C%s tienes</string>
+    <string name="collection_campaign_title_third">En C%s tiene</string>
+    <string name="collection_description_recovery">%s%%\nde Recuperación</string>
+    <string name="collection_description_charged_orders">%s de %s\nPedidos cobrados</string>
+    <!--End Collection -->
+
+    <!-- Retention & Capi -->
+    <string name="retention_capi_header">Retención y Capi</string>
+    <string name="retention_capi_campaign_title">En C%s debes</string>
+    <string name="retention_capi_campaign_title_third">En C%s debe</string>
+    <string name="retention_capi_subtitle_entries">Lograr</string>
+    <plurals name="retention_capi_description_entries">
+        <item quantity="one">%s Ingreso</item>
+        <item quantity="other">%s Ingresos</item>
+    </plurals>
+    <string name="retention_capi_subtitle_retention">Retener</string>
+    <plurals name="retention_capi_description_retention">
+        <item quantity="one">%1$s PEG %2$s</item>
+        <item quantity="other">%1$s PEGs %2$s</item>
+    </plurals>
+    <string name="retention_capi_description_retention_billing">%s de %s PEGs %s</string>
+    <string name="retention_capi_subtitle_entries_billing">Vas logrando</string>
+    <string name="retention_capi_subtitle_entries_billing_third">Va logrando</string>
+    <string name="retention_capi_subtitle_retention_billing">Vas reteniendo</string>
+    <string name="retention_capi_subtitle_retention_billing_third">Va reteniendo</string>
+    <string name="retention_capi_subtitle_retention_billing_multi_profile">y debes retener</string>
+    <string name="retention_capi_subtitle_retention_billing_multi_profile_third">y debe retener</string>
+    <string name="retention_capi_description_porjected_capi">%s de Capi\nProyectada</string>
+    <string name="retention_capi_description">%s de Capi</string>
+    <!-- End Retention & Capi -->
+
+    <!-- Sales and Orders -->
+    <string name="sale_orders_header">Venta, Pedidos y PMNP</string>
+    <string name="sale_orders_sale_title_multi_profile">Resultados por %s en C%s</string>
+    <string name="sale_orders_campaign_title">En C%s tu meta es</string>
+    <string name="sale_orders_campaign_title_third">En C%s su meta es</string>
+    <string name="sale_orders_description_orders">%s Pedidos %s</string>
+    <string name="sale_orders_description_catalog_sale">%s %s\nVenta Catálogo %s</string>
+    <string name="sale_orders_description_catalog_sale_multi_profile">%s %s\nde Venta</string>
+    <string name="sale_orders_default_title_billing">Vas logrando</string>
+    <string name="sale_orders_default_title_billing_third">Va logrando</string>
+    <string name="sale_orders_success_title_billing">¡Superaste tu meta!</string>
+    <string name="sale_orders_success_title_billing_third">¡Superó su meta!</string>
+    <string name="sale_orders_success_title_billing_multi_profile">¡Superaste tus metas!</string>
+    <string name="sale_orders_success_title_billing_multi_profile_third">¡Superó sus metas!</string>
+    <string name="sale_orders_reached_title_billing">¡Lograste tu meta!</string>
+    <string name="sale_orders_reached_title_billing_third">¡Logró su meta!</string>
+    <string name="sale_orders_reached_title_billing_multi_profile">¡Lograste tus metas!</string>
+    <string name="sale_orders_reached_title_billing_multi_profile_third">¡Logró sus metas!</string>
+    <string name="sale_orders_subtitle_billing_catalog_sale">Venta Catálogo</string>
+    <string name="sale_orders_title_billing_multi_profile">Vas logrando</string>
+    <string name="sale_orders_title_billing_multi_profile_third">Va logrando</string>
+    <string name="sale_orders_orders_title">Pedidos</string>
+    <string name="sale_orders_goal_description">Meta: %s Pedidos</string>
+    <string name="sale_orders_catalog_sale_description">Meta: %s\nVenta Catálogo</string>
+    <string name="sale_orders_catalog_sale_description_multi_profile">Meta: %s %s\nde Venta</string>
+    <string name="sale_orders_amount_sale_description">%s %s Venta</string>
+
+    <plurals name="sale_orders_description_orders_multi_profile">
+        <item quantity="one">y %d\nPedido %s</item>
+        <item quantity="other">y %d\nPedidos %s</item>
+    </plurals>
+    <plurals name="sale_orders_description_orders">
+        <item quantity="one">%s Pedido</item>
+        <item quantity="other">%s Pedidos</item>
+    </plurals>
+    <plurals name="sale_orders_description_orders_legacy">
+        <item quantity="one">Pedido</item>
+        <item quantity="other">Pedidos</item>
+    </plurals>
+    <plurals name="sale_orders_description_orders_billed">
+        <item quantity="one">%s facturado</item>
+        <item quantity="other">%s facturados</item>
+    </plurals>
+
+
+    <string name="sale_orders_title_net_sales">VENTA NETA</string>
+    <string name="sale_orders_title_orders">PEDIDOS</string>
+
+    <string name="sale_orders_title_pmnp">PMNP</string>
+    <string name="achievement_title">CUMPLIMIENTO</string>
+    <string name="sale_orders_title_goals">En C%s tus metas son</string>
+    <string name="sale_orders_title_achievements">En C%s lograste</string>
+    <string name="sale_orders_title_achievements_progress">En C%s vas logrando</string>
+    <string name="sale_orders_title_actives_final">ACTIVAS FINALES</string>
+
+    <string name="sale_orders_title_actives_retention">RET. DE ACTIVAS</string>
+    <string name="sale_orders_fulfillment_progress">Cumplimiento: %s%%</string>
+    <string name="sale_orders_pmnp_message_goal">Meta: $%s</string>
+    <string name="sale_orders_activity_percentage_message_goal">Meta: %s%</string>
+
+    <string name="sale_orders_disclaimer_multimark_high_value_orders">En tu zona hay %s pedidos de Alto Valor Multimarca</string>
+
+    <string name="progress_pmnp_title">$ %s PMNP</string>
+
+
+    <string name="orders">Pedidos</string>
+    <string name="actives_retention">Ret. de Activas</string>
+
+    <string name="your_country">Tu País</string>
+    <string name="your_region">Tu Región</string>
+    <string name="your_zone">Tu Zona</string>
+
+    <string name="text_real">Real</string>
+    <string name="text_goal">Meta</string>
+    <string name="text_fulfillment">Cumplimiento</string>
+    <string name="text_average">Promedio por\nPedido</string>
+    <string name="text_low_value">Bajo Valor</string>
+    <string name="text_high_value">Alto Valor</string>
+    <string name="text_high_value_plus">Alto Valor Plus</string>
+    <string name="text_final_actives">Activas Finales\nC%s</string>
+    <string name="text_final_actives_last_year">Activas Finales\n%s</string>
+    <string name="text_actives_retention_percentage">%%Retención de\nActivas</string>
+    <!-- End Sales and Orders -->
+
+
+    <string name="new_cycle_in_x_campaign_message_se_sale">En %s puedes lograr</string>
+    <string name="new_cycle_in_x_campaign_message_se_billing">En %s vas logrando</string>
+    <string name="new_cycle_in_x_campaign_message_gz_sale">En %s puedes lograr en tu Zona</string>
+    <string name="new_cycle_in_x_campaign_message_gz_billing">En %s vas logrando en tu Zona</string>
+    <string name="new_cycle_in_x_campaign_message_gr_sale">En %s puedes lograr en tu Región</string>
+    <string name="new_cycle_in_x_campaign_message_gr_billing">En %s vas logrando en tu Región</string>
+    <string name="new_cycle_in_x_campaign_message_dv_sale">En %s puedes lograr en tu País</string>
+    <string name="new_cycle_in_x_campaign_message_dv_billing">En %s vas logrando en tu País</string>
+    <string name="new_cycle_consultants_low_value_segment">%1$s %2$s Consultoras 6D6</string>
+    <string name="new_cycle_consultants_high_value_segment">%1$s %2$s Consultoras 6D6 Alto valor</string>
+    <string name="new_cycle_in_delimiter">%1$s de %2$s</string>
+    <string name="new_cycle_in_delimiter_two_lines">%1$s\nde %2$s</string>
+
+    <string name="text_kpi_consolidated_gz">Avance por Sección en %s</string>
+    <string name="text_kpi_consolidated_gr">Avance por Zona en %s</string>
+    <string name="text_kpi_consolidated_dv">Avance por Región en %s</string>
+
+    <string name="consolidated_by_x">Consolidado por %s</string>
+    <string name="view_x">Ver %s</string>
+    <string name="consultants_details">Detalle de las consultoras</string>
+    <string name="consultants_all">Todas</string>
+    <string-array name="new_cycle_se_title_tabs">
+        <item>@string/title_newcycles_6d6</item>
+        <item>@string/title_newcycles_5d5</item>
+        <item>@string/title_newcycles_4d4</item>
+        <item>@string/title_newcycles_3d3</item>
+        <item>@string/title_newcycles_2d2</item>
+        <item>@string/title_newcycles_1d1</item>
+    </string-array>
+
+    <string name="date_update">Actualizado el %s a las %s</string>
+    <string name="title_section_results">Tu avance de Ganancia %s</string>
+    <string name="collection_recovery_advance_title">Resultados %s</string>
+    <string name="title_handle_consultants_with_orders">Gestiona las consultoras con pedido %s</string>
+    <string name="title_handle_actives">Gestiona las activas</string>
+    <string name="retention_capi_title">Gestiona a tus PEGs</string>
+    <string name="title_handle_pegs">Gestiona las PEGs</string>
+    <string name="text_new_cycle_sale_title">Gestiona a tu Ciclo de Nuevas</string>
+    <string name="text_new_cycle_sale_title_gz">Gestiona al Ciclo de Nuevas</string>
+    <string name="gain_detail_projected">Detalle ganancia proyectada %s</string>
+    <string name="profit_received_title">Detalle de Ganancia %s</string>
+    <string name="gain_total_projected">Ganancia total proyectada</string>
+    <string name="info_total_gain_projected">*La Ganancia Cambio de nivel no se considera para el "Avance de Ganancia"</string>
+    <string name="high_value_orders">PEDIDOS ALTO VALOR</string>
+    <string name="low_value_orders">PEDIDOS BAJO VALOR</string>
+    <string name="gain_by_orders">Pedidos</string>
+    <string name="gain_by_competition">Concursos</string>
+    <string name="total">Total: %1$s %2$s</string>
+    <string name="high_values_plus_orders">Alto Valor Plus</string>
+    <string name="high_values_orders">Alto Valor</string>
+    <string name="low_values_orders">Bajo Valor</string>
+    <string name="consultants_with_outstanding_debt">Consultoras con deuda pendiente</string>
+    <string name="calculate_now">Calcular ahora</string>
+    <string name="proyect_your_gain_for_and_accomplish_your_goals">Proyecta tu ganancia para %s y logra tus sueños</string>
+    <string name="gains_calculator">Calculadora de ganancia</string>
+    <string name="you_projected_in_your_calc_aproach_gains">En C08 proyectaste en tu <b>Calculadora de ganancia</b> una ganancia aproximada de: <b>S/ 1,800</b></string>
+    <string name="you_need_x_to_achieve_it">Te faltan <b><font color="#B9007E"> S/ 1,200</font></b> para lograrlo</string>
+    <string name="x_money_left">Te faltan S/ 1,200 para lograrlo</string>
+    <string name="title_see_zone">Ver zonas</string>
+    <string name="title_see_region">Ver Regiones</string>
+    <string name="title_advance">Avance de Ganancia por pedidos</string>
+    <string name="title_profit_potential">Ganancia Potencial *</string>
+    <string name="title_entries_acomplished">Ingresos logrados</string>
+    <string name="text_profit_potential_disclaimer">* Dependerá de los resultados al final de la campaña.</string>
+    <string name="text_save_your_capitalization_in_campaign">¡Asegura tu Capi en %s!</string>
+    <string name="text_push_its_capitalization_in_campaign">¡Impulsa su Capi en %s!</string>
+
+    <string name="header_title_sale_orders_se">💪 Meta de Pedidos %s</string>
+    <string name="header_title_sale_orders_bright_se">💪 Meta Venta Catálogo %s</string>
+    <string name="header_description_sale_orders_se">120 Pedidos</string>
+
+    <string name="content_title_billing_se">Avance de la Sección en %s</string>
+    <string name="title_goal">META</string>
+    <plurals name="billed_number">
+        <item quantity="one">facturado</item>
+        <item quantity="other">facturados</item>
+    </plurals>
+    <string name="billed">facturado</string>
+    <string name="billeds">facturados</string>
+    <string name="total_with_percentage">Total: %s%%</string>
+    <string name="total_quantity">Total: %s</string>
+    <string name="final_active">Consultora</string>
+    <string name="final_actives">Consultoras</string>
+    <plurals name="final_active_number">
+        <item quantity="one">Consultora</item>
+        <item quantity="other">Consultoras</item>
+    </plurals>
+    <string name="text_your_capitalization_tip">Recuerda que tu capitalización se calcula en base a: Ingresos + Reingresos - Egresos</string>
+    <string name="text_capitalization_tip">Recuerda que la capitalización se calcula en base a: Ingresos + Reingresos - Egresos</string>
+    <string name="order_average">Promedio por pedido</string>
+    <string name="capitalization">Capitalización</string>
+    <string name="segure_gain_amount">Ganancia Monto Asegurado</string>
+    <string name="capitalization_projected">Capitalización\nProyectada</string>
+    <string name="incomes">Ingresos</string>
+    <string name="reentries">Reingresos</string>
+    <string name="adjusted_incomes">Ingresos para el éxito</string>
+    <string name="expenses">Egresos</string>
+    <string name="activity">Actividad</string>
+    <string name="activity_percentage">\%ACTIVIDAD</string>
+
+
+
+    <string name="text_news">Nuevas</string>
+    <string name="text_news_high_value">Nuevas Alto Valor</string>
+    <string name="text_actives_retention">Ret. de Activas</string>
+
+    <string name="final_actives_label">Activas finales</string>
+    <string name="pegs">PEGs</string>
+    <string name="pegs_column_title">PEGs\npor retener</string>
+    <string name="active_retention">Retención de Activas</string>
+    <string name="orders_detail">Detalle de Pedidos</string>
+    <string name="high_value_orders_">Pedidos de Alto Valor</string>
+    <string name="low_value_orders_">Pedidos de Bajo Valor</string>
+    <string name="retained_pegs">PEGs retenidas</string>
+    <string name="retention_pegs_percentage">Retención de PEGs</string>
+    <string name="pegtoretain">PEGs por retener</string>
+    <string name="retention_final_actives">Activas finales C18 - %s</string>
+    <string name="total_campaign_number">C18</string>
+    <string name="total_campaign_number_pr">C13</string>
+    <string name="number_with_percentage">%s%%</string>
+    <string name="sale">Venta</string>
+    <string name="text_kpi_new_consultants">Nuevas</string>
+    <string name="text_kpi_new_high_value_consultants">Nuevas Alto Valor</string>
+
+    <string name="home_saleOrdersSaleTitle">En C%s lograste</string>
+    <string name="home_saleOrdersSaleTitleThirdPerson">En C%s logró</string>
+    <string name="home_saleOrdersCatalogSale">%s %s %s\nVenta Catálogo</string>
+    <string name="home_saleOrdersIndicatorGoalNotReached">Te faltan</string>
+    <string name="home_saleOrdersIndicatorGoalNotReachedThirdPerson">Le faltan</string>
+    <string name="home_saleOrdersIndicatorGoalMessage">¡Tú puedes!</string>
+    <string name="home_saleOrdersIndicatorGoalSuccessTitle">Alcanzaste tu meta de</string>
+    <string name="home_saleOrdersIndicatorGoalSuccessTitleThirdPerson">Alcanzó su meta de</string>
+    <string name="home_saleOrdersIndicatorGoalReachedMessage">¡Lo lograste! 🤩</string>
+    <string name="home_saleOrdersIndicatorGoalExceededTitle">Superaste tu meta en</string>
+    <string name="home_saleOrdersIndicatorGoalExceededTitleThirdPerson">Superó su meta en</string>
+    <string name="home_saleOrdersBrightDescriptionCatalogSale">En C%s tu meta de Venta Catálogo es</string>
+    <string name="home_saleOrdersBrightDescriptionCatalogSaleThirdPerson">En C%s su meta de Venta Catálogo es</string>
+    <string name="home_saleOrdersBrightSubtitlePreviousCatalogSale">de Venta Catálogo</string>
+    <string name="home_saleOrdersSaleDescriptionGZ">%s %s de Venta Neta\ny %d Pedidos %s</string>
+    <string name="progress_complete">100%</string>
+
+    <string name="number_with_currency">%s %s</string>
+    <string name="text_with_slash">%s /\n%s</string>
+    <string name="new_fixed">Fijas Nuevas</string>
+    <string name="retention_6d6">Retención 6D6</string>
+    <string name="change_level">Cambio de Nivel</string>
+    <string name="products_release">Lanzamiento de Productos</string>
+
+    <string name="ganancia_cambio_de_nivel">Ganancia Cambio de nivel</string>
+
+    <string name="home_collectionProjectedProfitTitle">Ganancia proyectada</string>
+    <string name="home_collectionRecoveryTitle">Vas recuperando</string>
+    <string name="home_collectionRecoveryTitleThirdPerson">Va recuperando</string>
+
+    <string name="home_newCyclePossible">Posibles 6d6</string>
+    <string name="text_kpi_newcycle_possible_6d6">Posibles\n6d6</string>
+    <string name="text_kpi_newcycle_possible_6d6_high_value">Posibles\n6d6 AV</string>
+    <string name="text_kpi_newcycle_possible_5d5">Posibles\n5d5</string>
+    <string name="text_kpi_newcycle_possible_5d5_high_value">Posibles\n5d5 AV</string>
+    <string name="text_kpi_newcycle_possible_4d4">Posibles\n4d4</string>
+    <string name="text_kpi_newcycle_possible_4d4_high_value">Posibles\n4d4 AV</string>
+    <string name="text_kpi_newcycle_possible_3d3">Posibles\n3d3</string>
+    <string name="text_kpi_newcycle_possible_2d2">Posibles\n2d2</string>
+    <string-array name="new_cycle_header_columns">
+        <item>@string/text_kpi_newcycle_possible_6d6</item>
+        <item>@string/text_kpi_newcycle_possible_5d5</item>
+        <item>@string/text_kpi_newcycle_possible_4d4</item>
+        <item>@string/text_kpi_newcycle_possible_3d3</item>
+        <item>@string/text_kpi_newcycle_possible_2d2</item>
+    </string-array>
+    <string-array name="new_cycle_header_columns_high_value">
+        <item>@string/text_kpi_newcycle_possible_6d6_high_value</item>
+        <item>@string/text_kpi_newcycle_possible_5d5_high_value</item>
+        <item>@string/text_kpi_newcycle_possible_4d4_high_value</item>
+    </string-array>
+    <string name="home_newCycleConsultants6d6">%s 6d6</string>
+    <string name="home_newCyclePossibleConsultants6d6">Posibles 6d6: %s</string>
+    <string name="all_you_have">Tienes</string>
+    <string name="all_you_haveThirdPerson">Tiene</string>
+    <string name="country_label">País</string>
+    <string name="region_label">Región</string>
+    <string name="zone_label">Zona</string>
+    <string name="section_label">Sección</string>
+    <string name="your_label">Tu %s</string>
+
+    <string name="text_country_and_regions">PAÍS/\nREGIONES</string>
+    <string name="text_region_and_zones">REGIÓN/\nZONAS</string>
+    <string name="text_zone_and_sections">ZONA/\nSECCIONES</string>
+
+    <string name="contest_win">Ganancia por concursos</string>
+    <string name="order_profit">Ganancia por pedidos</string>
+    <string name="newcycle_letter_campaign">C</string>
+
+    <string name="title_handle_your_cs_with_debts">Gestiona a tus consultoras con deuda</string>
+    <string name="title_handle_cs_with_debts">Gestiona a las consultoras con deuda</string>
+
+
+    <string name="text_total_gain_in_campaign">Ganancia total %s</string>
+
+    <string name="text_pre_approved">Pre-aprobadas</string>
+    <string name="text_approved">Aprobadas</string>
+    <string name="text_in_evaluation">En evaluación</string>
+    <string name="text_anticipates_incomes">Ing. Anticipados</string>
+    <string name="text_total_gain_se_establecida">Avance de Ganancia de %s</string>
+    <string name="text_total_gain_se_nueva">Ganancia de %s</string>
+    <string name="text_orders_gain_date">Ganancia de Pedidos a la fecha</string>
+    <string name="text_other_ways_profits">Otras formas de ganancia</string>
+    <string name="text_orders_gain_date_order_name">Pedidos de %s</string>
+    <string name="text_retention_title_6d6">Retención 6d6</string>
+    <string name="text_retention_detail_6d6">Retuviste %s Consultoras 6d6</string>
+    <string name="text_retention_detail_differentiated_title_6d6">Retuviste %s Consultoras 6d6 </string>
+    <string name="text_retention_detail_differentiated_title_6d6_low_value">%s Consultora 6d6 Bajo Valor </string>
+    <string name="text_retention_detail_differentiated_title_6d6_high_value">%s Consultora 6d6 Alto Valor</string>
+
+    <string name="text_retention_detail_6d6_differentiated">%s Consultora 6d6 %s</string>
+    <string name="capitalizacion_detail_nueva">Tuviste una capitalizacion de %s</string>
+
+    <string name="newcycle_tip_description">Gana hasta S/120 por cada 6D6 y S/150 por cada 6D6 AV que logres retener en la campaña.</string>
+
+    <string name="text_tip_capitalization_tip_billing_period">La capitalización proyectada se calcula en base a: Ingresos + Reingresos - PEGs por retener</string>
+    <string name="text_tip_capitalization_tip_billing_period_capi">
+        * La capitalización proyectada se calcula en base a: Ingresos + Reingresos - PEGs por retener.\n\n
+        * Ingresos para el éxito: Son los ingresos totales de la sección considerando que cada 2 ingresos proactivos se considera como 1 ingreso.\n
+        **La capitalización proyectada para cálculo de éxito se calcula en base a: ingresos para el éxito + reingresos - egresos. Esta variable solo se utilizará en caso tu nivel de Socia tenga condición de Capitalización para el logro del éxito
+    </string>
+    <string name="text_tip_capitalization_tip_billing_period_capi_peru">
+        La capitalización proyectada se calcula en base a: Ingresos + Reingresos - PEGs por retener.\n\n
+        * Ingresos para el éxito: Son los ingresos totales de la sección considerando que el total de ingresos proactivos se considera como 1 ingreso.\n
+        ** La capitalización proyectada para cálculo de éxito se calcula en base a: ingresos para el éxito + reingresos - egresos. Esta variable solo se utilizará en caso tu nivel de Socia tenga condición de Capitalización para el logro del éxito.
+    </string>
+    <string name="text_possible_entries">Posibles\nIngresos</string>
+    <string name="text_possible_re_entries">Posibles\nReingresos</string>
+
+    <plurals name="text_possible_consultant">
+        <item quantity="one">%d Posible Consultora</item>
+        <item quantity="other">%d Posibles Consultoras</item>
+    </plurals>
+
+    <string name="text_possibles_consultants">Posibles consultoras</string>
+    <string name="text_projected_capitalization">Capitalización proyectada</string>
+    <string name="text_projected_section_capitalization">Capitalización proyectada para cálculo de éxito</string>
+    <string name="kpi_newcycle_keep_in_mind">☝️</string>
+    <string name="percentage_string_format">%s%%</string>
+    <string name="collection_charged_orders">Detalle de pedidos Cobrados</string>
+    <string name="collection_charged_orders_percentage">Pedidos Cobrados al %s</string>
+    <string name="text_kpi_your_results_title">Tus Resultados %s</string>
+    <string name="text_kpi_your_results_title_gz">En %s lograste</string>
+    <string name="text_kpi_your_results_title_formatted">Tus Resultados C%s</string>
+    <string name="text_kpi_results_title_formatted">Resultados C%s</string>
+
+    <string name="grid_title_recovery">%RECUPERACIÓN</string>
+    <string name="grid_title_invoiced">FACTURADO</string>
+    <string name="grid_title_recovered">RECUPERADO</string>
+    <string name="text_new_cycle_sale_gz_third_person_title">En %s puede lograr</string>
+    <string name="text_new_cycle_results_third_person_title">Resultados %s</string>
+
+    <string name="text_kpi_data_not_available">Aún no hay información de esta %s</string>
+    <string name="collection_title_31_days">Activar cobranza a 31 días</string>
+    <string name="text_total_gain">Ganancia total</string>
+
+    <string name="operation_division">%s / %s</string>
+
+</resources>

@@ -1,0 +1,50 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/indicator_bright_path"
+    android:padding="@dimen/content_inset_less"
+    tools:context="biz.belcorp.salesforce.modules.brightpath.features.header.BrightPathHeaderKpiFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLevelIndicatorDetailMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="end"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_body"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="EN C05 LOGRASTE" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLevelIndicatorDetailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:gravity="end"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_title_1"
+        android:textStyle="bold"
+        android:padding="@dimen/content_inset_tiniest"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorDetailMessage"
+        tools:text="20 Cambios de Nivel" />
+
+    <include
+        android:id="@+id/layoutIndicators"
+        layout="@layout/fragment_level_indicator_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevelIndicatorDetailTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

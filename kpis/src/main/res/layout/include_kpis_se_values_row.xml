@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/ds_padding_12dp">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/colorSubTitle"
+        android:textSize="@dimen/text_size_label"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvTitleRight"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/high_value_orders" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvValueLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/colorSubTitle"
+        android:textSize="@dimen/text_size_caption"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleLeft"
+        tools:text="s/ 400" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/colorSubTitle"
+        android:textSize="@dimen/text_size_label"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintLeft_toRightOf="@+id/tvTitleLeft"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/low_value_orders" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvValueRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/colorSubTitle"
+        android:textSize="@dimen/text_size_caption"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleRight"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleLeft"
+        tools:text="s/ 800" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

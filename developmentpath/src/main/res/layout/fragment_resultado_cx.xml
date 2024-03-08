@@ -1,0 +1,121 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentResultados"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/content_inset_medium"
+    android:paddingEnd="@dimen/content_inset_normal"
+    android:paddingBottom="@dimen/content_inset_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMetaVsReal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/resultado_meta_real"
+        android:textColor="@color/magenta"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop"
+        tools:text="Meta vs Real" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_meta_real"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:background="@drawable/surface_rounded"
+        android:paddingTop="@dimen/content_inset_normal"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMetaVsReal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textMeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginEnd="8dp"
+            android:text="@string/resultado_meta"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/textReal"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textReal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            android:text="@string/resultado_real"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/black"
+            app:layout_constraintBaseline_toBaselineOf="@id/textMeta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/textMeta"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barreraTitulos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="textMeta,textMeta" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMetaReal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            app:layout_constraintTop_toBottomOf="@id/barreraTitulos"
+            tools:itemCount="6"
+            tools:layoutManager="GridLayoutManager"
+            tools:listitem="@layout/inflate_custom_etiqueta_information"
+            tools:spanCount="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtResultadoCx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/resultado_cx"
+        android:textColor="@color/magenta"
+        android:textSize="@dimen/text_size_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content_meta_real"
+        tools:targetApi="lollipop"
+        tools:text="Ganancia" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_resultado_cx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/surface_rounded"
+        android:paddingTop="@dimen/content_inset_normal"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:layout_constraintTop_toBottomOf="@id/txtResultadoCx">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerResultadosCx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="6"
+            tools:layoutManager="GridLayoutManager"
+            tools:listitem="@layout/inflate_custom_etiqueta_information"
+            tools:spanCount="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

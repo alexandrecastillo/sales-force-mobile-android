@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvwItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="8dp"
+    android:background="#fff"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="60dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:padding="@dimen/ds_padding_other_2">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvConsultantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_light"
+            android:maxLines="1"
+            android:textColor="@color/purple"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="MARILU GARCIA" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvConsultantCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_other_1"
+            android:fontFamily="@font/mulish_regular"
+            android:maxLines="1"
+            android:textColor="@color/gray_label_dark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsultantName"
+            tools:text="Código: 0503213" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvConsultantSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_other_1"
+            android:fontFamily="@font/mulish_regular"
+            android:maxLines="1"
+            android:textColor="@color/gray_label_dark"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsultantLevel"
+            tools:text="Seccion: A" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvConsultantLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_other_1"
+            android:fontFamily="@font/mulish_regular"
+            android:maxLines="1"
+            android:textColor="@color/gray_label_dark"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsultantCode"
+            tools:text="Nivel: Coral" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvConsultantBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_other_1"
+            android:fontFamily="@font/mulish_regular"
+            android:maxLines="1"
+            android:textColor="@color/red_balance"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/ConsultantEndIconBarrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsultantSeccion"
+            tools:text="Saldo Pendiente: S/ 10.00" />
+
+        <ImageView
+            android:id="@+id/ivConsultantFav"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:padding="@dimen/ds_margin_other_1"
+            android:tint="@color/gris"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/callSeparator"
+            app:layout_constraintStart_toEndOf="@+id/ConsultantEndIconBarrier"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_location_map" />
+
+        <ImageView
+            android:id="@+id/ivConsultantFavRed"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:padding="@dimen/ds_margin_other_1"
+            android:tint="@color/red"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/callSeparator"
+            app:layout_constraintStart_toEndOf="@+id/ConsultantEndIconBarrier"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_location_map" />
+
+        <View
+            android:id="@+id/callSeparator"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/ds_margin_other_1"
+            android:layout_marginEnd="@dimen/ds_margin_other_1"
+            android:background="@color/separator_color"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivConsultantCall"
+            app:layout_constraintEnd_toStartOf="@+id/ivConsultantCall"
+            app:layout_constraintTop_toTopOf="@+id/ivConsultantCall" />
+
+        <ImageView
+            android:id="@+id/ivConsultantCall"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_margin="@dimen/ds_margin_other_1"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/selector_ic_call" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/ConsultantEndIconBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="ivConsultantFavRed,ivConsultantFav"
+            tools:layout_editor_absoluteX="361dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

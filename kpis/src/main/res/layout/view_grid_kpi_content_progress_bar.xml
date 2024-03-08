@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/includedItemViewGridContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/view_grid_kpi_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <biz.belcorp.mobile.components.design.miniprogressbar.ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="@dimen/collection_progress_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includedItemViewGridContent"
+        app:miniprogressbar_progressDrawableHeight="@dimen/content_inset_tiny"
+        app:miniprogressbar_progressDrawableTint="@color/colorBillingButton"
+        app:miniprogressbar_progressDrawableWidth="match_parent"
+        app:miniprogressbar_progressPaddingLeftText="@dimen/content_inset_tiny"
+        tools:miniprogressbar_currentProgress="70"
+        tools:miniprogressbar_maxProgress="100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:padding="@dimen/ds_padding_normal">
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/userEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="👋" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userName"
+        style="@style/Widget.TextView.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_other_1"
+        android:textColor="@color/textColorPrimaryVariant"
+        app:layout_constraintStart_toEndOf="@+id/userEmoji"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/welcome_user_name" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/userDescription"
+        style="@style/Widget.TextView.Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:textColor="@color/textColorPrimaryVariant"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        tools:text="Socia Empresaria Sección A - 3012" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userSegmentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/userDescription"
+        app:layout_constraintTop_toBottomOf="@+id/userDescription">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/userSegmentIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/userSegment"
+            app:layout_constraintEnd_toStartOf="@+id/userSegment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userSegment"
+            app:srcCompat="@drawable/icon_circle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userSegment"
+            style="@style/Widget.TextView.Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_other_1"
+            android:textColor="@color/textColorPrimaryVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userSegmentIndicator"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nivel Diamante" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

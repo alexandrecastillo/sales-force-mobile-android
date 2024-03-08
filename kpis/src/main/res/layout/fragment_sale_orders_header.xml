@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvGoals"
+        style="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:textColor="@color/textColorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:text="En C09 tus metas  son" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGoals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGoals"
+        app:layout_goneMarginTop="@dimen/zero" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAchievements"
+        style="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:textColor="@color/textColorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvGoals"
+        tools:text="En C08 lograste" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAchievements"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAchievements" />
+
+    <LinearLayout
+        android:id="@+id/layoutMultibrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_padding_top_view_group"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_padding_top_view_group"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvAchievements">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/lato"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="@string/title_consultants_multi_brand"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/counter_14sp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:layout_alignParentStart="true"
+                android:text="@string/title_actives_multi_brand"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/magenta"
+                android:textSize="@dimen/counter_14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMultimarkIndicator"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/lato"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:textColor="@color/magenta"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="365 / 50.5%"
+                android:textSize="@dimen/counter_14sp"
+                android:textStyle="bold" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cpd_text_title_padding_left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/lato"
+                android:layout_alignParentStart="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/title_actives_no_multi_brand"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/counter_14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvNoMultimarkActives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/lato"
+                tools:text="150"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/counter_14sp"
+                 />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cpd_text_title_padding_left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/lato"
+                android:layout_alignParentStart="true"
+                android:text="@string/title_actives_multi_brand_vs_last_campaign"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/counter_14sp" />
+
+            <TextView
+                android:id="@+id/tvMultimarcaVsLastCampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                tools:text="-50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/black"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/counter_14sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cpd_text_title_padding_left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/magenta"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/title_actives_multi_brand_av"
+                android:textSize="@dimen/counter_14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMultimarkAVlastCampaignVs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="100 / 20.5%"
+                android:textColor="@color/magenta"
+                android:textSize="@dimen/counter_14sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cpd_text_title_padding_left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/lato"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_alignParentStart="true"
+                android:text="@string/title_actives_multi_brand_vs_last_campaign"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/counter_14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvMultimarcaActivasAVvsLastCampaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/lato"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/counter_14sp"
+                tools:text="+24"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_aprobada"
+    style="@style/item_postulante_card">
+
+    <LinearLayout style="@style/item_postulante_card_body">
+
+        <LinearLayout
+            android:id="@+id/header"
+            style="@style/item_postulante_header">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNombres"
+                style="@style/item_postulante_name"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                tools:text="Carmen Palomino" />
+
+            <LinearLayout
+                style="@style/item_postulante_status_box"
+                android:background="@drawable/background_unete_aprobada_box">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtStatusDescrip"
+                    style="@style/item_postulante_status_box_label"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/aprobada"
+                    android:textColor="@color/unete_aprobado" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/body"
+            style="@style/item_postulante_body">
+
+            <LinearLayout
+                android:id="@+id/lyDatos"
+                style="@style/item_postulante_datos_layout">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtNroDocumento"
+                    style="@style/item_postulante_label_data"
+                    android:text="@string/unete_listado_documento" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTelefonoCelular"
+                    style="@style/item_postulante_label_data"
+                    android:text="@string/unete_listado_telefono_celular" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtFuente"
+                    style="@style/item_postulante_label_data"
+                    android:text="@string/unete_listado_fuente" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtIngreso"
+                    style="@style/item_postulante_label_data"
+                    android:text="@string/unete_listado_ingreso" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTipoPago"
+                    style="@style/item_postulante_label_data"
+                    android:text="@string/unete_listado_tipo_pago" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtDireccion"
+                    style="@style/item_postulante_dato"
+                    android:textAlignment="viewStart"
+                    tools:text="@string/direccion" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyStatus"
+                style="@style/item_postulante_status_layout">
+
+                <ImageView
+                    android:id="@+id/icStatus"
+                    style="@style/item_postulante_status_circle"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/circle_unete_aprobada" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtStatus"
+                    style="@style/item_postulante_status_message"
+                    android:text="@string/postulante_aprobada"
+                    android:textColor="@color/unete_aprobado" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyStatus_aprobacion_sac"
+                style="@style/item_postulante_status_layout"
+                android:visibility="gone">
+
+                <ImageView
+                    style="@style/item_postulante_status_circle"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_alerta_roja" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/item_postulante_status_message"
+                    android:text="@string/unete_listado_aprobacion_sac"
+                    android:textColor="@color/unete_rechazado" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyCodConsultora"
+                style="@style/item_postulante_codconsultora_layout">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtCodConsultora"
+                    style="@style/item_postulante_codconsultora"
+                    android:text="@string/postulante_codigo_consultora" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

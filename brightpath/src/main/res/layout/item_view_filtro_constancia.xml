@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvwFilterLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_state_constancy_filter"
+    android:paddingStart="@dimen/content_inset_normal"
+    android:paddingTop="@dimen/content_inset_small"
+    android:paddingEnd="@dimen/content_inset_normal"
+    android:paddingBottom="@dimen/content_inset_small" />

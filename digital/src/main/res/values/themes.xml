@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DigitalFilterTheme" parent="AppTheme">
+        <item name="bgSelectorBarSelectedColor">@color/magenta</item>
+        <item name="dimenBorderRadius">@dimen/ds_radius_100</item>
+    </style>
+
+    <style name="DigitalGridTheme" parent="Widget.SpreadSheet">
+        <item name="mainColor">@color/colorGridDigital</item>
+        <item name="headerTextAppearance">@style/TextAppearance.Digital.Grid.Header</item>
+        <item name="cellTextAppearance">@style/TextAppearance.Digital.Grid.Cell</item>
+    </style>
+
+</resources>

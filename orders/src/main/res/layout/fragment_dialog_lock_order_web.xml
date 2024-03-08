@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/popup_width"
+    android:layout_height="250dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/popup_width"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_buttons"
+        android:layout_centerHorizontal="true"
+        android:background="#35bdb2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal|bottom">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/lock_order_web" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_gz_consultant_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="BLOQUEAR PEDIDO"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_gz_consultant_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center_horizontal"
+            android:text="¿Está seguro que desea bloquear el pedido?"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="@dimen/popup_width"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#aab2b8" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_accepted"
+            android:layout_width="159dp"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/separator">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="159dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center"
+                android:text="ACEPTAR"
+                android:textColor="#243039" />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/triangle_lock" />
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="159dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/separator"
+            android:background="@android:color/white"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:text="CANCELAR"
+            android:textColor="#243039" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_x_white" />
+
+    <View
+        android:id="@+id/view_close"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

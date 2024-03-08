@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_size_normal">24dp</dimen>
+    <dimen name="size_0dp">0dp</dimen>
+    <dimen name="size_60dp">60dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_19dp">19dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_23dp">23dp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+
+
+    <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_16sp">16sp</dimen>
+    <dimen name="size_15sp">15sp</dimen>
+    <dimen name="size_12sp">12sp</dimen>
+
+    <dimen name="credit_result_height">50dp</dimen>
+    <dimen name="credit_medium_height">60dp</dimen>
+    <dimen name="credit_large_height">104dp</dimen>
+
+</resources>

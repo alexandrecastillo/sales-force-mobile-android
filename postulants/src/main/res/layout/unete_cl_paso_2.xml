@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtTelefonoCelular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/telefono_celular" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtTelefonoFijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/telefono_fijo" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hasSelection="true"
+        android:visibility="gone"
+        custom:hint="@string/region" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnComuna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hasSelection="true"
+        android:visibility="gone"
+        custom:hint="@string/comuna" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.formulario.input.autoComplete.UAutoCompletePlaces
+        android:id="@+id/txtDireccionGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/direccion" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtDireccionManual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        custom:placeholder="@string/direccion_placeholder"
+        custom:hint="@string/direccion" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+        android:id="@+id/txtReferencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hint="@string/referencia" />
+
+    <LinearLayout
+        style="@style/uneteInput_box"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_text"
+            android:layout_weight="0.6"
+            android:text="@string/ha_sido_consultora" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swtConsultoraAnteriormente"
+            style="@style/unete_switch"
+            android:layout_weight="0.4"
+            android:checked="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/uneteInput_box"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_text"
+            android:layout_weight="0.6"
+            android:text="@string/consultora_recomendada" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swtRecomiendaConsultora"
+            style="@style/unete_switch"
+            android:layout_weight="0.4"
+            android:checked="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsultoraRecomienda"
+        style="@style/unete_section_exp"
+        android:layout_marginTop="12dp">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtCodigoConsultoraRecomienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/consultora_recomienda_codigo" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtNombreConsultoraRecomienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/consultora_recomienda_nombre"
+            custom:readOnly="true" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/unete_obligatorio_label"
+        android:text="@string/campos_obligatorios" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Widget styles -->
+    <style name="TextAppearance.Toolbar.Title.Methodology" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_size_title_2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+    </style>
+
+</resources>

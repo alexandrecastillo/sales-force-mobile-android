@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="credit_consulting_toolbat">CONSULTA CREDITICIA</string>
+    <string name="credit_consulting_toolbar_new">CONSULTA DE DEUDA</string>
+    <string name="credit_consulting_header">Se requiere conexión a internet para acceder\na esta funcionalidad.</string>
+    <string name="first_lastname">Primer Apellido</string>
+
+    <string name="name">Nombre</string>
+    <string name="identity_document_2">Doc. Identidad</string>
+    <string name="code_2">Código</string>
+    <string name="status">Estado</string>
+    <string name="debt">Deuda</string>
+    <string name="campaign_income">Campaña de Ingreso</string>
+    <string name="last_billing">Ultima facturación</string>
+    <string name="external_debt">Deuda Externa</string>
+    <string name="would_you_consult_if_he_has_debt_out_of_belcorp">¿Desea consultar si tiene deuda fuera de Belcorp?</string>
+    <string name="consult">Consultar</string>
+    <string name="consulting_external_debt">Consultando deuda externa…</string>
+    <string name="motive_lock">Bloqueo</string>
+    <string name="consultant_is_apt">Es apta para ser consultora</string>
+    <string name="consultant_is_apt_co">Es apta para ser consultora</string>
+    <string name="buro_sin_revisar_sv">Falta de información. Debe ser evaluado por SAC.</string>
+    <string name="buro_sin_resultado_sv">No se ha encontrado resultados.</string>
+    <string name="buro_error_intente_nuevamente_sv">Ocurrió un error en su solicitud. Por favor intentelo de nuevo.</string>
+    <string name="consultant_is_not_apt">No es apta para ser consultora</string>
+    <string name="consultant_is_not_apt_co">No es apta</string>
+    <string name="there_are_external_debts">Se registraron deudas externas</string>
+    <string name="could_not_do_the_request_retry_late">No se pudo hacer la consulta, por favor intente más tarde.</string>
+    <string name="there_are_not_external_debts">No se registraron deudas externas</string>
+    <string name="invalid_zone">La zona ingresada es invalida</string>
+    <string name="invalid_region">La Región ingresada es invalida</string>
+    <string name="error_validate_region_zone">Error al validar Region o Zona</string>
+    <string name="there_is_not_belcorp_data">No se registraron datos en Belcorp</string>
+    <string name="proof_concept">Conceptos de deuda</string>
+    <string name="you_must_complete_first_name">Debe ingresar Primer Apellido</string>
+    <string name="you_must_complete_fields">Debe ingresar Primer Apellido y Zona</string>
+    <string name="you_must_complete_fields2">Debe ingresar Region,Zona y Primer Apellido</string>
+    <string name="zone">Zona</string>
+    <string name="region">Region</string>
+
+    <string name="motivo_bloqueo">Motivo: %1$s</string>
+    <string name="obs_bloqueo">Observación: %1$s</string>
+    <string name="title_bloqueo">BLOQUEOS(%1$s): </string>
+
+    <string name="vineta">\u2022</string>
+
+    <string name="empty_result">El apellido no coincide con el registrado en el repositorio</string>
+
+    <string name="exception_message_generic">Se ha producido un error de aplicación</string>
+    <string name="exception_message_no_connection">No hay conexión a internet</string>
+    <string name="exception_message_user_not_found">No se puede obtener los datos de usuario. Revisar su conección a internet</string>
+    <string name="not_found_service">Servicio no encontrado</string>
+    <string name="not_available_service">Servicio no disponible</string>
+    <string name="you_must_enter_identity_document">Debe ingresar el documento de identidad</string>
+    <string name="search_2">Buscar</string>
+
+    <!--IDENTITY DOCUMENT-->
+    <string-array name="identity_document_bolivia">
+        <item name="key">BO</item>
+        <item name="value">13</item>
+    </string-array>
+
+    <string-array name="identity_document_chile">
+        <item name="key">CL</item>
+        <item name="value">15</item>
+    </string-array>
+
+    <string-array name="identity_document_colombia">
+        <item name="key">CO</item>
+        <item name="value">12</item>
+    </string-array>
+
+    <string-array name="identity_document_costa_rica">
+        <item name="key">CR</item>
+        <item name="value">19</item>
+    </string-array>
+
+    <string-array name="identity_document_republica_dominicana">
+        <item name="key">DO</item>
+        <item name="value">19</item>
+    </string-array>
+
+    <string-array name="identity_document_ecuador">
+        <item name="key">EC</item>
+        <item name="value">15</item>
+    </string-array>
+
+    <string-array name="identity_document_guatemala">
+        <item name="key">GT</item>
+        <item name="value">18</item>
+    </string-array>
+
+    <string-array name="identity_document_mexico">
+        <item name="key">MX</item>
+        <item name="value">19</item>
+    </string-array>
+
+    <string-array name="identity_document_panama">
+        <item name="key">PA</item>
+        <item name="value">16</item>
+    </string-array>
+
+    <string-array name="identity_document_peru">
+        <item name="key">PE</item>
+        <item name="value">15</item>
+    </string-array>
+
+    <string-array name="identity_document_puerto_rico">
+        <item name="key">PR</item>
+        <item name="value">11</item>
+    </string-array>
+
+    <string-array name="identity_document_el_salvador">
+        <item name="key">SV</item>
+        <item name="value">15</item>
+    </string-array>
+
+    <string-array name="identity_document_venezuela">
+        <item name="key">VE</item>
+        <item name="value">16</item>
+    </string-array>
+
+    <string-array name="identity_document">
+        <item>@array/identity_document_bolivia</item>
+        <item>@array/identity_document_chile</item>
+        <item>@array/identity_document_colombia</item>
+        <item>@array/identity_document_costa_rica</item>
+        <item>@array/identity_document_republica_dominicana</item>
+        <item>@array/identity_document_ecuador</item>
+        <item>@array/identity_document_guatemala</item>
+        <item>@array/identity_document_mexico</item>
+        <item>@array/identity_document_panama</item>
+        <item>@array/identity_document_peru</item>
+        <item>@array/identity_document_puerto_rico</item>
+        <item>@array/identity_document_el_salvador</item>
+        <item>@array/identity_document_venezuela</item>
+    </string-array>
+
+
+</resources>

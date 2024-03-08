@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_view_text">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin_8dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_equis" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.USpinner
+            android:id="@+id/uspn_motivo"
+            style="@style/uneteInput_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/iv_close"
+            custom:validateIconVisible="false" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/uet_comentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hint="Ingresa tus comentarios"
+            app:layout_constraintTop_toBottomOf="@+id/uspn_motivo"
+            app:multiline="true"
+            app:validateIconVisible="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_rechazar"
+            style="@style/Widget.Button.White.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unete_postulante_rechazar"
+            android:textColor="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uet_comentarios"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/inc_loading"
+        layout="@layout/loading_postulants"
+        android:visibility="gone" />
+
+</LinearLayout>

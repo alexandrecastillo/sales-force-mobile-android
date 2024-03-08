@@ -1,0 +1,32 @@
+{
+    "LegalTerms": [
+        {
+            "term_code": "TC",
+            "description": "Términos y Condiciones",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/terminos.pdf",
+            "position": 1,
+            "active": true
+        },
+        {
+            "term_code": "PP",
+            "description": "Politica de Privacidad",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/politicas.pdf",
+            "position": 2,
+            "active": true
+        },
+        {
+            "term_code": "CO",
+            "description": "Politica de Cookies",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/politicas.pdf",
+            "position": 4,
+            "active": true
+        },
+        {
+            "term_code": "PB",
+            "description": "Politica de Publicidad",
+            "url": "https://belcorpffvv.s3.amazonaws.com/appmovil/legal/politicas.pdf",
+            "position": 5,
+            "active": true
+        }
+    ]
+}

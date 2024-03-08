@@ -1,0 +1,22 @@
+package biz.belcorp.salesforce.modules.kpis.core.data.repository.collection.cloud.dto
+
+internal const val FUNCTION_COLLECTION_NAME_KEY = "Kpi_Collection"
+internal const val FILTER_COLLECTION_KEY = "filterC"
+internal const val FILTER_COLLECTION_TYPE_KEY = "FilterC"
+internal const val COLLECTION_CHARGE_KEY = "KpiCollection"
+internal const val INPUT_COLLECTION_KEY = "input"
+
+internal const val KEY_PERCENTAGE = "percentage"
+internal const val KEY_INVOICED_SALE = "invoiced_sale"
+internal const val KEY_AMOUNT_COLLECTED = "amount_collected"
+internal const val KEY_DEBTOR_CONSULTANTS = "debtor_consultants"
+internal const val KEY_ORDERS = "orders"
+internal const val KEY_TOTAL_GAINED = "total_gained"
+internal const val KEY_MINIMAL_COLLECTION_PERCENTAGE = "minimal_collection_percentage"
+internal const val KEY_TOTAL_COLLECTED = "total_collected"
+internal const val KEY_TOTAL_ORDERS = "total_orders"
+internal const val KEY_RANGES = "ranges"
+internal const val KEY_POS = "pos"
+internal const val KEY_RANGE = "range"
+internal const val KEY_COLLECTED = "collected"
+internal const val KEY_TOTAL = "total"

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_login"
+            app:startDestination="@id/loginFragment">
+
+    <action
+        android:id="@+id/globalToHomeActivity"
+        app:destination="@id/homeActivity" />
+
+    <action
+        android:id="@+id/globalToTermActivity"
+        app:destination="@id/termsActivity" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="biz.belcorp.salesforce.modules.auth.features.business.LoginBusinessFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/loginToSupportFragment"
+            app:destination="@id/supportFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="biz.belcorp.salesforce.modules.auth.features.support.LoginSupportFragment"
+        android:label="SupportFragment"
+        tools:layout="@layout/fragment_support">
+
+        <argument
+            android:name="countryIso"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="biz.belcorp.salesforce.base.features.main.HomeActivity"
+        android:label="HomeActivity"
+        tools:layout="@layout/activity_home" />
+
+    <activity
+        android:id="@+id/termsActivity"
+        android:name="biz.belcorp.salesforce.modules.termsconditions.features.dialog.fragment.TermsActivity"
+        android:label="TermsActivity"
+        tools:layout="@layout/activity_terms" />
+
+</navigation>

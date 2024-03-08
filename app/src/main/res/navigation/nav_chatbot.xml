@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_splash"
+    app:startDestination="@id/chatBotFragment">
+
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="biz.belcorp.salesforce.modules.consultants.features.chatbot.ChatBotFragment"
+        android:label="ChatBotFragment" />
+</navigation>

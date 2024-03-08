@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="documento_identidad">Doc. Identidad</string>
+    <string name="documento_identidad_rev">Doc. Identidad Reverso</string>
+    <string name="postulant_evaluation_empty_section">Debe ingresar la sección</string>
+    <string name="unete_paso1_valid_tipo_documento_select">Debe seleccionar el Tipo de Documento</string>
+    <string name="unete_paso1_valid_nombres_empty">Debe completar el campo Nombres</string>
+    <string name="unete_paso1_valid_primer_nombre_empty">Debe completar el campo Primer Nombre</string>
+    <string name="unete_paso1_valid_segundo_nombre_empty">Debe completar el campo Segundo Nombre</string>
+    <string name="unete_paso1_valid_apellido_paterno_empty">Debe completar el campo Apellido Paterno</string>
+    <string name="unete_paso1_valid_apellido_materno_empty">Debe completar el campo Apellido Materno</string>
+    <string name="unete_paso1_valid_documento_empty">Debe completar el campo Documento de Identidad</string>
+    <string name="unete_paso1_valid_documento_min_length">Valide el formato o la cantidad de digitos del campo Documento de Identidad</string>
+    <string name="unete_paso1_valid_codigo_recom_min_length">Ingrese un codigo de consultora válido</string>
+    <string name="unete_paso1_valid_documento_format">Valide el formato del campo Documento de Identidad</string>
+    <string name="unete_paso1_valid_rut">Valide el formato del campo RUT</string>
+    <string name="unete_paso1_valid_nacimiento_empty">Debe completar el campo Fecha de Nacimiento</string>
+    <string name="unete_paso1_valid_date_wrong_format">Error en el formato de fecha</string>
+    <string name="unete_paso1_valid_correo_empty">Debe completar el campo Correo</string>
+    <string name="unete_paso1_accept_terms">Debes aceptar el acuerdo de consulta crediticia.</string>
+    <string name="unete_paso1_error_sign">Debes agregar tu firma</string>
+    <string name="unete_paso1_sign">Firmar</string>
+    <string name="unete_paso1_update_sign">Volver a firmar</string>
+    <string name="unete_paso1_valid_correo_format">Debe ingresar un correo válido</string>
+    <string name="unete_paso1_valid_legal_primer_nombre_empty">Debe completar el campo Primer Nombre Legal</string>
+    <string name="unete_paso1_valid_legal_segundo_nombre_empty">Debe completar el campo Segundo Nombre Legal</string>
+    <string name="unete_paso1_valid_legal_apellido_paterno_empty">Debe completar el campo Apellido Paterno Legal</string>
+    <string name="unete_paso1_valid_legal_apellido_materno_empty">Debe completar el campo Apellido Materno Legal</string>
+    <string name="unete_paso1_valid_legal_tipo_documento_select">Debe seleccionar el Tipo de Documento Legal</string>
+    <string name="unete_paso1_valid_legal_documento_empty">Debe completar el campo Documento de Identidad Legal</string>
+    <string name="unete_paso1_valid_legal_documento_min_length">Valide el formato o la cantidad de digitos del campo Documento de Identidad Legal</string>
+    <string name="unete_paso1_valid_legal_nacimiento_empty">Debe completar el campo Fecha de Nacimiento Legal</string>
+    <string name="unete_paso1_valid_legal_correo_empty">Debe completar el campo Correo Legal</string>
+    <string name="unete_paso1_valid_legal_correo_format">Debe ingresar un correo válido Legal</string>
+
+    <string name="unete_paso2_valid_select">Debe seleccionar</string>
+    <string name="unete_paso2_valid_canton_select">Debe seleccionar el Canton</string>
+    <string name="unete_paso2_valid_corregimiento_select">Debe seleccionar el Corregimiento</string>
+    <string name="unete_paso2_valid_distrito_select">Debe seleccionar el Distrito</string>
+    <string name="unete_paso2_valid_barrio_select">Debe seleccionar el Barrio</string>
+
+    <string name="unete_pe_paso3_meta_title">META</string>
+    <string name="unete_pe_paso3_meta_tipo">TIPO</string>
+    <string name="unete_pe_paso3_meta_monto">MONTO</string>
+    <string name="unete_pe_paso3_meta_descripcion">DESCRIPCIÓN</string>
+
+
+    <string name="unete_pe_paso3_list_meta_tipo">TIPO DE META:</string>
+    <string name="unete_pe_paso3_list_meta_monto">MONTO DE META:</string>
+    <string name="unete_pe_paso3_list_meta_descripcion">DESCRIPCION DE META:</string>
+    <string name="unete_pe_paso3_list_aval_documento">DOCUMENTO DE IDENTIDAD AVAL:</string>
+
+    <string name="unete_pe_paso3_aval_primer_nombre">PRIMER NOMBRE</string>
+    <string name="unete_pe_paso3_aval_segundo_nombre">SEGUNDO NOMBRE</string>
+    <string name="unete_pe_paso3_aval_primer_apellido">PRIMER APELLIDO</string>
+    <string name="unete_pe_paso3_aval_segundo_apellido">SEGUNDO APELLIDO</string>
+    <string name="unete_pe_paso3_aval_nacimiento">FECHA DE NACIMIENTO</string>
+    <string name="unete_pe_paso3_aval_direccion">DIRECCIÓN COMPLETA</string>
+    <string name="unete_pe_paso3_aval_tipo">TIPO DE VÍNCULO</string>
+    <string name="unete_pe_paso3_aval_telefono_fijo">TELÉFONO FIJO</string>
+    <string name="unete_pe_paso3_aval_telefono_celular">TELÉFONO CELULAR</string>
+    <string name="unete_pe_paso3_aval_documento">DOCUMENTO DE IDENTIDAD</string>
+
+    <string name="unete_pe_paso3_valid_aval_primer_nombre_empty">Debe completar el campo Primer Nombre Aval</string>
+    <string name="unete_pe_paso3_valid_aval_primer_apellido_empty">Debe completar el campo Primer Apellido Aval</string>
+    <string name="unete_pe_paso3_valid_aval_segundo_apellido_empty">Debe completar el campo Segundo Apellido Aval</string>
+    <string name="unete_pe_paso3_valid_aval_nacimiento_empty">Debe completar el campo Fecha de Nacimiento Aval</string>
+    <string name="unete_pe_paso3_valid_aval_direccion_empty">Debe completar el campo Dirección Completa Aval</string>
+    <string name="unete_pe_paso3_valid_aval_vinculo_select">Debe seleccionar el Aval Vinculo</string>
+    <string name="unete_pe_paso3_valid_aval_documento_empty">Debe completar el campo Documento de Identidad Aval</string>
+    <string name="unete_pe_paso3_valid_aval_documento_min_length">Valide el formato o la cantidad de digitos del campo Documento de Identidad Aval</string>
+    <string name="unete_pe_paso3_valid_aval_telefono_celular_empty">Debe completar el campo Celular o Telefono Aval</string>
+    <string name="unete_pe_paso3_valid_aval_celular_empty">Debe completar el campo Celular Aval</string>
+    <string name="unete_pe_paso3_valid_aval_celular_format">Valide el formato o la cantidad de digitos del campo Celular Aval</string>
+    <string name="unete_pe_paso3_valid_aval_celular_repeat">Valide que no se repita el mismo numero varias veces en el campo Celular Aval</string>
+    <string name="unete_pe_paso3_valid_aval_telefono_empty">Debe completar el campo Telefono Aval</string>
+    <string name="unete_pe_paso3_valid_aval_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono Aval</string>
+    <string name="unete_pe_paso3_valid_aval_telefono_repeat">Valide que no se repita el mismo numero varias veces en el campo Telefono Aval</string>
+
+    <string name="unete_pe_paso3_valid_meta_tipo_select">Debe seleccionar el Tipo de Meta</string>
+    <string name="unete_pe_paso3_valid_meta_monto_empty">Debe completar el Monto de Meta</string>
+    <string name="unete_pe_paso3_valid_meta_descripcion_empty">Debe completar la Descripcion de la Meta</string>
+
+    <string name="zonificacion_aceptar">Si</string>
+    <string name="zonificacion_cancelar">No</string>
+    <string name="zonificacion_title">Ubicación</string>
+
+    <string name="quitar_documento">Eliminar</string>
+
+    <string name="unete_valid_paso1">Debe completar los campos del Paso 1</string>
+    <string name="unete_paso1_valid_postulante_title">Validar Postulante</string>
+    <string name="unete_paso1_valid_postulante_title_datos_apta">Datos Apta</string>
+    <string name="unete_paso1_valid_postulante_title_datos_belcorp">Datos Belcorp</string>
+    <string name="unete_paso1_valid_postulante_title_datos_proveedor_externo">Datos Proveedor Externo</string>
+    <string name="unete_paso1_valid_postulante_description">Ocurrio un error al Validar la Postulante, intente nuevamente.</string>
+    <string name="unete_paso1_valid_complete_paso">Debe completar el paso %s primero.</string>
+    <string name="unete_paso1_valid_consultora_title">Validar Consultora</string>
+    <string name="unete_paso1_valid_consultora_postulante">Estimada Socia: La solicitud se encuentra en proceso de evaluación.</string>
+    <string name="unete_paso1_valid_registro_proceso">La postulante ya tiene un registro en proceso. Ayúdala a terminarla en Somos Belcorp o comunícate con SAC.</string>
+    <string name="unete_paso1_valid_consultora_existe">Estimada Socia: La postulante %s ya es una consultora de belleza.</string>
+    <string name="unete_paso1_consultora_contado">La postulante ha sido rechazada por la evaluación crediticia. ¿Deseas incorporarla como consultora sin crédito?</string>
+    <string name="unete_paso1_consultora_contado_new">La postulante debe ser incorporada como consultora Pago al Contado y aprovechar los beneficios de Mi Tienda On Line.</string>
+    <string name="unete_paso1_consultora_contado_new_only_pe">La postulante debe ser incorporada como consultora Pago al Contado y aprovechar los beneficios de Mi Tienda Online. Recuerda que luego de pasar pedido 3 campañas consecutivas podrá optar a crédito cumpliendo las condiciones establecidas.</string>
+    <string name="unete_valid_bloqueo_title">Error</string>
+
+    <string name="unete_pe_paso1_tipo_documento">TIPO DE DOCUMENTO</string>
+
+    <string name="unete_pe_paso1_documento">DOCUMENTO DE IDENTIDAD</string>
+
+    <string name="unete_pe_paso1_valid_bloqueo_descripcion_crediticia">Estimada Socia: Tu Postulante no es apta, porque no pasó la Evaluación Crediticia</string>
+    <string name="unete_pe_paso1_ec_valid_bloqueo_descripcion_crediticia">No Apta por Buró Crediticio\nEstimada Socia: Tu Postulante no es apta, porque no pasó la Evaluación Crediticia</string>
+
+    <string name="unete_valid_documento_title">Validar Documento</string>
+    <string name="unete_valid_documento_description">Ocurrio un error al Validar el Documento, intente nuevamente</string>
+    <string name="unete_valid_documento_repeated">Este Documento ya fue ingresado, ingrese uno diferente</string>
+
+    <string name="unete_valid_obligatorio">Campo obligatorio</string>
+    <string name="unete_valid_formato_invalido">Formato no válido</string>
+    <string name="unete_valid_prefijo_invalido">Debe empezar con %s</string>
+    <string name="unete_valid_formato_invalido_not_inicio">No debe comenzar con 0</string>
+
+    <!--Inicio Titulos-->
+
+    <string name="unete_paso1_documento_identidad">Doc. Identidad</string>
+    <string name="unete_paso1_seguro_social">Seguro Social</string>
+
+    <string name="unete_paso4_primer_nombre_ref_familiar">PRIMER NOMBRE REF. FAMILIAR</string>
+    <string name="unete_paso4_apellido_paterno_ref_familiar">APELLIDO PATERNO REF. FAMILIAR</string>
+    <string name="unete_paso4_tipo_vinculo_ref_familiar">TIPO DE VÍNCULO REF. FAMILIAR</string>
+    <string name="unete_paso4_telefono_celular_ref_familiar">TELÉFONO CELULAR REF. FAMILIAR</string>
+    <string name="unete_paso4_telefono_fijo_ref_familiar">TELÉFONO FIJO REF. FAMILIAR</string>
+    <string name="unete_paso4_primer_nombre_no_familiar">PRIMER NOMBRE NO FAMILIAR</string>
+    <string name="unete_paso4_apellido_paterno_no_familiar">APELLIDO PATERNO NO FAMILIAR</string>
+    <string name="unete_paso4_tipo_vinculo_no_familiar">TIPO DE VÍNCULO NO FAMILIAR</string>
+    <string name="unete_paso4_aval_ciudad">CIUDAD GARANTE</string>
+    <string name="unete_paso4_telefono_celular_no_familiar">TELÉFONO CELULAR NO FAMILIAR</string>
+    <string name="unete_paso4_telefono_fijo_no_familiar">TELÉFONO FIJO NO FAMILIAR</string>
+
+    <string name="unete_paso5_cedula_identificacion_anversa">ADJUNTAR Cédula de Identidad</string>
+    <string name="unete_paso5_id_foto">ADJUNTAR ID CON FOTO</string>
+    <string name="unete_paso5_cedula_identificacion_reversa">ADJUNTAR  REVERSO Cédula de Identidad</string>
+    <string name="unete_paso5_contrato">ADJUNTAR CONTRATO</string>
+
+    <!--Titulos de notificaciones local -->
+    <string name="titulo_notificacion">Ruta de Desarrollo</string>
+
+    <!--Fin Titulos-->
+
+    <!--Inicio Mensajes de validacion-->
+    <string name="unete_paso4_valid_ref_familiar_primer_nombre_format">Valide el formato o la cantidad de digitos del campo Primero Nombre Ref. Familiar</string>
+    <string name="unete_paso4_valid_ref_familiar_apellido_paterno_format">Valide el formato o la cantidad de digitos del campo Apellido Paterno Ref. Familiar</string>
+    <string name="unete_paso4_valid_ref_familiar_celular_format">Valide el formato o la cantidad de digitos del campo Celular Ref. Familiar</string>
+    <string name="unete_paso4_valid_celular_format">Valide el formato o la cantidad de digitos del campo Celular</string>
+    <string name="unete_paso4_valid_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono</string>
+    <string name="unete_paso4_valid_ref_familiar_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono Ref. Familiar</string>
+    <string name="unete_paso4_valid_no_familiar_primer_nombre_format">Valide el formato o la cantidad de digitos del campo Primero Nombre No Familiar</string>
+    <string name="unete_paso4_valid_no_familiar_primer_nombre_empty">Valide el formato o la cantidad de digitos del campo Primero Nombre No Familiar</string>
+    <string name="unete_paso4_valid_no_familiar_apellido_paterno_empty">Valide el formato o la cantidad de digitos del campo Apellido Paterno No Familiar</string>
+    <string name="unete_paso4_valid_no_familiar_apellido_paterno_format">Valide el formato o la cantidad de digitos del campo Apellido Paterno No Familiar</string>
+    <string name="unete_paso4_valid_no_familiar_celular_format">Valide el formato o la cantidad de digitos del campo Celular No Familiar</string>
+    <string name="unete_paso4_valid_no_familiar_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono No Familiar</string>
+    <string name="unete_paso4_valid_meta_monto_empty">Debe completar el Monto de Meta</string>
+    <string name="unete_paso4_valid_estado_civil_empty">Debe seleccionar el Estado Civil</string>
+    <string name="unete_paso4_valid_genero_empty">Debe seleccionar el Género</string>
+    <string name="unete_paso4_valid_nivel_educativo_empty">Debe seleccionar el Nivel Educativo</string>
+    <string name="unete_paso4_valid_nit_empty">Debe completar el campo NIT</string>
+    <string name="unete_paso4_valid_nit_format">Valide el formato o la cantidad de digitos de NIT</string>
+    <!--Fin Mensajes de validacion-->
+
+    <!-- Inicio Proceso -->
+    <string name="unete_postulante_registrada_title">Postulante Registrada</string>
+    <string name="unete_postulante_supera_edad">La información se guardó con éxito.
+        \nRecuerda que debes contar con un fiador o un recibo a tu nombre de otra marca de producto de belleza para convertirte en consultora de Belleza Ezika</string>
+    <string name="unete_postulante_registrada_text">La información se guardó con éxito</string>
+    <string name="unete_postulante_rechazar_title">Rechazo de Postulante</string>
+    <string name="unete_postulante_rechazar">Rechazar</string>
+    <string name="unete_postulante_registro_finalizado_title">Finalizar</string>
+    <string name="unete_postulante_registro_finalizado_text">¡Felicitaciones!\nRegistraste una posible Consultora.\n\n-Los datos se enviarán a la Gerente de Zona.\n\n-Te sugerimos enseñarle a:\n\n1. Descargar el app Ésika conmigo\n2. Ingresar con su documento de Identidad como usuario y contraseña\n3. Pasar su primer pedido</string>
+    <!-- Fin Proceso -->
+
+    <!-- Inicio Listado -->
+    <string name="unete_listado_rechazadas_desc">Este listado muestra a las potenciales consultoras que fueron rechazadas:</string>
+    <string name="unete_listado_rechazadas_desc_no_data">No se encontraron posibles consultoras rechazadas.</string>
+    <string name="unete_listado_aprobadas_desc">Este listado muestra a las potenciales consultoras que ya tienen o estan en generación de Código:</string>
+    <string name="unete_listado_aprobadas_desc_no_data">No se encontraron posibles consultoras aprobadas.</string>
+    <string name="unete_listado_preaprobadas_desc">Este listado muestra a las potenciales consultoras que puedes visitar para completar su registro y las que se encuentran en aprobación:</string>
+    <string name="unete_listado_preaprobadas_desc_no_data">No se encontraron posibles consultoras en evaluación.</string>
+
+    <string name="unete_listado_rechazada">Rechazada</string>
+    <string name="unete_listado_rechazada_motivo">Motivo: %1$s</string>
+    <string name="unete_listado_seccion">Sección: %1$s</string>
+    <string name="seccion">Sección</string>
+    <string name="unete_listado_fuente">Fuente: %1$s</string>
+    <string name="unete_listado_dias_espera">%1$s días en espera.</string>
+    <string name="unete_listado_documento">Nro. Documento: %1$s</string>
+    <string name="unete_listado_telefono_celular">Celular: %1$s</string>
+    <string name="unete_listado_en_obs">En Observación</string>
+
+    <string name="unete_listado_aprobada_msg">Postulante aprobada</string>
+    <string name="unete_listado_rechaza_msg">Postulante rechazada</string>
+    <string name="unete_listado_actualizada_msg">Postulante actualizada</string>
+
+    <string name="unete_listado_prospecto_enviado">Prospecto enviado el %1$s</string>
+    <string name="unete_listado_codigo_consultora">Código Consultora: %1$s</string>
+    <string name="unete_listado_aprobada">Aprobada</string>
+    <string name="unete_listado_aprobacion_sac">En Aprobación SAC</string>
+    <string name="unete_listado_generando_codigo">Generando Código</string>
+    <string name="unete_listado_ya_es_consultora">Ya es consultora</string>
+    <string name="centro_poblado">Centro Poblado</string>
+    <string name="zona">Zona</string>
+    <string name="unete_listado_enaprobacion_sac">Una vez aprobado se genera código</string>
+    <string name="corregimiento">Corregimiento</string>
+
+    <string name="unete_geo_failed">No se pudo encontrar la zona y sección para esta ubicación ¿Deseas continuar la incorporación?</string>
+
+    <!-- INICIO DE VALIDACION BLOQUEOS-->
+    <string name="unete_bo_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 901&#8211;105678 (Para todo el país). Costo 0.29 Bs/Min. // 3150600 (Solo para teléfonos fijos de Sta. Cruz)</string>
+    <string name="unete_cl_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 800&#8211;210&#8211;207 / 02&#8211;28762100(desde un celular).</string>
+    <string name="unete_co_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información puede comunicarse con Ésika a través de Ésika Responde 01&#8211;9000&#8211;9&#8211;37452/ 5948060 (Bogotá)</string>
+    <string name="unete_cr_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 800&#8211;000&#8211;5235 / 22019601 / 22019602.</string>
+    <string name="unete_dm_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 1&#8211;809&#8211;200&#8211;5235/809&#8211;620&#8211;5235(Santo Domingo)</string>
+    <string name="unete_ec_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 1800&#8211;766672.</string>
+    <string name="unete_gt_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 1&#8211;801&#8211;81&#8211;37452 / 22856185 / 23843795.</string>
+    <string name="unete_mx_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 01&#8211;800&#8211;2352677.</string>
+    <string name="unete_pa_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 800&#8211;5235 Línea gratuita / 377&#8211;9399 Línea local.</string>
+    <string name="unete_pe_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada.<b>\nPor motivo %s</b>\nPara mayor información comunícate con nosotros a través de Belcorp Responde 080&#8211;11&#8211;3030 Provincias / 2113614 Lima</string>
+    <string name="unete_pr_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde: 1&#8211;866&#8211;366&#8211;3235 (Isla) / 787&#8211;622&#8211;3235 (Área Metropolitana)</string>
+    <string name="unete_sv_valid_bloqueo_description">Estimada Socia: La postulante está bloqueada. Para mayor información comunícate con nosotros a través de Belcorp Responde 800&#8211;37452&#8211;000 / 25101198 / 25101199.</string>
+    <string name="unete_modal_guadar_description_evaluacion">Información guardada con éxito. La postulante se encuentra en proceso. Consúltala en Evaluación.</string>
+    <!-- FIN DE VALIDACION BLOQUEOS-->
+    <string name="unete_confirmacion_aprobada_only_pe">Recuerda:\nComo parte de tus funciones es fundamental valides la información proporcionada por la postulante a fin de asegurar la correcta incorporación de las mismas. Para ello, deberás realizar lo siguiente (1) validar que los datos coincidan con el DNI entregado; (2) confirmar que el DNI sea legible y (3) realizar la validación telefónica. El código de las consultoras de tu zona serán creados bajo tu responsabilidad.</string>
+
+
+    <!-- unete validation message default -->
+    <string name="unete_valid_bloqueo_apta_default">Puede ser consultora</string>
+    <string name="unete_valid_bloqueo_no_apta_default">No puede ser consultora</string>
+
+    <!-- unete validation message pe -->
+    <string name="unete_valid_bloqueo_title_already_process_pe">La postulante ya tiene un proceso de registro activo</string>
+    <string name="unete_valid_bloqueo_title_already_consultant_pe">La postulante ya es consultora</string>
+    <string name="unete_valid_bloqueo_title_can_be_consultant_w_credit_pe">Sí puede ser consultora con crédito</string>
+    <string name="unete_valid_bloqueo_title_can_be_consultant_w_o_credit_pe">Puede ser consultora sin crédito</string>
+    <string name="unete_valid_bloqueo_title_can_be_consultant_credit_to_define_pe">Sí puede ser consultora, tipo de pago por definir</string>
+    <string name="unete_valid_bloqueo_title_can_not_be_consultant_she_is_blocked_pe">No puede ser consultora, se encuentra bloqueada</string>
+    <string name="unete_valid_bloqueo_subtitle_califica_credito_pe">Califica a tener crédito</string>
+    <string name="unete_valid_bloqueo_subtitle_tiene_deuda_externa_pe">Tiene deuda externa</string>
+    <string name="unete_valid_bloqueo_title_buro_externo">"Resultado de consulta a Buro externo"</string>
+    <string name="unete_valid_bloqueo_subtitle_no_califica_credito_pe">No califica a crédito</string>
+    <string name="unete_valid_bloqueo_subtitle_no_tiene_deuda_externa_pe">No tiene deuda externa</string>
+    <string name="unete_valid_bloqueo_title_datos_belcorp_pe">Consulta datos Belcorp</string>
+    <string name="unete_valid_bloqueo_subtitle_no_presenta_bloqueo_pe">No presenta bloqueo</string>
+    <string name="unete_valid_bloqueo_subtitle_presenta_bloqueo_pe">La postulante está bloqueada</string>
+    <string name="unete_valid_bloqueo_no_se_pudo_realizar_consulta_externa_pe">Deuda externa: en estos momentos no se puede realizar la consulta a la postulante</string>
+
+    <!-- unete validation message cl -->
+    <string name="unete_valid_bloqueo_title_postulante_encuentra_bloqueada_cl">La postulante se encuentra bloqueada por Belcorp</string>
+    <string name="unete_valid_bloqueo_title_postulante_proceso_activo_cl">La postulante ya tiene un proceso de registro activo</string>
+    <string name="unete_valid_bloqueo_subtitle_postulante_califica_credito_cl">La Postulante califica a tener crédito</string>
+    <string name="unete_valid_bloqueo_subtitle_postulante_no_califica_credito_cl">La Postulante no califica a tener crédito</string>
+    <string name="unete_valid_bloqueo_subtitle_postulante_califica_credito_no_bloqueada_cl">La postulante califica a crédito</string>
+    <string name="unete_valid_bloqueo_subtitle_postulante_no_califica_credito_no_bloqueada_cl">La postulante no califica a tener crédito, puede continuar como consultora sin crédito</string>
+
+    <string name="unete_si">Si</string>
+    <string name="unete_no">No</string>
+    <string name="unete_aceptar">Aceptar</string>
+
+    <string name="unete_aprobada_title">¡FELICIDADES!</string>
+    <string name="unete_aprobada_body">Has aprobado a %1$s %2$s como consultora.</string>
+    <string name="unete_proactiva_aprobada_body">Has aprobado a %1$s.</string>
+    <string name="unete_proactiva_rechazada_body">Se ha rechazado el pase de pedidos a %1$s.</string>
+    <string name="unete_no_numero_whatsapp">No pudimos obtener el número telefónico</string>
+
+    <string name="unete_step_no_guardado">¡Guarde los datos primero!</string>
+
+    <string name="unete_postulante_offline">Conéctese a Internet para subir la informacion.</string>
+
+    <string name="vineta">\u2022</string>
+
+    <string name="unete_success_title">¡FELICITACIONES!</string>
+    <string name="unete_success_sub_title">REGISTRASTE A UNA</string>
+    <string name="unete_success_sub_title_2">POSIBLE CONSULTORA</string>
+    <string name="unete_success_sub_title_3">Los datos se enviarán a la Gerente de Zona.</string>
+
+    <string name="unete_success_message">Te sugerimos enseñarle a utilizar el App Ésika Conmigo.</string>
+    <string name="unete_success_message_2">Para ello deberá:</string>
+    <string name="unete_success_item_1">Descargar el App Ésika Conmigo.</string>
+    <string name="unete_success_item_2">Ingresar con su documento de identidad como usuario y contraseña.</string>
+    <string name="unete_success_item_3">Pasar su primer pedido.</string>
+    <string name="unete_success_share_app">COMPARTE EL LINK DEL APP</string>
+    <string name="unete_success_paso5_sms_mail">Tu consultora va a recibir su contraseña por SMS y Mail. En caso de no hacerlo, por favor que ella se comunique con Servicio al Cliente 01&#8211;800&#8211;235&#8211;2677</string>
+    <string name="esika_conmigo">App Esika Conmigo</string>
+    <string name="label_conmigo">App L\'Bel Conmigo</string>
+    <string name="share_app">Compartir App con</string>
+    <string name="unete_suggest">Te sugerimos enseñarle a utilizar el %s. Para ello deberá:</string>
+    <string name="download_app">Descargar el %s</string>
+
+    <string name="mensaje_zonificacion">Verifique que tenga señal o esté conectado a una Red Wi-Fi para zonificar a la postulante</string>
+
+    <string name="unete_paso2_estado">Estado</string>
+    <string name="unete_paso2_delegacion">Delegación o municipio</string>
+    <string name="unete_paso2_ciudad">Ciudad</string>
+    <string name="unete_paso2_colonia">Colonia</string>
+    <string name="unete_paso2_codigo_postal">Código Postal</string>
+    <string name="unete_paso2_codigo_postal_error">Código postal no encontrado en el rango del Estado</string>
+    <string name="unete_paso2_direccion">Calle y Número</string>
+    <string name="unete_paso2_entre_calles">Entre calles</string>
+    <string name="unete_paso2_datos_validacion_crediticia">DATOS PARA VALIDACIÓN CREDITICIA</string>
+    <string name="unete_paso2_tarjeta_credito">* ¿Tienes Tarjeta de crédito vigente?</string>
+    <string name="unete_paso2_tarjeta_credito_no">(Tarjetas de servicio o departamentales no están consideradas)</string>
+    <string name="unete_paso2_credito_hipotecario">* ¿Tienes o tuviste Crédito Hipotecario?</string>
+    <string name="unete_paso2_credito_automotriz">* ¿Tienes o tuviste Crédito Automotriz los últimos 24 meses?</string>
+
+    <string name="unete_valid_familiar_nombres_empty">Debe completar el campo Referencia Familiar Nombres</string>
+    <string name="unete_valid_familiar_apellidos_empty">Debe completar el campo Referencia Familiar Apellidos</string>
+    <string name="unete_valid_familiar_direccion_empty">Debe completar el campo Referencia Familiar Direccion</string>
+    <string name="unete_valid_familiar_vinculo_select">Debe seleccionar la Referencia Familiar Vinculo</string>
+    <string name="unete_valid_familiar_celular_empty">Debe completar el campo Referencia Familiar Celular</string>
+    <string name="unete_valid_familiar_celular_format">Valide el formato o la cantidad de digitos del campo Referencia Familiar Celular</string>
+    <string name="unete_valid_familiar_celular_repeat">Valide que no se repita el mismo numero varias veces en el campo Referencia Familiar Celular</string>
+    <string name="unete_valid_familiar_telefono_repeat">Valide que no se repita el mismo numero varias veces en el campo Referencia Familiar Telefono</string>
+
+
+    <string name="unete_valid_pe_aval_primer_nombre_empty">Debe completar el campo Primer Nombre Aval</string>
+    <string name="unete_valid_pe_aval_primer_apellido_empty">Debe completar el campo Primer Apellido Aval</string>
+    <string name="unete_valid_pe_aval_segundo_apellido_empty">Debe completar el campo Segundo Apellido Aval</string>
+    <string name="unete_valid_pe_aval_nacimiento_empty">Debe completar el campo Fecha de Nacimiento Aval</string>
+    <string name="unete_valid_pe_aval_direccion_empty">Debe completar el campo Dirección Completa Aval</string>
+    <string name="unete_valid_pe_aval_vinculo_select">Debe seleccionar el Aval Vinculo</string>
+    <string name="unete_valid_pe_aval_documento_empty">Debe completar el campo Documento de Identidad Aval</string>
+    <string name="unete_valid_pe_aval_documento_min_length">Valide el formato o la cantidad de digitos del campo Documento de Identidad Aval</string>
+    <string name="unete_valid_pe_aval_telefono_celular_empty">Debe completar el campo Celular o Telefono Aval</string>
+    <string name="unete_valid_pe_aval_celular_empty">Debe completar el campo Celular Aval</string>
+    <string name="unete_valid_pe_aval_celular_format">Valide el formato o la cantidad de digitos del campo Celular Aval</string>
+    <string name="unete_valid_pe_aval_celular_repeat">Valide que no se repita el mismo numero varias veces en el campo Celular Aval</string>
+    <string name="unete_valid_pe_aval_telefono_empty">Debe completar el campo Telefono Aval</string>
+    <string name="unete_valid_pe_aval_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono Aval</string>
+    <string name="unete_valid_pe_aval_telefono_repeat">Valide que no se repita el mismo numero varias veces en el campo Telefono Aval</string>
+
+    <string name="alert_noaprobada_title">LO SENTIMOS</string>
+    <string name="alert_noaprobada_content">%s no fue aprobada por situación crediticia</string>
+    <string name="alert_nointernet_title">UPPS! OCURRIÓ UN PROBLEMA</string>
+    <string name="alert_nointernet_content">Nuestro servicio se encuentra inactivo. Por favor, inténtalo más tarde.</string>
+    <string name="alert_pendiente_title">VALIDACIÓN PENDIENTE</string>
+    <string name="alert_pendiente_content">Los datos de %s serán validados nuevamente al completar el registro</string>
+    <string name="alert_exitosa_title">VALIDACIÓN EXITOSA</string>
+    <string name="alert_exitosa_content">Los datos de %s fueron validados correctamente por Círculo de Crédito</string>
+    <string name="alert_cancelar_registro_title">¿Estás segura que quieres cancelar el registro?</string>
+    <string name="message_registro_cancelado">El registro ha sido cancelado </string>
+    <string name="message_codigo_no_encontrado">No se encontró a la consultora</string>
+    <string name="message_sms_title">Se realizó el envío del código de verificación para la postulante.</string>
+    <string name="message_sms_subtitle">Por favor verifica junto a tu postulante el código e ingresalo en el campo.</string>
+    <string name="alert_sms_not_validate">Aún no se ha validado el celular. ¿Estás seguro de continuar?</string>
+    <string name="alert_not_validate_pin">Validacion PIN incorrecta</string>
+    <string name="alert_error_validate_pin">Ha ocurrido un error en la validacion, reenviar un nuevo PIN</string>
+
+
+    <string name="alert_continuar_button">CONTINUAR</string>
+    <string name="alert_aceptar_button">ACEPTAR</string>
+    <string name="alert_cancelar_button">CANCELAR</string>
+
+    <string name="cancelar_button">CANCELAR REGISTRO</string>
+    <string name="validar_button">VALIDAR Y CONTINUAR</string>
+    <string name="tipo_meta">Tipo meta</string>
+
+    <string name="postulante_pertenece_otra_zona_seccion">La postulante pertenece a otra zona o sección</string>
+    <string name="completar_datos">Complete los datos</string>
+    <string name="postulante_pertenece_a_zona_seccion" translatable="false">La ubicación seleccionada pertenece a la Zona %s y sección %s ¿Deseas continuar la incorporación?</string>
+    <string name="postulante_pertenece_otra_seccion">La postulante pertenece a otra sección</string>
+    <string name="error_conexion_reintentar">Ocurrió un error de conexión. Vuelva a intentar.</string>
+
+    <string name="solicitud_rechazada_title">Solicitud Rechazada</string>
+    <string name="solicitud_rechazada_mensaje">La solicitud ya ha sido rechazada</string>
+
+    <string name="celular_validado">Celular ya validado</string>
+    <string name="telefono_validado">Ha validado su teléfono.</string>
+    <string name="pin_correcto">PIN correcto</string>
+    <string name="pin_invalido">PIN ingresado es incorrecto.</string>
+    <string name="alert_paso_bloqueado">Es necesario que valide el celular antes de continuar.</string>
+
+    <string name="pre_inscritas_mayus">PRE-INSCRITAS</string>
+
+    <string name="terms_conditions">Acepto términos y condiciones</string>
+    <string name="estimada_postulante">Estimada Postulante</string>
+    <string name="no_necesario_documentos">La postulante será una consultora sin crédito, por lo tanto no necesita brindar documento.</string>
+    <string name="pendiente_cambio_modelo">Por completar traslado</string>
+    <string name="unete_listado_tipo_pago">Tipo: %1$s</string>
+    <string name="unete_listado_correo_electronico">Correo: %1$s</string>
+    <string name="unete_listado_telefono">Teléfono: %1$s</string>
+    <string name="unete_proactiva_finalizar_message">Contáctate con la consultora y ayúdala a finalizar su registro desde Somos Belcorp</string>
+    <string name="unete_proactiva_finalizar_message_v2">Ayúdala a completar su registro. Envíale su link por whatsapp para que lo termine:\n%s</string>
+    <string name="unete_proactiva_finalizar_message_wsp_v2">¡Hola %s!, soy %s, tu %s. ¡Bienvenida a tu nuevo negocio de Belleza!\nIngresa al siguiente link para terminar tu registro.\n%s</string>
+    <string name="default_prompt">Seleccione</string>
+    <string name="not_selected">Debe seleccionar una opción</string>
+    <string name="unete_valid_cedula_format">Debe llenar este campo</string>
+    <string name="consultora_recomendada_format">Valide el formato o la cantidad de digitos del campo</string>
+    <string name="dpi">D.P.I.</string>
+    <string name="document_label_message">Incluya los guiones en el número de documento</string>
+
+    <string name="facebook">Facebook</string>
+    <string name="mshfacebook">MSHFacebook</string>
+
+    <string name="exception_message_generic">Se ha producido un error de aplicación</string>
+    <string name="exception_message_no_connection">No hay conexión a internet</string>
+    <string name="exception_message_user_not_found">No se puede obtener los datos de usuario. Revisar su conección a internet</string>
+    <string name="not_found_service">Servicio no encontrado</string>
+    <string name="not_available_service">Servicio no disponible</string>
+    <string name="not_available_option">Opción no disponible</string>
+    <string name="credenciales_invalidas">Contraseña incorrecta</string>
+
+
+    <string name="devuelto_sac_mensaje">Por favor, selecciona \"Ver información\" para editar y solucionar la observación</string>
+
+    <string name="my_zone">MI\nZONA</string>
+    <string name="documento_duplicado">Alerta</string>
+    <string name="permisos_rechazados">Permisos rechazados</string>
+    <string name="documento_duplicado_mensaje">El documento de identidad %s ya existe.</string>
+    <string name="permisos_almacenamiento_denegados_mensaje">Para el correcto funcionamiento de la aplicación debes brindar los permisos de almacenamiento manualmente.</string>
+    <string name="debes_ingresar_firma">Debes ingresar tu firma.</string>
+
+    <string name="actualizacion_button_cancelar">Cancelar</string>
+    <string name="actualizacion_button_continuar">Continuar</string>
+    <string name="actualizacion_button_ok">OK</string>
+    <string name="actualizacion_button_aceptar">Aceptar</string>
+    <string name="ir_configuracion">Ir a configuración</string>
+    <string name="actualizacion_button_incorporar">Sí, Incorporar</string>
+    <string name="actualizacion_button_entendido">No</string>
+    <string name="empty_result">El apellido no coincide con el registrado en el repositorio</string>
+    <string name="geoReference">Georreferenciación</string>
+
+    <string name="duplicate_mail">Correo ya utilizado.</string>
+    <string name="duplicate_celular">Celular ya utilizado.</string>
+
+    <string name="accept">Aceptar</string>
+
+    <string name="verifica_tu_conexion_a_internet">VERIFICA TU CONEXIÓN \n A INTERNET</string>
+    <string name="intenta_conetarte_nuevamente_en_unos_minutos">Intenta conectarte nuevamente en unos \n minutos. Mientras tanto, puedes revisar tu \n información cargada hasta el %1$s</string>
+    <string name="retry_connection">Intenta conectarte nuevamente en unos minutos.</string>
+
+    <string name="update_app_version">Tenemos una nueva versión</string>
+    <string name="update">Actualizar ahora</string>
+    <string name="remind_me_later">Recordar más tarde</string>
+    <string name="update_version_description">Al actualizar podrás acceder a nuevos contenidos.</string>
+    <string name="send_mail">Enviar correo</string>
+    <string name="imposible_abrir_documento">No se puede abrir el documento</string>
+
+    <string name="text_location_warning">Se necesita permiso para acceder a los contactos</string>
+    <string name="text_give_permissions_manually">Habilitar ahora</string>
+    <string name="text_permissions_were_granted">Los permisos han sido otorgados</string>
+    <string name="text_permissions_not_granted">Los permisos para esta característica están deshabilitados</string>
+    <string name="text_permissions_hint">Por favor, ingresa a Permisos y luego activa %1$s</string>
+    <string name="text_contacts">Contactos</string>
+
+    <string name="unete_postulante_sac">Postulante se encuentra en evaluacion SAC.</string>
+    <string name="nueva_candidata">NUEVA CANDIDATA</string>
+    <string name="tx_complete_los_datos">Complete los datos</string>
+    <string name="cancelar">CANCELAR</string>
+
+    <string name="reconocida_success_consultora">¡CONSULTORA RECONOCIDA CON ÉXITO!</string>
+    <string name="reconocida_success_no_consultora">!RECONOCIDA CON EXITO!</string>
+    <string name="tx_permiso_garantizado_storage">Permisos concedidos</string>
+    <string name="tx_permiso_denegado_storage">Permisos rechazados, no podrás subir los documentos</string>
+    <string name="seleccionar">SELECCIONAR</string>
+    <string name="ub_origen">UB</string>
+    <string name="rechazar">RECHAZAR</string>
+    <string name="aprobar">APROBAR</string>
+    <string name="validar">VALIDAR CRÉDITO</string>
+
+    <string name="unete_validacion_crediticia1">La validación crediticia no ha sido completada.</string>
+    <string name="unete_validacion_crediticia2">Puede ponerse en contacto con Servicio al Cliente</string>
+    <string name="unete_validacion_crediticia_valido">La validación crediticia ha sido completada</string>
+    <string name="unete_validacion_telefonica1">La validación telefónica no ha sido completada.</string>
+    <string name="unete_validacion_telefonica2">Puede contactarse con la postulante para validarla</string>
+    <string name="unete_validacion_telefonica_valido">El teléfono de la postulante ha sido validado</string>
+    <string name="unete_validacion_geografica1">La validación geográfica no ha sido completada.</string>
+    <string name="unete_validacion_geografica2">Puede ponerse en contacto con Servicio al Cliente</string>
+    <string name="unete_validacion_geografica_valido">La ubicación de la postulante ha sido validada</string>
+
+    <string name="agree">ENTENDIDO</string>
+
+    <string name="aprobada">APROBADA</string>
+    <string name="preaprobada">PRE-APROBADA</string>
+    <string name="cambiomodelo">CAMBIO MODELO</string>
+    <string name="enevaluacion">EN EVALUACIÓN</string>
+    <string name="rechazada">RECHAZADA</string>
+    <string name="ingresosAnticipadosM">ING. ANTICIPADOS</string>
+    <string name="preinscrita">PRE-INSCRITA</string>
+
+    <string name="ver_informacion">VER INFORMACION</string>
+    <string name="editar_datos">EDITAR DATOS</string>
+    <string name="not_interested">NO ESTÁ INTERESADA</string>
+    <string name="unete_filter_found">Se ha encontrado <b><i>%1$s consultora</i></b></string>
+    <string name="unete_filter_found_plural">Se ha encontrado <b><i>%1$s consultoras</i></b></string>
+    <string name="unete_listado_ingreso">Ingreso: %1$s</string>
+
+    <!--CONSULTANT SEARCH-->
+    <string name="consultant_code_hint">Código de Consultora</string>
+    <string name="consultant_name_hint">Nombre</string>
+    <string name="consultant_dni_hint">DNI</string>
+    <string name="consultant_section_hint">Sección</string>
+    <string name="consultant_status_hint">Estado</string>
+    <string name="consultant_campania_hint">Campaña</string>
+    <string name="consultant_tipo_hint">Tipo de Filtro</string>
+    <string name="consultant_segment_hint">Segmento</string>
+    <string name="consultant_origen_hint">Origen</string>
+    <string name="consultant_level_hint">Nivel</string>
+    <string name="consultant_requested_hint">Pedido</string>
+    <string name="consultant_residue_hint">Saldo</string>
+    <string name="consultant_authorized_hint">Autorizada</string>
+    <string name="consultant_filtro_aprobado_hint">Filtrar por: </string>
+    <string name="consultant_title_length">Se encontraron %1$s consultoras en tu zona:</string>
+    <string name="consultant_title_length_se">Se encontraron %1$s consultoras en tu sección:</string>
+    <string name="see_more_filters">Ver más filtros</string>
+    <string name="hide_filters">Ocultar filtros</string>
+    <string name="show_all">Todos</string>
+    <string name="show_all_segment">98</string>
+    <string name="whatsapp">WHATSAPP</string>
+
+    <!--UNETE-->
+    <string name="postulante_name_hint">Buscar por nombres &#8230;</string>
+    <string name="postulante_status_hint">Estado</string>
+    <string name="postulante_motivo_rechazo"> <b>Motivo:</b> Corresponde a la intendencia. Se informa a Gerente de Zona.</string>
+    <string name="postulante_tipo_rechazo"> <b>Tipo:</b> </string>
+    <string name="postulante_codigo_consultora"> Código de Consultora:</string>
+    <string name="postulante_aprobada">Ya es consultora</string>
+    <string name="postulante_rechazada">Rechazada por evaluacion crediticia</string>
+
+    <!--UNETE PASO1-->
+    <string name="tipo_documento">Tipo de Doc.</string>
+    <string name="rfc">RFC</string>
+    <string name="rut">RUT</string>
+    <string name="primer_nombre">Primer Nombre</string>
+    <string name="segundo_nombre">Segundo Nombre</string>
+    <string name="apellito_paterno">Apellido Paterno</string>
+    <string name="apellito_materno">Apellido Materno</string>
+    <string name="regimen_contable">Régimen</string>
+    <string name="nacionalidad">Nacionalidad</string>
+    <string name="fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="correo">Correo</string>
+    <string name="correo_repeat">Vuelva a escribir su correo</string>
+    <string name="genero">Género</string>
+    <string name="sv_terms_html_underlined"><![CDATA[<b><u>Acuerdo de consulta crediticia.</u></b>]]></string>
+
+    <!--UNETE PASO2-->
+    <string name="telefono_celular">Celular</string>
+    <string name="telefono_fijo">Teléfono Fijo</string>
+    <string name="empresa_trabaja">Empresa donde trabaja</string>
+    <string name="departamento">Departamento</string>
+    <string name="municipio">Municipio</string>
+    <string name="region">Región</string>
+    <string name="comuna">Comuna</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="barrio">Barrio</string>
+    <string name="numeracion">Numeración (Calle - avenida)</string>
+    <string name="provincia">Provincia</string>
+    <string name="canton">Cantón</string>
+    <string name="distrito">Distrito</string>
+    <string name="barrio_referencia">Barrio/Referencia</string>
+    <string name="tipo_direccion">Tipo Dirección</string>
+    <string name="direccion">Dirección</string>
+    <string name="direccion_placeholder">Américo Vespucio 1266</string>
+    <string name="referencia_placeholder">Considerar número de casa / departamento, otras referencias</string>
+    <string name="direccion_ec">Dirección (Barrio, Villa, Bloqueo, Calle Principal, Calle Secundaria, # Casa)</string>
+    <string name="capturar_direccion_postulante">Capturar ubicación casa postulante</string>
+    <string name="calle_avenida">Calle o Avenida</string>
+    <string name="numero">Numero</string>
+    <string name="referencia">Referencia</string>
+    <string name="codigo_postal">Código Postal</string>
+    <string name="captura_ubicacion">Capturar ubicación casa postulante</string>
+    <string name="ha_sido_consultora">¿Ha sido consultora de belleza anteriormente?</string>
+    <string name="viene_de_facebook">¿Viene de Facebook?</string>
+    <string name="consultora_recomendada">¿Te ha recomendado otra consultora de belleza?</string>
+    <string name="consultora_recomienda_nombre">Nombre de consultora que recomienda</string>
+    <string name="consultora_recomienda_codigo">Código de consultora que recomienda</string>
+    <string name="consultora_recomienda_cedula">Cédula de consultora que recomienda</string>
+    <string name="misma_direccion">¿Misma direccion?</string>
+    <string name="validar_sms">Validar PIN</string>
+    <string name="reenviar">Reenviar SMS</string>
+    <string name="pin">PIN</string>
+    <string name="ingresar_direccion_manualmente">Ingresar dirección manualmente</string>
+
+    <!--UNETE PASO4-->
+    <string name="requiere_aval">Requiere Aval</string>
+    <string name="direccion_entrega_zona">Dirección de entrega dentro de la sección/zona</string>
+    <string name="nombres">Nombre</string>
+    <string name="apellidos">Apellido</string>
+    <string name="direccion_completa">Dirección Completa</string>
+    <string name="tipo_vinculo">Tipo de Vínculo</string>
+    <string name="tipo_parentesco">Parentesco</string>
+    <string name="tipo_persona">Tipo de Persona</string>
+    <string name="origen_ingreso">Origen Ingreso</string>
+    <string name="direccion_entrega">DIRECCIÓN DE ENTREGA DENTRO DE LA SECCIÓN/ZONA</string>
+    <string name="estado_civil">Estado Civil</string>
+    <string name="nivel_educativo">Nivel Educativo</string>
+    <string name="otras_marcas">¿Vende Otras Marcas?</string>
+    <string name="monto">Monto</string>
+    <string name="monto_descripcion">Descripción</string>
+    <string name="seccion_fiador">FIADOR</string>
+    <string name="seccion_aval">AVAL</string>
+    <string name="seccion_ref_familiar">REFERENCIA FAMILIAR</string>
+    <string name="seccion_ref_no_familiar">REFERENCIA NO FAMILIAR</string>
+    <string name="nit_ref_familiar">NIT</string>
+    <string name="seccion_meta">META</string>
+    <string name="unete_paso4_ref_familiar">DATOS REFERENCIA FAMILIAR</string>
+
+    <!--UNETE PASO5-->
+    <string name="documento_identidad_anverso">Documento de Identidad de frente</string>
+    <string name="documento_identidad_reverso">Documento de Identidad revés</string>
+    <string name="documento_pagare">Pagaré</string>
+    <string name="consultar">Consultar</string>
+    <string name="documento_compra_venta">Documento de Compra Venta</string>
+    <string name="documento_autorizacion_consulta_credito">Autorización de consulta de crédito firmada</string>
+    <string name="documento_identidad_fiador">Documento de Identidad Fiador</string>
+    <string name="documento_otros">Otros documentos</string>
+    <string name="documento_contrato">Contrato</string>
+    <string name="documento_aval">Documento Aval</string>
+    <string name="documento_aval_reverso">Documento Aval Reverso</string>
+    <string name="documento_solicitud_credito">Solicitud de Crédito</string>
+    <string name="documento_copia_rut">Copia de RUT</string>
+    <string name="documento_ife">IFE</string>
+    <string name="documento_ife_reverso">IFE Reverso</string>
+    <string name="documento_comprobante_domicilio">Comprobante de Domicilio</string>
+    <string name="documento_documento_identida">DOCUMENTO IDENTIDA</string>
+    <string name="documento_reverso_documento_identida">REVERSO DOCUMENTO IDENTIDA</string>
+    <string name="documento_recibo_pago_servicios">RECIBO DE PAGO DE SERVICIOS</string>
+    <string name="documento_contrato_frontal">CONTRATO FRONTAL</string>
+    <string name="documento_contrato_reves">CONTRATO REVÉS</string>
+    <string name="documento_firma">FIRMA</string>
+    <string name="documento_autorizacion_consulta_credito_firmada">AUTORIZACIÓN DE CONSULTA DE CRÉDITO FIRMADA</string>
+    <string name="documento_documento_fiador">DOCUMENTO FIADOR</string>
+    <string name="documento_recibo_pago_de_fiador">RECIBO DE PAGO DE FIADOR</string>
+    <string name="documento_autorizacion_consulta_credito_firmada_fiador">AUTORIZACIÓN DE CONSULTA DE CRÉDITO FIRMADA FIADOR</string>
+    <string name="documento_constancia_laboral_fiador">CONSTANCIA LABORAL FIADOR</string>
+    <string name="documento_adjuntar_carta_descargo">ADJUNTAR CARTA DE DESCARGO</string>
+    <string name="documento_cedula">CEDULA</string>
+    <string name="documento_contrato_compra_venta_o_pagare">CONTRATO DE COMPRA VENTA O PAGARE</string>
+    <string name="documento_contrato_compra_venta_o_pagare_o_contado">CONTRATO DE COMPRA VENTA, PAGARE O PAGO DE CONTADO</string>
+    <string name="documento_certificacion">CERTIFICACIÓN</string>
+    <string name="documento_cedula_fiador_frente">CÉDULA FIADOR (FRENTE)</string>
+    <string name="documento_certificacion_fiador">CERTIFICACIÓN Fiador</string>
+    <string name="documento_carta_descargo">CARTA DE DESCARGO</string>
+    <string name="dpi_frente">DPI(FRENTE)</string>
+    <string name="dpi_reverso">DPI(REVERSO)</string>
+    <string name="acuerdo_compra_y_pagare">ACUERDO DE COMPRA Y PAGARE</string>
+    <string name="autorizacion_buro">AUTORIZACIÓN DE BURO</string>
+    <string name="dpi_fiador_frente">DPI FIADOR(FRENTE)</string>
+    <string name="dpi_fiador_reverso">DPI FIADOR(REVERSO)</string>
+    <string name="autorizacion">AUTORIZACIÓN</string>
+    <string name="pagare_fiador">PAGARÉ DE FIADOR</string>
+    <string name="dui_frente">DUI FRENTE)</string>
+    <string name="dui_reverso">DUI(REVERSO)</string>
+    <string name="contrato_compra_venta_y_pagare">CONTRATO DE COMPRA VENTA y PAGARE</string>
+    <string name="autorizacion_buro_jurada">AUTORIZACION DE BURO Y DECLARACION JURADA</string>
+    <string name="recibo_pago_servicios">RECIBO DE PAGO DE SERVICIOS</string>
+    <string name="dui_fiador_frente">DUI FIADOR (FRENTE)</string>
+    <string name="dui_fiador_reverso">DUI Fiador (REVERSO)</string>
+    <string name="autorizacion_buro_jurada_fiador">AUTORIZACION DE BURO Y DECLARACION JURADA FIADOR</string>
+
+    <string name="unete_valid_celular_empty">Debe completar el campo Celular</string>
+    <string name="unete_valid_celular_format">Valide el formato o la cantidad de digitos del campo Celular</string>
+    <string name="unete_valid_celular_repeat">Valide que no se repita el mismo numero varias veces en el campo Celular</string>
+    <string name="unete_valid_telefono_empty">Debe completar el campo Telefono</string>
+    <string name="unete_valid_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono</string>
+    <string name="unete_valid_codigo_consultora_format">Valide el formato o la cantidad de digitos del campo Codigo Consultora</string>
+    <string name="unete_valid_telefono_repeat">Valide que no se repita el mismo numero varias veces en el campo Telefono</string>
+    <string name="unete_valid_direccion_empty">Debe seleccionar una Direccion</string>
+    <string name="unete_valid_referencia_empty">Debe completar el campo Referencia</string>
+    <string name="unete_valid_pin_empty">Debe completar el campo PIN</string>
+    <string name="unete_valid_codigo_postal_empty">Debe completar el campo Codigo Postal</string>
+    <string name="unete_valid_telefono_formato">Valide el formato o la cantidad de digitos del campo Celular</string>
+    <string name="unete_valid_codigo_postal_not_just_0">El Código Postal debe tener al menos un caracter que no sea 0</string>
+
+    <string name="unete_valid_bo_aval_primer_nombre_empty">Debe completar el campo Primer Nombre Garante</string>
+    <string name="unete_valid_bo_aval_primer_apellido_empty">Debe completar el campo Primer Apellido Garante</string>
+    <string name="unete_valid_bo_aval_segundo_apellido_empty">Debe completar el campo Segundo Apellido Garante</string>
+    <string name="unete_valid_bo_aval_nacimiento_empty">Debe completar el campo Fecha de Nacimiento Garante</string>
+    <string name="unete_valid_bo_aval_direccion_empty">Debe completar el campo Dirección Completa Garante</string>
+    <string name="unete_valid_bo_aval_vinculo_select">Debe seleccionar el Garante Vinculo</string>
+    <string name="unete_valid_bo_aval_documento_empty">Debe completar el campo Documento de Identidad Garante</string>
+    <string name="unete_valid_bo_aval_documento_min_length">Valide el formato o la cantidad de digitos del campo Documento de Identidad Garante</string>
+    <string name="unete_valid_bo_aval_telefono_celular_empty">Debe completar el campo Celular o Telefono Garante</string>
+    <string name="unete_valid_bo_aval_celular_empty">Debe completar el campo Celular Garante</string>
+    <string name="unete_valid_bo_aval_celular_format">Valide el formato o la cantidad de digitos del campo Celular Garante</string>
+    <string name="unete_valid_bo_aval_celular_repeat">Valide que no se repita el mismo numero varias veces en el campo Celular Garante</string>
+    <string name="unete_valid_bo_aval_telefono_empty">Debe completar el campo Telefono Garante</string>
+    <string name="unete_valid_bo_aval_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono Garante</string>
+    <string name="unete_valid_bo_aval_telefono_repeat">Valide que no se repita el mismo numero varias veces en el campo Telefono Garante</string>
+    <string name="unete_condiciones">Estado de Validaciones: </string>
+
+    <string name="postulant_evaluation_disclaimer_pe">* Los resultados que se obtengan pueden variar si la postulante pertenece a otra sección</string>
+    <string name="text_gerente_zona">Gerente de Zona</string>
+    <string name="text_gerente_regional">"Gerente Regional"</string>
+
+    <string name="tx_entendido">ENTENDIDO</string>
+    <string name="devuelto_sac_mensaje_personalizado_paises">Por favor, selecciona \"Editar datos\" para solucionar la observación.</string>
+    <string name="two_spaces">%1$s %2$s</string>
+
+
+    <string name="unete_bo_paso3_meta_title">META</string>
+    <string name="unete_bo_paso3_meta_tipo">TIPO</string>
+    <string name="unete_bo_paso3_meta_monto">MONTO</string>
+    <string name="unete_bo_paso3_meta_descripcion">DESCRIPCIÓN</string>
+
+
+    <string name="unete_bo_paso3_list_meta_tipo">TIPO DE META:</string>
+    <string name="unete_bo_paso3_list_meta_monto">MONTO DE META:</string>
+    <string name="unete_bo_paso3_list_meta_descripcion">DESCRIPCION DE META:</string>
+    <string name="unete_bo_paso3_list_aval_documento">DOCUMENTO DE IDENTIDAD AVAL:</string>
+
+    <string name="unete_bo_paso3_aval_primer_nombre">PRIMER NOMBRE</string>
+    <string name="unete_bo_paso3_aval_segundo_nombre">SEGUNDO NOMBRE</string>
+    <string name="unete_bo_paso3_aval_primer_apellido">PRIMER APELLIDO</string>
+    <string name="unete_bo_paso3_aval_segundo_apellido">SEGUNDO APELLIDO</string>
+    <string name="unete_bo_paso3_aval_nacimiento">FECHA DE NACIMIENTO</string>
+    <string name="unete_bo_paso3_aval_direccion">DIRECCIÓN COMPLETA</string>
+    <string name="unete_bo_paso3_aval_tipo">TIPO DE VÍNCULO</string>
+    <string name="unete_bo_paso3_aval_telefono_fijo">TELÉFONO FIJO</string>
+    <string name="unete_bo_paso3_aval_telefono_celular">TELÉFONO CELULAR</string>
+    <string name="unete_bo_paso3_aval_documento">DOCUMENTO DE IDENTIDAD</string>
+
+    <string name="unete_bo_paso3_valid_aval_primer_nombre_empty">Debe completar el campo Primer Nombre Aval</string>
+    <string name="unete_bo_paso3_valid_aval_primer_apellido_empty">Debe completar el campo Primer Apellido Aval</string>
+    <string name="unete_bo_paso3_valid_aval_segundo_apellido_empty">Debe completar el campo Segundo Apellido Aval</string>
+    <string name="unete_bo_paso3_valid_aval_nacimiento_empty">Debe completar el campo Fecha de Nacimiento Aval</string>
+    <string name="unete_bo_paso3_valid_aval_direccion_empty">Debe completar el campo Dirección Completa Aval</string>
+    <string name="unete_bo_paso3_valid_aval_vinculo_select">Debe seleccionar el Aval Vinculo</string>
+    <string name="unete_bo_paso3_valid_aval_documento_empty">Debe completar el campo Documento de Identidad Aval</string>
+    <string name="unete_bo_paso3_valid_aval_documento_min_length">Valide el formato o la cantidad de digitos del campo Documento de Identidad Aval</string>
+    <string name="unete_bo_paso3_valid_aval_telefono_celular_empty">Debe completar el campo Celular o Telefono Aval</string>
+    <string name="unete_bo_paso3_valid_aval_celular_empty">Debe completar el campo Celular Aval</string>
+    <string name="unete_bo_paso4_valid_aval_celular_format">Valide el formato o la cantidad de digitos del campo Celular Aval</string>
+    <string name="unete_bo_paso3_valid_aval_celular_repeat">Valide que no se repita el mismo numero varias veces en el campo Celular Aval</string>
+    <string name="unete_bo_paso3_valid_aval_telefono_empty">Debe completar el campo Telefono Aval</string>
+    <string name="unete_bo_paso3_valid_aval_telefono_format">Valide el formato o la cantidad de digitos del campo Telefono Aval</string>
+    <string name="unete_bo_paso3_valid_aval_telefono_repeat">Valide que no se repita el mismo numero varias veces en el campo Telefono Aval</string>
+
+    <string name="unete_bo_paso4_valid_meta_tipo_select">Debe seleccionar el Tipo de Meta</string>
+    <string name="unete_bo_paso4_valid_meta_monto_empty">Debe completar el Monto de Meta</string>
+    <string name="unete_bo_paso4_valid_meta_descripcion_empty">Debe completar la Descripcion de la Meta</string>
+
+    <string name="unete_bo_paso4_seccion_fiador">FIADOR</string>
+    <string name="unete_bo_paso4_seccion_aval">GARANTE</string>
+    <string name="unete_bo_paso4_nit_ref_familiar">NIT</string>
+    <string name="unete_bo_paso4_seccion_ref_familiar">REFERENCIA FAMILIAR</string>
+    <string name="unete_bo_paso4_seccion_ref_no_familiar">REFERENCIA NO FAMILIAR</string>
+    <string name="unete_bo_paso4_seccion_meta">META</string>
+    <string name="unete_bo_paso4_estado_civil">Estado civil</string>
+    <string name="unete_bo_paso4_nivel_educativo">Nivel educativo</string>
+
+    <string name="unete_bo_paso4_primer_nombre_ref_familiar_empty">Debe completar el campo Primer Nombre Ref. Familiar</string>
+    <string name="unete_bo_paso4_apellido_paterno_ref_familiar_empty">Debe completar el campo Apellido Paterno Ref. Familiar</string>
+    <string name="unete_bo_paso4_telefono_celular_ref_familiar_empty">Debe completar el campo Teléfono Celular Ref. Familiar</string>
+    <string name="unete_bo_paso4_telefono_fijo_ref_familiar_empty">Debe completar el campo Teléfono Fijo Ref. Familiar</string>
+    <string name="unete_bo_paso4_celular_ref_familiar_format">Valide el formato o la cantidad de digitos del campo Teléfono Celular</string>
+    <string name="unete_bo_paso4_telefono_ref_familiar_format">Valide el formato o la cantidad de digitos del campo Teléfono Fijo</string>
+    <string name="unete_bo_paso4_nit_ref_familiar_format">Valide el formato o la cantidad de digitos del campo NIT</string>
+    <string name="unete_bo_paso4_aval_ciudad_empty">Debe completar el campo Aval Ciudad</string>
+
+    <string name="unete_bo_paso5_documento_identidad_anverso">ADJUNTAR DOCUMENTO DE IDENTIDAD ANVERSO</string>
+    <string name="unete_bo_paso5_documento_identidad_reverso">ADJUNTAR DOCUMENTO DE IDENTIDAD REVERSO</string>
+    <string name="unete_bo_paso5_recibo_pago_servicios">ADJUNTAR RECIBO DE PAGO DE SERVICIOS</string>
+    <string name="unete_bo_paso5_contrato">ADJUNTAR CONTRATO</string>
+    <string name="unete_bo_paso5_documento_garante_reverso">ADJUNTAR AUTORIZACIÓN BURO DE CREDITO</string>
+    <string name="unete_bo_paso5_documento_garante_anverso">ADJUNTAR FOTO SELFIE</string>
+    <string name="unete_bo_paso4_documento_solicitud_credito">ADJUNTAR DOCUMENTO SOLICITUD CRÉDITO</string>
+    <string name="you_have_detail_cycle">En %1$s tienes</string>
+    <string name="pre_inscritas">Pre-Inscritas</string>
+    <string name="evaluacion_detail">En evaluación</string>
+    <string name="aprobada_detail">Aprobadas</string>
+    <string name="preaprobada_detail">Pre-aprobadas</string>
+    <string name="ingresos_anticipados">Ing. Anticipados</string>
+    <string name="proactivos_finalizar">Proactivos por finalizar</string>
+    <string name="proactivos_finalizados">Proactivos finalizados</string>
+    <string name="proactivos_preaprobadas">Proactivos pre-aprobados</string>
+    <string name="you_achieve_detail_cycle">En %1$s lograste</string>
+    <string name="of_conversion">de conversión</string>
+
+    <!-- Side Menu -->
+    <string name="button_profile">VER PERFIL</string>
+
+    <string name="campos_obligatorios">*Campos Obligatorios</string>
+    <string name="confirmar_direccion">CONFIRMAR DIRECCIÓN</string>
+    <string name="save_continue">GUARDAR Y CONTINUAR</string>
+    <string name="adjunta_documentos">Adjunta documentos :</string>
+    <string name="terminaciones">Terminaciones</string>
+    <string name="estados">Estado</string>
+
+    <string name="no_consultant">0 Consultoras</string>
+    <string name="non_consultant">Consultoras</string>
+    <string name="unete_title">UNETE</string>
+    <string name="consolidado">Consolidado</string>
+    <string name="buscar_candidatas">Buscar</string>
+    <string name="msg_warning_no_data_consolidado">No se cuenta con información para\nesta variable en este momento.</string>
+
+    <string name="evaluacion">%Evaluación</string>
+
+    <string name="enEvaluacion">Evaluación</string>
+    <string name="aprobadas">Aprobadas</string>
+    <string name="preAprobadas">Pre-Aprobadas</string>
+    <string name="rechazadas">Rechazadas</string>
+    <string name="ingAnticipados">Ing. Anticipados</string>
+
+    <string name="my_zone_one_line">MI ZONA</string>
+    <string name="my_region_one_line">REGI\u00d3N</string>
+    <string name="my_country_one_line">MI PA\u00cdS</string>
+
+    <string name="percentage">%</string>
+    <string name="unete_listado_empty">No hay postulantes %s en este momento</string>
+    <string name="unete_success_thanks_title">¡GRACIAS!</string>
+    <string name="unete_success_regularizar_message">Completaste la información restante para la documentación de la nueva consultora.</string>
+    <string name="regularizar_detail">Regularizar Documento</string>
+    <string name="textoValidacionGZ">Verifico Número telefónico \nSolicitado - %1$s</string>
+    <string name="proactivaPreAprobadoWarning">Estimada Gerente de Zona, recuerda validar la información de las consultoras nuevas, los pedidos se aprobarán bajo tu responsabilidad.</string>
+    <string name="proactivaPreRechazadoWarning">Estimada Gerente de Zona, estás a punto de rechazar el pase de pedido de esta consultora. ¿Estás de acuerdo?</string>
+
+    <string name="textoValidacionGZSinFecha">Verifico Número telefónico</string>
+    <string name="unete_validacion_GZ_only_pe">"Estimada Gerente de Zona, recuerda que como parte de tus funciones es fundamental que valides la información proporcionada por las consultoras nuevas a fin de asegurar la correcta incorporación de las mismas. El código de las consultoras de tu zona serán creados bajo tu responsabilidad"</string>
+    <string name="unete_listado_codigo">Código: %1$s</string>
+    <string name="regularizarDoc">REGULARIZAR DOCUMENTO</string>
+
+    <string name="image_chooser_title">Seleccionar</string>
+    <string name="image_chooser_error_message">Galería no disponible</string>
+    <string name="seguro_social">Seguro social</string>
+    <string name="message_contact_postulant">Debe ponerse en contacto con la candidata para obtener este dato.</string>
+    <string name="co_terms_prefix">Acepto los Términos y Condiciones de</string>
+    <string name="sv_terms_prefix">Acepto</string>
+    <string name="co_terms_sufix"><b> Únete a Belcorp</b></string>
+    <string name="co_terms_">Debes aceptar los Términos y Condiciones</string>
+    <string name="legal_activity_not_found">No se encontró la aplicación necesaria para visualizar los términos.</string>
+
+    <string name="unete_confirmacion_aprobada">Estimada %1$s, recuerda validar la información de las consultoras nuevas, el código se creará bajo tu responsabilidad.</string>
+    <string name="unete_validacion_GZ">"Estimada Gerente de Zona, recuerda validar la información de las consultoras nuevas, el código se creará bajo tu responsabilidad"</string>
+    <string name="error_desconocido_pick_pdf_postulant">Ocurrió error un inesperado, vuelve a intentarlo</string>
+    <string name="error_desconocido_pick_pdf_error">Solamente archivos pdf por favor</string>
+    <string name="disclaimer_aprove_postulant">Recuerda!\nComo parte de los servicios brindados a Cetco S.A. es fundamental que valides la información proporcionada por las consultoras nuevas a fin de asegurar la correcta incorporación de las mismas. De lo contrario, la incorporación con información falsa o que no corresponda a la persona que se está incorporando, podría generar consecuencias legales. La ejecución de tus servicios incluye\n(1) validar que los datos de la consultora coincidan con el DNI entregado\n(2) confirmar que el DNI sea legible.</string>
+    <string name="can_be_consultant">Puede ser consultora</string>
+    <string name="can_not_be_consultant">No puede ser consultora</string>
+    <string name="validation_postulant">Validación postulante</string>
+
+    <string name="dialog_title_permission">Permisos necesarios</string>
+    <string name="dialog_message_permission">Se requiere acceso a los permisos para poder subir los documentos</string>
+    <string name="dialog_cancelar">Cancelar</string>
+    <string name="dialog_aceptar">Aceptar</string>
+
+</resources>

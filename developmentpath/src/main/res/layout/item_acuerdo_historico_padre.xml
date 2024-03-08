@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_inset_less"
+    android:background="@drawable/surface_rounded">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margenInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/content_inset_less" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margenFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/content_inset_less" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewCampania"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Campaña 18" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAcuerdosPorCampania"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="@id/margenFinal"
+        app:layout_constraintStart_toStartOf="@id/margenInicial"
+        app:layout_constraintTop_toBottomOf="@id/textViewCampania"
+        tools:listitem="@layout/item_acuerdo_historico_detalle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

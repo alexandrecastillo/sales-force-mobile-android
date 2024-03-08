@@ -1,0 +1,228 @@
+import biz.belcorp.salesforce.Config
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Versions
+
+apply plugin: "com.android.library"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'
+apply plugin: 'newrelic'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileOptions {
+        sourceCompatibility Versions.Android.javaVersion
+        targetCompatibility Versions.Android.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = Versions.Android.javaVersion.toString()
+    }
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+    compileSdkVersion Versions.Android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion Versions.Android.minSdkVersion
+        targetSdkVersion Versions.Android.targetSdkVersion
+        versionCode Versions.Android.appVersionCode
+        versionName Versions.Android.appVersionName
+
+        buildConfigField 'String', "API_GOOGLE_MAPS", '"https://maps.googleapis.com/maps/api/"'
+
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'HOST_LINK_SE', '"https://uneteabelcorp.com/"'
+            buildConfigField 'String', 'HOST', '"https://ffvvmobile.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api.belcorp.biz/"'
+            buildConfigField 'String', 'DATA_REPORT_HOST', '"https://ffvv.somosbelcorp.com/portal/IngresoSistema/IngresoExterno?token="'
+            buildConfigField 'String', 'SOMOS_BELCORP_HOST', '"https://ws.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'API_SB_HOST', '"https://api.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'NEW_RELIC_TOKEN', '"AA16cb0cff28f660858cfb2e0622b7c864a6c483b7-NRMA"'
+            buildConfigField 'String', 'MATERIALES_REDES_SOCIALES', '"https://www.somosbelcorp.com/Login/IngresoExterno?token="'
+
+            buildConfigField 'String', 'USER_TOKEN', '"usrAppFFVV"'
+            buildConfigField 'String', 'PWD_TOKEN', '"535A968E4DE4DDC5B9C6DD68E7EA53AD52BB1B58"'
+        }
+        stage {
+            debuggable !Config.App.isCiServer
+            minifyEnabled Config.App.isCiServer
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'HOST_LINK_SE', '"https://uneteabelcorp.com/"'
+            buildConfigField 'String', 'HOST', '"https://ffvvmobile.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api.belcorp.biz/"'
+            buildConfigField 'String', 'DATA_REPORT_HOST', '"https://ffvv.somosbelcorp.com/portal/IngresoSistema/IngresoExterno?token="'
+            buildConfigField 'String', 'SOMOS_BELCORP_HOST', '"https://ws.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'API_SB_HOST', '"https://api.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'NEW_RELIC_TOKEN', '"AA16cb0cff28f660858cfb2e0622b7c864a6c483b7-NRMA"'
+            buildConfigField 'String', 'MATERIALES_REDES_SOCIALES', '"https://somosbelcorp.com/Login/IngresoExterno?token="'
+
+            buildConfigField 'String', 'USER_TOKEN', '"usrAppFFVV"'
+            buildConfigField 'String', 'PWD_TOKEN', '"535A968E4DE4DDC5B9C6DD68E7EA53AD52BB1B58"'
+        }
+        develop {
+            debuggable true
+            minifyEnabled Config.App.isCiServer
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'HOST_LINK_SE', '"https://uneteabelcorp.com/"'
+            buildConfigField 'String', 'HOST', '"https://ffvvmobileqa.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api-qa.belcorp.biz/"'
+            buildConfigField 'String', 'DATA_REPORT_HOST', '"https://ffvvmqa.somosbelcorp.com/portal/IngresoSistema/IngresoExterno?token="'
+            buildConfigField 'String', 'SOMOS_BELCORP_HOST', '"https://wsqa.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'API_SB_HOST', '"https://apiqa.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'NEW_RELIC_TOKEN', '"AAad94fdcc6549424d18b6133014cf79c3b00ced4b-NRMA"'
+            buildConfigField 'String', 'MATERIALES_REDES_SOCIALES', '"https://portal2qas.somosbelcorp.com//Login/IngresoExterno?token="'
+
+            buildConfigField 'String', 'USER_TOKEN', '"usrAppFFVV"'
+            buildConfigField 'String', 'PWD_TOKEN', '"8BAECBA8F832431C63D503050D9CCDB9E6DF80C0"'
+        }
+        review {
+            debuggable true
+            minifyEnabled Config.App.isCiServer
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'HOST_LINK_SE', '"https://uneteabelcorp.com/"'
+            buildConfigField 'String', 'HOST', '"https://ffvvmobileqa.somosbelcorp.com/"'
+            buildConfigField 'String', 'BELCORP_HOST', '"https://api-qa.belcorp.biz/"'
+            buildConfigField 'String', 'DATA_REPORT_HOST', '"https://ffvvmqa.somosbelcorp.com/portal/IngresoSistema/IngresoExterno?token="'
+            buildConfigField 'String', 'SOMOS_BELCORP_HOST', '"https://wsqa.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'API_SB_HOST', '"https://apiqa.somosbelcorp.com/api/"'
+            buildConfigField 'String', 'NEW_RELIC_TOKEN', '"AAbbf703b6a0939a55415c626eb32dd86642d2a5a1-NRMA"'
+            buildConfigField 'String', 'MATERIALES_REDES_SOCIALES', '"https://sbepdqa.somosbelcorp.com/Login/IngresoExterno?token="'
+
+            buildConfigField 'String', 'USER_TOKEN', '"usrAppFFVV"'
+            buildConfigField 'String', 'PWD_TOKEN', '"8BAECBA8F832431C63D503050D9CCDB9E6DF80C0"'
+        }
+    }
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        test.java.srcDirs += "src/sharedtest/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+    flavorDimensions "perfil"
+    productFlavors {
+        multiprofile {
+            dimension "perfil"
+        }
+        businesspartners {
+            dimension "perfil"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation Deps.kotlin
+    implementation Deps.kotlinCoroutines
+    implementation Deps.kotlinCoroutinesAndroid
+    api Deps.Libs.kotlinSerialization
+
+    api Deps.Libs.koin
+    api Deps.Libs.koinScope
+    api Deps.Libs.koinViewModel
+
+    api Deps.Libs.belcorpComponentsCore
+    api Deps.Libs.belcorpComponentsDesign
+    api Deps.Libs.belcorpComponentsDialogs
+    api Deps.Libs.belcorpComponentsLogin
+    api Deps.Libs.belcorpComponentsCharts
+
+    api Deps.Android.material
+    api Deps.Android.emojiCompat
+    api Deps.Android.emojiBundled
+    api Deps.Android.swipeRefreshLayout
+
+    implementation Deps.Android.appCompat
+    implementation Deps.Android.androidKTX
+    implementation Deps.Android.constraintLayout
+    implementation Deps.Android.viewModelKTX
+
+    api Deps.Libs.workManager
+    api Deps.Libs.workManagerKTX
+
+    implementation Deps.Libs.stetho
+    implementation Deps.Libs.dbflow
+    implementation Deps.Libs.dbflowCore
+    implementation Deps.Libs.dbflowKotlin
+    kapt Deps.Libs.dbflowProcessor
+
+    releaseImplementation Deps.Libs.objectbox
+    stageImplementation Deps.Libs.objectbox
+    developImplementation Deps.Libs.objectbox
+    reviewImplementation Deps.Libs.objectboxBrowser
+
+    implementation Deps.Libs.playCore
+
+    api Deps.Libs.newRelic
+
+    implementation Deps.Libs.jsonwebtoken
+
+    implementation Deps.Libs.gson
+    implementation Deps.Libs.rxJava
+    implementation Deps.Libs.rxAndroid
+
+    implementation Deps.Libs.retrofit
+    implementation Deps.Libs.retrofitGsonConverter
+    implementation Deps.Libs.retrofitScalarsConverter
+    implementation Deps.Libs.retrofitKotlixConverter
+    implementation Deps.Libs.retrofitRxJavaAdapter
+    implementation Deps.Libs.okHttp
+    implementation Deps.Libs.okHttpInterceptor
+    implementation Deps.Libs.gson
+
+    implementation Deps.Libs.firebaseCore
+    implementation Deps.Libs.firebaseAnalytics
+    implementation Deps.Libs.firebaseMessaging
+    implementation Deps.Libs.firebaseConfig
+    implementation Deps.Libs.firebasePerf
+    implementation Deps.Libs.firebaseCrashlytics
+    implementation Deps.Libs.securityCrypto
+
+    implementation Deps.Libs.glide
+    kapt Deps.Libs.glideCompiler
+    implementation Deps.Libs.glideOkHttp
+    api Deps.Libs.googleMap
+    api Deps.Libs.googleLocation
+
+    // Test
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.junit5Api
+    testImplementation Deps.Test.junit5Params
+    testImplementation Deps.Test.koinTest
+    testImplementation Deps.Test.kluent
+    testImplementation Deps.Test.mockk
+    testImplementation Deps.Test.androidTestCore
+    testImplementation Deps.Test.androidTestExt
+    testImplementation Deps.Test.androidArchTestCore
+    testImplementation Deps.Test.roboelectric
+    testImplementation Deps.Test.roboelectricMulidex
+    testImplementation Deps.Test.coroutines
+}
+
+kapt {
+    arguments {
+        arg("objectbox.modelPath", "$projectDir/${Config.Android.dbPath}")
+    }
+}
+
+apply plugin: 'io.objectbox'
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'
+

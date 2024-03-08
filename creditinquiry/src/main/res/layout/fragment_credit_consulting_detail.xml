@@ -1,0 +1,745 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sections_drilldown_detail_background"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/credit_large_height"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/content_inset_less"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="@dimen/icon_size_normal"
+                        android:layout_height="@dimen/icon_size_normal"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/content_inset_normal"
+                        android:src="@drawable/ic_backspace_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_normal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_credit_consulting_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/credit_consulting_toolbat"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_title_2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="@dimen/content_inset_less"
+                        android:layout_toStartOf="@+id/tv_credit_consulting_title"
+                        android:src="@drawable/ic_credit_consulting" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/content_inset_less">
+
+                <LinearLayout
+                    android:id="@+id/ll_consultant_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/credit_result_height"
+                    android:gravity="center"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/iv_credit_condulting_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_credit_condulting_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/content_inset_half"
+                        android:fontFamily="@font/mulish_bold"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/red_error"
+                        android:textSize="@dimen/text_size_caption" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_inset_less"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/content_inset_normal"
+                        android:paddingBottom="@dimen/content_inset_normal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_title_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:paddingStart="@dimen/content_inset_less"
+                                android:paddingEnd="@dimen/content_inset_less"
+                                android:text="@string/name"
+                                android:textSize="@dimen/text_size_caption" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/content_inset_small"
+                                android:fontFamily="@font/mulish_bold"
+                                android:paddingStart="@dimen/content_inset_less"
+                                android:paddingEnd="@dimen/content_inset_less"
+                                android:textColor="@color/purple"
+                                android:textSize="@dimen/text_size_body" />
+
+                            <TableLayout
+                                android:id="@+id/tl_belcorp_data"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/content_inset_large"
+                                android:stretchColumns="*">
+
+                                <TableRow
+                                    android:paddingStart="@dimen/content_inset_less"
+                                    android:paddingEnd="@dimen/content_inset_less">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:text="@string/identity_document_2"
+                                        android:textSize="@dimen/text_size_caption" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:text="@string/code_2"
+                                        android:textSize="@dimen/text_size_caption" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_marginTop="@dimen/content_inset_small"
+                                    android:paddingStart="@dimen/content_inset_less"
+                                    android:paddingEnd="@dimen/content_inset_less">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_identity_document"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:textColor="@color/gray_label_dark"
+                                        android:textSize="@dimen/text_size_body" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_code"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:textColor="@color/gray_label_dark"
+                                        android:textSize="@dimen/text_size_body" />
+
+                                </TableRow>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/ds_divider_size"
+                                    android:layout_marginTop="@dimen/content_inset_normal"
+                                    android:layout_marginBottom="@dimen/content_inset_normal"
+                                    android:background="@color/gray_label" />
+
+                                <TableRow
+                                    android:paddingStart="@dimen/content_inset_less"
+                                    android:paddingEnd="@dimen/content_inset_less">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:text="@string/status"
+                                        android:textSize="@dimen/text_size_caption" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:text="@string/debt"
+                                        android:textSize="@dimen/text_size_caption" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_marginTop="@dimen/content_inset_small"
+                                    android:paddingStart="@dimen/content_inset_less"
+                                    android:paddingEnd="@dimen/content_inset_less">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:textColor="@color/gray_label_dark"
+                                        android:textSize="@dimen/text_size_body" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_debt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:textColor="@color/gray_label_dark"
+                                        android:textSize="@dimen/text_size_body" />
+
+                                </TableRow>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/ds_divider_size"
+                                    android:layout_marginTop="@dimen/content_inset_normal"
+                                    android:layout_marginBottom="@dimen/content_inset_normal"
+                                    android:background="@color/gray_label" />
+
+                                <TableRow
+                                    android:paddingStart="@dimen/content_inset_less"
+                                    android:paddingEnd="@dimen/content_inset_less">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:text="@string/campaign_income"
+                                        android:textSize="@dimen/text_size_caption" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:text="@string/last_billing"
+                                        android:textSize="@dimen/text_size_caption" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_marginTop="@dimen/content_inset_small"
+                                    android:paddingStart="@dimen/content_inset_less"
+                                    android:paddingEnd="@dimen/content_inset_less">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_campaign_income"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:textColor="@color/gray_label_dark"
+                                        android:textSize="@dimen/text_size_body" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_last_billing"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/mulish_regular"
+                                        android:textColor="@color/gray_label_dark"
+                                        android:textSize="@dimen/text_size_body" />
+
+                                </TableRow>
+
+                            </TableLayout>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_there_is_not_belcorp_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/mulish_regular"
+                            android:paddingStart="@dimen/content_inset_less"
+                            android:paddingTop="@dimen/content_inset_normal"
+                            android:paddingEnd="@dimen/content_inset_less"
+                            android:paddingBottom="@dimen/content_inset_normal"
+                            android:text="@string/there_is_not_belcorp_data"
+                            android:textAllCaps="true"
+                            android:textColor="@color/titles"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_consulnt_external_debt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_inset_less"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/content_inset_less"
+                        android:paddingTop="@dimen/content_inset_small"
+                        android:paddingEnd="@dimen/content_inset_less"
+                        android:paddingBottom="@dimen/content_inset_small">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/content_inset_small"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="@string/external_debt"
+                            android:textSize="@dimen/text_size_caption" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_check_external_debt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/would_you_consult_if_he_has_debt_out_of_belcorp"
+                                android:textColor="@color/gray_label_dark"
+                                android:textSize="@dimen/text_size_body" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_consult"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:drawableEnd="@drawable/ic_consult"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/consult"
+                                android:textAllCaps="false"
+                                android:textColor="@color/purple"
+                                android:textSize="@dimen/text_size_body" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_consulting_external_debt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/content_inset_less"
+                            android:fontFamily="@font/mulish_bold"
+                            android:text="@string/consulting_external_debt"
+                            android:textColor="@color/purple"
+                            android:textSize="@dimen/text_size_body"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_external_debt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_regular"
+                            android:textAllCaps="true"
+                            android:textColor="@color/titles"
+                            android:textSize="@dimen/text_size_body"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_external_debts_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/proof_concept"
+                                android:textSize="@dimen/text_size_caption"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_external_debts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_consulnt_external_no_belcorp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_inset_less"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/content_inset_less"
+                        android:paddingTop="@dimen/content_inset_small"
+                        android:paddingEnd="@dimen/content_inset_less"
+                        android:paddingBottom="@dimen/content_inset_small">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/content_inset_small"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="@string/external_debt"
+                            android:textSize="@dimen/text_size_caption" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_check_external_no_belcorp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/would_you_consult_if_he_has_debt_out_of_belcorp"
+                                android:textColor="@color/gray_label_dark"
+                                android:textSize="@dimen/text_size_body" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_region"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/credit_medium_height"
+                                    android:layout_marginStart="@dimen/content_inset_less"
+                                    android:layout_marginTop="@dimen/content_inset_normal"
+                                    android:layout_marginEnd="@dimen/content_inset_less"
+                                    android:layout_marginBottom="@dimen/content_inset_normal"
+                                    android:layout_weight="1"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardElevation="@dimen/content_inset_tiny">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/til_region"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:gravity="bottom"
+                                        app:hintTextColor="@color/gray_label">
+
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/et_region"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:cursorVisible="true"
+                                            android:fontFamily="@font/mulish_regular"
+                                            android:gravity="start"
+                                            android:hint="@string/region"
+                                            android:imeOptions="actionDone|flagNoExtractUi"
+                                            android:inputType="number|textNoSuggestions"
+                                            android:maxLength="10"
+                                            android:maxLines="1"
+                                            android:singleLine="true"
+                                            android:textColor="@color/gray_label_dark"
+                                            android:textCursorDrawable="@null"
+                                            android:textSize="@dimen/text_size_subtitle"
+                                            app:edittextColorHint="@color/gray_label" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_zona"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/credit_medium_height"
+                                    android:layout_marginStart="@dimen/content_inset_less"
+                                    android:layout_marginTop="@dimen/content_inset_normal"
+                                    android:layout_marginEnd="@dimen/content_inset_less"
+                                    android:layout_marginBottom="@dimen/content_inset_normal"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardElevation="@dimen/content_inset_tiny">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/til_zona"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:gravity="bottom"
+                                        app:hintTextColor="@color/gray_label">
+
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/et_zona"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:cursorVisible="true"
+                                            android:fontFamily="@font/mulish_regular"
+                                            android:gravity="start"
+                                            android:hint="@string/zone"
+                                            android:imeOptions="actionDone|flagNoExtractUi"
+                                            android:inputType="number|textNoSuggestions"
+                                            android:maxLength="10"
+                                            android:maxLines="1"
+                                            android:singleLine="true"
+                                            android:textColor="@color/gray_label_dark"
+                                            android:textCursorDrawable="@null"
+                                            android:textSize="@dimen/text_size_subtitle"
+                                            app:edittextColorHint="@color/gray_label" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_first_lastname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/credit_medium_height"
+                                    android:layout_marginStart="@dimen/content_inset_less"
+                                    android:layout_marginTop="@dimen/content_inset_normal"
+                                    android:layout_marginEnd="@dimen/content_inset_less"
+                                    android:layout_marginBottom="@dimen/content_inset_normal"
+                                    android:layout_weight="2"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardElevation="@dimen/content_inset_tiny">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/til_first_lastname"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:gravity="bottom"
+                                        app:hintTextColor="@color/gray_label">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/et_first_lastname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:cursorVisible="true"
+                                            android:fontFamily="@font/mulish_regular"
+                                            android:gravity="start"
+                                            android:hint="@string/first_lastname"
+                                            android:imeOptions="actionDone|flagNoExtractUi"
+                                            android:inputType="text|textNoSuggestions"
+                                            android:maxLength="25"
+                                            android:maxLines="1"
+                                            android:singleLine="true"
+                                            android:textColor="@color/gray_label_dark"
+                                            android:textCursorDrawable="@null"
+                                            android:textSize="@dimen/text_size_subtitle"
+                                            app:edittextColorHint="@color/gray_label" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_error_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="@dimen/content_inset_medium"
+                                android:layout_marginTop="@dimen/content_inset_less"
+                                android:layout_marginEnd="@dimen/content_inset_medium"
+                                android:fontFamily="@font/mulish_bold"
+                                android:gravity="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/text_size_caption" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_consult_no_belcorp"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:drawableEnd="@drawable/ic_consult"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/consult"
+                                android:textAllCaps="false"
+                                android:textColor="@color/purple"
+                                android:textSize="@dimen/text_size_body" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_consulting_external_no_belcorp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/content_inset_less"
+                            android:fontFamily="@font/mulish_bold"
+                            android:text="@string/consulting_external_debt"
+                            android:textColor="@color/purple"
+                            android:textSize="@dimen/text_size_body"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_external_no_belcorp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_regular"
+                            android:textAllCaps="true"
+                            android:textColor="@color/titles"
+                            android:textSize="@dimen/text_size_body"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_external_no_belcorp_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/content_inset_normal"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="@string/proof_concept"
+                                android:textSize="@dimen/text_size_caption" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_external_no_belcorp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_motive_lock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_inset_less"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/content_inset_less"
+                        android:paddingTop="@dimen/content_inset_small"
+                        android:paddingEnd="@dimen/content_inset_less"
+                        android:paddingBottom="@dimen/content_inset_small">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_bloqueo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="@string/motive_lock"
+                            android:textSize="@dimen/text_size_caption" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_motive_lock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

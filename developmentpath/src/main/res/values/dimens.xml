@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Otras Marcas -->
+    <dimen name="otra_marca_logo_height">72dp</dimen>
+
+    <dimen name="producto_mas_vendido_height">48dp</dimen>
+
+    <dimen name="expandable_height">100dp</dimen>
+    <dimen name="button_corner_radius">18dp</dimen>
+
+    <!-- Graficos -->
+    <dimen name="chart_height">150dp</dimen>
+    <dimen name="chart_axisWidth">2dp</dimen>
+    <dimen name="chart_barWidth">12dp</dimen>
+    <dimen name="chart_captionBottomPaddingSmall">4dp</dimen>
+    <dimen name="chart_captionBottomPaddingNormal">16dp</dimen>
+    <dimen name="chart_captionLineSpacingSmall">4dp</dimen>
+    <dimen name="chart_captionLineSpacingNormal">16dp</dimen>
+    <dimen name="chart_cornerRadius">4dp</dimen>
+    <dimen name="chart_indicatorDotRadius">2dp</dimen>
+    <dimen name="chart_indicatorLineWidth">1dp</dimen>
+
+    <dimen name="margin_6dp">6dp</dimen>
+    <dimen name="margin_boton_confirmacion">32dp</dimen>
+    <dimen name="indicator_detail_sub_value">16sp</dimen>
+    <dimen name="indicator_detail_campaign">10sp</dimen>
+
+    <!-- RDD -->
+    <dimen name="rdd_menu_primary_horizontal">16dp</dimen>
+    <dimen name="rdd_menu_primary_vertical">16dp</dimen>
+    <dimen name="rdd_menu_text_horizontal">8dp</dimen>
+    <dimen name="rdd_menu_secondary_horizontal">32dp</dimen>
+    <dimen name="rdd_menu_icon_size">24dp</dimen>
+    <dimen name="rdd_margin_start">20dp</dimen>
+    <dimen name="rdd_margin_start_up">21dp</dimen>
+    <dimen name="rdd_margin_start_upper">22dp</dimen>
+    <dimen name="rdd_margin_start_low">28dp</dimen>
+    <dimen name="rdd_margin_start_large">30dp</dimen>
+    <dimen name="rdd_margin_start_large_tiny">33dp</dimen>
+    <dimen name="rdd_margin_start_high">40dp</dimen>
+    <dimen name="rdd_padding_start_tiny">52dp</dimen>
+    <dimen name="rdd_padding_start_low">65dp</dimen>
+    <dimen name="rdd_padding_start_large">70dp</dimen>
+    <dimen name="rdd_margin_low">15dp</dimen>
+    <dimen name="rdd_margin_top">14dp</dimen>
+    <dimen name="rdd_margin_start_tiny">3dp</dimen>
+    <dimen name="rdd_margin_start_tiny_high">2dp</dimen>
+    <dimen name="rdd_margin_min">13dp</dimen>
+    <dimen name="rdd_margin_min_less">10dp</dimen>
+    <dimen name="rdd_margin_min_less_tiny">9dp</dimen>
+    <dimen name="rdd_margin_min_tiny">5dp</dimen>
+    <dimen name="rdd_margin_min_tiny_high">7dp</dimen>
+    <dimen name="button_min_width">110dp</dimen>
+    <dimen name="icon_size_small_less">12dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="rdd_sales_height">20dp</dimen>
+    <dimen name="rdd_margin_high_value">25dp</dimen>
+    <dimen name="icon_size_large">55dp</dimen>
+    <dimen name="icon_size_huge">71dp</dimen>
+    <dimen name="datos_height">35dp</dimen>
+    <dimen name="icon_size_small_more_less">8.5dp</dimen>
+    <dimen name="button_list_large">17dp</dimen>
+    <!--<dimen name="text_size_subtitle">15sp</dimen>-->
+    <dimen name="text_size_subtitle_low">13.5sp</dimen>
+    <dimen name="text_size_subtitle_2">16.9sp</dimen>
+    <dimen name="text_size_subtitle_3">17.5sp</dimen>
+    <dimen name="porcentaje_chart_progress_width">4dp</dimen>
+
+    <!-- Card Consultora Visita -->
+    <dimen name="size_card_consultora_ruta_nombre">14sp</dimen>
+    <dimen name="size_card_consultora_ruta_avatar">40dp</dimen>
+
+    <!-- Switch custom Mi Ruta -->
+    <dimen name="switch_thumb_width">48dp</dimen>
+    <dimen name="switch_thumb_height">36dp</dimen>
+    <dimen name="switch_track_width">45dp</dimen>
+    <dimen name="switch_track_height">10dp</dimen>
+    <dimen name="switch_size_text">14sp</dimen>
+    <dimen name="switch_margin_start_text">8dp</dimen>
+    <dimen name="switch_margin_end_text">5dp</dimen>
+
+    <!-- Datetime picker dialog -->
+    <dimen name="datetime_picker_text">16sp</dimen>
+
+    <!-- Header Ruta de desarrollo -->
+    <dimen name="margin_buttons_next_prev">8dp</dimen>
+    <dimen name="size_title_ruta">13sp</dimen>
+    <dimen name="size_title_ruta_month">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="size_subtitle_dashboard">12sp</dimen>
+    <dimen name="text_button_ruta">14sp</dimen>
+
+    <!--Acompaniamiento -->
+    <dimen name="size_icon_habilidad_campania_a_campania">30dp</dimen>
+    <dimen name="porcentaje_chart_size">42dp</dimen>
+    <dimen name="component_shadow_size">4dp</dimen>
+
+    <!-- Sections -->
+    <dimen name="section_height">48dp</dimen>
+    <dimen name="section_width">104dp</dimen>
+
+    <!-- Novedades -->
+    <dimen name="with_imagen_url">240dp</dimen>
+    <dimen name="height_imagen_url">144dp</dimen>
+
+    <!-- Prepararse es Clave -->
+    <dimen name="prepararse_icon_width">32dp</dimen>
+    <dimen name="prepararse_icon_height">32dp</dimen>
+
+    <dimen name="padding_bottom_height">70dp</dimen>
+    <dimen name="size_datos_persona_12">12sp</dimen>
+    <dimen name="size_datos_persona_14">14sp</dimen>
+    <dimen name="contact_data_height">60dp</dimen>
+    <dimen name="size_component_none">0dp</dimen>
+
+    <dimen name="margin_tiniest" >2.5dp</dimen>
+    <dimen name="margin_edit_field">11.5dp</dimen>
+    <dimen name="data_back_arrow">12.5dp</dimen>
+    <dimen name="ppu_width">10.5dp</dimen>
+    <dimen name="ppu_height">12.5dp</dimen>
+    <dimen name="goal_subtititle">12.6sp</dimen>
+    <dimen name="habilidades_text_size">12.5sp</dimen>
+    <dimen name="habilidades_subtext_size">13.5sp</dimen>
+    <dimen name="habilidades_subtitle_size">14.5sp</dimen>
+    <dimen name="habilidades_caption_size">11.5sp</dimen>
+    <dimen name="ds_title_1_size">20sp</dimen>
+    <dimen name="ds_body_size">14sp</dimen>
+
+    <dimen name="size_image_event">44dp</dimen>
+    <dimen name="size_image_result_visit">18dp</dimen>
+    <dimen name="size_image_arrow">24dp</dimen>
+    <dimen name="size_image_register_plan">36dp</dimen>
+    <dimen name="size_image_large">84dp</dimen>
+    <dimen name="size_image_event_arrow">12dp</dimen>
+
+    <dimen name="rdd_widget_size">30dp</dimen>
+    <dimen name="rdd_widget_size_large">60dp</dimen>
+    <dimen name="rdd_margin_top_large">28dp</dimen>
+
+    <dimen name="rdd_margin_path_large">36dp</dimen>
+
+    <dimen name="rdd_line_spacing" format="float">1.25</dimen>
+    <dimen name="rdd_visit_line_spacing" format="float">1.15</dimen>
+    <dimen name="rdd_dashboard_line_spacing" format="float">0.14</dimen>
+
+    <dimen name="rdd_text_min_height">12dp</dimen>
+    <dimen name="rdd_dashboard_scoring_size">14dp</dimen>
+    <dimen name="rdd_dashboard_avatar_size">80dp</dimen>
+
+    <dimen name="rdd_banner_height">80dp</dimen>
+
+    <dimen name="rdd_icon_medium">40dp</dimen>
+    <dimen name="size_tv_rechazar">12sp</dimen>
+
+    <dimen name="ranking_cell_width_large">98dp</dimen>
+    <dimen name="dream_question_text_size">14sp</dimen>
+
+</resources>

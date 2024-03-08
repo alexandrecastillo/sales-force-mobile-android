@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navFeatureBilling"
+    app:startDestination="@id/billingFragment">
+
+    <dialog
+        android:id="@+id/billingFragment"
+        android:name="biz.belcorp.salesforce.modules.billing.features.billing.view.BillingFragment"
+        android:label="BillingFragment">
+
+        <argument
+            android:name="rol"
+            app:argType="biz.belcorp.salesforce.core.entities.zonificacion.Rol"
+            android:defaultValue="NINGUNO"
+            app:nullable="false" />
+
+        <argument
+            android:name="uaKey"
+            app:argType="biz.belcorp.salesforce.core.domain.entities.zonificacion.LlaveUA"
+            android:defaultValue="@null"
+            app:nullable="true" />
+
+    </dialog>
+
+</navigation>

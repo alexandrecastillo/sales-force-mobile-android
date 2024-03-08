@@ -1,0 +1,115 @@
+<resources>
+
+    <string name="sale">Venta</string>
+    <string name="billing">Facturaci\u00f3n</string>
+
+    <string name="title_login">Login</string>
+    <string name="title_core">Core</string>
+    <string name="title_home">Home</string>
+    <string name="title_kpis">Kpis</string>
+    <string name="title_developmentpath">Development path</string>
+    <string name="title_virtualmethodology">Virtual Methodology</string>
+    <string name="title_developmentmaterial">Development Material</string>
+    <string name="title_postulants">Postulants</string>
+    <string name="title_consultants">Consultants</string>
+    <string name="title_orders">Orders</string>
+    <string name="title_calculator">Calculator</string>
+    <string name="identity_document">Documento de identidad</string>
+
+    <string name="menu_notification_title">Notifications</string>
+    <string name="menu_stories_title">Stories</string>
+
+    <string name="title_toolbar">ESTÁS EN</string>
+    <string name="subtitle_toolbar">"FACTURACIÓN %s - DÍA %s"</string>
+
+    <string name="welcome_user_name">Hola %s</string>
+
+    <string name="message_connectivity_online">En linea</string>
+    <string name="message_connectivity_offline">No hay conexión a internet</string>
+
+    <string name="unhandled_error_title">Ha ocurrido un error</string>
+    <string name="unhandled_error_message">¡No te preocupes! Estamos trabajando para solucionarlo rápidamente.
+        \n\n Reinicia el app o ingresa nuevamente en unos minutos.</string>
+    <string name="unhandled_error_restart">Reiniciar App</string>
+
+    <!-- Side Menu -->
+    <string name="button_profile">VER PERFIL</string>
+    <string name="version_app">Versión %s</string>
+
+    <!-- Shortcuts -->
+    <string name="shortcuts_subtitle">Desarrolla tu Negocio</string>
+
+    <!-- Banner -->
+    <string name="billing_banner_title">Avance de Facturación</string>
+    <string name="billing_banner_description">Haz seguimiento de tus pedidos y gana más</string>
+    <string name="consultants">Consultoras</string>
+    <string name="business_women">Empresarias</string>
+
+    <string name="temp_emoji">👋</string>
+    <string-array name="news">
+        <item>Nueva 1d1</item>
+        <item>Nueva 2d2</item>
+        <item>Nueva 3d3</item>
+        <item>Nueva 4d4</item>
+    </string-array>
+
+    <!-- Temporal strings -->
+    <string name="title_billing">Billing</string>
+    <string name="title_creditinquiry">Credit Inquiry</string>
+
+    <string name="title_error">Error</string>
+    <string name="message_fullsync_failed">Ha ocurrido un error al obtener sus datos</string>
+    <string name="percentage_format">%d%%</string>
+
+    <!-- Toolbar string -->
+    <string name="text_toolbar_period_billing">FACTURACIÓN %s - DÍA %s</string>
+    <string name="text_toolbar_period_sale">VENTA %s</string>
+
+    <!-- UserInfoHeader string -->
+    <string name="text_userinfo_level">Nivel %s</string>
+    <string name="text_userinfo_description_multiprofile">%s - %s %s</string>
+    <string name="text_userinfo_description_se">%1$s Sección %2$s - %3$s %4$s</string>
+
+    <!-- Ua string -->
+    <string name="home_ua_info_title">Estás viendo los indicadores de:</string>
+
+    <!-- InAppUpdate -->
+
+    <string name="check_for_update">Verificar actualización</string>
+    <string name="update_available">Actualización disponible</string>
+    <string name="update_not_available">No hay acualización disponible</string>
+    <string name="restart_to_update">Actualización descargada. Presione para reiniciar</string>
+    <string name="action_restart">Reiniciar</string>
+    <string name="update_failed">Error al actualizar</string>
+    <string name="title_brightpath">Bright Path</string>
+
+    <!-- WebPage -->
+
+    <string name="title_webpage_materiales_redes_sociales">Materiales Redes Sociales</string>
+    <string name="title_webpage_ucb">UCB</string>
+    <string name="title_webpage_data_report">DATA REPORT</string>
+    <string name="title_webpage_my_academy">MI ACADEMIA</string>
+
+    <!-- Banner -->
+    <string name="title_development_path">Rutas de Desarrollo</string>
+    <string name="description_development_path">¡Prepararse es clave!\nVisita, desarrolla y gana más</string>
+
+    <!-- Zonification -->
+    <string name="country">País</string>
+    <string name="region">Región</string>
+    <string name="zone">Zona</string>
+    <string name="section">Sección</string>
+    <string name="uncovered">Descoberturada</string>
+    <string name="title_termsconditions">Términos, Políticas y Condiciones</string>
+
+    <string name="title_digital">Indicadores Digitales</string>
+
+    <string name="cookies_label">Utilizamos Cookies para mejorar la experiencia de navegación en nuestra Web. Para continuar, dale click en aceptar. Política de Cookies.</string>
+    <string name="cookies">Política de Cookies</string>
+    <string name="understood">Entendido</string>
+    <string name="accept">Aceptar</string>
+    <string name="empty_url">No se pudo obtener la url</string>
+
+    <string name="no_sell_other_rproducts">No vende otras marcas</string>
+
+</resources>

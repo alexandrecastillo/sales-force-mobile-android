@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenedorCabecera"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/fondo_textura"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="@dimen/content_inset_less">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/zero"
+        android:layout_marginTop="@dimen/content_inset_half"
+        android:layout_marginEnd="@dimen/zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_sub"
+        app:srcCompat="@drawable/navidad_calculator" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_white_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/calculator_dashboard_titulo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/content_inset_tiniest"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/calculator_dashboard_titulo_sub"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

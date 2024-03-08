@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTituloDesplegado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_less"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_body"
+        tools:text="Conferencia" />
+
+    <View
+        android:id="@+id/viewSeparador"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_1" />
+
+</LinearLayout>

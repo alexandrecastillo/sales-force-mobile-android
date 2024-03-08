@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleLeft"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRangeLabel"
+        android:textStyle="bold"
+        android:layout_marginEnd="@dimen/content_inset_less"
+        android:letterSpacing="@dimen/letter_spacing_small"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="PMNP" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/descriptionLeft"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:layout_marginEnd="@dimen/content_inset_less"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleLeft"
+        tools:text="PMNP" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleRight"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRangeLabel"
+        android:textStyle="bold"
+        android:letterSpacing="@dimen/letter_spacing_small"
+        android:layout_marginStart="@dimen/content_inset_less"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="CUMPLIMIENTO" />
+
+    <biz.belcorp.mobile.components.design.miniprogressbar.ProgressBar
+        android:id="@+id/progressRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:layout_marginStart="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/titleRight"
+        app:miniprogressbar_progressMarginText="@dimen/content_inset_tiny"
+        app:miniprogressbar_textAppearance="@style/TextAppearance.MiniProgressBar.Basic"
+        tools:miniprogressbar_currentProgress="20"
+        tools:miniprogressbar_progressDrawableHeight="@dimen/mini_progress_height"
+        tools:miniprogressbar_text="90%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+import biz.belcorp.salesforce.Config
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Versions
+
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileOptions {
+        sourceCompatibility Versions.Android.javaVersion
+        targetCompatibility Versions.Android.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = Versions.Android.javaVersion.toString()
+    }
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+    compileSdkVersion Versions.Android.compileSdkVersion
+    def GEO_API_KEY = 'AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE'
+    defaultConfig {
+        minSdkVersion Versions.Android.minSdkVersion
+        targetSdkVersion Versions.Android.targetSdkVersion
+        versionCode Versions.Android.appVersionCode
+        versionName Versions.Android.appVersionName
+        manifestPlaceholders = [GEO_API_KEY: GEO_API_KEY]
+        vectorDrawables.useSupportLibrary = true
+    }
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        test.java.srcDirs += "src/sharedtest/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+    buildTypes {
+        release {
+            debuggable false
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+        stage {
+            debuggable !Config.App.isCiServer
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+        develop {
+            debuggable true
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+        review {
+            debuggable true
+            buildConfigField 'String', "GOOGLE_API_KEY", '"AIzaSyCZuyNkig7sjSgC8ba5z4sUOFJCmbL9XtE"'
+        }
+    }
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+    flavorDimensions "perfil"
+    productFlavors {
+        multiprofile {
+            dimension "perfil"
+        }
+        businesspartners {
+            dimension "perfil"
+        }
+    }
+    allprojects {
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    }
+}
+
+dependencies {
+    api project(":app")
+    api project(":core")
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation(name: 'material-stepper-release', ext: 'aar')
+
+    implementation Deps.kotlinCoroutines
+    implementation Deps.kotlinCoroutinesAndroid
+
+    implementation Deps.Android.appCompat
+    implementation Deps.Android.androidKTX
+    implementation Deps.Android.constraintLayout
+    implementation Deps.Android.navigationFragment
+    implementation Deps.Android.navigationUI
+    implementation Deps.Android.material
+
+    implementation Deps.Libs.koin
+    implementation Deps.Libs.koinScope
+    implementation Deps.Libs.koinViewModel
+
+    implementation Deps.Libs.retrofit
+    implementation Deps.Libs.rxJava
+    implementation Deps.Libs.gson
+
+    implementation Deps.Libs.firebaseCore
+    implementation Deps.Libs.firebaseAnalytics
+
+    implementation Deps.Libs.stetho
+    implementation Deps.Libs.dbflow
+    implementation Deps.Libs.dbflowCore
+    implementation Deps.Libs.dbflowKotlin
+
+    implementation Deps.Libs.spinnerDatePicker
+    implementation Deps.Libs.glide
+    implementation Deps.Libs.expandable
+    implementation Deps.Libs.circleImage
+
+    implementation Deps.Libs.workManager
+    implementation Deps.Libs.rxJava
+    implementation Deps.Libs.rxAndroid
+    implementation Deps.Libs.workManagerKTX
+
+    kapt Deps.Libs.dbflowProcessor
+
+    //belcorp
+    implementation Deps.Libs.belcorpComponentsCore
+
+    //glide
+    implementation Deps.Libs.glide
+    kapt Deps.Libs.glideCompiler
+    implementation Deps.Libs.glideOkHttp
+
+    // Test
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.junit5Api
+    testImplementation Deps.Test.junit5Params
+    testImplementation Deps.Test.koinTest
+    testImplementation Deps.Test.kluent
+    testImplementation Deps.Test.mockk
+    testImplementation Deps.Test.androidTestCore
+    testImplementation Deps.Test.androidArchTestCore
+    testImplementation Deps.Test.roboelectric
+    testImplementation Deps.Test.roboelectricMulidex
+    androidTestImplementation Deps.Test.runner
+    androidTestImplementation Deps.Test.espressoCore
+    androidTestImplementation Deps.Test.mockkAndroid
+}
+
+apply from: '../jacoco.gradle'
+apply from: '../sonarqubemodule.gradle'

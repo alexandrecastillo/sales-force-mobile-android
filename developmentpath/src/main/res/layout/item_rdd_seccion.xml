@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="#fff"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_seccion_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="SECCIÓN "
+            android:textColor="@color/rdd_accent"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_nivel_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll_nivel_placeholder" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_codigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/rdd_accent"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_nivel_placeholder"
+            app:layout_constraintStart_toEndOf="@id/tv_seccion_title"
+            app:layout_constraintTop_toTopOf="@+id/ll_nivel_placeholder" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_guion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text=" - "
+            android:textColor="@color/rdd_accent"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_nivel_placeholder"
+            app:layout_constraintStart_toEndOf="@id/tv_codigo"
+            app:layout_constraintTop_toTopOf="@+id/ll_nivel_placeholder" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/mulish_bold"
+            android:singleLine="true"
+            android:textColor="@color/rdd_accent"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_nivel_placeholder"
+            app:layout_constraintEnd_toStartOf="@id/barrera_vertical"
+            app:layout_constraintStart_toEndOf="@id/tv_guion"
+            app:layout_constraintTop_toTopOf="@+id/ll_nivel_placeholder"
+            tools:text="MÓNICA RAMÍREZ" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_visitadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/rdd_primary_text"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_visitadas_title"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="30" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_separador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="/"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_visitadas_title"
+            app:layout_constraintStart_toEndOf="@id/tv_visitadas" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/mulish_regular"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_visitadas_title"
+            app:layout_constraintStart_toEndOf="@id/tv_separador"
+            tools:text="80" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_visitadas_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="Consultoras visitadas del plan"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@id/pb_visitadas"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pb_visitadas"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="36dp"
+            android:progress="25"
+            android:progressDrawable="@drawable/pd_rdd_visitadas"
+            app:layout_constraintBottom_toBottomOf="@id/ll_estado"
+            app:layout_constraintEnd_toStartOf="@id/guia_vertical"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_estado" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrera_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="ll_nivel,iv_alert" />
+
+        <ImageView
+            android:id="@+id/iv_alert"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guia_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="110dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_nivel_placeholder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guia_vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="1"
+                android:text="Nivel "
+                android:textColor="@color/rdd_dashboard_text"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nivel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/rdd_dashboard_bg_light"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guia_vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_nivel"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="1"
+                android:text="Nivel "
+                android:textColor="@color/rdd_dashboard_text"
+                android:textSize="10sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nivel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="1"
+                android:textColor="@color/rdd_dashboard_text"
+                android:textSize="10sp"
+                tools:text="Diamante" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exitosa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/rdd_dashboard_bg_light"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guia_vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_nivel_placeholder">
+
+            <ImageView
+                android:id="@+id/circulo_exito"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:padding="6dp"
+                app:srcCompat="@drawable/circulo_azul_calendario" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_exitosa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="1"
+                android:textColor="@color/rdd_dashboard_text"
+                android:textSize="10sp"
+                tools:text="No exitosa" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_estado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/rdd_dashboard_bg_light"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guia_vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_exitosa">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:visibility="invisible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:maxLines="1"
+                android:textColor="@color/rdd_dashboard_text"
+                android:textSize="10sp"
+                tools:text="Productiva" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

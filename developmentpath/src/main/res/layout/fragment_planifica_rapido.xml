@@ -1,0 +1,128 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/rdd_dashboard_tab_bg"
+    android:focusable="true"
+    tools:context=".features.mi_ruta.planificarapido.listarpersonas.PersonasEnPlanFragment">
+
+    <ImageButton
+        android:id="@+id/btnRetroceder"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_black" />
+
+    <ImageView
+        android:id="@+id/imageViewIconoTitulo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRetroceder"
+        app:srcCompat="@drawable/ic_calendario" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.05"
+        android:lineSpacingMultiplier="1.15"
+        android:text="@string/rdd_planificacionrapida_titulo"
+        android:textColor="#252628"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewIconoTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewIconoTitulo"
+        app:layout_constraintTop_toTopOf="@id/imageViewIconoTitulo"
+        tools:targetApi="lollipop" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8.5dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/rdd_planificacionrapida_subtitulo"
+        android:textColor="#797a7d"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewOrdenHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/rdd_planificacionrapida_orden_hint"
+        android:textColor="#bfc5d2"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtitulo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewOrden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/rdd_planificacionrapida_orden_region"
+        android:textColor="#494b4e"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewOrdenHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/textViewOrdenHint"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtitulo"
+        app:layout_constraintTop_toTopOf="@id/textViewOrdenHint" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerVisitas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/botonIrAMiRuta"
+        app:layout_constraintTop_toBottomOf="@id/textViewOrden"
+        app:layout_constraintVertical_bias="0"
+        tools:listitem="@layout/item_persona_planificar_rapido" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonIrAMiRuta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.Button.Black.Variant"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/rdd_dashboard_btn_ver_mi_ruta"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutAviso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

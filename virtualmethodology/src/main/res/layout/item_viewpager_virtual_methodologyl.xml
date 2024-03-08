@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        app:layout_constraintBottom_toTopOf="@id/imgFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/imgMetologiaVentas"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/height_image_share"
+            android:layout_marginStart="@dimen/ds_margin_image_lateral"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:layout_marginEnd="@dimen/ds_margin_image_lateral"
+            app:layout_constraintEnd_toEndOf="@+id/rightNav"
+            app:layout_constraintStart_toStartOf="@+id/leftNav"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/leftNav"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_left" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/rightNav"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgWhatsapp"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:layout_marginBottom="@dimen/ds_margin_botton_icon"
+        android:background="@color/whatsapp_green"
+        android:padding="@dimen/ds_padding_small"
+        android:src="@drawable/whatsapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgFacebook"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentImages" />
+
+    <ImageView
+        android:id="@+id/imgFacebook"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:layout_marginBottom="@dimen/ds_margin_botton_icon"
+        android:background="@color/fb_blue"
+        android:padding="@dimen/ds_padding_small"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fb_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgSMS"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgWhatsapp"
+        app:layout_constraintTop_toBottomOf="@+id/contentImages" />
+
+    <ImageView
+        android:id="@+id/imgSMS"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/icon_size_medium"
+        android:layout_marginStart="@dimen/ds_margin_normal"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        android:layout_marginEnd="@dimen/ds_margin_normal"
+        android:layout_marginBottom="@dimen/ds_margin_botton_icon"
+        android:background="@color/black"
+        android:padding="@dimen/ds_padding_small"
+        android:src="@drawable/sms_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/contentImages" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

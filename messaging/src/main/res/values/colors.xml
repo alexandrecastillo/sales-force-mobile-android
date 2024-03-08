@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="notification_color">#722789</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="textColorNotificationVariant">#7F7E7E</color>
+    <color name="textColorDivider">#EFEFEF</color>
+    <color name="textColorNotification">@color/magenta</color>
+
+    <color name="colorBadge">@color/colorDefaultBadge</color>
+
+    <color name="colorIconNews">#A3B52975</color>
+    <color name="colorIconRdd">#A31D3A8A</color>
+    <color name="colorIconPostulants">#A3758EA4</color>
+
+    <color name="colorUnreadMessages">#3DA1B1C8</color>
+</resources>

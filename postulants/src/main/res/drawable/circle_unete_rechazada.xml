@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/unete_rechazado" />
+            <size
+                android:width="@dimen/unete_status_circle"
+                android:height="@dimen/unete_status_circle" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/margin_2dp"
+        android:left="@dimen/margin_8dp"
+        android:right="@dimen/margin_8dp"
+        android:top="@dimen/margin_2dp">
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45">
+            <shape>
+                <solid android:color="@color/white_5" />
+            </shape>
+        </rotate>
+    </item>
+
+    <item
+        android:bottom="@dimen/margin_2dp"
+        android:left="@dimen/margin_8dp"
+        android:right="@dimen/margin_8dp"
+        android:top="@dimen/margin_2dp">
+        <rotate
+            android:fromDegrees="-45"
+            android:toDegrees="-45">
+            <shape>
+                <solid android:color="@color/white_5" />
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>

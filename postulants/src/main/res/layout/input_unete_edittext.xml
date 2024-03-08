@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/unete_input_txtInputLayout"
+            style="@style/uneteInput_InputLayout"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/unete_input_txtComponent"
+                style="@style/uneteInput_Input"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/icValidation"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_validation_neutral" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMesssage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_36dp"
+        android:fontFamily="@font/mulish_regular"
+        android:maxLines="2"
+        android:minLines="1"
+        android:textColor="@color/warning_red"
+        android:textSize="@dimen/size_11sp"
+        tools:text="Campo obligatorio" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rdd_dashboard_bg"
+    android:paddingStart="@dimen/ds_padding_other_2"
+    android:paddingEnd="@dimen/ds_padding_other_2"
+    tools:context="biz.belcorp.salesforce.modules.developmentpath.features.dashboard.avance.se.view.DashboardRddSe">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/framelayoutResultadoVisitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/framelayoutIrADesarrolloSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            app:layout_constraintTop_toBottomOf="@id/framelayoutResultadoVisitas" />
+
+        <FrameLayout
+            android:id="@+id/framelayoutAvanceVisitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_large"
+            app:layout_constraintTop_toBottomOf="@id/framelayoutIrADesarrolloSeccion" />
+
+        <FrameLayout
+            android:id="@+id/framelayoutReconocimientos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_large"
+            app:layout_constraintTop_toBottomOf="@id/framelayoutAvanceVisitas" />
+
+        <View
+            android:id="@+id/espacioInferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            app:layout_constraintTop_toBottomOf="@id/framelayoutReconocimientos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HeaderIconTextCustomView">
+        <attr name="hitIcon" format="integer|reference" />
+        <attr name="hitTitleSize" format="dimension" />
+        <attr name="hitDescriptionSize" format="dimension" />
+        <attr name="hitTitle" format="string" />
+        <attr name="hitTitleColor" format="color" />
+        <attr name="hitTitleFontFamily" format="reference" />
+        <attr name="hitDescription" format="string" />
+        <attr name="hitDescriptionColor" format="color" />
+        <attr name="hitDescriptionFontFamily" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FlatIconButtonCustomView">
+        <attr name="fibText" format="string" />
+        <attr name="fibTextColor" format="color" />
+        <attr name="fibTextFontFamily" format="reference" />
+        <attr name="fibIcon" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorButtonCustomView">
+        <attr name="ibText" format="string" />
+        <attr name="ibTextColor" format="color" />
+        <attr name="ibTextFontFamily" format="reference" />
+        <attr name="ibIcon" format="integer|reference" />
+        <attr name="ibBackgroundColor" format="color" />
+        <attr name="ibRippleColor" format="color" />
+        <attr name="ibOutline" format="boolean" />
+        <attr name="ibBorderRadius" format="dimension" />
+        <attr name="ibBorderSize" format="dimension" />
+        <attr name="ibBorderColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomSnackbarView">
+        <attr name="textoInformativo" format="string" />
+        <attr name="textoAccion" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgressView">
+        <attr name="fontFamily" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectorFecha">
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="text_watch_consultants">VER CONSULTORAS</string>
+
+    <string name="text_bright_path_level_coral">Coral</string>
+    <string name="text_bright_path_level_amber">Ámbar</string>
+    <string name="text_bright_path_level_pearl">Perla</string>
+    <string name="text_bright_path_level_topaz">Topacio</string>
+
+    <string name="text_bright_path_achieved_prev_campaign">EN %1$s LOGRASTE</string>
+    <string name="text_bright_path_quantity_has_changed">%1$s Cambios de Nivel</string>
+
+
+    <string name="label_posibles_cambios_de_nivel">POSIBLES CAMBIOS DE NIVEL</string>
+    <string name="label_cambio_de_nivel">CAMBIO DE NIVEL</string>
+    <string name="label_fin_periodo">CIERRE DE PERIODO</string>
+
+    <string name="text_posibles_changes_level_consultant_inf">Pueden cambiar en</string>
+
+    <string name="no_consultant">0 Consultoras</string>
+    <string name="non_consultant">Consultoras</string>
+
+    <string name="my_section">MI\nSECCI\u00d3N</string>
+    <string name="my_zone">MI\nZONA</string>
+    <string name="my_region">MI\nREGI\u00d3N</string>
+    <string name="my_country">MI\nPA\u00cdS</string>
+
+    <string name="enterprise_partner">Socia Empresaria:</string>
+    <string name="zone_manager">Gerente de Zona:</string>
+    <string name="region_manager">Gerente Regional:</string>
+    <string name="no_cover">Sin cobertura</string>
+    <string name="no_responsible">Sin responsable</string>
+
+    <string name="text_level_select_an_constancy">Selecciona el nivel de las consultoras</string>
+    <string name="empty" />
+    <string name="error_message_no_data">No se obtuvieron datos nuevos</string>
+    <string name="know_your_levels">Conoce tus niveles</string>
+    <string name="actual_level">Perteneces al Nivel %1$s</string>
+    <string name="to_stay_level">PARA MANTENERTE COMO %1$s</string>
+    <string name="to_up_level">PARA SUBIR DE NIVEL A %1$s</string>
+    <string name="you_must_achieve">Debes lograr:</string>
+    <string name="level_sale">Venta: %1$s</string>
+    <string name="level_orders">Pedidos: %1$s</string>
+    <string name="campaign_acomplish">Llevas %1$s Campañas en este nivel</string>
+    <string name="result_current_campaign">Tu resultado de campaña actual</string>
+    <string name="your_current_sales">Tus venta de %1$s</string>
+    <string name="your_current_orders">Tus pedidos de %1$s</string>
+    <string name="upgrade_level_accomplish">Cumple para subir de nivel</string>
+    <string name="campaigns_to_upgrade">Llevas %1$s Campañas cumpliendo las condiciones\npara subir de nivel</string>
+    <string name="last_campaigns_result">Resultados de tus últimas campañas</string>
+    <string name="warning_accomplish">Recuerda que para cambiar de nivel deberás cumplir las exigencias durante 3 Campañas consecutivas</string>
+    <string name="upgrade_no_accomplish">No cumple para mantener nivel</string>
+    <string name="upgrade_accomplish">Cumple para mantener nivel</string>
+    <string name="sell">Venta</string>
+    <string name="orders">Pedidos</string>
+    <string name="status">Estatus</string>
+    <string name="c1">1era</string>
+    <string name="c2">2da</string>
+    <string name="c3">3era</string>
+    <string name="empty_state">Lo sentimos, no hay informacion actual para esta consultora</string>
+    <string name="projection_earnings">Ganancia de pedidos proyectada en el nivel %1$s</string>
+    <string name="low_value">Bajo Valor</string>
+    <string name="low_value_plus">Bajo Valor Plus</string>
+    <string name="high_value">Alto Valor</string>
+    <string name="high_value_plus">Alto Valor PLus</string>
+    <string name="project_earning_as">Ganancia proyectada como %1$s: %2$s</string>
+    <string name="level_stay_disclaimer">Recuerda que para mantener tu nivel debes cumplir con todas las condiciones durante 3 campañas consecutivas</string>
+
+
+</resources>

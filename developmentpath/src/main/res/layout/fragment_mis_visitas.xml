@@ -1,0 +1,150 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f6fc"
+    tools:context=".biz.belcorp.salesforce.modules.developmentpath.features.dashboard.avance.dv.misvisitas.MisVisitasFragment">
+
+    <ImageView
+        android:id="@+id/ivIcono"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitulo"
+        app:srcCompat="@drawable/ic_calendario" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.07"
+        android:text="@string/titulo_mis_visitas"
+        android:textColor="#252628"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clPlanificar"
+        app:layout_constraintEnd_toStartOf="@id/clPlanificar"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/ivIcono"
+        app:layout_constraintTop_toTopOf="@+id/clPlanificar"
+        tools:targetApi="lollipop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPlanificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background_rdd_boton_planificar"
+        app:layout_constraintBottom_toTopOf="@+id/clMisVisitas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivIconoPlanificar"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPlanificar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_mas" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPlanificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.15"
+            android:text="@string/planificar"
+            android:textColor="@color/rdd_accent"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivIconoPlanificar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="lollipop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMisVisitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shadow_rdd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivIcono">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvVisitadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPlanificadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="bottom"
+            android:textColor="#494b4e"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvVisitadas"
+            app:layout_constraintStart_toEndOf="@id/tvVisitadas"
+            tools:text="/14" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/subtitulo_gerentes_regionales_visitadas_del_plan"
+            android:textColor="#494b4e"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVisitadas" />
+
+        <ProgressBar
+            android:id="@+id/pbVisitas"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:max="100"
+            android:progress="14"
+            android:progressDrawable="@drawable/custom_progress_mis_visitas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvVisitadas"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitulo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

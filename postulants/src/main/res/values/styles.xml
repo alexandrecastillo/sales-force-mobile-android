@@ -1,0 +1,549 @@
+<resources>
+
+    <style name="AppThemeUnete" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkUnete</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:typeface">normal</item>
+        <item name="ms_stepperStyle">@style/DotStepperStyle</item>
+
+    </style>
+
+    <style name="TextViewUneteListadoDescripcion" parent="@android:style/Widget.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray_label</item>
+        <item name="android:textSize">@dimen/sections_drilldown_consultant</item>
+        <item name="android:layout_marginTop">@dimen/activity_indicator_margin</item>
+        <item name="android:padding">@dimen/activity_regular_margin</item>
+        <item name="android:minLines">1</item>
+        <item name="android:text">@string/no_consultant</item>
+        <item name="android:drawablePadding">@dimen/activity_regular_margin</item>
+    </style>
+
+    <style name="AppTheme.FlatDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+
+    <style name="unete_dtpicker_spinner">
+        <item name="android:textColorPrimary">@color/unete_text</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+    </style>
+
+    <style name="CardView.Unete">
+        <item name="android:layout_marginTop">@dimen/margin_view_card_all</item>
+        <item name="android:layout_marginLeft">@dimen/margin_view_card_all_min</item>
+        <item name="android:layout_marginRight">@dimen/margin_view_card_all_min</item>
+        <item name="android:layout_marginBottom">@dimen/margin_view_card_all_min</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+    </style>
+
+
+    <style name="unete_dtpicker_dialog">
+        <item name="android:textColorPrimary">@color/unete_text</item>
+        <item name="colorAccent">#009999</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.FlatDialog.Style1" parent="Widget.AlertDialog">
+        <item name="confirmButtonStyle">@drawable/background_button_style_1</item>
+        <item name="confirmTextStyle">@color/white</item>
+    </style>
+
+    <style name="AppTheme.FlatDialog.Style2" parent="Widget.AlertDialog">
+        <item name="cancelButtonStyle">@drawable/background_button_style_2</item>
+        <item name="cancelTextStyle">@color/black</item>
+        <item name="confirmButtonStyle">@drawable/background_button_style_3</item>
+        <item name="confirmTextStyle">@color/white</item>
+    </style>
+
+    <style name="uneteInput_icon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="srcCompat">@drawable/icon_validation_neutral</item>
+    </style>
+
+    <style name="unete_obligatorio_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#768ea3</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="uneteInput_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="uneteInput_InputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColorHint">#80637b92</item>
+        <item name="hintTextAppearance">@style/inputLayout_style</item>
+    </style>
+
+    <style name="unetePrefijo_TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textColorHint">#80637b92</item>
+    </style>
+
+    <style name="DotStepperStyle">
+        <item name="ms_stepperType">dots</item>
+        <item name="ms_activeStepColor">#009999</item>
+        <item name="ms_bottomNavigationBackground">?attr/colorAccent</item>
+        <item name="ms_tabStepDividerWidth">32dp</item>
+    </style>
+
+    <style name="uneteInput_Input" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textAppearance">@style/inputText_style</item>
+    </style>
+
+    <style name="inputLayout_style" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="inputText_style" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="unete_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#768ea3</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="unete_switch">
+        <item name="android:thumb">@drawable/switch_thumb_unete</item>
+        <item name="track">@drawable/switch_track_unete</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="unete_section_title">
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#118987</item>
+    </style>
+
+    <style name="unete_section_exp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="ael_duration">400</item>
+        <item name="ael_expanded">true</item>
+    </style>
+
+    <style name="unete_paso_indicacion">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#768ea3</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="camara_unete_documento_img">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="srcCompat">@drawable/ic_camara_unete</item>
+    </style>
+
+    <style name="unete_documento_txt">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textColor">#768ea3</item>
+    </style>
+
+    <style name="unete_documento">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:weightSum">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="unete_section">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="unete_section_img">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="srcCompat">@drawable/ic_down_arrow</item>
+    </style>
+
+    <style name="unete_checkbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#768ea3</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="unete_btnContinue" parent="AppThemeUnete">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_login_button</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/save_continue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:fontFamily">@font/mulish_regular</item>
+    </style>
+
+    <style name="item_postulante_card">
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardElevation">3dp</item>
+    </style>
+
+    <style name="item_postulante_card_body">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="item_postulante_header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="item_postulante_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#5b758b</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_postulante_status_box">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+
+    <style name="item_postulante_status_box_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+    </style>
+
+    <style name="item_postulante_body">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="item_postulante_dato_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="item_postulante_dato">
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#768ea3</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <style name="unete_base">
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#768ea3</item>
+    </style>
+
+    <style name="item_postulante_action_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#f0f3f5</item>
+    </style>
+
+    <style name="item_postulante_action">
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_postulante_datos_layout" parent="unete_base">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="item_postulante_label_data" parent="unete_base">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#768ea3</item>
+    </style>
+
+    <style name="item_postulante_status_layout">
+        <item name="android:layout_width">260dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="item_postulante_status_circle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="item_postulante_status_message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="item_postulante_motivorechazo_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="item_postulante_codconsultora_layout" parent="item_postulante_motivorechazo_layout" />
+
+    <style name="item_postulante_motivorechazo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#768ea3</item>
+    </style>
+
+    <style name="item_postulante_codconsultora" parent="item_postulante_motivorechazo" />
+
+    <style name="unete_documento_img">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="srcCompat">@drawable/ic_upload_image</item>
+    </style>
+
+    <style name="uneteInput_spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textAppearance">@style/inputText_style</item>
+    </style>
+
+    <style name="NavigationIndicatorTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabIndicatorHeight">@dimen/margin_5dp</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">fill</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/size_11sp</item>
+        <item name="android:fontFamily">@font/mulish_light</item>
+    </style>
+
+    <style name="MulishTextView" parent="@android:style/Widget.TextView">
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="Widget.Button.Purple">
+        <item name="backgroundTint">@color/purple</item>
+        <item name="android:backgroundTint">@color/purple</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.Button.White">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="Widget.Button.Purple.Common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_30dp</item>
+        <item name="android:layout_marginBottom">@dimen/ds_margin_normal</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:paddingStart">@dimen/dialog_condicion_paddingLeft_1</item>
+        <item name="android:paddingEnd">@dimen/dialog_condicion_paddingLeft_1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Widget.Button.Purple.Variant">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_login_button</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/save_continue</item>
+    </style>
+
+    <style name="Widget.Button.Purple.ShareLink">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_login_button</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:paddingStart">@dimen/dimen_20dp</item>
+        <item name="android:paddingEnd">@dimen/dimen_20dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16dp</item>
+        <item name="android:layout_marginTop">@dimen/dimen_24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/save_continue</item>
+    </style>
+
+    <style name="Widget.Button.Purple.Variant2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_login_button</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/margin_20dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_7dp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_7dp</item>
+
+    </style>
+
+    <style name="Widget.Button.White.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:text">@string/save_continue</item>
+    </style>
+
+    <style name="Widget.Button.Purple.Custom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:text">@string/save_continue</item>
+    </style>
+
+    <style name="Widget.Button.Purple.btnSMS">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="backgroundTint">@color/selector_border_purple</item>
+        <item name="android:backgroundTint">@color/selector_border_purple</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Widget.Button.Purple.btnContinueMaps">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_map_button</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/save_continue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DialogTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+</resources>

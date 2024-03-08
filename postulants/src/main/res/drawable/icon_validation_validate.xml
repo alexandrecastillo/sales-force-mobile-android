@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportHeight="24.0"
+    android:viewportWidth="24.0">
+    <group android:name="check">
+        <path
+            android:name="check_path"
+            android:pathData="M6,10 l0,0 l0,0"
+            android:strokeColor="#49cb19"
+            android:strokeWidth="2" />
+
+        <path
+            android:fillColor="#49cb19"
+            android:pathData="M109.08,183.34c-1.52,0 -3,-0.54 -4.17,-1.54l-37.83,-32.43c-2.68,-2.3 -2.99,-6.34 -0.69,-9.02c2.3,-2.68 6.34,-2.99 9.02,-0.69l32.73,28.06l71.54,-91.98c2.17,-2.79 6.19,-3.3 8.98,-1.12c2.79,2.17 3.29,6.19 1.12,8.98l-75.66,97.28c-1.08,1.38 -2.67,2.26 -4.41,2.44C109.51,183.32 109.3,183.34 109.08,183.34zM256,128C256,57.42 198.58,0 128,0S0,57.42 0,128c0,70.58 57.42,128 128,128S256,198.58 256,128zM243.2,128c0,63.52 -51.68,115.2 -115.2,115.2c-63.52,0 -115.2,-51.68 -115.2,-115.2C12.8,64.48 64.48,12.8 128,12.8C191.52,12.8 243.2,64.48 243.2,128z" />
+
+    </group>
+</vector>

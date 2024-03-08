@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/metasLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCabeceraMeta"
+        style="@style/CardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_inset_tiny"
+        android:padding="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/meta_personal_gz"
+            android:textColor="@color/perfil_text_section"
+            android:textSize="@dimen/text_size_subtitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageExpandirColapsar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_expand_more_blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/laytMetaList"
+        style="@style/CardStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rdd_margin_min_tiny"
+        android:paddingStart="@dimen/content_inset_less"
+        android:paddingEnd="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_less"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCabeceraMeta"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/textContadorMetas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/text_zona_reconocimiento"
+            android:textSize="@dimen/text_size_subtitle"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonCrearMeta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonCrearMeta"
+            tools:text="1/3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCrearMeta"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingStart="@dimen/content_inset_small"
+            android:paddingEnd="@dimen/content_inset_small"
+            android:text="@string/nueva_meta_gz"
+            app:iconTint="@color/icon_green_selector"
+            android:textColor="@color/titles"
+            android:textSize="@dimen/goal_subtititle"
+            app:icon="@drawable/ic_mas_habilitado"
+            app:iconGravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textSubtituloMeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/text_zona_reconocimiento"
+            android:textSize="@dimen/goal_subtititle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCrearMeta"
+            tools:text="@string/registro_metas" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutNuevaMeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:background="@drawable/border_layout_meta"
+            android:paddingStart="@dimen/rdd_margin_min_less"
+            android:paddingTop="@dimen/rdd_margin_min_less"
+            android:paddingEnd="@dimen/rdd_margin_min_less"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSubtituloMeta"
+            tools:visibility="visible">
+
+            <EditText
+                android:id="@+id/editTextMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_textbox_nuevo"
+                android:fontFamily="@font/mulish_regular"
+                android:hint="@string/empty"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:maxLines="8"
+                android:minLines="3"
+                android:textSize="@dimen/size_title_ruta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCancelarNuevaMeta"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/cancelar_meta_gz"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextMeta" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonGuardarNuevaMeta"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_inset_small"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/guardar_meta_gz"
+                android:textColor="@color/mi_ruta_datetime_picker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextMeta" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMetasGrabadas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rdd_margin_min_less"
+            android:layout_marginBottom="@dimen/content_inset_tiniest"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/content_inset_tiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutNuevaMeta" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

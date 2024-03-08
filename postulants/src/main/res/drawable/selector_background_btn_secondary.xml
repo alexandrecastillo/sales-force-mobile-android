@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/transparent" />
+                    <stroke android:width="1dp" android:color="@color/black" />
+                </shape>
+            </item>
+            <item android:color="@color/shadow_start" />
+        </layer-list>
+    </item>
+    <item android:state_focused="true" android:state_hovered="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/transparent" />
+                    <stroke android:width="1dp" android:color="@color/black" />
+                </shape>
+            </item>
+            <item android:color="@color/shadow_start" />
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/transparent" />
+                    <stroke android:width="1dp" android:color="@color/black" />
+                </shape>
+            </item>
+            <item android:color="@color/shadow_start" />
+        </layer-list>
+    </item>
+    <item android:state_hovered="true" >
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/transparent" />
+                    <stroke android:width="1dp" android:color="@color/black" />
+                </shape>
+            </item>
+            <item android:color="@color/shadow_end" />
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="@color/transparent" />
+            <stroke android:width="1dp" android:color="@color/black" />
+        </shape>
+    </item>
+
+</selector>

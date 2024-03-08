@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="sections_drilldown_detail_background">#F8F8F9</color>
+    <color name="gray_label_dark">#1d1d26</color>
+    <color name="gray_label">#661d1d26</color>
+    <color name="purple">#722789</color>
+    <color name="red_error">#e32927</color>
+    <color name="titles">#243039</color>
+    <color name="cian">#35bdb2</color>
+    <color name="warning_message_color">#758da3</color>
+    <color name="purple_70">#8f66aa</color>
+    <color name="colorPrimaryDark">#768ea3</color>
+
+
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/content_inset_small"
+    android:clipToPadding="false"
+    android:animateLayoutChanges="true">
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.HeaderIconTextCustomView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hitIcon="@drawable/ic_woman"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:hitTitle="Datos de la consultora" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_less"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/surface_rounded"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/expandableContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="1"
+                tools:layoutManager="GridLayoutManager"
+                tools:listitem="@layout/inflate_custom_etiqueta_information"
+                tools:spanCount="2" />
+
+            <FrameLayout
+                android:id="@+id/frameLayoutMetas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_normal"
+                android:layout_marginTop="@dimen/content_inset_normal"
+                android:layout_marginEnd="@dimen/content_inset_normal"
+                app:layout_constraintTop_toBottomOf="@id/recyclerDatos" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/fadingView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shadow_top_light"
+            app:layout_constraintBottom_toBottomOf="@id/expandableContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/separador"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two"
+            android:layout_marginStart="@dimen/content_inset_normal"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="@dimen/content_inset_normal"
+            android:background="@color/gray_1"
+            app:layout_constraintTop_toBottomOf="@id/expandableContainer" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/icon_size_medium"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/separador" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toggleIcon"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            app:layout_constraintBottom_toBottomOf="@id/toggleButton"
+            app:layout_constraintEnd_toEndOf="@id/toggleButton"
+            app:layout_constraintStart_toStartOf="@id/toggleButton"
+            app:layout_constraintTop_toTopOf="@id/toggleButton"
+            app:srcCompat="@drawable/ic_arrow_down" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <biz.belcorp.salesforce.modules.developmentpath.widgets.IndicatorButtonCustomView
+        android:id="@+id/btnCobranzaYEstadoDeCuenta"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/content_inset_double"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:padding="@dimen/content_inset_normal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/contenedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ibText="@string/btn_cobranza_y_estado_de_cuenta"
+        app:ibIcon="@drawable/ic_arrow_right"
+        app:ibOutline="true"
+        app:ibBorderColor="@color/black"
+        app:ibBorderSize="1dp"
+        app:ibRippleColor="@color/gray_3"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

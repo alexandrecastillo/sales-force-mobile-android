@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/rdd_dashboard_tab_bg"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:id="@+id/imageAvanceCampania"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_avance_campania" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.07"
+        android:text="@string/dashboard_dv_avance_campania"
+        android:textColor="@color/titulo_avance_campania"
+        app:layout_constraintBottom_toBottomOf="@+id/imageAvanceCampania"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageAvanceCampania"
+        app:layout_constraintTop_toTopOf="@+id/imageAvanceCampania"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardPedidosFacturados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_rdd"
+        android:padding="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardAvanceActual">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textPedidosFacturadosTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/dashboard_dv_pedidos_facturados"
+            android:textColor="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute"
+            tools:text="Pedidos  facturados: " />
+
+        <ImageView
+            android:id="@+id/imagePedidosFacturados"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/textPedidosFacturadosValor"
+            app:layout_constraintStart_toStartOf="@id/textPedidosFacturadosTitulo"
+            app:layout_constraintTop_toTopOf="@+id/textPedidosFacturadosValor"
+            app:srcCompat="@drawable/ic_pedidos_facturados" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textPedidosFacturadosValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/titulo_avance_campania"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imagePedidosFacturados"
+            app:layout_constraintTop_toBottomOf="@+id/textPedidosFacturadosTitulo"
+            tools:ignore="UnusedAttribute"
+            tools:text="149,434" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_meta_avance_pais"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPedidosFacturadosValor">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish_regular"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/dashboard_dv_pedidos_facturados_meta"
+                android:textColor="@color/meta_avance_campania"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnusedAttribute"
+                tools:text="Meta: 190,345" />
+
+            <View
+                android:id="@+id/viewDivisor"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/rdd_dashboard_foco_separador"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMeta"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textPorcentajeLogrado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mulish_bold"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/dashboard_dv_pedidos_facturados_porcentaje"
+                android:textColor="@color/estado_positivo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDivisor"
+                tools:ignore="UnusedAttribute"
+                tools:text="Lograda al 85%"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewDivisorVerticalCards"
+        android:layout_width="12.5dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/cardPedidosFacturados"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDivisorHorizontalCards"
+        android:layout_width="0dp"
+        android:layout_height="12.5dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardPedidosFacturados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/viewDivisorVerticalCards" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardIntencionPasePedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/shadow_rdd"
+        android:padding="22dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cardPedidosFacturados"
+        app:layout_constraintStart_toStartOf="@id/cardPedidosFacturados"
+        app:layout_constraintTop_toTopOf="@id/viewDivisorHorizontalCards">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textIntencionPasePedido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/dashboard_dv_intencion_pase_pedido"
+            android:textColor="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textIntencionPasePedidoValor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/mulish_bold"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/dashboard_intencion_pase_provisional"
+            android:textColor="@color/titulo_avance_campania"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textIntencionPasePedido"
+            tools:ignore="UnusedAttribute"
+            tools:text="149,434" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardAvanceActual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shadow_rdd"
+        android:padding="20dp"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardIntencionPasePedido"
+        app:layout_constraintEnd_toEndOf="@+id/viewDivisorVerticalCards"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAvanceCampania">
+
+        <biz.belcorp.mobile.components.charts.speedometer.Speedometer
+            android:id="@+id/velocimetro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/mulish_bold"
+            app:layout_constraintBottom_toTopOf="@+id/layoutTextDias"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sm_animDuration="1500"
+            app:sm_label="Avance Actual"
+            app:sm_labelColor="@color/meta_avance_campania"
+            app:sm_labelTextSize="12sp"
+            app:sm_numberTextSize="22sp"
+            app:sm_progressStartColor="@color/progress_velocimetro" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTextDias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_meta_avance_pais"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/velocimetro"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textDiasCierre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:textColor="@color/rdd_evento"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnusedAttribute"
+                tools:text="12 días | para cierre País" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

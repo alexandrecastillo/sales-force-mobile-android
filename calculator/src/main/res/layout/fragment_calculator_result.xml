@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flCalculatorResultHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="@dimen/ds_padding_other_6" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvwCalculatorWarningMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:layout_marginTop="@dimen/ds_margin_medium"
+            android:layout_marginEnd="@dimen/ds_margin_normal"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/ds_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flCalculatorResultHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_warning_basic">
+
+                <ImageView
+                    android:id="@+id/ivwCalculatorWarningIcon"
+                    android:layout_width="@dimen/ds_margin_extra_large"
+                    android:layout_height="@dimen/ds_margin_extra_large"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:contentDescription="@string/calculator_dashboard_titulo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_error_outline" />
+
+                <TextView
+                    android:id="@+id/txvCalculatorWarningMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_medium"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:layout_marginBottom="@dimen/ds_margin_medium"
+                    android:text="@string/calculator_message_sales_goal"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivwCalculatorWarningIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txvHeaderCampaignLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:layout_marginTop="@dimen/ds_margin_large"
+            android:layout_marginEnd="@dimen/ds_margin_normal"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvwCalculatorWarningMessage"
+            tools:text="@string/calculator_result_could_you_win" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvwCalculatorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:layout_marginEnd="@dimen/ds_margin_normal"
+            android:layout_marginBottom="@dimen/ds_margin_other_5"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/ds_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvHeaderCampaignLabel">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/textView4"
+                    android:layout_width="@dimen/ds_margin_normal"
+                    android:layout_height="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_normal"
+                    android:textSize="@dimen/counter_14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_emoji_star_eyes" />
+
+                <TextView
+                    android:id="@+id/lblGananciaPedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_margin_medium"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/calculator_default_number_hint"
+                    android:textColor="@color/estado_positivo"
+                    android:textSize="@dimen/generic_size_text_big"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView4"
+                    tools:text="s/ 2,000" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_normal"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:text="@string/calculator_result_you_must_attain"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/subtitle"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblGananciaPedido" />
+
+                <TextView
+                    android:id="@+id/txvSuccessfulDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_other_2"
+                    android:gravity="center"
+                    android:text="@string/text_dot"
+                    android:textColor="@color/estado_positivo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView6" />
+
+                <TextView
+                    android:id="@+id/txvSuccessfulState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_small"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/calculator_result_be_succeful"
+                    android:textColor="@color/estado_positivo"
+                    app:layout_constraintBottom_toBottomOf="@id/txvSuccessfulDot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txvSuccessfulDot"
+                    app:layout_constraintTop_toTopOf="@id/txvSuccessfulDot" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvwCalculatorResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_normal"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txvSuccessfulState"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_calculator_result" />
+
+                <TextView
+                    android:id="@+id/txvAlso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_normal"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/calculator_label_also"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvwCalculatorResult" />
+
+                <biz.belcorp.mobile.components.design.textrectangle.TextRectangle
+                    android:id="@+id/lblBonoCambioNivel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txvAlso"
+                    app:txt_rectangle_text="@string/calculator_dashboard_tab_otro_nivel_cambias"
+                    app:txt_rectangle_text_color="@color/grey"
+                    app:txt_rectangle_text_rectangle_color="@color/estado_positivo"
+                    app:txt_rectangle_text_rectangle_text="@string/calculator_dashboard_tab_otro_nivel_cambias_bono"
+                    app:txt_rectangle_text_rectangle_text_color="@color/white" />
+
+                <Button
+                    android:id="@+id/btnCalculatorResultSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ds_margin_normal"
+                    android:layout_marginTop="@dimen/ds_margin_large"
+                    android:layout_marginEnd="@dimen/ds_margin_normal"
+                    android:layout_marginBottom="@dimen/ds_margin_normal"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="@string/calculator_result_save_calculation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblBonoCambioNivel" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:gravity="center"
+            android:text="@string/calculator_result_info"
+            android:textColor="@color/gray_4"
+            android:textSize="@dimen/body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvwCalculatorContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

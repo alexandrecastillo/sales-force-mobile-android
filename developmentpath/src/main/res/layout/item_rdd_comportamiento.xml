@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/ds_padding_other_1">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backgroundComportamiento"
+        android:layout_width="@dimen/ds_icon_medium_size"
+        android:layout_height="@dimen/ds_icon_medium_size"
+        android:src="@drawable/shape_circle_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:tint="@color/positivo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconComportamiento"
+        android:layout_width="@dimen/icon_size_normal"
+        android:layout_height="@dimen/icon_size_normal"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundComportamiento"
+        app:layout_constraintEnd_toEndOf="@id/backgroundComportamiento"
+        app:layout_constraintStart_toStartOf="@id/backgroundComportamiento"
+        app:layout_constraintTop_toTopOf="@id/backgroundComportamiento"
+        tools:src="@drawable/ic_comportamiento_1"
+        tools:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

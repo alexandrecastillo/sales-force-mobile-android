@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Design System -->
+
+    <!-- {@deprecated Use icon_size_normal instead.} -->
+    <dimen name="ds_icon_small_size">24dp</dimen>
+    <!-- {@deprecated Use icon_size_medium instead.} -->
+    <dimen name="ds_icon_medium_size">32dp</dimen>
+    <!-- {@deprecated Use icon_size_large instead.} -->
+    <dimen name="ds_icon_big_size">48dp</dimen>
+    <!-- {@deprecated Use icon_size_big instead.} -->
+    <dimen name="ds_icon_xbig_size">56dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_icon_other_1">16dp</dimen>
+
+    <!-- {@deprecated Use zero instead.} -->
+    <dimen name="ds_no_margin">0dp</dimen>
+    <!-- {@deprecated Use content_inset_tiny instead.} -->
+    <dimen name="ds_margin_small">4dp</dimen>
+    <!-- {@deprecated Use content_inset_small instead.} -->
+    <dimen name="ds_margin_medium">8dp</dimen>
+    <!-- {@deprecated Use content_inset_normal instead.} -->
+    <dimen name="ds_margin_normal">16dp</dimen>
+    <!-- {@deprecated Use content_inset_medium instead.} -->
+    <dimen name="ds_margin_large">24dp</dimen>
+    <!-- {@deprecated Use content_inset_large instead.} -->
+    <dimen name="ds_margin_extra_large">32dp</dimen>
+    <!-- {@deprecated Use content_inset_tiniest instead.} -->
+    <dimen name="ds_margin_other_1">2dp</dimen>
+    <!-- {@deprecated Use content_inset_half instead.} -->
+    <dimen name="ds_margin_other_6">6dp</dimen>
+    <!-- {@deprecated Use content_inset_less instead.} -->
+    <dimen name="ds_margin_other_2">12dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_other_3">14dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_other_20">20dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_other_4">18dp</dimen>
+    <!-- {@deprecated Use content_inset_double instead.} -->
+    <dimen name="ds_margin_other_5">48dp</dimen>
+    <!-- {@deprecated Use content_inset_less instead.} -->
+    <dimen name="ds_margin_12dp">12dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_14dp">14dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_other_28">28dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_other_7">35dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_margin_other_8">19dp</dimen>
+
+    <!-- {@deprecated Use content_inset_tiny instead.} -->
+    <dimen name="ds_padding_small">4dp</dimen>
+    <!-- {@deprecated Use content_inset_small instead.} -->
+    <dimen name="ds_padding_medium">8dp</dimen>
+    <!-- {@deprecated Use content_inset_normal instead.} -->
+    <dimen name="ds_padding_normal">16dp</dimen>
+    <!-- {@deprecated Use content_inset_medium instead.} -->
+    <dimen name="ds_padding_large">24dp</dimen>
+    <!-- {@deprecated Use content_inset_tiniest instead.} -->
+    <dimen name="ds_padding_other_1">2dp</dimen>
+    <!-- {@deprecated Use content_inset_less instead.} -->
+    <dimen name="ds_padding_other_2">12dp</dimen>
+    <!-- {@deprecated Use content_inset_medium instead.} -->
+    <dimen name="ds_padding_other_3">24dp</dimen>
+    <!-- {@deprecated Use content_inset_large instead.} -->
+    <dimen name="ds_padding_other_4">32dp</dimen>
+    <!-- {@deprecated Use content_inset_double instead.} -->
+    <dimen name="ds_padding_other_5">48dp</dimen>
+    <!-- {@deprecated Use content_inset_big instead.} -->
+    <dimen name="ds_padding_other_6">56dp</dimen>
+    <!-- {@deprecated Use content_inset_less instead.} -->
+    <dimen name="ds_padding_12dp">12dp</dimen>
+    <!-- {@deprecated Do not use, create another specific attribute. } -->
+    <dimen name="ds_padding_40dp">40dp</dimen>
+    <dimen name="ds_padding_empty">36dp</dimen>
+
+    <!-- {@deprecated Use text_size_title_1 instead.} -->
+    <dimen name="title_1">20sp</dimen>
+    <!-- {@deprecated Use text_size_title_2 instead.} -->
+    <dimen name="title_2">18sp</dimen>
+    <!-- {@deprecated Use text_size_subtitle instead.} -->
+    <dimen name="subtitle">16sp</dimen>
+    <!-- {@deprecated Use text_size_body instead.} -->
+    <dimen name="body">14sp</dimen>
+    <!-- {@deprecated Use text_size_button instead.} -->
+    <dimen name="button">14sp</dimen>
+    <!-- {@deprecated Use text_size_caption instead.} -->
+    <dimen name="caption">12sp</dimen>
+    <!-- {@deprecated Use text_size_label instead.} -->
+    <dimen name="label">10sp</dimen>
+    <!-- {@deprecated Use text_size_subtitle instead.} -->
+    <dimen name="huge_title">24sp</dimen>
+    <dimen name="ds_title_normal">12dp</dimen>
+
+    <dimen name="ds_radius_2">2dp</dimen>
+    <dimen name="ds_radius_4">4dp</dimen>
+    <dimen name="ds_radius_6">6dp</dimen>
+    <dimen name="ds_radius_8">8dp</dimen>
+    <dimen name="ds_radius_12">12dp</dimen>
+    <dimen name="ds_radius_100">100dp</dimen>
+
+    <dimen name="ds_elevation_1">1dp</dimen>
+    <dimen name="ds_elevation_2">2dp</dimen>
+    <dimen name="ds_elevation_4">4dp</dimen>
+    <dimen name="ds_elevation_8">8dp</dimen>
+
+    <dimen name="ds_divider_size">1dp</dimen>
+    <dimen name="ds_label_digital_size">56dp</dimen>
+    <dimen name="ds_stroke_width_1">1dp</dimen>
+    <dimen name="ds_divider_horizontal_height">1dp</dimen>
+    <dimen name="ds_default_elevation">@dimen/ds_elevation_4</dimen>
+    <dimen name="ds_icon_small_size_16dp">16dp</dimen>
+
+    <dimen name="ds_height_separator_tiny">0.5dp</dimen>
+    <dimen name="ds_height_separator_small">1dp</dimen>
+    <dimen name="ds_height_separator">2dp</dimen>
+    <item name="letter_spacing_consultant_label" format="float" type="dimen">0.15</item>
+    <item name="letter_spacing_default" format="float" type="dimen">0.25</item>
+    <item name="letter_spacing_small" format="float" type="dimen">0.08</item>
+    <item name="bg_corner_alpha" format="float" type="integer">0.24</item>
+    <dimen name="mini_progress_height">6dp</dimen>
+
+    <dimen name="tab_background_height">1dp</dimen>
+    <dimen name="tab_indicator_height">4dp</dimen>
+    <dimen name="tab_min_width">96dp</dimen>
+
+    <dimen name="search_item_simple_height">40dp</dimen>
+
+</resources>

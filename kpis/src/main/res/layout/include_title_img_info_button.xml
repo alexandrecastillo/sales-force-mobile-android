@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        style="@style/TextAppearance.DS.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_bold"
+        android:textColor="@color/colorTitleImgInfoButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/gains_calculator" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvContext"
+        style="@style/Widget.CardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgvLeft"
+                android:layout_width="@dimen/ds_kpi_collection_header_img"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ds_margin_other_28"
+                android:layout_marginBottom="@dimen/ds_margin_other_2"
+                android:src="@drawable/icon_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvw_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ds_margin_other_7"
+                android:layout_marginTop="@dimen/ds_margin_other_8"
+                android:layout_marginEnd="@dimen/ds_margin_other_2"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgvLeft"
+                app:layout_constraintTop_toTopOf="@id/imgvLeft"
+                tools:text="@string/proyect_your_gain_for_and_accomplish_your_goals" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/ds_icon_medium_size"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/mulish_regular"
+                android:padding="@dimen/ds_padding_12dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvw_info"
+                app:layout_constraintTop_toBottomOf="@id/tvw_info"
+                tools:text="@string/calculate_now" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</merge>

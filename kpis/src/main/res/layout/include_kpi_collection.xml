@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCollection"
+        android:paddingTop="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <biz.belcorp.mobile.components.design.indicatorheader.IndicatorHeader
+            android:id="@+id/indicatorHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_small"
+            app:indicatorHeader_backgroundIconColor="@color/colorCollection"
+            app:indicatorHeader_disableAlpha="true"
+            app:indicatorHeader_disableBackgroundIconColor="true"
+            app:indicatorHeader_icon="@drawable/ic_kpis_collection"
+            app:indicatorHeader_iconColor="@color/colorIcon"
+            app:indicatorHeader_space="@dimen/content_inset_tiny"
+            app:indicatorHeader_textColor="@color/textColorPrimaryVariant"
+            app:indicatorHeader_textSize="@dimen/text_size_subtitle"
+            app:indicatorHeader_type="multiline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:indicatorHeader_text="@string/collection_header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/content_inset_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clHeader">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimaryVariant"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="En C09 puedes lograr" />
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimaryVariant"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:text="67.3%\nRecuperación" />
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@+id/descriptionChargedOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_less"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimaryVariant"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            tools:text="580 de 1,180\nPedidos cobrados" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

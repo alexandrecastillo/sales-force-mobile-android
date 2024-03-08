@@ -1,0 +1,20 @@
+package biz.belcorp.salesforce.modules.calculator.core.domain.entities
+
+data class PartnerVariable (val nivelID: Int,
+                                     val indicadorNuevaLider: String?,
+                                     val metaPedido: Int?,
+                                     val metaVenta: Double?,
+                                     val numeroActivasIniciales: Int?,
+                                     val porcentajeMetaRecuperacion: Double?,
+                                     val promedioVentaPedidosAV: Double?,
+                                     val promedioVentaPedidosBV: Double?,
+                                     val nivelCambioCampania: String?,
+                                     var metaIngresos: Int?,
+                                     var metaCapitalizacion: Int?,
+                                     var indicadorMedicionVariable: String?,
+                                     var indicadorMedicionMeta: String?,
+                                     var porcentajeComisionEXAV: Double?,
+                                     var porcentajeComisionEXBV: Double?,
+                                     var porcentajeComisionNEAV: Double?,
+                                     var porcentajeComisionNEBV: Double?,
+                                     var bonoCambioNivel: Double?)

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardComportamientos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/ds_radius_4"
+    app:cardElevation="@dimen/ds_elevation_2"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_comportamientos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/text_comportamientos_reconocidos"
+            android:textColor="@color/titles"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewComportamientos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:layout_marginEnd="@dimen/content_inset_small"
+            android:clickable="false"
+            android:orientation="horizontal"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintEnd_toStartOf="@+id/pgbPorcentaje"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_rdd_comportamiento" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/pgbPorcentaje"
+            android:layout_width="@dimen/icon_size_big"
+            android:layout_height="@dimen/icon_size_big"
+            android:layout_centerInParent="true"
+            app:cpb_background_progressbar_color="@color/gray_3"
+            app:cpb_background_progressbar_width="@dimen/content_inset_tiny"
+            app:cpb_progressbar_color="@color/estado_positivo"
+            app:cpb_progressbar_width="@dimen/content_inset_tiny"
+            app:layout_constraintBottom_toBottomOf="@id/recyclerViewComportamientos"
+            app:layout_constraintEnd_toStartOf="@id/iconoDerecha"
+            app:layout_constraintTop_toTopOf="@id/recyclerViewComportamientos"
+            tools:cpb_progress="50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPorcentaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/gray_5"
+            android:textSize="@dimen/text_size_title_2"
+            app:layout_constraintBottom_toBottomOf="@id/pgbPorcentaje"
+            app:layout_constraintEnd_toEndOf="@id/pgbPorcentaje"
+            app:layout_constraintStart_toStartOf="@id/pgbPorcentaje"
+            app:layout_constraintTop_toTopOf="@id/pgbPorcentaje"
+            tools:text="3/6" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconoDerecha"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/pgbPorcentaje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pgbPorcentaje"
+            app:srcCompat="@drawable/icon_arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

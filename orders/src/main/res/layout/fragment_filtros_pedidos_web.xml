@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/ds_padding_normal">
+
+        <View
+            android:id="@+id/layoutCabecera"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pedidoweb_cabecera_height"
+            android:background="@color/color_pedidos_web"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iconCerrar"
+            android:layout_width="@dimen/icon_size_normal"
+            android:layout_height="@dimen/icon_size_normal"
+            android:layout_marginStart="@dimen/ds_margin_normal"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:padding="@dimen/ds_margin_other_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutCabecera"
+            app:srcCompat="@drawable/ic_x_white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/ds_margin_small"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/pedido_title_filtro"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title_2"
+            app:layout_constraintBottom_toBottomOf="@id/layoutCabecera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutCabecera" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCampania"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ds_margin_large"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/ds_margin_large"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+            app:cardElevation="@dimen/pedidoweb_card_elevation"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCabecera">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llCampania"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ds_padding_medium">
+
+                <ImageView
+                    android:id="@+id/ivTriangleCampania"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ds_margin_normal"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tilConsultantCampania"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilConsultantCampania"
+                    app:srcCompat="@drawable/selector_triangle_blue" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConsultantCampania"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/pedidoweb_no_radius"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    app:hintTextColor="@color/gray_label"
+                    app:layout_constraintEnd_toStartOf="@id/ivTriangleCampania"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConsultantCampania"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_campania_hint"
+                        android:inputType="text"
+                        android:padding="@dimen/ds_margin_other_2"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCampania"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tilConsultantCampania" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ds_margin_large"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/ds_margin_large"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+            app:cardElevation="@dimen/pedidoweb_card_elevation"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCampania">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ds_padding_medium">
+
+                <ImageView
+                    android:id="@+id/ivTriangleTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ds_margin_normal"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tilConsultantTipo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilConsultantTipo"
+                    app:srcCompat="@drawable/selector_triangle_blue" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConsultantTipo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/pedidoweb_no_radius"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    app:hintTextColor="@color/gray_label"
+                    app:layout_constraintEnd_toStartOf="@id/ivTriangleTipo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConsultantTipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_tipo_hint"
+                        android:inputType="text"
+                        android:padding="@dimen/ds_margin_other_2"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tilConsultantTipo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ds_margin_large"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/ds_margin_large"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+            app:cardElevation="@dimen/pedidoweb_card_elevation"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvTipo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llSeccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ds_padding_medium">
+
+                <ImageView
+                    android:id="@+id/ivTriangleSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ds_margin_normal"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tilConsultantSection"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilConsultantSection"
+                    app:srcCompat="@drawable/selector_triangle_blue" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConsultantSection"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/pedidoweb_no_radius"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    app:hintTextColor="@color/gray_label"
+                    app:layout_constraintEnd_toStartOf="@id/ivTriangleSection"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConsultantSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_section_hint"
+                        android:inputType="text"
+                        android:padding="@dimen/ds_margin_other_2"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ds_margin_large"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/ds_margin_large"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+            app:cardElevation="@dimen/pedidoweb_card_elevation"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSection">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ds_padding_medium">
+
+                <ImageView
+                    android:id="@+id/ivTriangleStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ds_margin_normal"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tilConsultantStatus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilConsultantStatus"
+                    app:srcCompat="@drawable/selector_triangle_blue" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConsultantStatus"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/pedidoweb_no_radius"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    app:hintTextColor="@color/gray_label"
+                    app:layout_constraintEnd_toStartOf="@id/ivTriangleStatus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConsultantStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_status_hint"
+                        android:inputType="text"
+                        android:padding="@dimen/ds_margin_other_2"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tilConsultantStatus" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/otherFiltersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvStatus"
+            tools:visibility="visible">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvFechaDesde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llFechaDesde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ds_padding_medium">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFechaDesde"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ds_margin_normal"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginEnd="@dimen/ds_margin_normal"
+                        android:layout_marginBottom="@dimen/ds_margin_other_2"
+                        android:text="@string/order_web_hint_date_from"
+                        android:textColor="@color/gray_label"
+                        android:textSize="@dimen/text_size_subtitle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFechaDesde"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/ds_margin_normal"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:cursorVisible="true"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="end"
+                        android:hint="@string/pedido_fecha_hint"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textColorHint="@color/gray_label"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_subtitle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivCloseFechaDesde"
+                        app:layout_constraintStart_toEndOf="@id/tvFechaDesde"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivCloseFechaDesde"
+                        android:layout_width="@dimen/icon_size_normal"
+                        android:layout_height="@dimen/icon_size_normal"
+                        android:layout_marginStart="@dimen/ds_margin_medium"
+                        android:layout_marginTop="@dimen/ds_margin_medium"
+                        android:layout_marginEnd="@dimen/ds_margin_normal"
+                        android:layout_marginBottom="@dimen/ds_margin_medium"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/ds_padding_small"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_close_filter" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvFechaHasta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvFechaDesde">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llFechaHasta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ds_padding_medium">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvFechaHasta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ds_margin_normal"
+                        android:layout_marginTop="@dimen/ds_margin_other_2"
+                        android:layout_marginEnd="@dimen/ds_margin_normal"
+                        android:layout_marginBottom="@dimen/ds_margin_other_2"
+                        android:text="@string/order_web_hint_date_to"
+                        android:textColor="@color/gray_label"
+                        android:textSize="@dimen/text_size_subtitle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFechaHasta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/ds_margin_normal"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:cursorVisible="true"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="end"
+                        android:hint="@string/pedido_fecha_hint"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textColorHint="@color/gray_label"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_subtitle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivCloseFechaHasta"
+                        app:layout_constraintStart_toEndOf="@id/tvFechaHasta"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivCloseFechaHasta"
+                        android:layout_width="@dimen/icon_size_normal"
+                        android:layout_height="@dimen/icon_size_normal"
+                        android:layout_marginStart="@dimen/ds_margin_medium"
+                        android:layout_marginTop="@dimen/ds_margin_medium"
+                        android:layout_marginEnd="@dimen/ds_margin_normal"
+                        android:layout_marginBottom="@dimen/ds_margin_medium"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/ds_padding_small"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_close_filter" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvOrigen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvFechaHasta">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llOrigen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ds_padding_medium">
+
+                    <ImageView
+                        android:id="@+id/ivTriangleOrigen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/ds_margin_normal"
+                        android:clickable="false"
+                        android:contentDescription="@string/app_name"
+                        app:layout_constraintBottom_toBottomOf="@id/tilConsultantOrigen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tilConsultantOrigen"
+                        app:srcCompat="@drawable/selector_triangle_blue" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilConsultantOrigen"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="@dimen/pedidoweb_no_radius"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        app:hintTextColor="@color/gray_label"
+                        app:layout_constraintEnd_toStartOf="@id/ivTriangleOrigen"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConsultantOrigen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:focusable="false"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="start"
+                            android:hint="@string/consultant_origen_hint"
+                            android:inputType="text"
+                            android:padding="@dimen/ds_margin_other_2"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvOrigen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/tilConsultantOrigen" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvOrigen">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConsultantCode"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:paddingTop="@dimen/ds_padding_medium"
+                    app:hintTextColor="@color/gray_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConsultantCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:cursorVisible="true"
+                        android:digits="0123456789"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/consultant_code_hint"
+                        android:inputType="text"
+                        android:padding="@dimen/ds_margin_other_2"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvCode">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConsultantName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:paddingTop="@dimen/ds_padding_medium"
+                    app:hintTextColor="@color/gray_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConsultantName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:cursorVisible="true"
+                        android:fontFamily="@font/mulish_regular"
+                        android:gravity="start"
+                        android:hint="@string/pedido_nombre_hint"
+                        android:inputType="text"
+                        android:padding="@dimen/ds_margin_other_2"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_label_dark"
+                        android:textSize="@dimen/text_size_subtitle" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSegment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvName">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llSegment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ds_padding_medium">
+
+                    <ImageView
+                        android:id="@+id/ivTriangleSegment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/ds_margin_normal"
+                        android:clickable="false"
+                        android:contentDescription="@string/app_name"
+                        app:layout_constraintBottom_toBottomOf="@id/tilConsultantSegment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tilConsultantSegment"
+                        app:srcCompat="@drawable/selector_triangle_blue" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilConsultantSegment"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="@dimen/pedidoweb_no_radius"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        app:hintTextColor="@color/gray_label"
+                        app:layout_constraintEnd_toStartOf="@id/ivTriangleSegment"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConsultantSegment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:focusable="false"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="start"
+                            android:hint="@string/consultant_segment_hint"
+                            android:inputType="text"
+                            android:padding="@dimen/ds_margin_other_2"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSegment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/tilConsultantSegment" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvResidue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/ds_margin_large"
+                android:layout_marginTop="@dimen/ds_margin_other_2"
+                android:layout_marginRight="@dimen/ds_margin_large"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/pedidoweb_no_radius"
+                app:cardElevation="@dimen/pedidoweb_card_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvSegment">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llResidue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ds_padding_medium">
+
+                    <ImageView
+                        android:id="@+id/ivTriangleResidue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/ds_margin_normal"
+                        android:clickable="false"
+                        android:contentDescription="@string/app_name"
+                        app:layout_constraintBottom_toBottomOf="@id/tilConsultantResidue"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tilConsultantResidue"
+                        app:srcCompat="@drawable/selector_triangle_blue" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilConsultantResidue"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="@dimen/pedidoweb_no_radius"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        app:hintTextColor="@color/gray_label"
+                        app:layout_constraintEnd_toStartOf="@id/ivTriangleResidue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConsultantResidue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:focusable="false"
+                            android:fontFamily="@font/mulish_regular"
+                            android:gravity="start"
+                            android:hint="@string/consultant_residue_hint"
+                            android:inputType="text"
+                            android:padding="@dimen/ds_margin_other_2"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_label_dark"
+                            android:textSize="@dimen/text_size_subtitle" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvResidue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/tilConsultantResidue" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Space
+            android:id="@+id/sectionSpace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/cvSection"
+            app:layout_constraintEnd_toEndOf="@+id/cvSection"
+            app:layout_constraintTop_toTopOf="@+id/cvSection" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvSectionAdapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ds_margin_normal"
+            android:visibility="gone"
+            app:cardElevation="@dimen/pedidoweb_card_elevation_2"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="@+id/sectionSpace"
+            app:layout_constraintTop_toBottomOf="@+id/sectionSpace">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSections"
+                android:layout_width="@dimen/pedidoweb_secciones_width"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btnMoreFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_margin_large"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/ds_margin_large"
+            android:layout_marginBottom="@dimen/ds_margin_medium"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/see_more_filters"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otherFiltersLayout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAplicarFiltros"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pedidoweb_input_height"
+            android:layout_marginLeft="@dimen/ds_margin_large"
+            android:layout_marginTop="@dimen/ds_margin_other_2"
+            android:layout_marginRight="@dimen/ds_margin_large"
+            android:layout_marginBottom="@dimen/ds_margin_normal"
+            android:fitsSystemWindows="true"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/pedido_aplicar_filtros"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_subtitle"
+            app:backgroundTint="@color/order_web"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnMoreFilters" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

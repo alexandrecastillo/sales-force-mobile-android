@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ds_margin_small"
+    android:id="@+id/llItemRango"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvRango"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_margin_other_6"
+        android:layout_marginBottom="@dimen/ds_margin_other_6"
+        android:layout_marginLeft="@dimen/margin_end_calculator_profit_text"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/mulish_regular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="@dimen/ds_margin_normal"
+            android:layout_height="@dimen/ds_margin_normal"
+            android:layout_marginLeft="@dimen/ds_margin_other_5"
+            android:layout_marginTop="@dimen/ds_margin_medium"
+            android:layout_marginBottom="@dimen/ds_margin_other_6"
+            app:srcCompat="@drawable/ic_dollar" />
+
+        <TextView
+            android:id="@+id/tvComision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_margin_other_6"
+            android:layout_marginBottom="@dimen/ds_margin_other_6"
+            android:layout_marginLeft="@dimen/ds_margin_small"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/mulish_regular"
+            tools:text="S/ 9" />
+
+    </LinearLayout>
+</LinearLayout>

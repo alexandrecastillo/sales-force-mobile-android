@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.profile.dream.DreamFragment">
+
+        <biz.belcorp.salesforce.modules.developmentpath.widgets.HeaderIconTextCustomView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            app:hitIcon="@drawable/ic_woman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:hitTitle="Sueno 1" />
+
+        <LinearLayout
+            android:id="@+id/ll_dream_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <TextView
+                android:id="@+id/tv_dream_question_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/dream_empty_question_1"
+                android:textColor="@color/gris_escala_4"
+                android:textSize="@dimen/dream_question_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dream_question_answer_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_dream"
+                android:textSize="@dimen/dream_question_text_size"
+                tools:text="@string/dream_empty_answer_suggest" />
+
+            <TextView
+                android:id="@+id/tv_dream_question_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/dream_empty_question_2"
+                android:textColor="@color/gris_escala_4"
+                android:textSize="@dimen/dream_question_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dream_question_answer_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dream_question_text_size"
+                tools:text="@string/dream_empty_answer" />
+
+            <TextView
+                android:id="@+id/tv_dream_question_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/dream_empty_question_3"
+                android:textColor="@color/gris_escala_4"
+                android:textSize="@dimen/dream_question_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dream_question_answer_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dream_question_text_size"
+                tools:text="@string/dream_empty_answer" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sb_containter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_accumulated_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/gris_escala_4"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/sb_dream_progress"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Lleva S./0" />
+
+                <TextView
+                    android:id="@+id/tv_remaining_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/purple_dream"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sb_dream_progress"
+                    app:layout_constraintEnd_toEndOf="@+id/sb_dream_progress"
+                    tools:text="Le faltan S./0" />
+
+                <SeekBar
+                    android:id="@+id/sb_dream_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:progressDrawable="@drawable/seekbar_dream_progress_style"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/seekbar_dream_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_accumulated_money" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_campaigns_numbers_container"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/background_gray_light"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_campaigns_numbers_title_campaign"
+                    android:text="@string/dream_campaigns_numbers_title"
+                    android:textColor="@color/purple_dream"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_campaigns_numbers"
+                    android:layout_marginStart="5dp"
+                    android:scrollbars="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_dream_campaigns"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_dream_question_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/dream_empty_question_4"
+                android:textColor="@color/gris_escala_4"
+                android:textSize="@dimen/dream_question_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dream_question_answer_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dream_question_text_size"
+                tools:text="@string/dream_empty_answer" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_actions_button_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_button_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/ic_edit_pencil" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_button_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete"
+                        android:textColor="@color/estado_negativo" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/ic_trash_red" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_add_dream"
+            style="@style/Widget.Button.Black"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fitsSystemWindows="true"
+            android:text="@string/add_dream"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_dream_container"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,111 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inspira_background">
+
+    <ImageView
+        android:id="@+id/ivwInspiraHeaderIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/material_dimen_component_x1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_medal" />
+
+    <TextView
+        android:id="@+id/tvwInspiraHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_dimen_component_x1"
+        android:layout_marginTop="@dimen/material_dimen_component_x1"
+        android:layout_marginEnd="@dimen/material_dimen_component_x1"
+        android:layout_marginBottom="@dimen/material_dimen_component_x1"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/view_inspira_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivwInspiraHeaderIcon"
+        tools:text="@string/progress_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clyInspitaContent"
+        android:layout_width="@dimen/material_dimen_constraint_default"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_dimen_component_x2"
+        android:layout_marginTop="@dimen/material_dimen_component_x2"
+        android:layout_marginEnd="@dimen/material_dimen_component_x2"
+        android:layout_marginBottom="@dimen/material_dimen_component_x2"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvwInspiraHeaderTitle">
+
+        <ImageView
+            android:id="@+id/ivwInspiraContentIcon"
+            android:layout_width="@dimen/material_dimen_component_x3"
+            android:layout_height="@dimen/material_dimen_component_x3"
+            android:layout_marginStart="@dimen/material_dimen_component_x2"
+            android:layout_marginTop="@dimen/material_dimen_component_x2"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_progress" />
+
+        <TextView
+            android:id="@+id/tvwInspiraContentTitle"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="@dimen/material_dimen_constraint_default"
+            android:layout_marginStart="@dimen/view_inspira_5dp"
+            android:gravity="start"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_label_dark"
+            android:textSize="@dimen/view_inspira_14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivwInspiraContentIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivwInspiraContentIcon"
+            app:layout_constraintTop_toTopOf="@id/ivwInspiraContentIcon"
+            tools:text="@string/viaje_inspira_avance_header" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwInspiraAvance"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_dimen_component_x2"
+            android:layout_marginEnd="@dimen/material_dimen_component_x2"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/material_dimen_component_x1"
+            app:layout_constraintBottom_toTopOf="@id/rvwInspiraAvancePeriodo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivwInspiraContentIcon"
+            tools:itemCount="@integer/one"
+            tools:listitem="@layout/item_inspire_travel_advance_campaign" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvwInspiraAvancePeriodo"
+            android:layout_width="@dimen/material_dimen_constraint_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_dimen_component_x2"
+            android:layout_marginEnd="@dimen/material_dimen_component_x2"
+            android:layout_marginBottom="@dimen/material_dimen_component_x2"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/material_dimen_component_x1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvwInspiraAvance"
+            tools:itemCount="@integer/one"
+            tools:listitem="@layout/item_inspire_travel_advance_campaign" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

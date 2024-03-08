@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- INSPIRA -->
+    <string name="indicator_inspire">PROGRAMA INSPIRA</string>
+    <string name="inspira_name">Viaje Inspira</string>
+
+    <string name="indicator_inspire_benefist">BENEFICIOS INSPIRA</string>
+
+    <string name="position">#</string>
+
+    <string name="your_journey_to_inspire">En carrera al viaje inspira</string>
+    <string name="inspira_condition_item_number">%d.</string>
+    <string name="inspira_condition_item_title">condition</string>
+    <string name="inspira_condition_item_title_number">%d. %s</string>
+    <string name="inspira_condition_item_description">Deberás…</string>
+
+    <string name="inspira_condition_card_pav">PAV</string>
+    <string name="inspira_condition_card_range">RANGO DE ACTIVIDAD</string>
+
+    <string name="dialog_inspira_title">¡COMENZÓ LA CARRERA \n AL VIAJE INSPIRA!</string>
+    <string name="dialog_inspira_detail">Entérate de tu ranking, avances y \n condiciones</string>
+    <string name="dialog_inspira_button_accept">INGRESAR</string>
+    <string name="dashnoard_inspira_viajes_title">VIAJE INSPIRA</string>
+    <string name="dashnoard_inspira_program_title">PROGRAMA INSPIRA</string>
+    <string name="dashnoard_inspira_viajes_detail"><b>Acumula puntos</b> desde tu primera campaña y llévate este inolvidable premio</string>
+    <string name="dashnoard_inspira_viajes_link_title">¡%s TE ESPERA!</string>
+    <string name="dashnoard_inspira_viajes_link_detail">Crece tu negocio, crecen tus oportunidades</string>
+    <string name="dashnoard_inspira_beneficios_title">PROGRAMA DE BENEFICIOS INSPIRA</string>
+    <string name="dashnoard_inspira_beneficios_detail"><b>Acumula 25 puntos durante este periodo</b> y goza de los beneficios durante el siguiente</string>
+    <string name="dashnoard_inspira_beneficios_link_title">2do Periodo C07 a C12</string>
+    <string name="dashnoard_inspira_beneficios_link_detail">Grandes descuentos para ti y tu familia</string>
+
+    <string name="presentation_card_ranking">RANKING</string>
+    <string name="presentation_card_destination">DESTINO</string>
+    <string name="presentation_card_current_level">NIVEL ACTUAL %s</string>
+    <string name="presentation_card_current_position_label">Tu puesto hasta %s es:</string>
+    <string name="presentation_card_current_position">%dº</string>
+    <string name="presentation_card_points_campaign">HASTA %s</string>
+    <string name="presentation_card_points_progress">%s PUNTOS </string>
+
+    <string name="viaje_inspira_tab_title_1">RANKING</string>
+    <string name="viaje_inspira_tab_title_2">MI AVANCE</string>
+    <string name="viaje_inspira_tab_title_2_2">RESUMEN</string>
+    <string name="viaje_inspira_tab_title_3">CONDICIONES</string>
+    <string name="viaje_inspira_tab_title_4">BENEFICIOS</string>
+
+    <string name="viaje_inspira_label_ranking">Ranking</string>
+    <string name="viaje_inspira_label_avance">Mi Avance</string>
+    <string name="viaje_inspira_label_resumen">Resumen</string>
+    <string name="viaje_inspira_label_condiciones">Condiciones</string>
+
+    <string name="ranking_header_position">PUESTO</string>
+    <string name="ranking_header_user">USUARIO</string>
+    <string name="ranking_header_points">PUNTAJE</string>
+
+    <string name="progress_top_header">¡Estás entre los %d primeros ganadores!</string>
+    <string name="progress_out_header">¡Sigue esforzándote, tú puedes!</string>
+    <string name="progress_header">¡Sigues en carrera al Viaje Inspira!</string>
+    <string name="progress_header_lost">Este es tu resumen de la carrera, %s</string>
+    <string name="conditions_header">¡Toma nota de esto %s!</string>
+    <string name="conditions_header_lost">Estas fueron tus condiciones</string>
+    <string name="conditions_subheader">¿CÓMO PUEDES ACUMULAR PUNTOS?</string>
+
+    <string name="inspira_indicador_content_state_in_contest">En carrera</string>
+    <string name="inspira_indicador_content_state_in_getting_ready">¡Preparándome para la carrera %d!</string>
+    <string name="inspira_indicador_message_state_to_init">Para iniciar la carrera %d</string>
+    <string name="inspira_indicador_message_no_data">Sin datos</string>
+
+    <string name="header_inspira_content_state_getting_ready">Preparándome para la carrera %d</string>
+    <string name="indicator_inspira_title_position">EN %s TU PUESTO ES</string>
+    <string name="indicator_inspira_title_current_state">Estado actual:</string>
+    <string name="indicator_inspira_title_state">Estado</string>
+    <string name="indicator_inspira_title_current_level">Nivel actual</string>
+    <string name="indicator_inspira_title_lack_only">Queda solo</string>
+    <string name="indicator_inspira_content_x_campaign">%d campaña</string>
+    <string name="viaje_inspira_avance_header">AVANCE HASTA C%s</string>
+    <string name="viaje_inspira_avance_header_lost">Mi resumen</string>
+    <string name="ranking_position">%d&#x000B0;</string>
+    <string name="position_label">#%d</string>
+    <string name="points_label">%dpts</string>
+    <string name="inspira_score_zero">%d pt</string>
+    <string name="inspira_score_other">+ %d pt</string>
+
+    <string name="inspira_beneficios_ver">Ver</string>
+    <string name="inspira_beneficios_header">PERIODO</string>
+
+    <string name="categoria_inspira_tab_title">CATEGORÍAS</string>
+    <string name="categoria_title_inspira_tab_title">Digitales</string>
+
+    <string name="inspira_progress_period_prefix">%s periodo</string>
+    <string name="inspira_progress_campaign_prefix">C%s</string>
+    <string name="inspira_progress_campaign_prefix_lost">Hasta C%s</string>
+    <string name="inspira_condition_bullet_point">-</string>
+    <string name="inspira_condition_bullet_point_content">- %s</string>
+    <string name="inspira_progress_legend_header">¿Cómo puedes acumular puntos?</string>
+    <string name="inspira_progress_campaign_points">¡Acumulaste %d pts!</string>
+    <string name="inspira_progress_campaign_1">- Mantienes tu nivel de éxito</string>
+    <string name="inspira_progress_campaign_2">- Vas reteniendo el %1$s%% de activas</string>
+    <string name="inspira_progress_campaign_3">- Eres socia activa</string>
+    <string name="inspira_progress_campaign_4">- Tuviste %1$s%% en Rango de Actividad</string>
+    <string name="inspira_progress_campaign_5">- Capitalizaste a %1$s consultoras</string>
+    <string name="inspira_progress_campaign_6">- Tienes el %1$s%% de tu monto de pedido en comparación al año anterior</string>
+    <string name="inspira_progress_campaign_7">- Tuviste %1$s%% en Pedidos de Alto Valor</string>
+    <string name="inspira_progress_campaign_8">- Tienes %1$s%% de retención 6d6</string>
+
+    <string name="inspira_progress_campaign_lost_1">- Caíste de nivel de éxito</string>
+    <string name="inspira_progress_campaign_lost_2">- Retuviste el %1$s%% de tus activas</string>
+    <string name="inspira_progress_campaign_lost_3">- Te mantuviste cómo socia activa</string>
+    <string name="inspira_progress_campaign_lost_4">- Tuviste %1$s%% en Rango de Actividad</string>
+    <string name="inspira_progress_campaign_lost_5">- Capitalizaste a %1$s consultoras</string>
+    <string name="inspira_progress_campaign_lost_6">- Alcanzaste el %1$s%% de tu monto de pedido en comparación al año anterior</string>
+    <string name="inspira_progress_campaign_lost_7">- Tuviste %1$s%% en Pedidos de Alto Valor</string>
+    <string name="inspira_progress_campaign_lost_8">- Tuviste %1$s%% de retención 6d6</string>
+    <plurals name="inspira_progress_campaign_lost_9">
+        <item quantity="one">- Obtuviste %1$s punto</item>
+        <item quantity="other">- Obtuviste %1$s puntos</item>
+    </plurals>
+    <string name="inspira_campaign_information">Venta C-%s</string>
+</resources>

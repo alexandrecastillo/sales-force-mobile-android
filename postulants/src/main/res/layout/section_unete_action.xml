@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/item_postulante_action_layout"
+    android:gravity="center_vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnRechazar"
+        style="@style/item_postulante_action"
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:text="@string/rechazar"
+        android:textColor="#dc0e27" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnEditar"
+        style="@style/item_postulante_action"
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:text="@string/editar_datos"
+        android:textColor="#5b127b" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnAprobar"
+        style="@style/item_postulante_action"
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:text="@string/aprobar"
+        android:textColor="#5b127b" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnValidar"
+        style="@style/item_postulante_action"
+        android:layout_width="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:text="@string/validar"
+        android:textColor="#5b127b" />
+
+</LinearLayout>

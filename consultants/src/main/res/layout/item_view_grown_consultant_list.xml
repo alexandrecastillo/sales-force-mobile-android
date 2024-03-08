@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvwGrownConsultantItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_sides_grown_consultant_card"
+    android:layout_marginTop="@dimen/margin_top_bottom_grown_consultant_card"
+    android:layout_marginEnd="@dimen/margin_sides_grown_consultant_card"
+    android:layout_marginBottom="@dimen/margin_top_bottom_grown_consultant_card"
+    android:background="@drawable/shape_card_round_square_level_indicator"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="@dimen/ds_padding_medium"
+    app:cardElevation="3dp">
+
+    <include layout="@layout/container_view_grown_consultant_list" />
+
+</com.google.android.material.card.MaterialCardView>

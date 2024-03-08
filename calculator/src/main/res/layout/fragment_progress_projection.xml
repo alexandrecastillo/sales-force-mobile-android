@@ -1,0 +1,2812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:paddingBottom="20dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_capitalization_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/capitalization_title"
+            android:textAlignment="center"
+            android:textColor="@color/pink_primary"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_capitalization_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_card_rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_capitalization_title">
+
+            <GridLayout
+                android:id="@+id/gl_capitalization_inputs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_projected_income_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_projected_income_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/projected_income_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_projected_entries_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_projected_entries_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_entries_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="8"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_entries_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_1"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_entries_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_entries_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_projected_reentries_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_projected_reentries_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/projected_reentries_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_reentries_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_projected_reentries_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_reentries_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="8"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_reentries_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_2"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_reentries_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_reentries_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_reentries_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_section_pegs_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_button_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/section_pegs_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/disabled_label_color"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <EditText
+                        android:id="@+id/et_section_pegs_input"
+                        android:layout_width="120dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/disabled_background_input_rounded"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textColor="@color/disabled_label_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_retained_pegs_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_retained_pegs_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/retained_pegs_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_retained_pegs_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_retained_pegs_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_retained_pegs_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="8"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_projected_retained_pegs_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_3"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_retained_pegs_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_retained_pegs_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_retained_pegs_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_projected_expenses_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_projected_expenses_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/projected_expenses_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/disabled_label_color"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <EditText
+                        android:id="@+id/et_projected_expenses_input"
+                        android:layout_width="120dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/disabled_background_input_rounded"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textColor="@color/disabled_label_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_projected_capitalization_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_projected_capitalization_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/projected_capitalization_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/violet_labels"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <EditText
+                        android:id="@+id/et_projected_capitalization_input"
+                        android:layout_width="120dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/disabled_background_input_rounded"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textColor="@color/violet_labels" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_initial_actives_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_initial_actives_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/initial_actives_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/violet_labels"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <EditText
+                        android:id="@+id/et_initial_actives_input"
+                        android:layout_width="120dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/disabled_background_input_rounded"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textColor="@color/violet_labels" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_final_actives_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_final_actives_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/final_actives_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/violet_labels"
+                        android:textSize="14sp"
+                        tools:text="PEGs\nde mi sección" />
+
+                    <EditText
+                        android:id="@+id/et_final_actives_input"
+                        android:layout_width="120dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/disabled_background_input_rounded"
+                        android:enabled="false"
+                        android:textAlignment="center"
+                        android:textColor="@color/violet_labels" />
+
+                </LinearLayout>
+
+            </GridLayout>
+
+            <View
+                android:id="@+id/v_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gl_capitalization_inputs" />
+
+            <TextView
+                android:id="@+id/tv_active_retention_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/active_retention_title"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_active_retention_percentage"
+                app:layout_constraintEnd_toStartOf="@+id/tv_active_retention_percentage"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/gl_capitalization_inputs"
+                app:layout_constraintTop_toTopOf="@+id/tv_active_retention_percentage" />
+
+            <TextView
+                android:id="@+id/tv_active_retention_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_active_retention_label"
+                app:layout_constraintTop_toBottomOf="@+id/v_separator"
+                tools:text="104%" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_ciclo_de_nuevas_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/retencion_ciclo_de_nuevas_title"
+            android:textAlignment="center"
+            android:textColor="@color/pink_primary"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_capitalization_container" />
+
+        <TextView
+            android:id="@+id/tv_retencion_ciclo_de_nuevas_ingresos_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/retencion_ciclo_de_nuevas_ingresos_amount"
+            android:textAlignment="center"
+            android:textColor="@color/gray_4"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ciclo_de_nuevas_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_ciclo_de_nuevas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_retencion_ciclo_de_nuevas_ingresos_amount">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_column_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginEnd="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_ciclo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclo"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_posible_consultoras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Posible Consultoras  \n (Vivas)"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_voy_a_retener"
+                    app:layout_constraintStart_toEndOf="@+id/tv_ciclo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_voy_a_retener"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Voy a retener"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/orders_disabled"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_column_information" />
+
+            <GridLayout
+                android:id="@+id/gl_ciclo_nuevas_inputs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginEnd="23dp"
+                android:columnCount="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_column_information">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_2d2_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+
+                    <TextView
+                        android:id="@+id/tv_2d2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="2d2"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_2d2_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="5"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_2d2_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_2d2_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_2d2_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_2d2_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_2d2_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_4"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_2d2_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_2d2_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_2d2_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_2d2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_2d2_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_2d2_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_2d2_info_container" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_3d3_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_3d3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="3d3"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_3d3_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="4"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_3d3_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline7"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_3d3_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_3d3_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_3d3_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_3d3_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_5"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_3d3_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_3d3_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_3d3_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_3d3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_3d3_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_3d3_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_3d3_info_container" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_4d4_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_4d4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="4d4"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_4d4_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="4"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_4d4_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_4d4_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_4d4_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_4d4_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_4d4_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_6"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_4d4_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_4d4_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_4d4_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_4d4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_4d4_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_4d4_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_4d4_info_container"
+                        tools:text="0%"
+                        android:visibility="invisible" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_5d5_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_5d5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="5d5"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_5d5_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="3"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_5d5_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline9"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_5d5_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_5d5_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_5d5_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_5d5_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_7"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_5d5_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_5d5_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_5d5_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_5d5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_5d5_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_5d5_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_5d5_info_container"
+                        tools:text="0%"
+                        android:visibility="invisible" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/divider_6d6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_6d6_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="6d6"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="4"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_6d6_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_6d6_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_6d6_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_8"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_6d6_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_6d6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_6d6_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_6d6_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_6d6_info_container"
+                        tools:text="0%"
+                        android:visibility="invisible" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/divider_6d6_low"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_6d6_bajo_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal"
+                    tools:visibility="visible"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_bajo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="6d6"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_bajo_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="4"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_6d6_bajo_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_6d6_bajo_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_6d6_bajo_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_bajo_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_bajo_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_16"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_6d6_bajo_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_bajo_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_bajo_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_6d6_bajo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_6d6_bajo_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_6d6_bajo_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_6d6_bajo_info_container"
+                        tools:text="0%" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/high_low_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_6d6_alto_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal"
+                    tools:visibility="visible"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_alto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="6d6"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_alto_posibles_consultoras_vivas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="4"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_6d6_alto_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/guideline11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_6d6_alto_info_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_6d6_alto_values_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_projected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_9"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_6d6_alto_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_real"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_real_projected_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_6d6_alto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_6d6_alto_info_container"
+                        app:layout_constraintStart_toStartOf="@+id/ll_6d6_alto_info_container"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_6d6_alto_info_container"
+                        tools:text="0%" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/high_low_multi_brand_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/orders_disabled"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_ciclo_6d6_alto_multi_brand_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal"
+                    tools:visibility="visible"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_alto_multi_brand"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/sixdsix_multi_brand" />
+
+                    <TextView
+                        android:id="@+id/tv_6d6_alto_posibles_consultoras_vivas_multi_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_4"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ll_6d6_alto_info_container_multi_brand"
+                        app:layout_constraintStart_toStartOf="@+id/guideline12"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="4" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_6d6_alto_info_container_multi_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_6d6_alto_values_container_multi_brand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_projected_multi_brand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/disabled_label_color" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_label_multi_brand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/estimate" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider_9_multi_brand"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@color/disabled_label_color"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_real_6d6_alto_container_multi_brand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_real_multi_brand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@drawable/selector_success_color"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_6d6_alto_real_projected_label_multi_brand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/achieved" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_percentage_retention_6d6_alto_multi_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/black"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_6d6_alto_info_container_multi_brand"
+                        app:layout_constraintStart_toStartOf="@+id/ll_6d6_alto_info_container_multi_brand"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_6d6_alto_info_container_multi_brand"
+                        tools:text="0%" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </GridLayout>
+
+            <View
+                android:id="@+id/v_divider_ciclo_de_nuevas_ganancia"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gl_ciclo_nuevas_inputs" />
+
+
+            <!-- 6d6 Extended -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_6d6_profit_proyected_extended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_divider_ciclo_de_nuevas_ganancia">
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_title_extended"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cycle_news_profit_proyected_6d6_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_6d6_percentage_proyected_title_extended"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@+id/tv_6d6_percentage_proyected_title_extended"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_function_extended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="#909094"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_profit_6d6_proyected_title_extended"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended"
+                    tools:text="2 * $100.000" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_value_percentage_extended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_6d6_percentage_proyected_percentage_extended"
+                    app:layout_constraintStart_toStartOf="@+id/tv_6d6_percentage_proyected_percentage_extended"
+                    tools:text="104%" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_title_extended_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cycle_news_profit_proyected_6d6_title_low"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_profit_6d6_proyected_value_percentage_extended_low"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_function_extended" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_function_extended_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="#909094"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_profit_6d6_proyected_title_extended_low"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended_low"
+                    tools:text="2 * $100.000" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_value_percentage_extended_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended_low"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_profit_6d6_proyected_title_extended_low"
+                    tools:text="104%" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_title_extended_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cycle_news_profit_proyected_6d6_title_high"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_profit_6d6_proyected_value_percentage_extended_high"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_function_extended_low" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_function_extended_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="#909094"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_profit_6d6_proyected_title_extended_high"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended_high"
+                    tools:text="2 * $100.000" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_value_percentage_extended_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended_high"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_profit_6d6_proyected_title_extended_high"
+                    tools:text="104%" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_title_extended_high_multi_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cycle_news_profit_proyected_6d6_title_high_multimark"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_profit_6d6_proyected_value_percentage_extended_high_multi_mark"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_function_extended_high" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_function_extended_high_multi_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="#909094"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_profit_6d6_proyected_title_extended_high_multi_mark"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended_high_multi_mark"
+                    tools:text="2 * $100.000" />
+
+                <TextView
+                    android:id="@+id/tv_profit_6d6_proyected_value_percentage_extended_high_multi_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_profit_6d6_proyected_title_extended_high_multi_mark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_profit_6d6_proyected_title_extended_high_multi_mark"
+                    tools:text="104%" />
+
+                <TextView
+                    android:id="@+id/tv_6d6_percentage_proyected_title_extended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cycle_6d6_percentage_proyected_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_6d6_percentage_proyected_percentage_extended"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_profit_6d6_proyected_function_extended_high_multi_mark" />
+
+                <TextView
+                    android:id="@+id/tv_6d6_percentage_proyected_function_extended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="#909094"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_6d6_percentage_proyected_title_extended"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_6d6_percentage_proyected_title_extended"
+                    tools:text="2 / CX -5" />
+
+                <TextView
+                    android:id="@+id/tv_6d6_percentage_proyected_percentage_extended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="204%"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_6d6_percentage_proyected_title_extended"
+                    app:layout_constraintTop_toTopOf="@+id/tv_6d6_percentage_proyected_title_extended" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_orders_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="@dimen/ds_margin_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/orders_title"
+            android:textAlignment="center"
+            android:textColor="@color/pink_primary"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_ciclo_de_nuevas" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orders_section_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_card_rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_orders_title">
+
+            <biz.belcorp.mobile.components.design.icontext.IconText
+                android:id="@+id/ic_orders_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:txt_icon_left="@drawable/ic_calculator_goal"
+                app:txt_text="@string/orders_current_goal_title"
+                app:txt_text_color="@color/pink_primary" />
+
+
+            <EditText
+                android:id="@+id/et_current_orders"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/disabled_background_input_rounded"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:textColor="@color/violet_labels"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_orders_icon" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_orders_inputs_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_current_orders">
+
+                <LinearLayout
+                    android:id="@+id/ll_low_value_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_low_value_input_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_low_value_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="@string/orders_low_value_title"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="PEGs\nde mi sección" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_projected_low_value_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll_low_value_values_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_low_value_projected"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/disabled_label_color" />
+
+                                <TextView
+                                    android:id="@+id/tv_low_value_projected_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/estimate" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/divider_10"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:background="@color/disabled_label_color"
+                                android:orientation="vertical" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_real_low_value_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_low_value_real"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@drawable/selector_success_color"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_real_low_value_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/achieved" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_low_value_gain_per_order_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_low_value_gain_per_order_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_low_value_gain_per_order_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_low_value_gain_per_order_projected_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_low_value_gain_per_order_projected_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_projected_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_low_value_gain_per_order_projected_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_separator_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/orders_disabled" />
+
+                <LinearLayout
+                    android:id="@+id/ll_low_value_plus_input_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_low_value_plus_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/orders_low_value_plus_title"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="PEGs\nde mi sección" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_projected_low_value_plus_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll_low_value_plus_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_low_value_plus_projected"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/disabled_label_color" />
+
+                                <TextView
+                                    android:id="@+id/tv_low_value_plus_projected_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/estimate" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/divider_11"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:background="@color/disabled_label_color"
+                                android:orientation="vertical" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_real_low_value_plus_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_low_value_plus_real"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@drawable/selector_success_color" />
+
+                                <TextView
+                                    android:id="@+id/tv_real_low_value_plus_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/achieved" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_low_value_plus_gain_per_order_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_low_value_plus_gain_per_order_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_low_value_plus_gain_per_order_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_low_value_plus_gain_per_order_projected_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_low_value_plus_gain_per_order_projected_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_projected_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_low_value_plus_gain_per_order_projected_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_separator_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/orders_disabled" />
+
+                <LinearLayout
+                    android:id="@+id/ll_high_value_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_high_value_input_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_high_value_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/orders_high_value_title"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="PEGs\nde mi sección" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_projected_high_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll_high_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_high_value_projected"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/disabled_label_color" />
+
+                                <TextView
+                                    android:id="@+id/tv_high_value_projected_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/estimate" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/divider_12"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:background="@color/disabled_label_color"
+                                android:orientation="vertical" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_real_high_value_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_high_value_real"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@drawable/selector_success_color"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_real_high_value_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/achieved" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_high_value_gain_per_order_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_high_value_gain_per_order_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_high_value_gain_per_order_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_high_value_gain_per_order_projected_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_high_value_gain_per_order_projected_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_projected_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_high_value_gain_per_order_projected_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_separator_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/orders_disabled" />
+
+                <LinearLayout
+                    android:id="@+id/ll_high_value_plus_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_high_value_plus_input_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_high_value_plus_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="@string/orders_high_value_plus_title"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="PEGs\nde mi sección" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_projected_high_value_plus_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll_high_value_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_high_value_plus_projected"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="8"
+                                    android:textColor="@color/disabled_label_color" />
+
+                                <TextView
+                                    android:id="@+id/tv_high_value_plus_projected_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/estimate" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/divider_13"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:background="@color/disabled_label_color"
+                                android:orientation="vertical" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_real_high_value_plus_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_high_value_plus_real"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@drawable/selector_success_color"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_real_high_value_plus_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/achieved" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_high_value_plus_gain_per_order_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_high_value_plus_gain_per_order_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_high_value_plus_gain_per_order_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_high_value_plus_gain_per_order_projected_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_high_value_plus_gain_per_order_projected_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="2"
+                            android:text="@string/gain_per_order_projected_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp"
+                            tools:text="Ganancia\npor pedido" />
+
+                        <TextView
+                            android:id="@+id/tv_high_value_plus_gain_per_order_projected_value"
+                            android:layout_width="67dp"
+                            android:layout_height="32dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/orders_disabled"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_separator_four"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_orders_inputs_container" />
+
+            <LinearLayout
+                android:id="@+id/ll_goal_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/v_separator_four"
+                app:layout_constraintTop_toBottomOf="@+id/v_separator_four">
+
+                <TextView
+                    android:id="@+id/tv_total_orders_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_order_title"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_total_orders_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_orders_goal_achieved_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goal_achieved"
+                    android:textColor="@color/green_achieved"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_total_orders_goal_not_achieved_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goal_not_achieved"
+                    android:textColor="@color/estado_negativo"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_total_gain_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/v_separator_four"
+                app:layout_constraintTop_toBottomOf="@+id/v_separator_four">
+
+                <TextView
+                    android:id="@+id/tv_total_gain_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_gain_title"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_total_gain_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_separator_five"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_goal_container" />
+
+            <TextView
+                android:id="@+id/tv_projected_activity_percentage_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/projected_activity"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/v_separator_five"
+                app:layout_constraintTop_toBottomOf="@+id/v_separator_five" />
+
+            <TextView
+                android:id="@+id/tv_projected_activity_percentage_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="@+id/v_separator_five"
+                app:layout_constraintStart_toStartOf="@+id/ll_total_gain_container"
+                app:layout_constraintTop_toBottomOf="@+id/v_separator_five" />
+
+            <View
+                android:id="@+id/v_separator_six"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_projected_activity_percentage_number" />
+
+            <LinearLayout
+                android:id="@+id/ll_projected_message_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/v_separator_six"
+                app:layout_constraintStart_toStartOf="@+id/v_separator_six"
+                app:layout_constraintTop_toBottomOf="@+id/v_separator_six">
+
+                <TextView
+                    android:id="@+id/tv_projected_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_success_color"
+                    android:textSize="16sp"
+                    tools:text="@string/projection_success_message" />
+
+                <View
+                    android:id="@+id/v_separator_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/black" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_projected_pegs_cx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/pegs_projected_cx"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_projected_message_container" />
+
+            <TextView
+                android:id="@+id/tv_projected_pegs_cx_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="@+id/ll_total_gain_container"
+                app:layout_constraintStart_toStartOf="@+id/ll_total_gain_container"
+                app:layout_constraintTop_toTopOf="@+id/tv_projected_pegs_cx" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

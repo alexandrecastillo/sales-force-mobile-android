@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Metas -->
+    <integer name="scrim_animation_time">400</integer>
+
+    <integer name="rdd_text_length_event_title">100</integer>
+    <integer name="rdd_text_length_event_location">500</integer>
+</resources>

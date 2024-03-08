@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/content_inset_normal"
+    android:paddingTop="@dimen/content_inset_normal"
+    android:paddingEnd="@dimen/content_inset_normal">
+
+    <biz.belcorp.mobile.components.design.searchbar.SearchBar
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_inset_small"
+        app:layout_constraintBottom_toTopOf="@+id/bSearchBarBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:searchBar_backgroundDrawable="@drawable/bg_search_consultant"
+        app:searchBar_hint="@string/search_bar_hint"
+        app:searchBar_hintColor="@color/gray_4"
+        app:searchBar_iconClose="@drawable/ic_close"
+        app:searchBar_iconSearch="@drawable/ic_search_consultant"
+        app:searchBar_items="@array/news"
+        app:searchBar_showIcon="true"
+        tools:layout_height="36dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOrder"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        android:text="@string/filters_order_by"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:icon="@drawable/ic_filter"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSearchBarBottom"
+        tools:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFilters"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_inset_small"
+        android:text="@string/filters"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_filter"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSearchBarBottom" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTotalSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginBottom="@dimen/content_inset_less"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:textStyle="bold"
+        android:textColor="@color/textColorTernary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOrder"
+        tools:text="@string/temp_pending_orders" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvConsultants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/content_inset_medium"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalSearch"
+        app:layout_constraintVertical_bias="0"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_consultant_search"
+        tools:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEmptyData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalSearch"
+        app:srcCompat="@drawable/ic_search_empty_data" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEmptyData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.DS.Caption"
+        android:gravity="center"
+        android:text="@string/search_empty_data_message"
+        android:textColor="@color/textColorTernary"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivEmptyData" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bSearchBarBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="searchBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

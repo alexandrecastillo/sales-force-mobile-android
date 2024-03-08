@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSelectorBarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="@dimen/zero"
+        tools:text="Avance por Sección en C09"
+        tools:visibility="visible" />
+
+    <biz.belcorp.mobile.components.design.selector.bar.view.SelectorBar
+        android:id="@+id/selector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_small"
+        android:theme="@style/GridFilterTheme"
+        android:visibility="gone"
+        app:bgColorSelectedStatus="?attr/bgSelectorBarSelectedColor"
+        app:selectorBorderRadius="?attr/dimenBorderRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectorBarLabel"
+        tools:visibility="visible" />
+
+    <biz.belcorp.mobile.components.design.spreadsheet.Spreadsheet
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:cellTextAppearance="@style/TextAppearance.Digital.Grid.Cell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selector"
+        app:layout_constraintVertical_bias="0" />
+
+    <include
+        android:id="@+id/iEmptyView"
+        layout="@layout/include_data_not_available"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

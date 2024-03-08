@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clContenedorItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/content_inset_medium"
+    android:background="@color/white">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCampaign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_tiny"
+        android:layout_marginBottom="@dimen/content_inset_tiny"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:paddingStart="@dimen/content_inset_normal"
+        android:paddingEnd="@dimen/content_inset_normal"
+        android:textColor="@color/gray_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="C18" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCampaignIndicator"
+        android:layout_width="@dimen/content_inset_less"
+        android:layout_height="@dimen/content_inset_less"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:contentDescription="@null"
+        android:padding="@dimen/content_inset_tiny"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCampaign"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_oval" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivCampaignIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="109,976" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

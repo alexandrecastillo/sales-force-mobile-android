@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Modules.Orders.Dialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorControlActivated">#00aae1</item>
+        <item name="colorAccent">#00aae1</item>
+        <item name="materialButtonStyle">@style/Theme.Modules.Orders.Button</item>
+    </style>
+
+    <style name="Theme.Modules.Orders.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:background">@color/white</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="android:textColor">@color/order_web</item>
+    </style>
+
+</resources>

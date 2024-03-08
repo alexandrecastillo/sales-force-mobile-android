@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_inset_litle_big">52dp</dimen>
+    <dimen name="search_form_height">60dp</dimen>
+    <dimen name="search_form_height_2">50dp</dimen>
+    <dimen name="search_radius_none">0dp</dimen>
+    <dimen name="search_table_width">100dp</dimen>
+    <dimen name="margin_sides_grown_consultant_card">20dp</dimen>
+    <dimen name="margin_top_bottom_grown_consultant_card">8dp</dimen>
+    <dimen name="dimen_min_height_consultant_item_view">60dp</dimen>
+    <dimen name="dimen_min_size_grown_consultant_item_view">4dp</dimen>
+    <dimen name="ms_step_tab_divider_thickness">1dp</dimen>
+    <dimen name="search_item_simple_height">40dp</dimen>
+    <dimen name="content_inset_extra_large">38dp</dimen>
+</resources>

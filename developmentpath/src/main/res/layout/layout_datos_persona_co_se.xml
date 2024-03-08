@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llDatosBasicos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/ds_margin_other_1"
+    android:layout_marginEnd="@dimen/ds_margin_other_1"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ds_margin_small"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_seccion_datos" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline6">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_margin_medium"
+                android:layout_marginEnd="@dimen/ds_margin_medium"
+                android:layout_marginBottom="@dimen/ds_margin_medium"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0">
+
+                <TextView
+                    android:id="@+id/tvUA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:text="@string/perfil_tab_seccion_titulo"
+                    android:textColor="@color/color_persona_1"
+                    android:textSize="@dimen/size_datos_persona_12" />
+
+                <TextView
+                    android:id="@+id/tvRol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/color_persona_2"
+                    android:textSize="@dimen/size_datos_persona_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:text="@string/text_codigo_de_cosultora"
+                    android:textColor="@color/color_persona_1"
+                    android:textSize="@dimen/size_datos_persona_12" />
+
+                <TextView
+                    android:id="@+id/tvCodigoConsultora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/color_persona_2"
+                    android:textSize="@dimen/size_datos_persona_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ds_margin_medium"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline7"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvTituloSegmentoNivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/color_persona_1"
+                    android:textSize="@dimen/size_datos_persona_12"
+                    tools:text="@string/perfil_tab_segmento_consultora" />
+
+                <TextView
+                    android:id="@+id/tvSegmentoNivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/color_persona_2"
+                    android:textSize="@dimen/size_datos_persona_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_inset_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:text="@string/text_campana_de_ingreso"
+                    android:textColor="@color/color_persona_1"
+                    android:textSize="@dimen/size_datos_persona_12" />
+
+                <TextView
+                    android:id="@+id/tvCampaniaIngreso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/color_persona_2"
+                    android:textSize="@dimen/size_datos_persona_14" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:fontFamily="@font/mulish_regular"
+                android:singleLine="true"
+                android:text="@string/text_autorizada"
+                android:textColor="@color/color_persona_1"
+                android:textSize="@dimen/size_datos_persona_12" />
+
+            <TextView
+                android:id="@+id/tvAutorizada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_regular"
+                android:singleLine="true"
+                android:textColor="@color/color_persona_2"
+                android:textSize="@dimen/size_datos_persona_14" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/includeBloqueGanaMas"
+            layout="@layout/layout_bloque_gana_mas"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <include
+            android:id="@+id/includeBloqueOfertasDigitales"
+            layout="@layout/layout_bloque_ofertas_digitales"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.16" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

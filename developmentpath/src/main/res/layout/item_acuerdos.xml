@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:paddingStart="9dp"
+    android:paddingEnd="9dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:background="@drawable/background_registrar_visita_acuerdo_guardado">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_acuerdo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish_regular"
+        android:lineSpacingMultiplier="1.15"
+        android:textColor="@color/gris_escala_5"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Yessica mejorará la habilidad de manejar su tiempo para poder visitar a todas sus gerentes" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_acuerdo_fecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_acuerdo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mulish_light"
+        android:textColor="@color/gris_escala_4"
+        android:textStyle="italic"
+        tools:text="07 de febrero"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txt_eliminar_acuerdo"
+        app:layout_constraintTop_toBottomOf="@id/txt_acuerdo"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_eliminar_acuerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_acuerdo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_acuerdo"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/mulish_bold"
+        android:letterSpacing="0.2"
+        android:text="@string/text_eliminar"
+        android:textColor="@color/estado_negativo"
+        android:textSize="11sp"
+        tools:ignore="SmallSp"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

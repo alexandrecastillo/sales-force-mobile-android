@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navFeatureBrightPathIndicator"
+    app:startDestination="@id/fragBrightPathIndicatorDetail">
+
+    <dialog
+        android:id="@+id/fragBrightPathIndicatorDetail"
+        android:name="biz.belcorp.salesforce.modules.brightpath.features.container.IndicatorDetailFragment"
+        android:label="BrightPathIndicator"
+        tools:layout="@layout/fragment_indicator_detail">
+        <action
+            android:id="@+id/action_fragBrightPathIndicatorDetail_to_fragConsultantListDetailedKpi"
+            app:destination="@id/fragConsultantListDetailedKpi" />
+        <action
+            android:id="@+id/action_fragBrightPathIndicatorDetail_to_fragBrightPathKpiDetail"
+            app:destination="@id/fragBrightPathKpiDetail" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/fragConsultantListDetailedKpi"
+        android:name="biz.belcorp.salesforce.modules.brightpath.features.container.consultants.ConsultantsIndicatorDetailFragment"
+        android:label="ConsultantDetailedListKpi"
+        tools:layout="@layout/fragment_detail_list_consultants" />
+
+    <dialog
+        android:id="@+id/fragBrightPathKpiDetail"
+        android:name="biz.belcorp.salesforce.modules.brightpath.features.container.detail.BrightPathIndicatorDetailFragment"
+        android:label="BrightPathKpiDetail"
+        tools:layout="@layout/fragment_level_indicator_detail" />
+
+</navigation>

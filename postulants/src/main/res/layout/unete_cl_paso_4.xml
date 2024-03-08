@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnEstadoCivil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hasSelection="true"
+        custom:hint="@string/estado_civil" />
+
+    <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+        android:id="@+id/spnNivelEducativo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:hasSelection="true"
+        custom:hint="@string/nivel_educativo" />
+
+    <RelativeLayout
+        android:id="@+id/seccionReferencias"
+        style="@style/unete_section">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_section_title"
+            android:text="@string/seccion_ref_familiar" />
+
+        <ImageView style="@style/unete_section_img" />
+
+    </RelativeLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expReferencia"
+        style="@style/unete_section_exp"
+        app:ael_duration="400">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtNombreReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/nombres" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtApellidoReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/apellidos" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtDireccionReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/direccion" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+            android:id="@+id/spnVinculoReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hasSelection="true"
+            custom:hint="@string/tipo_vinculo" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtTelefonoCelularReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/telefono_celular" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtTelefonoFijoReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/telefono_fijo" />
+
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/seccionFiador"
+        style="@style/unete_section">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_section_title"
+            android:text="@string/seccion_aval" />
+
+        <ImageView style="@style/unete_section_img" />
+    </RelativeLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expFiador"
+        style="@style/unete_section_exp"
+        app:ael_duration="400">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalPrimerNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/primer_nombre" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalSegundoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/segundo_nombre" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalApellidoPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/apellito_paterno" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalApellidoMaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/apellito_materno" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+            android:id="@+id/spnAvalVinculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hasSelection="true"
+            custom:hint="@string/tipo_vinculo" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/direccion_completa" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalDocumento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/rut" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalTelefonoCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/telefono_celular" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtAvalTelefonoFijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/telefono_fijo" />
+
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/seccionMeta"
+        style="@style/unete_section">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/unete_section_title"
+            android:text="@string/seccion_meta" />
+
+        <ImageView style="@style/unete_section_img" />
+    </RelativeLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expMeta"
+        style="@style/unete_section_exp"
+        app:ael_duration="400">
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.inputs.USpinner
+            android:id="@+id/spnTipoMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            custom:hint="@string/tipo_meta"
+            custom:hasSelection="true" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtMetaMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/monto" />
+
+        <biz.belcorp.salesforce.modules.postulants.features.widget.validUnete.UEditText
+            android:id="@+id/txtMetaDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:hint="@string/monto_descripcion"
+            custom:multiline="true" />
+
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/unete_obligatorio_label"
+        android:text="@string/campos_obligatorios" />
+
+</LinearLayout>

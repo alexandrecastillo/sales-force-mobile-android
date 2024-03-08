@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rdd_accent"
+        android:paddingStart="@dimen/content_inset_small"
+        android:paddingTop="@dimen/content_inset_normal"
+        android:paddingEnd="@dimen/content_inset_small"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/botonRetroceder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_white_back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tituloCabecera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_small"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/botonRetroceder"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="AGREGAR EVENTO / EDITAR EVENTO" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/content_inset_normal"
+        app:layout_constraintBottom_toTopOf="@id/botonGuardarEvento"
+        app:layout_constraintTop_toBottomOf="@id/layoutCabecera">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/content_inset_large">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerTiposEvento"
+                style="@style/Widget.AppCompat.Spinner.DropDown.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupoTituloEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="editTextTituloEvento,separadorTituloEvento"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/editTextTituloEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_regular"
+                android:hint="@string/rdd_agregareventos_hint_titulo_evento"
+                android:inputType="textCapWords"
+                android:maxLength="@integer/rdd_text_length_event_title"
+                android:textColor="@color/black"
+                android:textColorHint="@color/light_text"
+                android:textSize="@dimen/text_size_title_2"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinnerTiposEvento"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/separadorTituloEvento"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ds_height_separator_tiny"
+                android:background="@color/light_text"
+                app:layout_constraintTop_toBottomOf="@id/editTextTituloEvento" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutAvisoEventoCompartido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_small"
+                android:background="@drawable/background_layout_aviso_evento_compartido_rdd"
+                android:padding="@dimen/content_inset_less"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separadorTituloEvento"
+                app:layout_goneMarginTop="@dimen/zero"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iconoEventoCompartido"
+                    android:layout_width="@dimen/size_image_event"
+                    android:layout_height="@dimen/size_image_event"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/content_inset_tiniest"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_eventordd_compartir_con_ses" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewEventoCompartido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/colorButtonVariant"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iconoEventoCompartido"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Este evento se enviará a todas las Socias Empresarias" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchEventoTodoElDia"
+                style="@style/SwitchRdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:checked="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutAvisoEventoCompartido" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_inset_less"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/rdd_agregareventos_todoeldia"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@id/switchEventoTodoElDia"
+                app:layout_constraintEnd_toStartOf="@id/switchEventoTodoElDia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/switchEventoTodoElDia" />
+
+            <ImageView
+                android:id="@+id/iconoUbicacion"
+                android:layout_width="@dimen/rdd_widget_size"
+                android:layout_height="@dimen/rdd_widget_size"
+                android:layout_marginTop="@dimen/rdd_margin_top_large"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switchEventoTodoElDia"
+                app:srcCompat="@drawable/ic_eventordd_ubicacion" />
+
+            <EditText
+                android:id="@+id/editTextUbicacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_inset_small"
+                android:background="@color/transparent"
+                android:fontFamily="@font/mulish_regular"
+                android:hint="@string/rdd_agregareventos_hint_ubicacion"
+                android:inputType="textCapWords"
+                android:maxLength="@integer/rdd_text_length_event_location"
+                android:textColor="@color/black"
+                android:textColorHint="@color/light_text"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="@id/iconoUbicacion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iconoUbicacion"
+                app:layout_constraintTop_toTopOf="@id/iconoUbicacion" />
+
+            <View
+                android:id="@+id/separadorUbicacion"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ds_height_separator_tiny"
+                android:layout_marginTop="@dimen/content_inset_less"
+                android:background="@color/light_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/editTextUbicacion"
+                app:layout_constraintTop_toBottomOf="@id/editTextUbicacion" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rdd_margin_start"
+                android:animateLayoutChanges="true"
+                app:layout_constraintTop_toBottomOf="@id/iconoUbicacion">
+
+
+                <ImageView
+                    android:id="@+id/iconoFecha"
+                    android:layout_width="@dimen/rdd_widget_size"
+                    android:layout_height="@dimen/rdd_widget_size"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_eventordd_fecha" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewFecha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_inset_small"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoFecha"
+                    app:layout_constraintEnd_toStartOf="@id/iconoDerechaFecha"
+                    app:layout_constraintStart_toEndOf="@id/iconoFecha"
+                    app:layout_constraintTop_toTopOf="@id/iconoFecha"
+                    tools:text="Lun., 25 jun." />
+
+                <ImageView
+                    android:id="@+id/iconoDerechaFecha"
+                    android:layout_width="@dimen/size_image_event_arrow"
+                    android:layout_height="@dimen/size_image_event_arrow"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoFecha"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iconoFecha"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+                <View
+                    android:id="@+id/separadorFecha"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ds_height_separator_tiny"
+                    android:layout_marginTop="@dimen/content_inset_less"
+                    android:background="@color/light_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textViewFecha"
+                    app:layout_constraintTop_toBottomOf="@id/textViewFecha" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rdd_margin_start"
+                android:animateLayoutChanges="true"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/layoutFecha"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iconoHora"
+                    android:layout_width="@dimen/rdd_widget_size"
+                    android:layout_height="@dimen/rdd_widget_size"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_eventordd_hora" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewHintHora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_inset_small"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/rdd_agregareventos_hint_hora"
+                    android:textColor="@color/light_text"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoHora"
+                    app:layout_constraintStart_toEndOf="@id/iconoHora"
+                    app:layout_constraintTop_toTopOf="@id/iconoHora" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewHora"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_inset_small"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoHora"
+                    app:layout_constraintEnd_toStartOf="@id/iconoDerechaHora"
+                    app:layout_constraintStart_toEndOf="@id/textViewHintHora"
+                    app:layout_constraintTop_toTopOf="@id/iconoHora"
+                    tools:text="02:15 pm - 04:15 pm" />
+
+                <ImageView
+                    android:id="@+id/iconoDerechaHora"
+                    android:layout_width="@dimen/size_image_event_arrow"
+                    android:layout_height="@dimen/size_image_event_arrow"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoHora"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iconoHora"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+                <View
+                    android:id="@+id/separadorHora"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ds_height_separator_tiny"
+                    android:layout_marginTop="@dimen/rdd_margin_min_less"
+                    android:background="@color/light_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textViewHintHora"
+                    app:layout_constraintTop_toBottomOf="@id/textViewHora" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSeleccionarAlerta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rdd_margin_start"
+                android:animateLayoutChanges="true"
+                app:layout_constraintTop_toBottomOf="@id/layoutHora">
+
+                <ImageView
+                    android:id="@+id/iconoAlerta"
+                    android:layout_width="@dimen/rdd_widget_size"
+                    android:layout_height="@dimen/rdd_widget_size"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_eventordd_alerta" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewAlerta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_inset_small"
+                    android:fontFamily="@font/mulish_regular"
+                    android:text="@string/rdd_agregareventos_alerta"
+                    android:textColor="@color/light_text"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoAlerta"
+                    app:layout_constraintStart_toEndOf="@id/iconoAlerta"
+                    app:layout_constraintTop_toTopOf="@id/iconoAlerta" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewAlertaSeleccionada"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_inset_small"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoAlerta"
+                    app:layout_constraintEnd_toStartOf="@id/iconoDerechaAlerta"
+                    app:layout_constraintStart_toEndOf="@id/textViewAlerta"
+                    app:layout_constraintTop_toTopOf="@id/iconoAlerta"
+                    tools:text="15 min antes" />
+
+                <ImageView
+                    android:id="@+id/iconoDerechaAlerta"
+                    android:layout_width="@dimen/size_image_event_arrow"
+                    android:layout_height="@dimen/size_image_event_arrow"
+                    android:contentDescription="@null"
+                    app:layout_constraintBottom_toBottomOf="@id/iconoAlerta"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iconoAlerta"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+                <View
+                    android:id="@+id/separadorAlerta"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ds_height_separator_tiny"
+                    android:layout_marginTop="@dimen/rdd_margin_min_less"
+                    android:background="@color/light_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textViewAlerta"
+                    app:layout_constraintTop_toBottomOf="@id/textViewAlerta" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutCompartir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_medium"
+                android:background="@drawable/background_layout_compartir_evento_rdd"
+                android:paddingStart="@dimen/content_inset_less"
+                android:paddingTop="@dimen/rdd_margin_min_less"
+                android:paddingEnd="@dimen/content_inset_less"
+                android:paddingBottom="@dimen/rdd_margin_min_less"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/layoutSeleccionarAlerta"
+                tools:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/checkboxCompartir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CheckboxRdd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textViewCompartir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_inset_less"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/rdd_accent"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintBottom_toBottomOf="@id/checkboxCompartir"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/checkboxCompartir"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/rdd_agregareventos_compartircheckboxmensaje_socias" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonGuardarEvento"
+        style="@style/Widget.Button.Black.Variant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_less"
+        android:layout_marginBottom="@dimen/rdd_margin_min_less"
+        android:enabled="true"
+        android:fontFamily="@font/mulish_bold"
+        android:textSize="@dimen/text_button_ruta"
+        app:layout_constraintBottom_toTopOf="@+id/botonCancerlar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/rdd_agregareventos_guardar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/botonCancerlar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_less"
+        android:layout_marginEnd="@dimen/content_inset_less"
+        android:layout_marginBottom="@dimen/rdd_margin_start"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:text="@string/cancelar"
+        android:textColor="@color/strawberry"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/botonGuardarEvento"
+        app:layout_constraintStart_toStartOf="@id/botonGuardarEvento" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="action_close">Cerrar</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_clean">Limpiar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_save">Guardar</string>
+
+    <string name="send_mail">Enviar correo</string>
+    <string name="has_no_mail">No tiene correo.</string>
+    <string name="mail_app_not_found">No hay aplicaciones de correo instaladas</string>
+
+    <string name="notification_title_sync">Sincronización</string>
+    <string name="notification_content_sync">Estamos sincronizando su información</string>
+
+    <string name="text_your_country">Tu País</string>
+    <string name="text_your_region">Tu Región</string>
+    <string name="text_your_zone">Tu Zona</string>
+
+    <string name="text_permissions_hint">Por favor, ingresa a Permisos y luego activa %1$s</string>
+    <string name="imposible_abrir_documento">No se puede abrir el documento</string>
+    <string name="text_zone_with_ua">Zona %s</string>
+    <string name="text_region_with_ua">Region %s</string>
+    <string name="text_section_with_ua">Sección %s</string>
+
+    <string name="text_campaign">C%s</string>
+</resources>

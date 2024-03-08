@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="95.5dp"
+        android:layout_height="95.5dp"
+        android:layout_marginBottom="32.5dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/textoTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_error_demanda_rdd" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textoTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27.5dp"
+        android:layout_marginEnd="27.5dp"
+        android:fontFamily="@font/mulish_bold"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.25"
+        android:text="@string/rdd_titulo_error_demanda"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textoSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="42dp"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.25"
+        android:textColor="@color/conexion_internet_subtitulo"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoTitulo"
+        tools:text="Verifica tu conexión para visualizar la planificación de tus Socias Empresarias" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.5dp"
+        android:background="@drawable/background_button_rdd_error_demanda"
+        android:fontFamily="@font/mulish_bold"
+        android:foreground="?attr/selectableItemBackground"
+        android:minWidth="180dp"
+        android:minHeight="45dp"
+        android:text="@string/rdd_confirmacion_ok"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoSubtitulo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

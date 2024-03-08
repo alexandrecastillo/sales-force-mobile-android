@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="text_no_se_encontraron_resultados_en_busqueda">NO SE ENCONTRARON RESULTADOS DE LA BÚSQUEDA</string>
+    <string name="ingresar_al_menos_un_filtro">Debe ingresar al menos uno de los filtros para realizar la búsqueda</string>
+    <string name="ingresar_al_menos_tres_caracteres">Colocar mínimo 3 caracteres en el nombre</string>
+
+    <string name="text_buscar_consultora">BUSCAR CONSULTORA</string>
+    <string name="text_completa_al_menos_una_accion">Completa al menos una de las siguientes opciones</string>
+
+    <string name="search_2">Buscar</string>
+
+    <string name="consultant_code_hint">Código de Consultora</string>
+    <string name="consultant_name_hint">Nombre</string>
+    <string name="consultant_dni_hint">DNI</string>
+    <string name="consultant_section_hint">Sección</string>
+    <string name="consultant_status_hint">Estado</string>
+    <string name="consultant_campania_hint">Campaña</string>
+    <string name="consultant_tipo_hint">Tipo de Filtro</string>
+    <string name="consultant_segment_hint">Segmento</string>
+    <string name="consultant_origen_hint">Origen</string>
+    <string name="consultant_level_hint">Nivel</string>
+    <string name="consultant_requested_hint">Pedido</string>
+    <string name="consultant_residue_hint">Saldo</string>
+    <string name="consultant_type_hint">Tipo</string>
+    <string name="consultant_authorized_hint">Autorizada</string>
+    <string name="consultant_filtro_aprobado_hint">Filtrar por: </string>
+    <string name="consultant_title_length">Se encontraron %1$s consultoras en tu zona:</string>
+    <string name="consultant_title_length_se">Se encontraron %1$s consultoras en tu sección:</string>
+    <string name="see_more_filters">Ver más filtros</string>
+    <string name="hide_filters">Ocultar filtros</string>
+    <string name="show_all">Todos</string>
+    <string name="show_all_segment">98</string>
+
+    <string name="identity_document">Documento de identidad</string>
+
+    <string name="campania_tipo_v">VENTA %s</string>
+    <string name="campania_tipo_f">FACTURACIÓN %s</string>
+
+    <string name="label_pedidos_alto_valor">PEDIDOS\nALTO VALOR</string>
+    <string name="label_pedidos_bajo_valor">PEDIDOS\nBAJO VALOR</string>
+    <string name="label_pedidos_rechazados">PEDIDOS\nRECHAZADOS</string>
+    <string name="label_posibles_ingresos">POSIBLES\nINGRESOS</string>
+    <string name="label_posibles_reingresos">POSIBLES\nREINGRESOS</string>
+    <string name="label_activas">ACTIVAS</string>
+    <string name="label_ingresos">INGRESOS</string>
+    <string name="label_reingresos">REINGRESOS</string>
+    <string name="label_egresos">EGRESOS</string>
+    <string name="label_ganancia_y_saldo">GANANCIA\nY SALDOS</string>
+    <string name="label_6d6">@string/indicator_new_cicle_6d6</string>
+    <string name="label_5d5">@string/indicator_new_cicle_5d5</string>
+    <string name="label_4d4">@string/indicator_new_cicle_4d4</string>
+    <string name="label_3d3">@string/indicator_new_cicle_3d3</string>
+    <string name="label_2d2">@string/indicator_new_cicle_2d2</string>
+    <string name="label_peg">PEG</string>
+    <string name="label_posibles_cambios_de_nivel">POSIBLES CAMBIOS DE NIVEL</string>
+    <string name="label_cambio_de_nivel">CAMBIO DE NIVEL</string>
+    <string name="text_posibles_changes_level_consultant_inf">Pueden cambiar en</string>
+
+    <string name="label_desc_activas">Consultoras activas según el periodo en que se encuentre la campaña.</string>
+    <string name="label_desc_pedidos_rechazados">Consultoras con pedido rechazado (no facturados).</string>
+    <string name="label_desc_ingresos_venta">Consultoras que ingresaron en la campaña anterior.</string>
+    <string name="label_desc_ingresos_facturacion">Consultoras que están ingresando en la campaña actual.</string>
+    <string name="label_desc_reingresos_venta">Consultoras que reingresaron en la campaña pasada.</string>
+    <string name="label_desc_reingresos_facturacion">Consultoras que están reingresando en la campaña actual.</string>
+    <string name="label_desc_egresos_venta">Consultoras que egresaron en la campaña pasada.</string>
+    <string name="label_desc_egresos_facturacion">Consultoras que estarían egresando en esta campaña si no pasan pedido.</string>
+    <string name="label_desc_saldos">Consultoras Activas que mantienen saldo pendiente.</string>
+    <string name="label_desc_posibles_consecutivas_vta">Consultoras que pasaron pedido la campaña anterior.</string>
+    <string name="label_desc_consecutivas_pedido_vta">Consultoras que pasaron pedido en la campaña anterior y en la actual.</string>
+    <string name="label_desc_no_consecutivas_pedido_vta">Consultoras que no pasaron pedido en la campaña anterior, pero sí en la actual.</string>
+    <string name="label_desc_consecutivas_pedido_alto_valor">Consultoras que pasaron pedido en la campaña anterior, y pasaron pedido de alto valor en la actual.</string>
+    <string name="label_desc_consecutivas_pedido_bajo_valor">Consultoras que pasaron pedido en la campaña anterior, y pasaron pedido de bajo valor en la actual.</string>
+    <string name="label_desc_6d6">Consultora que pueden convertirse en 6d6 en la campaña actual.</string>
+    <string name="label_desc_5d5">Consultora que pueden convertirse en 5d5 en la campaña actual.</string>
+    <string name="label_desc_4d4">Consultora que pueden convertirse en 4d4 en la campaña actual.</string>
+    <string name="label_desc_3d3">Consultora que pueden convertirse en 3d3 en la campaña actual.</string>
+    <string name="label_desc_2d2">Consultora que pueden convertirse en 2d2 en la campaña actual.</string>
+    <string name="label_desc_peg_venta">Consultoras que cerraron la campaña anterior como PEGs.</string>
+    <string name="label_desc_peg_facturacion">Consultoras que se convertirían en PEGs si no pasaran pedido en esta campaña.</string>
+    <string name="label_desc_posibles_compradoras">Consultoras que en campañas anteriores compraron productos de la marca y tipo del lanzamiento y que aún no pasan pedido esta campaña.</string>
+    <string name="label_desc_compradoras">Consultoras que han solicitado alguna unidad del lanzamiento en la campaña actual.</string>
+    <string name="label_desc_visitas_posible_pedido">Consultoras visitadas que indicaron a la Socia Empresaria que pasarían pedido esta campaña.</string>
+    <string name="label_desc_visitas_no_posibles_pedido">Consultoras visitadas que indicaron a la Socia Empresaria que no pasarían pedido.</string>
+    <string name="label_desc_visitas_pedido">Consultoras visitadas que pasaron pedido.</string>
+    <string name="label_desc_visitas_no_pedido">Consultoras visitadas que no pasaron pedido.</string>
+    <string name="label_desc_pedidos_alto_valor">Consultoras con pedidos de Alto Valor.</string>
+    <string name="label_desc_pedidos_bajo_valor">Consultoras con pedidos de Bajo Valor.</string>
+    <string name="label_desc_posibles_ingresos">Consultoras que pasando pedido en la campaña actual se convertirán en Ingresos</string>
+    <string name="label_desc_posibles_reingresos">Consultoras que pasando pedido en la campaña actual se convertirán en Reingresos.</string>
+
+    <string name="indicator_new_cicle_1d1">1d1</string>
+    <string name="indicator_new_cicle_2d2">2d2</string>
+    <string name="indicator_new_cicle_3d3">3d3</string>
+    <string name="indicator_new_cicle_4d4">4d4</string>
+    <string name="indicator_new_cicle_5d5">5d5</string>
+    <string name="indicator_new_cicle_6d6">6d6</string>
+
+    <string name="msg_warning_no_data_consolidado">No se cuenta con información para\nesta variable en este momento.</string>
+    <string name="text_non_consultants_available_pdv">Ninguna consultora de la sección\ncumple con la constancia</string>
+
+    <string name="impulsa_a_las_siguientes_consultoras">Impulsa a las siguientes Consultoras</string>
+
+    <string name="code">Código: %1$s</string>
+    <string name="section">Sección: %1$s</string>
+    <string name="balance">Saldo Pendiente: %1$s %2$s</string>
+
+    <!-- Search strings -->
+    <string name="search_empty_data_message">Lo sentimos.\nNo tenemos resultados de tu búsqueda.</string>
+    <string name="search_empty_data_default_message">No hay información disponible.</string>
+
+    <string name="search_consultant_result_found">Resultado de tu búsqueda: %s Consultoras</string>
+
+    <plurals name="text_consultant_search_result">
+        <item quantity="zero">Resultado de tu búsqueda: 0 Consultoras</item>
+        <item quantity="one">Resultado de tu búsqueda: 1 Consultora</item>
+        <item quantity="other">Resultado de tu búsqueda: %s Consultoras</item>
+    </plurals>
+
+    <plurals name="action_go_to_consultants_list">
+        <item quantity="one"> Consultora en total, ver detalle</item>
+        <item quantity="other">Consultoras en total, ver detalle</item>
+    </plurals>
+
+    <plurals name="consultant_collection_data">
+        <item quantity="zero">0 Consultora con deuda pendiente total</item>
+        <item quantity="one">1 Consultora con deuda pendiente total</item>
+        <item quantity="other">%s Consultoras con deuda pendiente total</item>
+    </plurals>
+
+    <plurals name="consultant_new_cycle_total_data">
+        <item quantity="zero">0 Consultoras del ciclo de nuevas en total</item>
+        <item quantity="one">1 Consultora del ciclo de nuevas en total</item>
+        <item quantity="other">%s Consultoras del ciclo de nuevas en total</item>
+    </plurals>
+
+    <plurals name="consultant_new_cycle_constancy_data">
+        <item quantity="zero">%d posibles consultoras nuevas %s en total</item>
+        <item quantity="one">%d posible consultora nueva %s en total</item>
+        <item quantity="other">%d posibles consultoras nuevas %s en total</item>
+    </plurals>
+
+    <string name="consultants_new">NUEVA %s</string>
+    <string name="consultant_new_inconstant">Inconstante</string>
+    <string name="consultant_amount_with_currency">%s %s</string>
+
+    <plurals name="consultant_text_pending_orders">
+        <item quantity="zero">%d Pedidos pendientes en total</item>
+        <item quantity="one">%d Pedido pendiente en total</item>
+        <item quantity="other">%d Pedidos pendientes en total</item>
+    </plurals>
+
+    <plurals name="consultant_text_billed_orders">
+        <item quantity="zero">%d Pedidos facturados en total</item>
+        <item quantity="one">%d Pedido facturado en total</item>
+        <item quantity="other">%d Pedidos facturados en total</item>
+    </plurals>
+
+    <string name="consultants_with_outstanding_debt">Consultoras con deuda pendiente</string>
+
+    <string name="filter_pending_orders">Filtrar pedidos pendientes</string>
+    <string name="filter_billed_orders">Filtrar pedidos facturados</string>
+
+    <string name="filter_search_hint_text">Buscar por nombre o segmento</string>
+
+    <!-- Filter strings -->
+    <string name="filter_title_somos_belcorp">Pedido en Somos Belcorp</string>
+    <string name="filter_summary_somos_belcorp">Habilitar monto de pedido</string>
+    <string name="filter_title_order_status">Status de pedido</string>
+    <string name="filter_title_min_amount_not_accomplished">No cumple con monto mínimo</string>
+    <string name="filter_title_near_to_be_high_value">Cerca de un Pedido de Alto Valor</string>
+    <string name="filter_title_has_pending_debt">Tiene deuda pendiente</string>
+    <string name="filter_title_new_cycles">Ciclo de Nuevas</string>
+    <string name="filter_title_new_cycles_6d6">Posible 6D6</string>
+    <string name="filter_title_new_cycles_5d5">Posible 5D5</string>
+    <string name="filter_title_new_cycles_4d4">Posible 4D4</string>
+    <string name="filter_title_new_cycles_3d3">Posible 3D3</string>
+    <string name="filter_title_new_cycles_2d2">Posible 2D2</string>
+    <string name="filter_title_segment">Segmento de Consultora</string>
+    <string name="filter_title_segment_pegs">PEGs</string>
+    <string name="filter_title_segment_possible_pegs">Posibles PEGs</string>
+    <string name="filter_title_state">Estado de Consultora</string>
+    <string name="filter_title_state_entries">Ingresos</string>
+    <string name="filter_title_state_reentries">Reingresos</string>
+    <string name="filter_title_type">Tipo de Consultora</string>
+    <string name="filter_title_order_type">Tipo de Pedido</string>
+
+    <string name="filter_title_multibrand">Multimarca</string>
+    <string name="filter_title_multicategory">Multicategoría</string>
+    <string name="filter_title_multibrand_yes">Sí</string>
+    <string name="filter_title_multibrand_no">No</string>
+    <string name="filter_title_type_has_cash_payment">Con Crédito</string>
+    <string name="filter_title_type_has_not_cash_payment">Sin Crédito</string>
+
+    <string name="filter_title_order_type_low_value">Bajo Valor</string>
+    <string name="filter_title_order_type_low__plus_value">Bajo Valor Plus</string>
+    <string name="filter_title_order_type_high_value">Alto Valor</string>
+    <string name="filter_title_order_type_high_plus_value">Alto Valor Plus</string>
+
+
+    <string name="text_maps_cancel">CANCELAR</string>
+    <string name="text_confirm">CONFIRMAR</string>
+    <string name="text_edit_location">EDITAR UBICACIÓN</string>
+
+    <string name="text_save_location">GUARDA LA UBICACIÓN</string>
+    <string name="text_give_permissions_manually">Habilitar ahora</string>
+    <string name="text_permissions_not_granted">Los permisos para esta característica están deshabilitados</string>
+    <string name="text_phone">Teléfono</string>
+
+    <string name="text_fine_location_warning">Se necesita permiso para acceder a su localizacion</string>
+    <string name="text_location">Ubicación</string>
+    <string name="text_accept">Aceptar</string>
+    <string name="text_permissions_hint">Por favor, ingresa a Permisos y luego activa %1$s</string>
+
+    <string name="text_error_consultant_non_provided">Consultant code was not provided</string>
+    <string name="text_consultant_updated">La localización de la consultora ha sido actualizada.</string>
+    <!-- End Filter strings -->
+
+    <!-- Text for Filter -->
+    <string name="text_all">Todas</string>
+    <string name="text_6d6">Posibles 6D6</string>
+    <string name="text_5d5">Posibles 5D5</string>
+    <string name="text_4d4">Posibles 4D4</string>
+    <string name="text_3d3">Posibles 3D3</string>
+    <string name="text_2d2">Posibles 2D2</string>
+    <string name="text_low_value">Bajo valor</string>
+    <string name="text_low_value_plus">Bajo valor plus</string>
+    <string name="text_high_value">Alto valor</string>
+    <string name="text_high_value_plus">Alto valor plus</string>
+    <string name="text_pegs_with_debt">PEGs con deuda</string>
+    <string name="text_peg_without_debt">PEGs sin deuda</string>
+
+    <string name="text_consultant_title">Estás viendo el listado de consultoras de:</string>
+
+    <plurals name="text_total_consultants">
+        <item quantity="one">%s Consultora en total</item>
+        <item quantity="other">%s Consultoras en total</item>
+    </plurals>
+
+    <string name="digital_indicator_subscribed">Registrada a %s</string>
+    <string name="digital_indicator_no_subscribed">No registrada a %s</string>
+    <string name="digital_indicator_share">Comparte %s</string>
+    <string name="digital_indicator_no_share">No comparte %s</string>
+    <string name="digital_indicator_buy">Vende por %s</string>
+    <string name="digital_indicator_no_buy">No vende por %s</string>
+
+    <string name="my_partners_hint_search">Buscar por nombre o segmento</string>
+    <string name="my_partners_selection_title">Selecciona a la Socia para ingresar a su perfil</string>
+    <string name="my_partner_label">Nivel:</string>
+    <string name="last_transaction">Última Tracción:</string>
+    <string name="address">Dirección:</string>
+    <string name="phone">Teléfono:</string>
+    <string name="projection">Proyección:</string>
+    <string name="partner_profile">Perfil de la\nSocia</string>
+    <string name="campaign_projection">Proyección\nde Campaña</string>
+    <string name="partner_section">\u2022 SECCIÓN %1$s</string>
+    <string name="partner_successfull">Exitosa</string>
+    <string name="partners_unsuccessfull">No Exitosa</string>
+    <string name="partner_projection">%1$d de 3 Campañas para subir de nivel</string>
+    <string name="title_my_partners">Listado Socias</string>
+    <string name="no_cover_section">Sección Descoberturada</string>
+    <string name="change_level">Cambio de Nivel</string>
+
+</resources>

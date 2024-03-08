@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvwGrownConsultantItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_sides_grown_consultant_card"
+    android:layout_marginTop="@dimen/margin_top_bottom_grown_consultant_card"
+    android:layout_marginEnd="@dimen/margin_sides_grown_consultant_card"
+    android:layout_marginBottom="@dimen/margin_top_bottom_grown_consultant_card"
+    android:background="@drawable/shape_card_round_square_level_indicator"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/includedGrownConsultantView"
+            layout="@layout/container_view_grown_consultant_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vwMiddleLane"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ms_step_tab_divider_thickness"
+            android:layout_marginStart="@dimen/ds_margin_medium"
+            android:layout_marginEnd="@dimen/ds_margin_medium"
+            android:background="@color/gray_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includedGrownConsultantView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvwRemainingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ds_margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwMiddleLane"
+            tools:text="123456" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_label_height">43dp</dimen>
+    <dimen name="ds_divider_vertical_width">1dp</dimen>
+    <dimen name="ds_divider_vertical_height">30dp</dimen>
+    <dimen name="mini_progress_width">72dp</dimen>
+    <dimen name="collection_progress_width">76dp</dimen>
+    <dimen name="mini_progress_height">6dp</dimen>
+    <dimen name="ds_kpi_collection_header_img">96dp</dimen>
+    <dimen name="ds_tab_layout_height">30dp</dimen>
+
+    <dimen name="card_min_height">238dp</dimen>
+
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="kpi_content_inset_normal">16dp</dimen>
+    <dimen name="kpi_no_margin">0dp</dimen>
+    <dimen name="kpi_segment_indicator_width">76dp</dimen>
+</resources>

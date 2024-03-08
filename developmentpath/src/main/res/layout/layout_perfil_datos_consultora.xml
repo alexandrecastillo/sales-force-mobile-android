@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/txtTipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/rdd_head_color_subtitle"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/includeCantidadProductosPPU"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        tools:text="C4" />
+
+    <ImageView
+        android:id="@+id/imgPintTipe"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTipe"
+        app:layout_constraintEnd_toStartOf="@+id/txtTipe"
+        app:layout_constraintTop_toTopOf="@+id/txtTipe"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvGuion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/guion"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTipe"
+        app:layout_constraintStart_toEndOf="@+id/txtTipe"
+        app:layout_constraintTop_toTopOf="@+id/txtTipe"
+        tools:text="-"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/includeCantidadProductosPPU"
+        layout="@layout/layout_cantidad_productos_ppu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtTipe"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/unete_input_txtInputLayout"
+            style="@style/uneteInput_InputLayout"
+            android:layout_width="match_parent">
+
+            <EditText
+                android:id="@+id/unete_input_txtComponent"
+                style="@style/uneteInput_Input"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/icValidation"
+            style="@style/uneteInput_icon"
+            android:contentDescription="@string/app_name" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtMesssage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:singleLine="true"
+        android:textColor="#d90015"
+        android:textSize="11sp"
+        tools:ignore="SmallSp"
+        tools:text="Campo obligatorio" />
+
+</LinearLayout>

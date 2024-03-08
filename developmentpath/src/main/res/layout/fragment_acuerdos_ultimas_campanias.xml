@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clContendorAcuerdosCampanias"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/content_inset_normal"
+    android:paddingEnd="@dimen/content_inset_normal"
+    android:paddingBottom="@dimen/content_inset_normal">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutConsolidado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutHistorico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/frameLayoutConsolidado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

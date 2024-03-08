@@ -1,0 +1,48 @@
+<resources>
+
+    <string name="sort_by">Ordenar por</string>
+    <string name="filters">Filtros</string>
+    <string name="filters_order_by">Order by</string>
+
+    <string name="title_debt">Deuda:</string>
+    <string name="title_orders_sb">Pedido en SB:</string>
+    <string name="title_orders_amount">Monto de pedido:</string>
+    <string name="title_orders_sb_amount">Monto pedido SB:</string>
+    <string name="title_order_mto_amount">Monto pedido MTO:</string>
+    <string name="title_order_cdei_amount">Monto pedido CDEI:</string>
+    <string name="title_percentage_consultants_multi_brand">% Consultoras multimarca</string>
+    <string name="title_consultants_multi_brand">Consultoras multimarca</string>
+
+    <string name="title_actives_multi_brand">Activas Multimarca</string>
+    <string name="title_actives_no_multi_brand">Activas No Multimarca</string>
+    <string name="title_actives_multi_brand_vs_last_campaign">vs campaña anterior</string>
+    <string name="title_actives_multi_brand_av">Activas Multimarca AV</string>
+
+    <string name="title_indicator_multi_brand">Indicador multimarca:</string>
+    <string name="title_indicator_multi_brand_yes">Sí</string>
+    <string name="title_indicator_multi_brand_no">No</string>
+
+    <string-array name="news">
+        <item>Nueva 1d1</item>
+        <item>Nueva 2d2</item>
+        <item>Nueva 3d3</item>
+        <item>Nueva 4d4</item>
+    </string-array>
+
+    <!-- Billing - Kpis string-->
+    <string name="title_new_cycle_billing_detail">¡Tu Facturación detallada!</string>
+    <string name="title_searching_detail">Consultoras de la Sección</string>
+    <string name="action_go_to_billing">Ir al avance de facturación</string>
+    <string name="action_go_to_search">Consultoras en total</string>
+
+    <!-- Temp string-->
+    <string name="temp_pending_orders">24 Pedidos pendientes en total</string>
+    <string name="text_kpi_ua_with_hyphen">"%s - "</string>
+    <string name="title_zone_information">Estás viendo el detalle de:</string>
+
+    <string name="title_consolidated_by_section">Consolidado por Sección</string>
+    <string name="text_no_data_available_on_grid">La %s es nueva.\nAún no hay información de la campaña anterior.</string>
+
+    <string name="show_all">Todos</string>
+
+</resources>

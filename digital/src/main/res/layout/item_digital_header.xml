@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/content_inset_normal"
+    android:paddingTop="@dimen/content_inset_normal"
+    android:paddingEnd="@dimen/content_inset_normal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/digital_header_title_end_margin"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Vende por Mi Tienda Online" />
+
+    <biz.belcorp.mobile.components.charts.pie.Pie
+        android:id="@+id/pieChart"
+        android:layout_width="@dimen/digital_chart_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_small"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        app:fontFamily="@font/mulish_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:pie_chartAngleGap="0"
+        app:pie_internalCircleRatio="0.8"
+        app:pie_numberColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/pieChart"
+        app:layout_constraintEnd_toEndOf="@id/pieChart"
+        app:layout_constraintStart_toStartOf="@id/pieChart"
+        app:layout_constraintTop_toTopOf="@id/pieChart"
+        tools:src="@drawable/ic_online_store" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPercentageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Title2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPercentageDescription"
+        app:layout_constraintStart_toEndOf="@id/pieChart"
+        tools:text="90%" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPercentageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_tiny"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/pieChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/tvPercentageValue"
+        app:layout_constraintTop_toTopOf="@id/pieChart"
+        tools:text="Comparte\nMi Tienda Online" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvProgressDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:textAppearance="@style/TextAppearance.DS.Body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pieChart"
+        tools:text="56 de 80 Consultoras comparte\nMi Tienda Online en C09" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

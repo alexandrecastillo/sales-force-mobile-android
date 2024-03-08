@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/content_inset_medium">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_inset_normal"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:layout_marginEnd="@dimen/content_inset_normal"
+        android:text="@string/title_consultants_orders"
+        android:textAppearance="@style/TextAppearance.DS.Subtitle"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_consultants_orders" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerPegs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:background="@color/white"
+        android:paddingStart="@dimen/content_inset_less"
+        android:paddingTop="@dimen/content_inset_normal"
+        android:paddingEnd="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textPegs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/title_pegs"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <biz.belcorp.mobile.components.design.indicatorgoalbar.IndicatorGoalBar
+            android:id="@+id/indicatorPegs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPegs"
+            tools:indicatorGoalBar_title="@string/description_missing_order" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerNewCycle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:background="@color/white"
+        android:paddingStart="@dimen/content_inset_less"
+        android:paddingTop="@dimen/content_inset_normal"
+        android:paddingEnd="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/containerPegs">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textNewCycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/title_new_cycle"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textNewCycleFirstSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textNewCycle"
+            tools:text="@string/description_advancement_new_cycle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textNewCycleSecondSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/description_retention"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textNewCycle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNewCycle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNewCycleFirstSummary"
+            tools:itemCount="6"
+            tools:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_billing_new_cycle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerRejected"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_normal"
+        android:background="@color/white"
+        android:paddingStart="@dimen/content_inset_less"
+        android:paddingTop="@dimen/content_inset_normal"
+        android:paddingEnd="@dimen/content_inset_less"
+        android:paddingBottom="@dimen/content_inset_normal"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/containerNewCycle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textRejected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="@string/title_rejected_orders"
+            android:textAppearance="@style/TextAppearance.DS.Subtitle"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRejected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_small"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRejected"
+            tools:itemCount="4"
+            tools:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_billing_rejected_orders" />
+
+        <TextView
+            android:id="@+id/tvEmptyRejected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_normal"
+            android:text="@string/title_rejected_orders_message"
+            android:textAppearance="@style/TextAppearance.DS.Body"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRejected" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

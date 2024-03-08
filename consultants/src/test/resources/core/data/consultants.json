@@ -1,0 +1,95 @@
+{
+    "Consultants": {
+        "list": [
+            {
+                "id": 0,
+                "consultant_id": 0,
+                "campaign": "202005",
+                "region": "13",
+                "zone": "1311",
+                "section": "B",
+                "code": "9907039879",
+                "is_peg": false,
+                "is_new": true,
+                "check_digit": "",
+                "multimarca": false,
+                "admission_campaign": "",
+                "last_order_campaign": "202005",
+                "first_order_campaign": "202005",
+                "personal_info": {
+                    "first_name": "",
+                    "full_name": "MARIA JOSE MERCADO SANTIZ",
+                    "surname": "",
+                    "second_name": "",
+                    "second_surname": "",
+                    "document_number": "",
+                    "address": ".    MZ C LOTE 24",
+                    "address_reference": ".    MZ C LOTE 24",
+                    "phone": "3206946715",
+                    "birthday": "1985-07-21T00:00:00",
+                    "email": "",
+                    "check_digit": "0  "
+                },
+                "anniversary_date": "",
+                "constancy": {
+                    "u6c": false,
+                    "u18c": false,
+                    "new": "1d1",
+                    "established": "1d1"
+                },
+                "segment": {
+                    "code": "1",
+                    "description": "Nuevas"
+                },
+                "bright_segment": {
+                    "code": "1",
+                    "description": "Consultora"
+                },
+                "bright_path": {
+                    "period": "202003",
+                    "sale": 1625,
+                    "level_code": "3",
+                    "level_description": "Ambar",
+                    "constancy": "3"
+                },
+                "state": {
+                    "code": "01",
+                    "description": "INGRESO"
+                },
+                "is_authorized_to_request_order": false,
+                "is_potential_entry": false,
+                "is_potential_reentry": false,
+                "billing_info": {
+                    "order_status": 1,
+                    "first_campaign": "202005",
+                    "last_campaign": "202005",
+                    "has_billed_order": true,
+                    "amount": 199.96,
+                    "order_mto_amount": 0
+                },
+                "collection_info": {
+                    "pending_debt": 0,
+                    "collection_percentage": 0
+                },
+                "reentries_u18c": 0,
+                "sales_info": {
+                    "catalog_sale": 189900,
+                    "order_range": "PBV",
+                    "is_order_sent": true
+                },
+                "geo_info": {
+                    "latitude": 0,
+                    "longitude": 0
+                },
+                "is_new_inconstant": false,
+                "digital": {
+                    "share_catalog": false,
+                    "suggested_message": "",
+                    "digital_segment": ""
+                },
+                "has_cash_payment": false,
+                "last_modified": "2020-11-23T01:03:58.197-05:00"
+            }
+        ]
+    }
+}

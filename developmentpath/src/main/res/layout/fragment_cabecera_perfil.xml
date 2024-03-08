@@ -1,0 +1,205 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgIconConsultant"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtnameConsultant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgIconConsultant"
+            tools:text="María Polo Ruiz" />
+
+        <include
+            android:id="@+id/layout_perfil_datos_persona_co"
+            layout="@layout/layout_perfil_datos_consultora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtnameConsultant" />
+
+        <include
+            android:id="@+id/layout_perfil_datos_persona_gz"
+            layout="@layout/layout_perfil_datos_gerente_zona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtnameConsultant" />
+
+        <include
+            android:id="@+id/layout_perfil_datos_persona_gr"
+            layout="@layout/layout_perfil_datos_gerente_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtnameConsultant" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="layout_perfil_datos_persona_co, layout_perfil_datos_persona_gz, layout_perfil_datos_persona_gr" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrera">
+
+            <ImageView
+                android:id="@+id/imgWhatsapp"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="14dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/group_9" />
+
+            <ImageView
+                android:id="@+id/imgGift"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/imgWhatsapp"
+                app:layout_constraintEnd_toEndOf="@id/txtCumpl"
+                app:layout_constraintStart_toStartOf="@id/txtCumpl"
+                app:layout_constraintTop_toTopOf="@id/imgWhatsapp"
+                app:srcCompat="@drawable/group_34" />
+
+            <ImageView
+                android:id="@+id/image_email"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/imgWhatsapp"
+                app:layout_constraintEnd_toEndOf="@id/txtEmail"
+                app:layout_constraintStart_toStartOf="@id/txtEmail"
+                app:layout_constraintTop_toTopOf="@id/imgWhatsapp"
+                app:srcCompat="@drawable/ic_email_gray" />
+
+            <View
+                android:id="@+id/separador_izquierdo"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="#23000000"
+                app:layout_constraintBottom_toBottomOf="@id/txtPhone"
+                app:layout_constraintEnd_toStartOf="@+id/txtPhone"
+                app:layout_constraintTop_toTopOf="@+id/imgWhatsapp" />
+
+            <View
+                android:id="@+id/separador_derecho"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="#23000000"
+                android:fontFamily="@font/mulish_regular"
+                app:layout_constraintBottom_toBottomOf="@id/txtPhone"
+                app:layout_constraintStart_toEndOf="@+id/txtPhone"
+                app:layout_constraintTop_toTopOf="@+id/imgWhatsapp" />
+
+            <TextView
+                android:id="@+id/txtCumpl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:minWidth="40dp"
+                android:text="@string/guion"
+                android:textColor="@color/rdd_head_color_subtitle"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/txtPhone"
+                app:layout_constraintEnd_toStartOf="@id/separador_izquierdo"
+                app:layout_constraintTop_toTopOf="@id/txtPhone"
+                tools:text="12 de Marzo" />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:minWidth="40dp"
+                android:text="@string/guion"
+                android:textColor="@color/rdd_head_color_subtitle"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imgWhatsapp"
+                app:layout_constraintStart_toStartOf="@+id/imgWhatsapp"
+                app:layout_constraintTop_toBottomOf="@+id/imgWhatsapp"
+                tools:text="999842182" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulish_regular"
+                android:gravity="center"
+                android:maxWidth="100dp"
+                android:minWidth="40dp"
+                android:singleLine="true"
+                android:text="@string/perfil_sin_correo"
+                android:textColor="@color/rdd_head_color_subtitle"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/separador_derecho"
+                app:layout_constraintTop_toTopOf="@id/txtPhone"
+                tools:text="esteesuncorreolargoperonotantocomoquisieras@google.com" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

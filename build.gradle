@@ -1,0 +1,44 @@
+import biz.belcorp.salesforce.Deps
+import biz.belcorp.salesforce.Config
+
+apply from: 'sonarqube.gradle'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url Config.Repository.jitpack }
+        maven { url Config.Repository.sonar }
+    }
+    dependencies {
+        classpath Deps.BuildPlugins.androidGradle
+        classpath Deps.BuildPlugins.kotlinGradlePlugin
+        classpath Deps.BuildPlugins.kotlinSerializationPlugin
+        classpath Deps.BuildPlugins.googleServices
+        classpath Deps.BuildPlugins.firebasePerfPlugin
+        classpath Deps.BuildPlugins.objectboxPlugin
+        classpath Deps.BuildPlugins.crashlyticsPlugin
+        classpath Deps.BuildPlugins.bundleTool
+        classpath Deps.BuildPlugins.safeArgsPlugin
+        classpath Deps.BuildPlugins.sonarPlugin
+        classpath Deps.BuildPlugins.jacocoPlugin
+        classpath Deps.BuildPlugins.newRelicPlugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url Config.Repository.jitpack }
+        maven { url Config.Repository.google }
+        maven { url Config.Repository.belcorp }
+        //maven { url Config.Repository.kotlinx }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+apply plugin: "com.vanniktech.android.junit.jacoco"
